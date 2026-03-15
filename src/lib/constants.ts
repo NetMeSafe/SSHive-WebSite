@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://sshive.app';
-export const DOWNLOAD_URL = '#'; // TODO: Update when hosting is ready
+export const DOWNLOAD_URL = '/SSHive.dmg';
 export const APP_VERSION = '1.0.0';
 export const APP_STORE_URL = '#'; // TODO: Add real App Store URL
 export const BREW_COMMAND = 'brew install --cask sshive';
