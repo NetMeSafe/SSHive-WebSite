@@ -63,6 +63,13 @@ export async function generateMetadata({
       title: t.title,
       description: t.description,
     },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
+      ],
+      apple: '/apple-icon.png',
+    },
     robots: {
       index: true,
       follow: true,
