@@ -181,7 +181,9 @@
     "emailPlaceholder": "votre@email.com",
     "emailSubscribe": "S'abonner",
     "systemReq": "Configuration requise",
-    "systemReqDetails": "macOS 13 Ventura ou ulterior. Apple Silicon (M1/M2/M3/M4) et Intel x64 supportes."
+    "systemReqDetails": "macOS 13 Ventura ou ulterior. Apple Silicon (M1/M2/M3/M4) et Intel x64 supportes.",
+    "gatekeeperTitle": "Premier lancement sur macOS",
+    "gatekeeperText": "Si macOS indique que l'app « est endommagee », ouvrez le Terminal et lancez : xattr -cr /Applications/SSHive.app — puis relancez SSHive. Cela est du au fait que l'app n'est pas encore notarisee par Apple (bientot)."
   },
   "footer": {
     "product": "Produit",

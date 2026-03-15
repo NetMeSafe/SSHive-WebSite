@@ -181,7 +181,9 @@
     "emailPlaceholder": "your@email.com",
     "emailSubscribe": "Subscribe",
     "systemReq": "System Requirements",
-    "systemReqDetails": "macOS 13 Ventura or later. Apple Silicon (M1/M2/M3/M4) and Intel x64 supported."
+    "systemReqDetails": "macOS 13 Ventura or later. Apple Silicon (M1/M2/M3/M4) and Intel x64 supported.",
+    "gatekeeperTitle": "First launch on macOS",
+    "gatekeeperText": "If macOS says the app \"is damaged\", open Terminal and run: xattr -cr /Applications/SSHive.app — then reopen SSHive. This is because the app is not yet notarized by Apple (coming soon)."
   },
   "footer": {
     "product": "Product",

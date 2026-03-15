@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { CheckCircle, Mail } from 'lucide-react';
+import { CheckCircle, Mail, AlertTriangle } from 'lucide-react';
 import { DownloadButton } from '@/components/download/DownloadButton';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { SoftwareApplicationSchema } from '@/components/seo/SoftwareApplicationSchema';
@@ -88,6 +88,32 @@ export default async function DownloadPage({
                 <span className="text-foreground">{signal}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gatekeeper Notice */}
+      <section className="py-12 border-t border-border">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-xl border border-yellow-500/30 bg-yellow-500/5 p-6">
+            <div className="flex items-start gap-4">
+              <AlertTriangle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">
+                  {t('gatekeeperTitle')}
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  {t('gatekeeperText').split('xattr -cr /Applications/SSHive.app')[0]}
+                </p>
+                <div className="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary border border-border font-mono text-sm">
+                  <code className="text-foreground">xattr -cr /Applications/SSHive.app</code>
+                  <CopyButton text="xattr -cr /Applications/SSHive.app" />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  {t('gatekeeperText').split('xattr -cr /Applications/SSHive.app')[1]}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
