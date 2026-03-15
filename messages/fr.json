@@ -1,0 +1,439 @@
+{
+  "metadata": {
+    "title": "SSHive — Client SSH/SFTP/RDP pour macOS | Gratuit & Pro",
+    "description": "SSHive est un client SSH, SFTP, RDP et VNC pour macOS. Terminal tout-en-un inspire de MobaXterm. Telechargez gratuitement ou passez a Pro sur l'App Store."
+  },
+  "nav": {
+    "features": "Fonctionnalites",
+    "compare": "Comparer",
+    "pricing": "Tarifs",
+    "blog": "Blog",
+    "docs": "Docs",
+    "download": "Telecharger"
+  },
+  "hero": {
+    "title": "Le client SSH que macOS merite",
+    "subtitle": "SSH, SFTP, RDP et VNC — tout dans une app. Gratuit pour commencer, Pro a 9,99 $.",
+    "downloadCta": "Telecharger gratuitement",
+    "featuresCta": "Voir les fonctionnalites",
+    "version": "Version {version} — macOS 13+",
+    "universalBinary": "Universal Binary (Apple Silicon + Intel)"
+  },
+  "socialProof": {
+    "appStore": "Disponible sur le Mac App Store",
+    "keychainSecurity": "Securite Trousseau macOS",
+    "noTelemetry": "Aucune telemetrie"
+  },
+  "features": {
+    "title": "Tout ce qu'il faut pour gerer vos serveurs",
+    "subtitle": "Une app. Tous les protocoles. Zero friction.",
+    "ssh": {
+      "title": "Terminal SSH",
+      "description": "Terminal accelere GPU avec xterm.js WebGL. Authentification par mot de passe, cle ou agent. Jump hosts, agent forwarding et reconnexion automatique.",
+      "shortDesc": "Terminal accelere GPU"
+    },
+    "sftp": {
+      "title": "Gestionnaire SFTP",
+      "description": "Navigateur de fichiers double-panneau avec glisser-deposer depuis le Finder. Editeur distant, operations groupees, progression des transferts avec indicateur de vitesse.",
+      "shortDesc": "Gestionnaire de fichiers"
+    },
+    "rdp": {
+      "title": "Bureau a distance (RDP)",
+      "description": "Client RDP embarque propulse par IronRDP (Rust). Clavier, souris et presse-papiers complets. Pas de fenetre externe — tout reste dans SSHive.",
+      "shortDesc": "Bureau a distance embarque"
+    },
+    "vnc": {
+      "title": "VNC",
+      "description": "Client VNC integre via noVNC. Proxy WebSocket avec protocole RFB complet. Souris, clavier et presse-papiers.",
+      "shortDesc": "Client VNC integre"
+    },
+    "tunnels": {
+      "title": "Tunnels SSH",
+      "description": "Redirection locale (-L), distante (-R), et proxy SOCKS5 (-D) avec support IPv4/IPv6/domaine complet. Jusqu'a 10 tunnels locaux + 5 distants par profil.",
+      "shortDesc": "Local, distant et proxy SOCKS5"
+    },
+    "mcp": {
+      "title": "Integration IA (MCP)",
+      "description": "Serveur MCP integre permettant a Claude Code, Cursor et Claude Desktop d'acceder a vos sessions SSH/SFTP. Auto-configuration des clients IA.",
+      "shortDesc": "Integration Claude et Cursor"
+    },
+    "broadcast": {
+      "title": "Mode Broadcast",
+      "description": "Executez la meme commande sur toutes les sessions SSH connectees simultanement. Parfait pour l'administration multi-serveurs.",
+      "shortDesc": "Execution multi-serveurs"
+    },
+    "snippets": {
+      "title": "Commandes rapides",
+      "description": "Bibliotheque de commandes reutilisables avec 14 presets pour le systeme, reseau, disque, Docker et Git. Creez vos propres snippets.",
+      "shortDesc": "Bibliotheque de commandes"
+    },
+    "learnMore": "En savoir plus",
+    "allFeatures": "Voir toutes les fonctionnalites"
+  },
+  "whySSHive": {
+    "title": "Pourquoi SSHive ?",
+    "native": {
+      "title": "macOS natif",
+      "description": "Concu pour macOS avec integration Trousseau, notifications natives et support du theme systeme. Pas un portage Linux."
+    },
+    "allInOne": {
+      "title": "Tout-en-un",
+      "description": "SSH, SFTP, RDP, VNC, tunnels et outils — une seule app au lieu de cinq. Arretez de jongler entre les fenetres."
+    },
+    "secure": {
+      "title": "Securise et prive",
+      "description": "Chiffrement via le Trousseau macOS, aucune telemetrie, pas de pub. Vos credentials et donnees ne quittent jamais votre machine."
+    }
+  },
+  "comparison": {
+    "title": "SSHive face a la concurrence",
+    "feature": "Fonctionnalite",
+    "free": "Gratuit",
+    "pro": "Pro",
+    "sshTerminal": "Terminal SSH",
+    "sftpManager": "Gestionnaire SFTP",
+    "rdpClient": "Client RDP",
+    "vncClient": "Client VNC",
+    "sshTunnels": "Tunnels SSH",
+    "broadcastMode": "Mode Broadcast",
+    "mcpIntegration": "MCP / Integration IA",
+    "nativeMacOS": "macOS natif",
+    "keychainIntegration": "Integration Trousseau",
+    "macAppStore": "Mac App Store",
+    "yes": "Oui",
+    "no": "Non",
+    "partial": "Partiel",
+    "limited": "Limite",
+    "unlimited": "Illimite",
+    "price": "Prix",
+    "seeFullComparison": "Voir la comparaison complete",
+    "switchToSSHive": "Passez a SSHive — Gratuit"
+  },
+  "pricing": {
+    "title": "Tarification simple et transparente",
+    "subtitle": "Commencez gratuitement. Passez a Pro quand vous en avez besoin.",
+    "free": {
+      "name": "Gratuit",
+      "price": "0 €",
+      "period": "pour toujours",
+      "cta": "Telecharger gratuitement",
+      "features": [
+        "2 sessions SSH",
+        "5 profils enregistres",
+        "Gestionnaire SFTP basique",
+        "14 commandes rapides integrees",
+        "Theme sombre",
+        "Securite via le Trousseau macOS"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "9,99 €",
+      "period": "achat unique",
+      "cta": "Bientot disponible",
+      "badge": "Bientot disponible",
+      "features": [
+        "Sessions SSH illimitees",
+        "Profils et dossiers illimites",
+        "Bureau a distance RDP",
+        "Visionneuse VNC",
+        "Tunnels SSH (L/R/D)",
+        "Proxy SOCKS5",
+        "Mode Broadcast",
+        "Integration MCP / IA",
+        "Support Jump Host",
+        "Export/import de profils",
+        "Snippets personnalises",
+        "Tous les themes",
+        "Mises a jour prioritaires"
+      ]
+    },
+    "noSubscription": "Achat unique. Pas d'abonnement. A vous pour toujours.",
+    "faq": {
+      "title": "Questions frequentes",
+      "q1": "SSHive est-il vraiment gratuit ?",
+      "a1": "Oui. La version gratuite inclut le terminal SSH, le gestionnaire SFTP, 2 sessions simultanees et 5 profils enregistres. Pas de compte, pas d'essai, pas de limite de temps.",
+      "q2": "Qu'est-ce que Pro apporte ?",
+      "a2": "Pro debloque les sessions illimitees, les profils illimites, RDP, VNC, les tunnels SSH, le mode broadcast, l'integration MCP/IA, les jump hosts et tous les themes. C'est un achat unique sur le Mac App Store.",
+      "q3": "Puis-je passer a Pro plus tard ?",
+      "a3": "Absolument. Commencez avec la version gratuite et passez a Pro quand vous voulez depuis le Mac App Store. Vos profils et parametres sont conserves.",
+      "q4": "Y a-t-il un abonnement ?",
+      "a4": "Non. SSHive Pro est un achat unique a 9,99 €. Vous payez une fois et c'est a vous pour toujours. Pas de frais recurrents.",
+      "q5": "Ai-je besoin d'un compte ?",
+      "a5": "Non. SSHive fonctionne completement hors ligne sans compte requis. Vos donnees restent sur votre machine, securisees par le Trousseau macOS."
+    }
+  },
+  "download": {
+    "title": "Telecharger SSHive",
+    "subtitle": "Gratuit pour commencer. macOS 13+.",
+    "dmgButton": "Telecharger SSHive {version}",
+    "dmgSubtitle": "macOS — Universal Binary (Apple Silicon + Intel)",
+    "or": "ou",
+    "appStoreAlt": "Mac App Store",
+    "brewCommand": "brew install --cask sshive",
+    "brewCopy": "Copier",
+    "brewCopied": "Copie !",
+    "noAccount": "Aucun compte requis",
+    "noAds": "Pas de pub, pas de tracking dans l'app",
+    "keychainSecurity": "Securise — chiffrement via le Trousseau macOS",
+    "upgradeLater": "Passez a Pro quand vous voulez (9,99 €, achat unique)",
+    "emailTitle": "Recevez les notifications de nouvelles versions",
+    "emailPlaceholder": "votre@email.com",
+    "emailSubscribe": "S'abonner",
+    "systemReq": "Configuration requise",
+    "systemReqDetails": "macOS 13 Ventura ou ulterior. Apple Silicon (M1/M2/M3/M4) et Intel x64 supportes."
+  },
+  "footer": {
+    "product": "Produit",
+    "resources": "Ressources",
+    "comparisons": "Comparer",
+    "community": "Communaute",
+    "about": "A propos",
+    "contact": "Contact",
+    "changelog": "Changelog",
+    "twitter": "Twitter",
+    "mastodon": "Mastodon",
+    "support": "Support",
+    "madeBy": "Fait avec amour par NetMeSafe",
+    "license": "Made in France",
+    "privacy": "Confidentialite"
+  },
+  "comparePage": {
+    "title": "SSHive vs {competitor}",
+    "description": "Decouvrez comment SSHive se compare a {competitor} pour SSH, SFTP et bureau a distance sur macOS.",
+    "verdict": "Le verdict",
+    "tryFree": "Essayer SSHive gratuitement",
+    "downloadFree": "Telecharger SSHive gratuitement",
+    "overviewTitle": "SSHive face a la concurrence",
+    "overviewSubtitle": "Decouvrez comment SSHive se compare a chaque client SSH majeur. Une seule app pour tous les remplacer.",
+    "overviewMetaTitle": "SSHive vs Concurrents — Meilleur client SSH pour macOS 2026",
+    "overviewMetaDescription": "Comparez SSHive a MobaXterm, iTerm2, Termius, PuTTY, Royal TSX, SecureCRT et Tabby. Tableau comparatif fonctionnalite par fonctionnalite des clients SSH macOS.",
+    "viewComparison": "Voir la comparaison complete",
+    "featureByFeature": "Comparaison fonctionnalite par fonctionnalite",
+    "whySwitch": "Pourquoi passer a SSHive ?",
+    "whySwitchReasons": {
+      "allInOne": "Tout-en-un : SSH, SFTP, RDP, VNC, tunnels et IA dans une seule app",
+      "securePrivate": "Securise et prive — chiffrement via le Trousseau macOS, aucune telemetrie, donnees sur votre machine",
+      "nativeMac": "App macOS native avec integration Trousseau et support Apple Silicon",
+      "oneTimePrice": "Achat unique a 9,99 $ pour Pro, pas d'abonnement recurrent",
+      "aiIntegration": "Serveur MCP integre pour Claude Code, Cursor et Claude Desktop",
+      "appStore": "Disponible sur le Mac App Store pour une installation et des mises a jour faciles"
+    },
+    "keychainIntegration": "Integration Trousseau",
+    "connectionProfiles": "Profils de connexion",
+    "modernUI": "Interface moderne",
+    "metaTitleTemplate": "SSHive vs {competitor} — Meilleur client SSH pour macOS 2026",
+    "introTitle": "SSHive vs {competitor} : quel est le meilleur client SSH pour macOS ?",
+    "detailedIntro": {
+      "mobaxterm": "MobaXterm est le standard des terminaux tout-en-un sur Windows depuis des annees. Avec le forwarding X11, le SFTP embarque et le support RDP, il a fixe la barre pour ce que devrait etre un outil de gestion a distance. SSHive apporte cette meme philosophie sur macOS — mais avec la securite native du Trousseau et des capacites IA modernes que MobaXterm n'offre pas. Si vous cherchez un equivalent MobaXterm sur Mac, SSHive est concu specifiquement pour vous. Contrairement a MobaXterm, qui ne fonctionne que sur Windows (ou via Wine, avec un succes limite), SSHive est une application macOS native construite avec Electron et React, optimisee pour Apple Silicon et disponible sur le Mac App Store.",
+      "iterm2": "iTerm2 a gagne sa reputation de meilleur emulateur de terminal pour macOS, et a juste titre. Il offre des panneaux divises, des profils, une recherche avancee et une personnalisation incroyable. Cependant, iTerm2 est purement un emulateur de terminal — il n'inclut pas de gestion de fichiers SFTP integree, de RDP, VNC, de gestion de tunnels SSH ou de profils de connexion. SSHive respecte ce qu'iTerm2 fait bien tout en comblant les lacunes dont les administrateurs systeme et ingenieurs DevOps ont besoin. Si votre workflow implique plus que taper des commandes dans un shell, SSHive consolide tout dans une seule fenetre.",
+      "terminus": "Tabby (anciennement Terminus) est un terminal moderne et multi-plateforme construit avec des technologies web. Il offre une interface soignee, un systeme de plugins et des fonctionnalites SSH basiques. Cependant, sa focalisation multi-plateforme signifie qu'il manque l'integration macOS profonde que SSHive fournit. SSHive inclut la gestion complete de fichiers SFTP, des clients RDP et VNC embarques, la configuration de tunnels SSH et l'integration IA — des fonctionnalites que Tabby n'a pas du tout ou ne supporte que partiellement via des plugins. Pour les utilisateurs macOS qui veulent une experience de gestion a distance complete, SSHive offre significativement plus pret a l'emploi.",
+      "putty": "PuTTY est l'un des clients SSH les plus anciens et les plus reconnus au monde. Initialement concu pour Windows, il a ete porte sur macOS, mais l'experience est loin d'etre native. PuTTY n'a pas de SFTP, RDP, VNC, de theming moderne ni de gestion de profils de connexion. SSHive reprend tout ce qui a fait aimer PuTTY — la simplicite et la fiabilite — et l'enveloppe dans une experience macOS moderne et native avec tous les protocoles et outils dont un administrateur systeme a besoin en 2026.",
+      "termius": "Termius est un client SSH soigne et multi-plateforme connu pour sa belle interface et ses capacites de synchronisation. Cependant, son niveau gratuit est limite, et les fonctionnalites avancees comme les tunnels SSH necessitent un abonnement a 10 $/mois. SSHive offre des fonctionnalites comparables — SSH, SFTP, profils de connexion, securite Trousseau — avec un achat unique a 9,99 $ pour Pro pour des sessions illimitees, RDP, VNC, le mode broadcast et l'integration IA. Pour les utilisateurs macOS qui veulent des outils SSH professionnels sans couts recurrents, SSHive est le choix evident.",
+      "royal-tsx": "Royal TSX est un outil de gestion a distance bien etabli pour macOS. Il supporte SSH, RDP, VNC et SFTP via une architecture de plugins. Cependant, Royal TSX coute 29 $ pour une licence unique et n'inclut pas d'integration IA. SSHive fournit tous les memes protocoles dans une seule app unifiee qui coute une fraction du prix et inclut des fonctionnalites modernes comme l'integration IA basee sur MCP pour Claude Code et Cursor.",
+      "securecrt": "SecureCRT de VanDyke Software est le client SSH de niveau entreprise de choix depuis des decennies. Il offre du scripting avance, la gestion de sessions et le support de protocoles. Cependant, a 119 $ par licence, il est tarifie pour les budgets entreprise. SSHive fournit une fonctionnalite SSH et SFTP comparable, ajoute RDP, VNC, le mode broadcast et l'integration IA, et coute soit rien (niveau gratuit) soit 9,99 $ pour Pro. Pour les developpeurs individuels, administrateurs systeme et petites equipes, SSHive offre des fonctionnalites de qualite entreprise a un prix accessible."
+    }
+  },
+  "about": {
+    "title": "A propos de SSHive",
+    "metaDescription": "Decouvrez SSHive, le client SSH/SFTP/RDP pour macOS cree par Lucas Russo. Inspire de MobaXterm.",
+    "description": "SSHive est cree par Lucas Russo, un developpeur passionne par la creation d'outils de qualite pour macOS. Inspire de MobaXterm, SSHive apporte la meme experience tout-en-un aux utilisateurs Mac — avec un feeling natif, la securite Trousseau et des integrations IA modernes.",
+    "storyTitle": "L'histoire",
+    "storyText": "En tant que developpeur et administrateur systeme passe de Windows a macOS, l'experience tout-en-un de MobaXterm me manquait. Je me retrouvais a jongler entre Terminal, Cyberduck, Microsoft Remote Desktop et divers autres outils. SSHive est ne de cette frustration — une seule app qui combine SSH, SFTP, RDP et VNC avec un feeling macOS natif. Construit avec Electron, React et TypeScript, SSHive est concu avec soin pour la securite et la performance.",
+    "techTitle": "Stack technique",
+    "techItems": [
+      "Electron 33 — Integration macOS native avec Trousseau, notifications et theme systeme",
+      "React + TypeScript — Interface typee avec gestion d'etat Zustand",
+      "Tailwind CSS — Design responsive avec themes sombre et clair",
+      "xterm.js (WebGL) — Rendu terminal accelere GPU",
+      "ssh2 — Implementation complete du protocole SSH/SFTP en JavaScript",
+      "IronRDP (Rust) — Client RDP embarque via agent-rdp",
+      "noVNC — Visionneuse VNC integree avec proxy WebSocket",
+      "Zod — Validation a l'execution de toutes les communications IPC"
+    ],
+    "downloadCta": "Telecharger SSHive",
+    "contactCta": "Nous contacter"
+  },
+  "contact": {
+    "title": "Contact",
+    "metaDescription": "Contactez l'equipe SSHive. Signalez des bugs, demandez des fonctionnalites ou dites bonjour.",
+    "subtitle": "Une question, un bug a signaler ou une fonctionnalite a suggerer ? Voici comment nous joindre.",
+    "emailTitle": "Email",
+    "emailDescription": "Pour les questions generales, partenariats ou autre.",
+    "twitterTitle": "Twitter",
+    "twitterDescription": "Suivez-nous pour les mises a jour, astuces et annonces.",
+    "twitterHandle": "@sshiveapp",
+    "supportTitle": "Support",
+    "supportDescription": "Rapports de bugs, demandes de fonctionnalites et questions techniques."
+  },
+  "changelog": {
+    "title": "Changelog",
+    "metaDescription": "Historique des versions de SSHive. Decouvrez les nouveautes de chaque version du client SSH/SFTP/RDP pour macOS.",
+    "subtitle": "Tous les changements notables de SSHive sont documentes ici.",
+    "v100": {
+      "version": "1.0.0",
+      "date": "Mars 2026",
+      "title": "Version initiale",
+      "features": [
+        "Version initiale de SSHive pour macOS",
+        "Terminal SSH avec rendu accelere GPU (xterm.js WebGL)",
+        "Gestionnaire SFTP double-panneau avec glisser-deposer et editeur distant",
+        "Client RDP embarque propulse par IronRDP (Rust)",
+        "Client VNC embarque propulse par noVNC",
+        "Tunnels SSH : Redirection locale (-L), distante (-R), proxy SOCKS5 (-D)",
+        "Mode Broadcast — envoyez des commandes a toutes les sessions simultanement",
+        "Serveur MCP pour integration IA (Claude Code, Cursor, Claude Desktop)",
+        "Bibliotheque de commandes rapides avec 14 presets integres",
+        "Outils reseau : DNS lookup, Ping, Traceroute, Whois",
+        "Themes sombre et clair",
+        "Localisation francaise et anglaise",
+        "Support Mac App Store avec modele freemium"
+      ]
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "metaDescription": "Articles sur SSH, les outils macOS, l'administration serveur et les nouveautes SSHive.",
+    "subtitle": "Articles sur SSH, les outils macOS et l'administration serveur.",
+    "comingSoonTitle": "Bientot disponible",
+    "comingSoonText": "Nous preparons des articles sur les bonnes pratiques SSH, les outils macOS et des astuces d'administration serveur. Restez a l'ecoute !",
+    "subscribeTitle": "Soyez informe des publications",
+    "subscribePlaceholder": "votre@email.com",
+    "subscribeButton": "S'abonner"
+  },
+  "docs": {
+    "title": "Documentation",
+    "metaDescription": "Documentation et questions frequentes de SSHive. Apprenez a installer, configurer et utiliser SSHive sur macOS.",
+    "subtitle": "Questions frequentes sur SSHive.",
+    "faq": {
+      "q1": "Comment installer SSHive ?",
+      "a1": "Vous pouvez telecharger le DMG directement depuis sshive.app, l'installer via Homebrew avec `brew install --cask sshive`, ou le trouver sur le Mac App Store. SSHive supporte macOS 13 Ventura et versions ulterieures.",
+      "q2": "SSHive est-il gratuit ?",
+      "a2": "Oui. La version gratuite inclut le terminal SSH, le gestionnaire SFTP, 2 sessions simultanees et 5 profils enregistres. Vous pouvez optionnellement passer a Pro (9,99 €, achat unique) pour des sessions illimitees, RDP, VNC, tunnels et plus.",
+      "q3": "SSHive fonctionne-t-il sur les Mac Intel ?",
+      "a3": "Oui. SSHive est distribue en Universal Binary qui fonctionne nativement sur les Mac Apple Silicon (M1/M2/M3/M4) et Intel x64.",
+      "q4": "Comment importer ma config SSH ?",
+      "a4": "Allez dans le dialogue de connexion, cliquez sur le bouton d'import et selectionnez « Importer depuis ~/.ssh/config ». SSHive analysera votre fichier de configuration SSH et creera des profils pour chaque entree host.",
+      "q5": "Mes donnees sont-elles securisees ?",
+      "a5": "Oui. Les mots de passe et passphrases de cles privees sont chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron. SSHive n'a aucune telemetrie, aucune analyse et aucun appel reseau en dehors de vos connexions SSH/SFTP/RDP/VNC. Toutes les donnees restent sur votre machine.",
+      "q6": "Comment fonctionnent les tunnels SSH dans SSHive ?",
+      "a6": "Vous pouvez configurer des tunnels Local (-L), Distant (-R) et SOCKS5 (-D) par profil de connexion. Les tunnels demarrent automatiquement a l'etablissement de la connexion SSH. Vous pouvez configurer jusqu'a 10 tunnels locaux et 5 distants par profil.",
+      "q7": "Puis-je utiliser SSHive avec Claude ou Cursor ?",
+      "a7": "Oui. SSHive inclut un serveur MCP (Model Context Protocol) integre qui configure automatiquement Claude Code, Cursor et Claude Desktop. Les assistants IA peuvent lister les sessions, executer des commandes et parcourir les fichiers sur vos serveurs distants.",
+      "q8": "Ou sont stockes mes profils ?",
+      "a8": "Les profils sont stockes dans ~/Library/Application Support/SSHive/profiles.json. Les credentials sont stockes separement dans credentials.json, chiffres via le Trousseau macOS. Vous pouvez exporter et importer des profils avec la fonctionnalite d'export integree."
+    }
+  },
+  "privacy": {
+    "title": "Politique de confidentialite",
+    "metaDescription": "Politique de confidentialite de SSHive. Aucune donnee personnelle collectee, aucune analyse dans l'app, credentials stockes localement via le Trousseau macOS.",
+    "subtitle": "Votre vie privee compte. Voici comment SSHive gere vos donnees.",
+    "lastUpdated": "Derniere mise a jour : mars 2026",
+    "sections": {
+      "noDataTitle": "Aucune donnee personnelle collectee",
+      "noDataText": "SSHive ne collecte, ne transmet et ne stocke aucune donnee personnelle. L'application fonctionne entierement hors ligne — les seules connexions reseau sont celles que vous initiez (SSH, SFTP, RDP, VNC).",
+      "noAnalyticsTitle": "Aucune analyse dans l'application",
+      "noAnalyticsText": "L'application desktop SSHive ne contient aucun code d'analyse, de telemetrie ou de suivi. Ce site web (sshive.app) utilise PostHog pour des statistiques d'utilisation anonymes afin de comprendre les visites. Aucune information personnelle n'est collectee.",
+      "noCookiesTitle": "Pas de cookies",
+      "noCookiesText": "Ce site web n'utilise pas de cookies. PostHog utilise le localStorage pour un suivi de session anonyme. L'application desktop SSHive n'utilise ni cookies ni aucun mecanisme de suivi web.",
+      "keychainTitle": "Credentials stockes localement",
+      "keychainText": "Tous les mots de passe et credentials sensibles sont chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron. Ils ne quittent jamais votre machine et sont proteges par votre mot de passe de session macOS."
+    },
+    "contactNote": "Des questions sur nos pratiques de confidentialite ? Contactez-nous a hello@sshive.app."
+  },
+  "featuresPage": {
+    "title": "Fonctionnalites",
+    "subtitle": "Tout ce qu'il faut pour gerer vos serveurs, dans une seule app macOS native.",
+    "exploreFeature": "Explorer {feature}"
+  },
+  "featurePages": {
+    "backToFeatures": "Voir toutes les fonctionnalites",
+    "tryFeature": "Essayer {feature} gratuitement",
+    "downloadCta": "Telecharger SSHive",
+    "ssh": {
+      "metaTitle": "Terminal SSH pour macOS — Accelere GPU",
+      "metaDescription": "Le terminal SSH de SSHive offre un rendu accelere GPU, le support des jump hosts et la reconnexion automatique. Gratuit pour macOS.",
+      "bullets": [
+        "Rendu accelere GPU avec xterm.js WebGL pour un defilement fluide meme avec un volume de sortie massif",
+        "Authentification par mot de passe, cle privee et agent SSH",
+        "Support Jump Host (ProxyJump) pour les connexions multi-sauts via des serveurs bastion",
+        "Reconnexion automatique en cas de coupure inattendue"
+      ]
+    },
+    "sftp": {
+      "metaTitle": "Gestionnaire SFTP pour macOS — Glisser-Deposer",
+      "metaDescription": "Le gestionnaire SFTP de SSHive propose le glisser-deposer, un editeur distant integre et les operations groupees. Gratuit pour macOS.",
+      "bullets": [
+        "Navigateur de fichiers double-panneau avec fil d'Ariane et signets de repertoires",
+        "Upload par glisser-deposer depuis le Finder avec progression en temps reel",
+        "Editeur de fichiers distant integre — double-clic pour editer, Cmd+S pour sauvegarder",
+        "Operations groupees : selection multiple pour telecharger, supprimer ou chmod"
+      ]
+    },
+    "rdp": {
+      "metaTitle": "Bureau a distance RDP pour macOS — Client Embarque",
+      "metaDescription": "Le client RDP embarque de SSHive est propulse par IronRDP (Rust) avec streaming WebSocket JPEG. Pas d'app externe. Gratuit pour macOS.",
+      "bullets": [
+        "Client embarque propulse par IronRDP (Rust) — aucune application externe requise",
+        "Streaming WebSocket JPEG pour une experience bureau a distance reactive",
+        "Support complet du clavier et de la souris, y compris le collage Cmd+V",
+        "Support multi-resolution s'adaptant a votre ecran"
+      ]
+    },
+    "vnc": {
+      "metaTitle": "Visionneuse VNC pour macOS — Client Integre",
+      "metaDescription": "La visionneuse VNC integree de SSHive utilise noVNC avec le protocole RFB complet. Pas de relais separe. Gratuit pour macOS.",
+      "bullets": [
+        "Visionneuse VNC integree via noVNC avec support complet du protocole RFB",
+        "Proxy WebSocket dans l'app — aucun relais VNC separe necessaire",
+        "Integration souris, clavier et presse-papiers",
+        "Compatible avec tout serveur VNC (TightVNC, RealVNC, etc.)"
+      ]
+    },
+    "tunnels": {
+      "metaTitle": "Tunnels SSH pour macOS — Redirection de ports et SOCKS5",
+      "metaDescription": "SSHive supporte la redirection locale (-L), distante (-R) et le proxy dynamique SOCKS5 (-D) avec support IPv4/IPv6 complet. Gratuit pour macOS.",
+      "bullets": [
+        "Redirection locale (-L) : Accedez aux services distants comme s'ils etaient locaux",
+        "Redirection distante (-R) : Exposez des services locaux au reseau distant",
+        "Proxy dynamique SOCKS5 (-D) : Routage complet IPv4, IPv6 et noms de domaine",
+        "Jusqu'a 10 tunnels locaux + 5 distants par profil de connexion"
+      ]
+    },
+    "mcp": {
+      "metaTitle": "Integration IA MCP pour macOS — Claude et Cursor",
+      "metaDescription": "Le serveur MCP integre de SSHive configure automatiquement Claude Code, Cursor et Claude Desktop pour acceder a vos sessions SSH/SFTP. Gratuit pour macOS.",
+      "bullets": [
+        "Serveur MCP integre pour l'integration avec les assistants IA",
+        "Configuration automatique de Claude Code, Cursor et Claude Desktop",
+        "5 outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file",
+        "Authentification par token Bearer avec generation automatique"
+      ]
+    },
+    "broadcast": {
+      "metaTitle": "Mode Broadcast pour macOS — Commandes Multi-Serveurs",
+      "metaDescription": "Le mode broadcast de SSHive envoie des commandes simultanement a toutes les sessions SSH connectees. Parfait pour la gestion de flotte. Gratuit pour macOS.",
+      "bullets": [
+        "Envoyez des commandes simultanement a toutes les sessions SSH connectees",
+        "Activez avec le raccourci clavier Cmd+Shift+B",
+        "Notification toast indiquant le nombre de sessions atteintes",
+        "Parfait pour la gestion de flotte et l'administration multi-serveurs"
+      ]
+    },
+    "snippets": {
+      "metaTitle": "Commandes Rapides pour macOS — Bibliotheque de Snippets",
+      "metaDescription": "SSHive inclut 14 commandes rapides pour le systeme, reseau, disque, Docker et Git, plus la creation de snippets personnalises. Gratuit pour macOS.",
+      "bullets": [
+        "14 commandes rapides integrees pour le systeme, reseau, disque, Docker et Git",
+        "Creez, modifiez et supprimez des snippets personnalises",
+        "Bibliotheque consultable avec filtrage par categorie",
+        "Insertion en un clic dans le terminal actif"
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous cherchez n'existe pas ou a ete deplacee.",
+    "backHome": "Retour a l'accueil"
+  }
+}

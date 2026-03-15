@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, Monaco, monospace;
+  --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark theme (default) */
+:root {
+  --background: #1a1b26;
+  --foreground: #c0caf5;
+  --card: #1f2233;
+  --card-foreground: #c0caf5;
+  --primary: #7aa2f7;
+  --primary-foreground: #1a1b26;
+  --secondary: #232a3e;
+  --secondary-foreground: #c0caf5;
+  --muted: #232a3e;
+  --muted-foreground: #565f89;
+  --accent: #2ac3de;
+  --accent-foreground: #1a1b26;
+  --border: #2a2e42;
+  --ring: #7aa2f7;
+}
+
+/* Light theme */
+.light {
+  --background: #ffffff;
+  --foreground: #1a1b26;
+  --card: #f8f9fa;
+  --card-foreground: #1a1b26;
+  --primary: #3b6fdb;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f3f5;
+  --secondary-foreground: #1a1b26;
+  --muted: #f1f3f5;
+  --muted-foreground: #6b7280;
+  --accent: #1a9fb8;
+  --accent-foreground: #ffffff;
+  --border: #e5e7eb;
+  --ring: #3b6fdb;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
+
+/* Smooth scrolling for anchor links */
+html { scroll-behavior: smooth; }

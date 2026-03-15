@@ -1,0 +1,439 @@
+{
+  "metadata": {
+    "title": "SSHive — SSH/SFTP/RDP Client for macOS | Free & Pro",
+    "description": "SSHive is a SSH, SFTP, RDP & VNC client for macOS. All-in-one terminal inspired by MobaXterm. Download free or get Pro on the App Store."
+  },
+  "nav": {
+    "features": "Features",
+    "compare": "Compare",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "docs": "Docs",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "The SSH Client macOS Deserves",
+    "subtitle": "SSH, SFTP, RDP & VNC — all in one app. Free to start, Pro for $9.99.",
+    "downloadCta": "Download Free for macOS",
+    "featuresCta": "See features",
+    "version": "Version {version} — macOS 13+",
+    "universalBinary": "Universal Binary (Apple Silicon + Intel)"
+  },
+  "socialProof": {
+    "appStore": "Available on Mac App Store",
+    "keychainSecurity": "macOS Keychain Security",
+    "noTelemetry": "No Telemetry"
+  },
+  "features": {
+    "title": "Everything you need to manage remote servers",
+    "subtitle": "One app. All protocols. Zero switching.",
+    "ssh": {
+      "title": "SSH Terminal",
+      "description": "GPU-accelerated terminal with xterm.js WebGL. Password, key, and agent authentication. Jump hosts, agent forwarding, and automatic reconnection.",
+      "shortDesc": "GPU-accelerated terminal"
+    },
+    "sftp": {
+      "title": "SFTP File Manager",
+      "description": "Dual-pane file browser with drag & drop uploads from Finder. Remote file editor, bulk operations, transfer progress with speed indicator.",
+      "shortDesc": "Drag & drop file manager"
+    },
+    "rdp": {
+      "title": "Remote Desktop (RDP)",
+      "description": "Embedded RDP client powered by IronRDP (Rust). Full keyboard, mouse, and clipboard support. No external window — everything stays in SSHive.",
+      "shortDesc": "Embedded remote desktop"
+    },
+    "vnc": {
+      "title": "VNC Viewer",
+      "description": "Built-in VNC client via noVNC. WebSocket proxy integration with full RFB protocol support. Mouse, keyboard, and clipboard.",
+      "shortDesc": "Built-in VNC viewer"
+    },
+    "tunnels": {
+      "title": "SSH Tunnels",
+      "description": "Local forwarding (-L), remote forwarding (-R), and SOCKS5 proxy (-D) with full IPv4/IPv6/domain support. Up to 10 local + 5 remote tunnels per profile.",
+      "shortDesc": "Local, remote & SOCKS5 proxy"
+    },
+    "mcp": {
+      "title": "AI Integration (MCP)",
+      "description": "Built-in MCP server lets Claude Code, Cursor, and Claude Desktop access your SSH/SFTP sessions. Auto-configures AI clients on your machine.",
+      "shortDesc": "Claude & Cursor integration"
+    },
+    "broadcast": {
+      "title": "Broadcast Mode",
+      "description": "Execute the same command on all connected SSH sessions simultaneously. Perfect for multi-server administration and fleet management.",
+      "shortDesc": "Multi-server command execution"
+    },
+    "snippets": {
+      "title": "Quick Commands",
+      "description": "Library of reusable commands with 14 presets for system, network, disk, Docker, and Git operations. Create your own custom snippets.",
+      "shortDesc": "Reusable command library"
+    },
+    "learnMore": "Learn more",
+    "allFeatures": "See all features"
+  },
+  "whySSHive": {
+    "title": "Why SSHive?",
+    "native": {
+      "title": "Native macOS",
+      "description": "Built for macOS with Keychain integration, native notifications, and system theme support. Not a Linux port."
+    },
+    "allInOne": {
+      "title": "All-in-One",
+      "description": "SSH, SFTP, RDP, VNC, tunnels, and tools — one app instead of five. Stop switching between windows."
+    },
+    "secure": {
+      "title": "Secure & Private",
+      "description": "macOS Keychain encryption, no telemetry, no ads. Your credentials and data never leave your machine."
+    }
+  },
+  "comparison": {
+    "title": "How SSHive compares",
+    "feature": "Feature",
+    "free": "Free",
+    "pro": "Pro",
+    "sshTerminal": "SSH Terminal",
+    "sftpManager": "SFTP File Manager",
+    "rdpClient": "RDP Client",
+    "vncClient": "VNC Client",
+    "sshTunnels": "SSH Tunnels",
+    "broadcastMode": "Broadcast Mode",
+    "mcpIntegration": "MCP / AI Integration",
+    "nativeMacOS": "Native macOS",
+    "keychainIntegration": "Keychain Integration",
+    "macAppStore": "Mac App Store",
+    "yes": "Yes",
+    "no": "No",
+    "partial": "Partial",
+    "limited": "Limited",
+    "unlimited": "Unlimited",
+    "price": "Price",
+    "seeFullComparison": "See full comparison",
+    "switchToSSHive": "Switch to SSHive — Free"
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Start free. Upgrade when you need more.",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "forever",
+      "cta": "Download Free",
+      "features": [
+        "2 SSH sessions",
+        "5 saved profiles",
+        "Basic SFTP file manager",
+        "14 built-in quick commands",
+        "Dark theme",
+        "macOS Keychain security"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "$9.99",
+      "period": "one-time purchase",
+      "cta": "Coming Soon",
+      "badge": "Coming Soon",
+      "features": [
+        "Unlimited SSH sessions",
+        "Unlimited profiles & folders",
+        "RDP remote desktop",
+        "VNC viewer",
+        "SSH tunnels (L/R/D)",
+        "SOCKS5 proxy",
+        "Broadcast mode",
+        "MCP / AI integration",
+        "Jump host support",
+        "Export/import profiles",
+        "Custom snippets",
+        "All themes",
+        "Priority updates"
+      ]
+    },
+    "noSubscription": "One-time purchase. No subscription. Yours forever.",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is SSHive really free?",
+      "a1": "Yes. The free version includes SSH terminal, SFTP file manager, 2 concurrent sessions, and 5 saved profiles. No account, no trial, no time limit.",
+      "q2": "What do I get with Pro?",
+      "a2": "Pro unlocks unlimited sessions, unlimited profiles, RDP, VNC, SSH tunnels, broadcast mode, MCP/AI integration, jump hosts, and all themes. It's a one-time purchase on the Mac App Store.",
+      "q3": "Can I upgrade later?",
+      "a3": "Absolutely. Start with the free version and upgrade to Pro anytime from the Mac App Store. Your profiles and settings carry over seamlessly.",
+      "q4": "Is there a subscription?",
+      "a4": "No. SSHive Pro is a one-time purchase of $9.99. You pay once and own it forever. No recurring fees.",
+      "q5": "Do I need an account?",
+      "a5": "No. SSHive works completely offline with no account required. Your data stays on your machine, secured by the macOS Keychain."
+    }
+  },
+  "download": {
+    "title": "Download SSHive",
+    "subtitle": "Free to start. macOS 13+.",
+    "dmgButton": "Download SSHive {version}",
+    "dmgSubtitle": "macOS — Universal Binary (Apple Silicon + Intel)",
+    "or": "or",
+    "appStoreAlt": "Mac App Store",
+    "brewCommand": "brew install --cask sshive",
+    "brewCopy": "Copy",
+    "brewCopied": "Copied!",
+    "noAccount": "No account needed",
+    "noAds": "No ads, no tracking in the app",
+    "keychainSecurity": "Secure — macOS Keychain encryption",
+    "upgradeLater": "Upgrade to Pro anytime ($9.99, one-time)",
+    "emailTitle": "Get notified of new releases",
+    "emailPlaceholder": "your@email.com",
+    "emailSubscribe": "Subscribe",
+    "systemReq": "System Requirements",
+    "systemReqDetails": "macOS 13 Ventura or later. Apple Silicon (M1/M2/M3/M4) and Intel x64 supported."
+  },
+  "footer": {
+    "product": "Product",
+    "resources": "Resources",
+    "comparisons": "Compare",
+    "community": "Community",
+    "about": "About",
+    "contact": "Contact",
+    "changelog": "Changelog",
+    "twitter": "Twitter",
+    "mastodon": "Mastodon",
+    "support": "Support",
+    "madeBy": "Made with love by NetMeSafe",
+    "license": "Made in France",
+    "privacy": "Privacy"
+  },
+  "comparePage": {
+    "title": "SSHive vs {competitor}",
+    "description": "See how SSHive compares to {competitor} for SSH, SFTP, and remote desktop on macOS.",
+    "verdict": "The verdict",
+    "tryFree": "Try SSHive Free",
+    "downloadFree": "Download SSHive Free",
+    "overviewTitle": "How SSHive Compares",
+    "overviewSubtitle": "See how SSHive stacks up against every major SSH client. One app to replace them all.",
+    "overviewMetaTitle": "SSHive vs Competitors — Best SSH Client for macOS 2026",
+    "overviewMetaDescription": "Compare SSHive to MobaXterm, iTerm2, Termius, PuTTY, Royal TSX, SecureCRT, and Tabby. Feature-by-feature comparison table for macOS SSH clients.",
+    "viewComparison": "View full comparison",
+    "featureByFeature": "Feature-by-feature comparison",
+    "whySwitch": "Why switch to SSHive?",
+    "whySwitchReasons": {
+      "allInOne": "All-in-one: SSH, SFTP, RDP, VNC, tunnels, and AI in a single app",
+      "securePrivate": "Secure & private — macOS Keychain encryption, no telemetry, data stays on your machine",
+      "nativeMac": "Native macOS app with Keychain integration and Apple Silicon support",
+      "oneTimePrice": "One-time $9.99 Pro upgrade, no recurring subscription",
+      "aiIntegration": "Built-in MCP server for Claude Code, Cursor, and Claude Desktop",
+      "appStore": "Available on the Mac App Store for easy install and updates"
+    },
+    "keychainIntegration": "Keychain Integration",
+    "connectionProfiles": "Connection Profiles",
+    "modernUI": "Modern UI",
+    "metaTitleTemplate": "SSHive vs {competitor} — Best SSH Client for macOS 2026",
+    "introTitle": "SSHive vs {competitor}: which is the better SSH client for macOS?",
+    "detailedIntro": {
+      "mobaxterm": "MobaXterm has been the gold standard all-in-one terminal on Windows for years. With X11 forwarding, embedded SFTP, and RDP support, it set the bar for what a remote management tool should be. SSHive brings this same philosophy to macOS — but with native Keychain security, and modern AI capabilities that MobaXterm does not offer. If you have been searching for a MobaXterm equivalent on Mac, SSHive is built specifically for you. Unlike MobaXterm, which only runs on Windows (or via Wine, with limited success), SSHive is a native macOS application built with Electron and React, optimized for Apple Silicon, and available on the Mac App Store.",
+      "iterm2": "iTerm2 has earned its reputation as the best terminal emulator for macOS, and rightfully so. It offers split panes, profiles, advanced search, and incredible customization. However, iTerm2 is purely a terminal emulator — it does not include built-in SFTP file management, RDP, VNC, SSH tunnel management, or connection profiles. SSHive respects what iTerm2 does well while filling the gaps that server administrators and DevOps engineers need. If your workflow involves more than just typing commands in a shell, SSHive consolidates everything into one window.",
+      "terminus": "Tabby (formerly Terminus) is a modern, cross-platform terminal built with web technologies. It offers a polished UI, plugin system, and basic SSH features. However, its cross-platform focus means it lacks the deep macOS integration that SSHive provides. SSHive includes full SFTP file management, embedded RDP and VNC clients, SSH tunnel configuration, and AI integration — features that Tabby either lacks entirely or only partially supports through plugins. For macOS users who want a complete remote management experience, SSHive offers significantly more out of the box.",
+      "putty": "PuTTY is one of the oldest and most recognized SSH clients in the world. Originally built for Windows, it has been ported to macOS, but the experience is far from native. PuTTY lacks SFTP, RDP, VNC, modern theming, and connection profile management. SSHive takes everything that made PuTTY beloved — simplicity and reliability — and wraps it in a modern, native macOS experience with all the protocols and tools a system administrator needs in 2026.",
+      "termius": "Termius is a polished, cross-platform SSH client known for its beautiful UI and sync capabilities. However, its free tier is limited, and advanced features like SSH tunnels require a $10/month subscription. SSHive offers comparable features — SSH, SFTP, connection profiles, Keychain security — with a one-time $9.99 Pro upgrade for unlimited sessions, RDP, VNC, broadcast mode, and AI integration. For macOS users who want professional SSH tooling without recurring costs, SSHive is the clear choice.",
+      "royal-tsx": "Royal TSX is a well-established remote management tool for macOS. It supports SSH, RDP, VNC, and SFTP through a plugin architecture. However, Royal TSX costs $29 for a single license and does not include AI integration. SSHive provides all the same protocols in a single, unified app that costs a fraction of the price and includes modern features like MCP-based AI integration for Claude Code and Cursor.",
+      "securecrt": "SecureCRT by VanDyke Software has been the enterprise-grade SSH client of choice for decades. It offers advanced scripting, session management, and protocol support. However, at $119 per license, it is priced for enterprise budgets. SSHive provides comparable SSH and SFTP functionality, adds RDP, VNC, broadcast mode, and AI integration, and costs either nothing (free tier) or $9.99 for the Pro upgrade. For individual developers, sysadmins, and small teams, SSHive delivers enterprise-quality features at an accessible price point."
+    }
+  },
+  "about": {
+    "title": "About SSHive",
+    "metaDescription": "Learn about SSHive, the SSH/SFTP/RDP client for macOS built by Lucas Russo. Inspired by MobaXterm.",
+    "description": "SSHive is built by Lucas Russo, a developer passionate about building great tools for macOS. Inspired by MobaXterm, SSHive brings the same all-in-one experience to Mac users — with a native feel, Keychain security, and modern AI integrations.",
+    "storyTitle": "The story",
+    "storyText": "As a developer and sysadmin who switched from Windows to macOS, I missed the all-in-one experience that MobaXterm provided. I found myself juggling between Terminal, Cyberduck, Microsoft Remote Desktop, and various other tools. SSHive was born from that frustration — a single app that combines SSH, SFTP, RDP, and VNC with a native macOS feel. Built with Electron, React, and TypeScript, SSHive is crafted with care for security and performance.",
+    "techTitle": "Tech stack",
+    "techItems": [
+      "Electron 33 — Native macOS integration with Keychain, notifications, and system theme",
+      "React + TypeScript — Type-safe UI with Zustand state management",
+      "Tailwind CSS — Responsive design with dark and light themes",
+      "xterm.js (WebGL) — GPU-accelerated terminal rendering",
+      "ssh2 — Full SSH/SFTP protocol implementation in JavaScript",
+      "IronRDP (Rust) — Embedded RDP client via agent-rdp",
+      "noVNC — Built-in VNC viewer with WebSocket proxy",
+      "Zod — Runtime validation for all IPC communication"
+    ],
+    "downloadCta": "Download SSHive",
+    "contactCta": "Get in touch"
+  },
+  "contact": {
+    "title": "Contact",
+    "metaDescription": "Get in touch with the SSHive team. Report bugs, request features, or say hello.",
+    "subtitle": "Have a question, found a bug, or want to suggest a feature? Here is how to reach us.",
+    "emailTitle": "Email",
+    "emailDescription": "For general inquiries, partnerships, or anything else.",
+    "twitterTitle": "Twitter",
+    "twitterDescription": "Follow us for updates, tips, and announcements.",
+    "twitterHandle": "@sshiveapp",
+    "supportTitle": "Support",
+    "supportDescription": "Bug reports, feature requests, and technical questions."
+  },
+  "changelog": {
+    "title": "Changelog",
+    "metaDescription": "SSHive release history. See what's new in each version of the SSH/SFTP/RDP client for macOS.",
+    "subtitle": "All notable changes to SSHive are documented here.",
+    "v100": {
+      "version": "1.0.0",
+      "date": "March 2026",
+      "title": "Initial Release",
+      "features": [
+        "Initial release of SSHive for macOS",
+        "SSH terminal with GPU-accelerated rendering (xterm.js WebGL)",
+        "SFTP dual-pane file manager with drag & drop and remote editor",
+        "RDP embedded client powered by IronRDP (Rust)",
+        "VNC embedded client powered by noVNC",
+        "SSH tunnels: Local forwarding (-L), Remote forwarding (-R), SOCKS5 proxy (-D)",
+        "Broadcast mode — send commands to all sessions simultaneously",
+        "MCP server for AI integration (Claude Code, Cursor, Claude Desktop)",
+        "Command snippets library with 14 built-in presets",
+        "Network tools: DNS lookup, Ping, Traceroute, Whois",
+        "Dark and Light theme support",
+        "French and English localization",
+        "Mac App Store support with freemium model"
+      ]
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "metaDescription": "Articles about SSH, macOS tools, server administration, and SSHive updates.",
+    "subtitle": "Articles about SSH, macOS tools, and server administration.",
+    "comingSoonTitle": "Coming soon",
+    "comingSoonText": "We're preparing articles about SSH best practices, macOS tools, and server administration tips. Stay tuned!",
+    "subscribeTitle": "Get notified when we publish",
+    "subscribePlaceholder": "your@email.com",
+    "subscribeButton": "Subscribe"
+  },
+  "docs": {
+    "title": "Documentation",
+    "metaDescription": "SSHive documentation and frequently asked questions. Learn how to install, configure, and use SSHive on macOS.",
+    "subtitle": "Frequently asked questions about SSHive.",
+    "faq": {
+      "q1": "How do I install SSHive?",
+      "a1": "You can download the DMG directly from sshive.app, install it via Homebrew with `brew install --cask sshive`, or get it from the Mac App Store. SSHive supports macOS 13 Ventura and later.",
+      "q2": "Is SSHive free?",
+      "a2": "Yes. The free version includes SSH terminal, SFTP file manager, 2 concurrent sessions, and 5 saved profiles. You can optionally upgrade to Pro ($9.99, one-time) for unlimited sessions, RDP, VNC, tunnels, and more.",
+      "q3": "Does SSHive work on Intel Macs?",
+      "a3": "Yes. SSHive is distributed as a Universal Binary that runs natively on both Apple Silicon (M1/M2/M3/M4) and Intel x64 Macs.",
+      "q4": "How do I import my SSH config?",
+      "a4": "Go to the connection dialog, click the import button, and select \"Import from ~/.ssh/config\". SSHive will parse your SSH config file and create profiles for each host entry.",
+      "q5": "Is my data secure?",
+      "a5": "Yes. Passwords and private key passphrases are encrypted using the macOS Keychain via Electron's safeStorage API. SSHive has no telemetry, no analytics, and no network calls besides your SSH/SFTP/RDP/VNC connections. All data stays on your machine.",
+      "q6": "How do SSH tunnels work in SSHive?",
+      "a6": "You can configure Local (-L), Remote (-R), and SOCKS5 (-D) tunnels per connection profile. Tunnels start automatically when the SSH connection is established. You can set up to 10 local and 5 remote tunnels per profile.",
+      "q7": "Can I use SSHive with Claude or Cursor?",
+      "a7": "Yes. SSHive includes a built-in MCP (Model Context Protocol) server that auto-configures Claude Code, Cursor, and Claude Desktop. AI assistants can list sessions, execute commands, and browse files on your remote servers.",
+      "q8": "Where are my profiles stored?",
+      "a8": "Profiles are stored in ~/Library/Application Support/SSHive/profiles.json. Credentials are stored separately in credentials.json, encrypted via the macOS Keychain. You can export and import profiles using the built-in export feature."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "metaDescription": "SSHive privacy policy. No personal data collected, no analytics in the app, credentials stored locally via macOS Keychain.",
+    "subtitle": "Your privacy matters. Here is how SSHive handles your data.",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": {
+      "noDataTitle": "No personal data collected",
+      "noDataText": "SSHive does not collect, transmit, or store any personal data. The app works entirely offline — the only network connections are the ones you initiate (SSH, SFTP, RDP, VNC).",
+      "noAnalyticsTitle": "No analytics in the app",
+      "noAnalyticsText": "The SSHive desktop application contains zero analytics, telemetry, or tracking code. This website (sshive.app) uses PostHog for anonymous usage statistics to understand page visits. No personal information is collected.",
+      "noCookiesTitle": "No cookies",
+      "noCookiesText": "This website does not use cookies. PostHog uses localStorage for anonymous session tracking. The SSHive desktop app does not use cookies or any web tracking mechanism.",
+      "keychainTitle": "Credentials stored locally",
+      "keychainText": "All passwords and sensitive credentials are encrypted using the macOS Keychain via Electron's safeStorage API. They never leave your machine and are protected by your macOS login password."
+    },
+    "contactNote": "Questions about our privacy practices? Contact us at hello@sshive.app."
+  },
+  "featuresPage": {
+    "title": "Features",
+    "subtitle": "Everything you need to manage remote servers, in one native macOS app.",
+    "exploreFeature": "Explore {feature}"
+  },
+  "featurePages": {
+    "backToFeatures": "See all features",
+    "tryFeature": "Try {feature} Free",
+    "downloadCta": "Download SSHive",
+    "ssh": {
+      "metaTitle": "SSH Terminal for macOS — GPU Accelerated",
+      "metaDescription": "SSHive's SSH terminal features GPU-accelerated rendering, jump host support, and automatic reconnection. Free for macOS.",
+      "bullets": [
+        "GPU-accelerated rendering with xterm.js WebGL for smooth scrolling even with massive output",
+        "Password, private key, and SSH agent authentication methods",
+        "Jump Host (ProxyJump) support for multi-hop connections through bastion servers",
+        "Automatic reconnection when connections drop unexpectedly"
+      ]
+    },
+    "sftp": {
+      "metaTitle": "SFTP File Manager for macOS — Drag & Drop",
+      "metaDescription": "SSHive's SFTP file manager features drag & drop uploads, a built-in remote editor, and bulk file operations. Free for macOS.",
+      "bullets": [
+        "Dual-pane file browser with breadcrumb navigation and directory bookmarks",
+        "Drag & drop upload directly from Finder with real-time transfer progress",
+        "Built-in remote file editor — double-click to edit, Cmd+S to save back to server",
+        "Bulk operations: select multiple files for download, delete, or chmod"
+      ]
+    },
+    "rdp": {
+      "metaTitle": "RDP Remote Desktop for macOS — Embedded Client",
+      "metaDescription": "SSHive's embedded RDP client is powered by IronRDP (Rust) with WebSocket JPEG streaming. No external app needed. Free for macOS.",
+      "bullets": [
+        "Embedded client powered by IronRDP (Rust) — no external app needed",
+        "WebSocket JPEG streaming for responsive remote desktop experience",
+        "Full keyboard and mouse support including Cmd+V paste",
+        "Multi-resolution support adapting to your display"
+      ]
+    },
+    "vnc": {
+      "metaTitle": "VNC Viewer for macOS — Built-in Client",
+      "metaDescription": "SSHive's built-in VNC viewer uses noVNC with full RFB protocol support. No separate relay needed. Free for macOS.",
+      "bullets": [
+        "Built-in VNC viewer via noVNC with full RFB protocol support",
+        "WebSocket proxy in the app — no separate VNC relay needed",
+        "Mouse, keyboard, and clipboard integration",
+        "Works with any VNC server (TightVNC, RealVNC, etc.)"
+      ]
+    },
+    "tunnels": {
+      "metaTitle": "SSH Tunnels for macOS — Port Forwarding & SOCKS5",
+      "metaDescription": "SSHive supports local forwarding (-L), remote forwarding (-R), and SOCKS5 dynamic proxy (-D) with full IPv4/IPv6 support. Free for macOS.",
+      "bullets": [
+        "Local forwarding (-L): Access remote services as if they were local",
+        "Remote forwarding (-R): Expose local services to the remote network",
+        "SOCKS5 dynamic proxy (-D): Full IPv4, IPv6, and domain name routing",
+        "Up to 10 local + 5 remote tunnels per connection profile"
+      ]
+    },
+    "mcp": {
+      "metaTitle": "MCP AI Integration for macOS — Claude & Cursor",
+      "metaDescription": "SSHive's built-in MCP server auto-configures Claude Code, Cursor, and Claude Desktop to access your SSH/SFTP sessions. Free for macOS.",
+      "bullets": [
+        "Built-in MCP server for AI assistant integration",
+        "Auto-configures Claude Code, Cursor, and Claude Desktop",
+        "5 tools: ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file",
+        "Bearer token authentication with auto-generated tokens"
+      ]
+    },
+    "broadcast": {
+      "metaTitle": "Broadcast Mode for macOS — Multi-Server Commands",
+      "metaDescription": "SSHive's broadcast mode sends commands simultaneously to all connected SSH sessions. Perfect for fleet management. Free for macOS.",
+      "bullets": [
+        "Send commands simultaneously to all connected SSH sessions",
+        "Toggle with Cmd+Shift+B keyboard shortcut",
+        "Toast confirmation showing number of sessions reached",
+        "Perfect for fleet management and multi-server administration"
+      ]
+    },
+    "snippets": {
+      "metaTitle": "Quick Commands for macOS — Snippet Library",
+      "metaDescription": "SSHive includes 14 built-in quick commands for system, network, disk, Docker, and Git, plus custom snippet creation. Free for macOS.",
+      "bullets": [
+        "14 built-in quick commands for system, network, disk, Docker, and Git",
+        "Create, edit, and delete custom snippets",
+        "Searchable library with category filtering",
+        "One-click insertion into the active terminal"
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to homepage"
+  }
+}
