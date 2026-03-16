@@ -3,51 +3,76 @@ import { Link } from '@/i18n/navigation';
 import { Download } from 'lucide-react';
 import { APP_VERSION, BREW_COMMAND } from '@/lib/constants';
 import { CopyButton } from '@/components/ui/CopyButton';
+import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
 export function DownloadCTA() {
   const t = useTranslations('download');
 
   return (
-    <section
-      className="py-20 md:py-28"
-      style={{ background: 'linear-gradient(135deg, #1a1b26, #24283b)' }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative py-14 md:py-20 overflow-hidden">
+      {/* Ambient glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse,rgba(122,162,247,0.08)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-[30%] w-[500px] h-[300px] bg-[radial-gradient(circle,rgba(42,195,222,0.05)_0%,transparent_70%)] pointer-events-none" />
+
+      {/* Separator */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Headline */}
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          {t('title')}
-        </h2>
-        <p className="text-lg text-muted-foreground mb-12">
-          {t('subtitle')}
-        </p>
+        <ScrollReveal>
+          <h2
+            className="text-3xl md:text-5xl font-bold text-foreground mb-4 tracking-tight"
+            style={{ fontFamily: 'var(--font-space-grotesk)' }}
+          >
+            {t('title')}
+          </h2>
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
+          <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+            {t('subtitle')}
+          </p>
+        </ScrollReveal>
 
         {/* Download options */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
-          {/* DMG download */}
-          <Link
-            href="/download"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity text-base"
-          >
-            <Download className="w-5 h-5" />
-            {t('dmgButton', { version: APP_VERSION })}
-          </Link>
-        </div>
+        <ScrollReveal delay={200}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
+            <Link
+              href="/download"
+              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(122,162,247,0.35)] hover:-translate-y-px text-base"
+            >
+              <Download className="w-5 h-5 transition-transform group-hover:-translate-y-px" />
+              {t('dmgButton', { version: APP_VERSION })}
+            </Link>
+          </div>
+        </ScrollReveal>
 
         {/* Homebrew command */}
-        <div className="inline-flex items-center gap-2 bg-secondary/50 border border-border rounded-lg px-4 py-2.5 font-mono text-sm text-foreground">
-          <span className="text-muted-foreground select-none">$</span>
-          <code className="select-all">{BREW_COMMAND}</code>
-          <CopyButton text={BREW_COMMAND} />
-        </div>
+        <ScrollReveal delay={300}>
+          <div className="inline-flex items-center gap-3 glass-card rounded-xl px-5 py-3 font-mono text-sm text-foreground">
+            <span className="text-primary select-none">$</span>
+            <code className="select-all">{BREW_COMMAND}</code>
+            <CopyButton text={BREW_COMMAND} />
+          </div>
+        </ScrollReveal>
 
         {/* Trust signals */}
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
-          <span>{t('noAccount')}</span>
-          <span className="hidden sm:inline" aria-hidden="true">|</span>
-          <span>{t('noAds')}</span>
-          <span className="hidden sm:inline" aria-hidden="true">|</span>
-          <span>{t('keychainSecurity')}</span>
-        </div>
+        <ScrollReveal delay={400}>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-success" />
+              {t('noAccount')}
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-success" />
+              {t('noAds')}
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-success" />
+              {t('keychainSecurity')}
+            </span>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

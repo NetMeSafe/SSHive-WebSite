@@ -6,65 +6,74 @@ export function Footer() {
   const nav = useTranslations('nav');
 
   return (
-    <footer className="bg-card border-t border-border mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="relative border-t border-white/[0.04] mt-auto">
+      {/* Subtle glow at top */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* Product */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">{t('product')}</h3>
-            <ul className="space-y-2">
-              <li><Link href="/features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{nav('features')}</Link></li>
-              <li><Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{nav('pricing')}</Link></li>
-              <li><Link href="/download" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{nav('download')}</Link></li>
-              <li><Link href="/changelog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('changelog')}</Link></li>
+            <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('product')}</h3>
+            <ul className="space-y-3">
+              <li><Link href="/features" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('features')}</Link></li>
+              <li><Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('pricing')}</Link></li>
+              <li><Link href="/download" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('download')}</Link></li>
+              <li><Link href="/changelog" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('changelog')}</Link></li>
             </ul>
           </div>
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">{t('resources')}</h3>
-            <ul className="space-y-2">
-              <li><Link href="/docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{nav('docs')}</Link></li>
-              <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{nav('blog')}</Link></li>
-              <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('about')}</Link></li>
-              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('contact')}</Link></li>
+            <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('resources')}</h3>
+            <ul className="space-y-3">
+              <li><Link href="/docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('docs')}</Link></li>
+              <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('blog')}</Link></li>
+              <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('about')}</Link></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('contact')}</Link></li>
             </ul>
           </div>
           {/* Compare */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">{t('comparisons')}</h3>
-            <ul className="space-y-2">
-              <li><Link href="/compare/mobaxterm" className="text-sm text-muted-foreground hover:text-foreground transition-colors">vs MobaXterm</Link></li>
-              <li><Link href="/compare/iterm2" className="text-sm text-muted-foreground hover:text-foreground transition-colors">vs iTerm2</Link></li>
-              <li><Link href="/compare/termius" className="text-sm text-muted-foreground hover:text-foreground transition-colors">vs Termius</Link></li>
-              <li><Link href="/compare/putty" className="text-sm text-muted-foreground hover:text-foreground transition-colors">vs PuTTY</Link></li>
+            <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('comparisons')}</h3>
+            <ul className="space-y-3">
+              <li><Link href="/compare/mobaxterm" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs MobaXterm</Link></li>
+              <li><Link href="/compare/iterm2" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs iTerm2</Link></li>
+              <li><Link href="/compare/termius" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs Termius</Link></li>
+              <li><Link href="/compare/putty" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs PuTTY</Link></li>
             </ul>
           </div>
           {/* Community */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">{t('community')}</h3>
-            <ul className="space-y-2">
-              <li><a href="https://twitter.com/sshiveapp" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('twitter')}</a></li>
-              <li><a href="https://fosstodon.org/@sshive" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('mastodon')}</a></li>
-              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('support')}</Link></li>
+            <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('community')}</h3>
+            <ul className="space-y-3">
+              <li><a href="https://twitter.com/sshiveapp" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('twitter')}</a></li>
+              <li><a href="https://fosstodon.org/@sshive" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('mastodon')}</a></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('support')}</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
+            {/* Logo mark */}
+            <svg width="20" height="20" viewBox="0 0 1024 1024" className="rounded opacity-40">
+              <rect width="1024" height="1024" rx="228" fill="#141414" />
+              <path d="M280 340 L480 512 L280 684" stroke="#7aa2f7" strokeWidth="64" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              <line x1="540" y1="684" x2="760" y2="684" stroke="#7aa2f7" strokeWidth="64" strokeLinecap="round" opacity="0.8" />
+            </svg>
             <a
               href="https://netmesafe.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               {t('madeBy')}
             </a>
-            <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-muted-foreground">{t('license')}</span>
+            <span className="text-xs px-2.5 py-1 rounded-full bg-white/[0.04] text-muted-foreground border border-white/[0.04]">{t('license')}</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-xs text-muted-foreground hover:text-foreground transition-colors">{t('privacy')}</Link>
+            <Link href="/privacy" className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-300">{t('privacy')}</Link>
           </div>
         </div>
       </div>

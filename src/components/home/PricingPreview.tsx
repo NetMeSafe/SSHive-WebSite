@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Check } from 'lucide-react';
+import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
 export function PricingPreview() {
   const t = useTranslations('pricing');
@@ -9,97 +10,128 @@ export function PricingPreview() {
   const proFeatures = t.raw('pro.features') as string[];
 
   return (
-    <section className="py-20 md:py-28 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-14 md:py-20">
+      {/* Ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[radial-gradient(circle,rgba(122,162,247,0.04)_0%,transparent_70%)] pointer-events-none" />
+
+      {/* Subtle separator */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            {t('title')}
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t('subtitle')}
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-10">
+            <span className="section-label mb-4 block">Pricing</span>
+            <h2
+              className="text-3xl md:text-5xl font-bold text-foreground tracking-tight"
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
+            >
+              {t('title')}
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {t('subtitle')}
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Free card */}
-          <div className="bg-card border border-border rounded-xl p-8 flex flex-col">
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold text-foreground">
-                {t('free.name')}
-              </h3>
-              <div className="mt-3 flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-foreground">
-                  {t('free.price')}
-                </span>
-                <span className="text-muted-foreground text-sm">
-                  / {t('free.period')}
-                </span>
+          <ScrollReveal>
+            <div className="glass-card rounded-2xl p-8 flex flex-col h-full">
+              <div className="mb-6">
+                <h3
+                  className="text-xl font-semibold text-foreground"
+                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                >
+                  {t('free.name')}
+                </h3>
+                <div className="mt-3 flex items-baseline gap-1">
+                  <span
+                    className="text-4xl font-bold text-foreground"
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                  >
+                    {t('free.price')}
+                  </span>
+                  <span className="text-muted-foreground text-sm">
+                    / {t('free.period')}
+                  </span>
+                </div>
               </div>
+
+              <ul className="space-y-3 mb-8 flex-1">
+                {freeFeatures.map((feature: string, i: number) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
+                    <Check className="w-4 h-4 text-success mt-0.5 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="/download"
+                className="block text-center border border-border/50 text-foreground px-6 py-3 rounded-xl font-medium hover:bg-white/5 hover:border-primary/30 transition-all duration-300"
+              >
+                {t('free.cta')}
+              </Link>
             </div>
-
-            <ul className="space-y-3 mb-8 flex-1">
-              {freeFeatures.map((feature: string, i: number) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-foreground">
-                  <Check className="w-4 h-4 text-success mt-0.5 shrink-0" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              href="/download"
-              className="block text-center border border-border text-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary transition-colors"
-            >
-              {t('free.cta')}
-            </Link>
-          </div>
+          </ScrollReveal>
 
           {/* Pro card */}
-          <div className="bg-card border-2 border-primary rounded-xl p-8 flex flex-col relative">
-            {/* Badge */}
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                {t('pro.badge')}
-              </span>
-            </div>
+          <ScrollReveal delay={100}>
+            <div className="relative rounded-2xl p-8 flex flex-col h-full border border-primary/30 bg-gradient-to-b from-primary/[0.06] to-transparent backdrop-blur-sm">
+              {/* Glow effect behind card */}
+              <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-primary/20 to-transparent opacity-50 blur-sm -z-10" />
 
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold text-foreground">
-                {t('pro.name')}
-              </h3>
-              <div className="mt-3 flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-foreground">
-                  {t('pro.price')}
-                </span>
-                <span className="text-muted-foreground text-sm">
-                  / {t('pro.period')}
+              {/* Badge */}
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-primary text-primary-foreground text-xs font-semibold px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(122,162,247,0.3)]">
+                  {t('pro.badge')}
                 </span>
               </div>
+
+              <div className="mb-6">
+                <h3
+                  className="text-xl font-semibold text-foreground"
+                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                >
+                  {t('pro.name')}
+                </h3>
+                <div className="mt-3 flex items-baseline gap-1">
+                  <span
+                    className="text-4xl font-bold gradient-text"
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                  >
+                    {t('pro.price')}
+                  </span>
+                  <span className="text-muted-foreground text-sm">
+                    / {t('pro.period')}
+                  </span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 mb-8 flex-1">
+                {proFeatures.map((feature: string, i: number) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <span className="block text-center bg-white/5 text-muted-foreground px-6 py-3 rounded-xl font-medium cursor-not-allowed border border-white/5">
+                {t('pro.cta')}
+              </span>
             </div>
-
-            <ul className="space-y-3 mb-8 flex-1">
-              {proFeatures.map((feature: string, i: number) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-foreground">
-                  <Check className="w-4 h-4 text-success mt-0.5 shrink-0" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <span
-              className="block text-center bg-muted text-muted-foreground px-6 py-3 rounded-lg font-medium cursor-not-allowed"
-            >
-              {t('pro.cta')}
-            </span>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* No subscription note */}
-        <p className="mt-10 text-center text-muted-foreground text-sm">
-          {t('noSubscription')}
-        </p>
+        <ScrollReveal delay={200}>
+          <p className="mt-10 text-center text-muted-foreground text-sm">
+            {t('noSubscription')}
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );
