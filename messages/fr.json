@@ -329,19 +329,53 @@
   "privacy": {
     "title": "Politique de confidentialite",
     "metaDescription": "Politique de confidentialite de SSHive. Aucune donnee personnelle collectee, aucune analyse dans l'app, credentials stockes localement via le Trousseau macOS.",
-    "subtitle": "Votre vie privee compte. Voici comment SSHive gere vos donnees.",
-    "lastUpdated": "Derniere mise a jour : mars 2026",
+    "lastUpdated": "Derniere mise a jour : 17 mars 2026",
     "sections": {
-      "noDataTitle": "Aucune donnee personnelle collectee",
-      "noDataText": "SSHive ne collecte, ne transmet et ne stocke aucune donnee personnelle. L'application fonctionne entierement hors ligne — les seules connexions reseau sont celles que vous initiez (SSH, SFTP, RDP, VNC).",
-      "noAnalyticsTitle": "Aucune analyse dans l'application",
-      "noAnalyticsText": "L'application desktop SSHive ne contient aucun code d'analyse, de telemetrie ou de suivi. Ce site web (sshive.app) utilise PostHog pour des statistiques d'utilisation anonymes afin de comprendre les visites. Aucune information personnelle n'est collectee.",
-      "noCookiesTitle": "Pas de cookies",
-      "noCookiesText": "Ce site web n'utilise pas de cookies. PostHog utilise le localStorage pour un suivi de session anonyme. L'application desktop SSHive n'utilise ni cookies ni aucun mecanisme de suivi web.",
-      "keychainTitle": "Credentials stockes localement",
-      "keychainText": "Tous les mots de passe et credentials sensibles sont chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron. Ils ne quittent jamais votre machine et sont proteges par votre mot de passe de session macOS."
-    },
-    "contactNote": "Des questions sur nos pratiques de confidentialite ? Contactez-nous a hello@sshive.app."
+      "intro": {
+        "title": "Introduction",
+        "text": "NetMeSafe (« nous », « notre ») exploite l'application SSHive pour macOS (l'« Application ») et le site web sshive.app (le « Site »). Cette Politique de confidentialite explique comment nous traitons les informations lorsque vous utilisez notre Application et notre Site.\n\nEn utilisant SSHive, vous acceptez les pratiques decrites dans cette politique."
+      },
+      "dataCollection": {
+        "title": "Collecte de donnees dans l'Application",
+        "text": "SSHive ne collecte, ne transmet et ne stocke aucune donnee personnelle sur nos serveurs. L'Application fonctionne entierement hors ligne — les seules connexions reseau sont celles que vous initiez vous-meme (SSH, SFTP, RDP, VNC).\n\nNous ne collectons pas :\n— Noms, adresses email ou coordonnees\n— Donnees d'utilisation ou de telemetrie\n— Rapports de plantage\n— Identifiants d'appareil ou identifiants publicitaires\n— Donnees de localisation\n— Historique de navigation ou de recherche"
+      },
+      "localData": {
+        "title": "Donnees stockees localement sur votre appareil",
+        "text": "SSHive stocke les donnees suivantes localement sur votre Mac, dans le repertoire de support de l'application (~/Library/Application Support/SSHive/) :\n\n— Profils de connexion : noms d'hote, ports, noms d'utilisateur et parametres de connexion que vous configurez.\n— Credentials : mots de passe et passphrases de cles privees, chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron. Ils sont proteges par votre mot de passe de session macOS et ne quittent jamais votre appareil.\n— Preferences de l'application : theme, taille de fenetre et autres parametres d'affichage.\n\nCes donnees ne sont jamais transmises a nos serveurs ni a des tiers. Vous pouvez les supprimer a tout moment en desinstallant l'application et ses fichiers de support."
+      },
+      "website": {
+        "title": "Analyse du site web",
+        "text": "Le site web SSHive (sshive.app) utilise PostHog, heberge sur des serveurs europeens (eu.posthog.com), pour des statistiques d'utilisation anonymes. PostHog nous aide a comprendre les visites et a ameliorer le site.\n\n— Aucun cookie n'est utilise. PostHog utilise le localStorage pour un suivi de session anonyme.\n— Aucune information personnelle n'est collectee.\n— Aucune donnee n'est partagee avec des annonceurs.\n— Vous pouvez bloquer PostHog avec n'importe quel bloqueur de publicites standard.\n\nL'Application elle-meme ne contient aucun code d'analyse, de telemetrie ou de suivi."
+      },
+      "thirdParty": {
+        "title": "Services tiers",
+        "text": "L'Application SSHive n'integre aucun service tiers d'analyse, de publicite ou de suivi. L'Application n'envoie de donnees a aucun serveur externe autre que les hotes distants auxquels vous vous connectez explicitement.\n\nL'Application inclut une fonctionnalite optionnelle de serveur MCP (Model Context Protocol) qui, lorsque vous l'activez, permet aux assistants IA (comme Claude ou Cursor) fonctionnant sur votre machine locale d'interagir avec vos sessions SSH/SFTP. Cette communication se fait entierement sur votre machine locale et ne transite pas par nos serveurs."
+      },
+      "children": {
+        "title": "Protection des mineurs",
+        "text": "SSHive ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles aupres d'enfants. Puisque l'Application ne collecte aucune donnee personnelle d'aucun utilisateur, il n'y a aucun risque de collecte de donnees d'enfants."
+      },
+      "security": {
+        "title": "Securite",
+        "text": "Nous prenons la securite de vos donnees au serieux :\n\n— Les credentials sont chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron.\n— Toutes les connexions distantes (SSH, SFTP) utilisent des protocoles de chiffrement standard de l'industrie.\n— Aucune donnee n'est transmise a nos serveurs, eliminant le risque de failles cote serveur.\n— L'Application est signee numeriquement et distribuee via le Mac App Store et en telechargement direct (DMG)."
+      },
+      "retention": {
+        "title": "Conservation des donnees",
+        "text": "Puisque nous ne collectons aucune donnee personnelle, il n'y a aucune donnee a conserver sur nos serveurs. Les donnees stockees localement sur votre appareil persistent jusqu'a ce que vous les supprimiez en retirant vos profils SSHive ou en desinstallant l'application."
+      },
+      "rights": {
+        "title": "Vos droits",
+        "text": "Puisque SSHive ne collecte ni ne stocke aucune donnee personnelle sur nos serveurs, il n'y a aucune donnee personnelle que nous pourrions fournir, modifier ou supprimer. Toutes vos donnees sont stockees localement sur votre appareil et sont sous votre controle total.\n\nVous pouvez a tout moment :\n— Consulter vos profils stockes dans ~/Library/Application Support/SSHive/\n— Supprimer tout ou partie de vos donnees stockees\n— Desinstaller l'application pour supprimer toutes les donnees locales"
+      },
+      "changes": {
+        "title": "Modifications de cette politique",
+        "text": "Nous pouvons mettre a jour cette Politique de confidentialite de temps a autre. Toute modification sera publiee sur cette page avec une date de revision mise a jour. Nous vous encourageons a consulter cette politique periodiquement."
+      },
+      "contact": {
+        "title": "Nous contacter",
+        "text": "Si vous avez des questions concernant cette Politique de confidentialite ou nos pratiques de confidentialite, veuillez nous contacter a :\n\nEmail : contact@netmesafe.com\nSite web : https://sshive.app/contact"
+      }
+    }
   },
   "featuresPage": {
     "title": "Fonctionnalites",

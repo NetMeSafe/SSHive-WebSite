@@ -329,19 +329,53 @@
   "privacy": {
     "title": "Privacy Policy",
     "metaDescription": "SSHive privacy policy. No personal data collected, no analytics in the app, credentials stored locally via macOS Keychain.",
-    "subtitle": "Your privacy matters. Here is how SSHive handles your data.",
-    "lastUpdated": "Last updated: March 2026",
+    "lastUpdated": "Last updated: March 17, 2026",
     "sections": {
-      "noDataTitle": "No personal data collected",
-      "noDataText": "SSHive does not collect, transmit, or store any personal data. The app works entirely offline — the only network connections are the ones you initiate (SSH, SFTP, RDP, VNC).",
-      "noAnalyticsTitle": "No analytics in the app",
-      "noAnalyticsText": "The SSHive desktop application contains zero analytics, telemetry, or tracking code. This website (sshive.app) uses PostHog for anonymous usage statistics to understand page visits. No personal information is collected.",
-      "noCookiesTitle": "No cookies",
-      "noCookiesText": "This website does not use cookies. PostHog uses localStorage for anonymous session tracking. The SSHive desktop app does not use cookies or any web tracking mechanism.",
-      "keychainTitle": "Credentials stored locally",
-      "keychainText": "All passwords and sensitive credentials are encrypted using the macOS Keychain via Electron's safeStorage API. They never leave your machine and are protected by your macOS login password."
-    },
-    "contactNote": "Questions about our privacy practices? Contact us at hello@sshive.app."
+      "intro": {
+        "title": "Introduction",
+        "text": "NetMeSafe (\"we\", \"us\", \"our\") operates the SSHive application for macOS (the \"App\") and the website sshive.app (the \"Website\"). This Privacy Policy explains how we handle information when you use our App and Website.\n\nBy using SSHive, you agree to the practices described in this policy."
+      },
+      "dataCollection": {
+        "title": "Data Collection in the App",
+        "text": "SSHive does not collect, transmit, or store any personal data on our servers. The App works entirely offline — the only network connections are those you initiate yourself (SSH, SFTP, RDP, VNC).\n\nWe do not collect:\n— Names, email addresses, or contact information\n— Usage analytics or telemetry\n— Crash reports\n— Device identifiers or advertising IDs\n— Location data\n— Browsing or search history"
+      },
+      "localData": {
+        "title": "Data Stored Locally on Your Device",
+        "text": "SSHive stores the following data locally on your Mac, in the application support directory (~/Library/Application Support/SSHive/):\n\n— Connection profiles: hostnames, ports, usernames, and connection settings you configure.\n— Credentials: passwords and private key passphrases, encrypted via the macOS Keychain using Electron's safeStorage API. These are protected by your macOS login password and never leave your device.\n— Application preferences: theme, window size, and other display settings.\n\nThis data is never transmitted to our servers or any third party. You can delete it at any time by removing the application and its support files."
+      },
+      "website": {
+        "title": "Website Analytics",
+        "text": "The SSHive website (sshive.app) uses PostHog, hosted on EU servers (eu.posthog.com), for anonymous usage statistics. PostHog helps us understand page visits and improve the website.\n\n— No cookies are used. PostHog uses localStorage for anonymous session tracking.\n— No personal information is collected.\n— No data is shared with advertisers.\n— You can block PostHog with any standard ad blocker.\n\nThe App itself contains zero analytics, telemetry, or tracking code."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "text": "The SSHive App does not integrate with any third-party analytics, advertising, or tracking services. The App does not send data to any external server other than the remote hosts you explicitly connect to.\n\nThe App includes an optional MCP (Model Context Protocol) server feature that, when enabled by you, allows AI assistants (such as Claude or Cursor) running on your local machine to interact with your SSH/SFTP sessions. This communication happens entirely on your local machine and does not transit through our servers."
+      },
+      "children": {
+        "title": "Children's Privacy",
+        "text": "SSHive is not directed at children under the age of 13. We do not knowingly collect personal information from children. Since the App collects no personal data from any user, there is no risk of children's data being collected."
+      },
+      "security": {
+        "title": "Security",
+        "text": "We take the security of your data seriously:\n\n— Credentials are encrypted using the macOS Keychain via Electron's safeStorage API.\n— All remote connections (SSH, SFTP) use industry-standard encryption protocols.\n— No data is transmitted to our servers, eliminating the risk of server-side breaches.\n— The App is code-signed and distributed via the Mac App Store and direct download (DMG)."
+      },
+      "retention": {
+        "title": "Data Retention",
+        "text": "Since we do not collect any personal data, there is no data to retain on our servers. Data stored locally on your device persists until you delete it by removing your SSHive profiles or uninstalling the application."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "text": "Since SSHive does not collect or store any personal data on our servers, there is no personal data for us to provide, modify, or delete. All your data is stored locally on your device and is under your full control.\n\nYou can at any time:\n— View your stored profiles in ~/Library/Application Support/SSHive/\n— Delete any or all of your stored data\n— Uninstall the application to remove all local data"
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "text": "If you have any questions about this Privacy Policy or our privacy practices, please contact us at:\n\nEmail: contact@netmesafe.com\nWebsite: https://sshive.app/contact"
+      }
+    }
   },
   "featuresPage": {
     "title": "Features",
