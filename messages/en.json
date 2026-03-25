@@ -9,11 +9,12 @@
     "pricing": "Pricing",
     "blog": "Blog",
     "docs": "Docs",
+    "mcp": "MCP",
     "download": "Download"
   },
   "hero": {
     "title": "The SSH Client macOS Deserves",
-    "subtitle": "SSH, SFTP, RDP & VNC — all in one app. Free to start, Pro for $9.99.",
+    "subtitle": "SSH, SFTP, RDP & VNC — all in one app. Free to start.",
     "downloadCta": "Download Free for macOS",
     "featuresCta": "See features",
     "version": "Version {version} — macOS 13+",
@@ -129,7 +130,9 @@
     "pro": {
       "name": "Pro",
       "price": "$9.99",
+      "originalPrice": "$19.99",
       "period": "one-time purchase",
+      "launchBadge": "Launch offer",
       "cta": "Coming Soon",
       "badge": "Coming Soon",
       "features": [
@@ -158,7 +161,7 @@
       "q3": "Can I upgrade later?",
       "a3": "Absolutely. Start with the free version and upgrade to Pro anytime from the Mac App Store. Your profiles and settings carry over seamlessly.",
       "q4": "Is there a subscription?",
-      "a4": "No. SSHive Pro is a one-time purchase of $9.99. You pay once and own it forever. No recurring fees.",
+      "a4": "No. SSHive Pro is a one-time purchase of $9.99 (launch offer, instead of $19.99). You pay once and own it forever. No recurring fees.",
       "q5": "Do I need an account?",
       "a5": "No. SSHive works completely offline with no account required. Your data stays on your machine, secured by the macOS Keychain."
     }
@@ -471,5 +474,222 @@
     "title": "Page not found",
     "description": "The page you're looking for doesn't exist or has been moved.",
     "backHome": "Back to homepage"
+  },
+  "homeShowcase": {
+    "mockup": {
+      "connections": "Connections",
+      "newConnection": "New connection",
+      "searchProfile": "Search a profile…",
+      "localTerminal": "Local terminal",
+      "networkTools": "Network tools",
+      "settings": "Settings",
+      "recents": "Recents",
+      "sessions": "sessions",
+      "local": "Local",
+      "remote": "Remote",
+      "uploading": "Uploading deploy.sh…",
+      "rdpConnected": "RDP Connected — 1920×1080",
+      "broadcastMode": "Broadcast Mode",
+      "broadcastActive": "BROADCAST ACTIVE — 4 sessions",
+      "broadcastSent": "Command sent to 4 servers successfully",
+      "tunnelsEncrypted": "All traffic encrypted end-to-end through SSH",
+      "mcpPrompt": "Check disk space and memory on production, and look at the latest nginx errors",
+      "mcpThinking": "Using SSHive MCP to access production session…",
+      "mcpResponse": "Your production server has 42 GB free (68% used). Memory is healthy at 6.2 GB / 16 GB. The last nginx error was a 502 Bad Gateway 3 hours ago from a timeout on the API upstream — looks like the api-gateway container briefly restarted."
+    },
+    "sftp": {
+      "label": "SFTP File Manager",
+      "title": "Drag, drop, deploy",
+      "desc": "Dual-pane file browser with drag & drop from Finder, a built-in remote editor, and real-time transfer progress. Managing files on remote servers feels like working locally.",
+      "b1": "Drag & drop uploads directly from Finder with live progress bar",
+      "b2": "Double-click to edit remote files — Cmd+S saves back to server",
+      "b3": "Bulk operations: select multiple files for download, chmod, or delete"
+    },
+    "rdp": {
+      "label": "Remote Desktop",
+      "title": "Windows desktops, inside SSHive",
+      "desc": "Embedded RDP client powered by IronRDP (Rust). Full keyboard, mouse, and clipboard support. No external app needed — everything stays in one window.",
+      "b1": "Embedded client — no Microsoft Remote Desktop or third-party app needed",
+      "b2": "Full clipboard integration, keyboard shortcuts, and Cmd+V paste",
+      "b3": "Adaptive resolution matching your Retina display"
+    },
+    "broadcast": {
+      "label": "Broadcast Mode",
+      "title": "One command, all servers",
+      "desc": "Execute the same command simultaneously on every connected SSH session. Perfect for fleet-wide updates, service restarts, or config deployments across dozens of servers.",
+      "b1": "Toggle with Cmd+Shift+B — instant broadcast to all sessions",
+      "b2": "See real-time output from every server side-by-side",
+      "b3": "Perfect for rolling restarts, config pushes, and fleet management"
+    },
+    "tunnels": {
+      "label": "SSH Tunnels",
+      "title": "Secure port forwarding, visualized",
+      "desc": "Local (-L), Remote (-R), and SOCKS5 (-D) tunnels with a visual interface. Access remote databases, expose local services, and route traffic — all encrypted through SSH.",
+      "b1": "Local forwarding: access remote MySQL, PostgreSQL, Redis as localhost",
+      "b2": "SOCKS5 dynamic proxy for full network routing through the tunnel",
+      "b3": "Up to 10 local + 5 remote tunnels per connection profile"
+    },
+    "mcp": {
+      "label": "AI Integration (MCP)",
+      "title": "Let Claude manage your servers",
+      "desc": "Built-in MCP server that auto-configures Claude Code, Cursor, and Claude Desktop. Your AI assistant can execute commands, read logs, and browse files on any connected server.",
+      "b1": "Auto-configures Claude Code, Cursor & Claude Desktop in one click",
+      "b2": "5 tools: list sessions, execute commands, browse & edit remote files",
+      "b3": "100% local — Bearer token auth, no cloud relay",
+      "learnMore": "Discover MCP integration"
+    },
+    "offer": {
+      "label": "Pricing",
+      "title": "Simple, transparent, no subscription",
+      "subtitle": "Start for free. Upgrade to Pro whenever you want.",
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "cta": "Download Free",
+        "features": [
+          "2 concurrent SSH sessions",
+          "5 saved profiles",
+          "SFTP file manager",
+          "14 quick commands",
+          "macOS Keychain security",
+          "Dark theme"
+        ]
+      },
+      "pro": {
+        "price": "$9.99",
+        "originalPrice": "$19.99",
+        "period": "one-time purchase",
+        "badge": "Launch offer",
+        "savings": "-50%",
+        "cta": "Coming Soon",
+        "features": [
+          "Unlimited SSH sessions",
+          "RDP & VNC remote desktop",
+          "SSH tunnels (L/R/D) + SOCKS5",
+          "Multi-server Broadcast mode",
+          "MCP / AI integration",
+          "Lifetime updates included"
+        ]
+      },
+      "guarantee": "One-time purchase. No subscription. Yours forever."
+    }
+  },
+  "mcpPage": {
+    "metaTitle": "MCP AI Integration — Claude Code, Cursor & Claude Desktop | SSHive",
+    "metaDescription": "SSHive's built-in MCP server lets AI assistants like Claude Code, Cursor, and Claude Desktop access your SSH and SFTP sessions. Auto-configured, secure, local.",
+    "backToFeatures": "See all features",
+    "sectionLabel": "AI Integration",
+    "heroTitle": "Your servers, accessible to AI",
+    "heroSubtitle": "SSHive includes a built-in MCP server that lets Claude Code, Cursor, and Claude Desktop interact with your SSH and SFTP sessions — directly from your machine.",
+    "hero": {
+      "statusMcp": "MCP Server Active",
+      "statusAuto": "Auto-configured",
+      "statusSecure": "Local & Secure"
+    },
+    "heroCta": "Download SSHive",
+    "heroSetupCta": "See setup",
+    "mockup": {
+      "settingsTitle": "MCP Server (Model Context Protocol)",
+      "settingsDesc": "Lets AI assistants (Claude, Cursor, Cline…) access active SSH sessions.",
+      "enableServer": "Enable MCP server",
+      "enableServerDesc": "Starts a local HTTP server on 127.0.0.1",
+      "active": "Active",
+      "port": "Port",
+      "token": "Token Bearer",
+      "autoConfigured": "Auto-configured clients",
+      "claudePrompt": "List all running Docker containers on my production server",
+      "claudeThinking": "Using SSHive MCP to access session \"NMS\"…",
+      "result": "Result",
+      "claudeResponse": "Your production server has 3 containers running: api-gateway, web-frontend, and postgres-db — all up for 14 days with no issues.",
+      "sftpPrompt": "Show me the Nginx config for the API",
+      "sftpResponse": "Your API reverse proxy is configured on api.example.com (port 443) and forwards traffic to localhost:3000. The SSL configuration looks standard."
+    },
+    "whatIsMcp": {
+      "label": "What is MCP?",
+      "title": "Model Context Protocol — the bridge between AI and your infrastructure",
+      "description": "MCP (Model Context Protocol) is an open standard created by Anthropic that allows AI assistants to interact with external tools and data sources. SSHive implements an MCP server that exposes your active SSH and SFTP sessions as tools — so Claude can execute commands, read files, and browse your remote servers without leaving the conversation.",
+      "fast": {
+        "title": "Instant access",
+        "desc": "No copy-paste, no context switching. Your AI assistant directly queries your servers through SSHive's active sessions."
+      },
+      "secure": {
+        "title": "100% local",
+        "desc": "The MCP server runs on 127.0.0.1 with Bearer token authentication. Nothing leaves your machine — no cloud relay, no third-party proxy."
+      },
+      "auto": {
+        "title": "Zero configuration",
+        "desc": "Activate MCP in Settings and SSHive auto-configures Claude Code, Cursor, and Claude Desktop. Ready in seconds."
+      }
+    },
+    "demoSsh": {
+      "label": "SSH via AI",
+      "title": "Execute commands through natural language",
+      "description": "Ask Claude to check Docker containers, view logs, restart services, or run any command on your remote servers. SSHive's MCP server bridges the conversation to your live SSH sessions.",
+      "bullet1": "Claude picks the right session automatically from your active connections",
+      "bullet2": "Full stdout/stderr output returned directly in the conversation",
+      "bullet3": "Works with any SSH session — no special server-side setup needed"
+    },
+    "demoSftp": {
+      "label": "SFTP via AI",
+      "title": "Browse and read remote files with AI",
+      "description": "Claude can list directories, read configuration files, and even write files on your remote servers through SSHive's SFTP tools. Perfect for debugging config issues or reviewing logs.",
+      "bullet1": "List directory contents on any active SFTP session",
+      "bullet2": "Read remote files — configs, logs, scripts — directly in Claude's context",
+      "bullet3": "Write files back to the server for quick fixes"
+    },
+    "tools": {
+      "label": "MCP Tools",
+      "title": "5 tools for full server access",
+      "subtitle": "Each tool maps to a specific SSH or SFTP operation, giving AI assistants precise control over your remote servers.",
+      "sshList": "Lists all active SSH sessions with host, user, port, and connection status.",
+      "sshExecute": "Executes a command on a specific SSH session and returns stdout/stderr.",
+      "sftpList": "Lists files and directories at a given path on a remote server.",
+      "sftpRead": "Reads the content of a remote file and returns it as text.",
+      "sftpWrite": "Writes content to a file on the remote server."
+    },
+    "setup": {
+      "label": "Setup",
+      "title": "Ready in 3 clicks",
+      "subtitle": "SSHive auto-configures your AI clients. For other tools, copy the JSON config below.",
+      "step1": {
+        "title": "Open SSHive Settings",
+        "desc": "Navigate to Settings > MCP in the SSHive sidebar."
+      },
+      "step2": {
+        "title": "Enable the MCP server",
+        "desc": "Toggle the switch to activate the local MCP server on port 49422. A Bearer token is automatically generated."
+      },
+      "step3": {
+        "title": "Done — Claude Code, Cursor & Claude Desktop are auto-configured",
+        "desc": "SSHive writes the configuration to each client's settings file automatically. Just restart your AI client and you're connected."
+      },
+      "streamableHttp": "Streamable HTTP (Claude Desktop, Cursor, Cline)",
+      "sse": "SSE — Server-Sent Events (legacy)"
+    },
+    "clients": {
+      "label": "Compatible Clients",
+      "title": "Works with your favorite AI tools",
+      "claudeCode": "Full integration — auto-configured when MCP is enabled in SSHive.",
+      "cursor": "Auto-configured — SSHive writes to Cursor's MCP settings file.",
+      "claudeDesktop": "Auto-configured — seamless integration with Claude Desktop app.",
+      "cline": "Compatible via manual Streamable HTTP configuration."
+    },
+    "security": {
+      "title": "Secure by design",
+      "description": "The MCP server never exposes your sessions to the internet. Everything stays on your machine, protected by authentication and local-only binding.",
+      "bullet1": "Server binds to 127.0.0.1 only — not reachable from the network",
+      "bullet2": "Bearer token authentication on every request",
+      "bullet3": "Auto-generated cryptographic tokens",
+      "bullet4": "No cloud relay — direct local communication",
+      "bullet5": "Token regeneration with one click",
+      "bullet6": "MCP server can be disabled at any time"
+    },
+    "cta": {
+      "title": "Give your AI superpowers",
+      "description": "Download SSHive and connect Claude Code, Cursor, or Claude Desktop to your servers in seconds.",
+      "downloadCta": "Download SSHive",
+      "featuresCta": "See all features"
+    }
   }
 }

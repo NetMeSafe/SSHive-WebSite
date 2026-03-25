@@ -315,7 +315,8 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.025;
+  opacity: 0.018;
+  mix-blend-mode: overlay;
 }
 
 /* ========================================
@@ -434,13 +435,8 @@ body {
   transform: translateZ(0);
 }
 
-/* Content visibility for offscreen sections */
-section {
+/* Content visibility for offscreen sections — disabled on hero for LCP */
+section:nth-of-type(n+3) {
   content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
-}
-
-/* First section should always be visible */
-section:first-of-type {
-  content-visibility: visible;
+  contain-intrinsic-size: auto 600px;
 }
