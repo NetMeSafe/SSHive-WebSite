@@ -1,8 +1,6 @@
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import { Download } from 'lucide-react';
-import { APP_VERSION, BREW_COMMAND } from '@/lib/constants';
-import { CopyButton } from '@/components/ui/CopyButton';
+import { APP_VERSION, APP_STORE_URL } from '@/lib/constants';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
 export function DownloadCTA() {
@@ -37,27 +35,20 @@ export function DownloadCTA() {
         {/* Download options */}
         <ScrollReveal delay={200}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
-            <Link
-              href="/download"
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(122,162,247,0.35)] hover:-translate-y-px text-base"
             >
               <Download className="w-5 h-5 transition-transform group-hover:-translate-y-px" />
               {t('dmgButton', { version: APP_VERSION })}
-            </Link>
-          </div>
-        </ScrollReveal>
-
-        {/* Homebrew command */}
-        <ScrollReveal delay={300}>
-          <div className="inline-flex items-center gap-3 glass-card rounded-xl px-5 py-3 font-mono text-sm text-foreground">
-            <span className="text-primary select-none">$</span>
-            <code className="select-all">{BREW_COMMAND}</code>
-            <CopyButton text={BREW_COMMAND} />
+            </a>
           </div>
         </ScrollReveal>
 
         {/* Trust signals */}
-        <ScrollReveal delay={400}>
+        <ScrollReveal delay={300}>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-success" />

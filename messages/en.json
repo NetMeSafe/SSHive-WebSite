@@ -133,8 +133,8 @@
       "originalPrice": "$19.99",
       "period": "one-time purchase",
       "launchBadge": "Launch offer",
-      "cta": "Coming Soon",
-      "badge": "Coming Soon",
+      "badge": "Recommended",
+      "cta": "Get Pro on App Store",
       "features": [
         "Unlimited SSH sessions",
         "Unlimited profiles & folders",
@@ -173,9 +173,6 @@
     "dmgSubtitle": "macOS — Universal Binary (Apple Silicon + Intel)",
     "or": "or",
     "appStoreAlt": "Mac App Store",
-    "brewCommand": "brew install --cask sshive",
-    "brewCopy": "Copy",
-    "brewCopied": "Copied!",
     "noAccount": "No account needed",
     "noAds": "No ads, no tracking in the app",
     "keychainSecurity": "Secure — macOS Keychain encryption",
@@ -184,9 +181,7 @@
     "emailPlaceholder": "your@email.com",
     "emailSubscribe": "Subscribe",
     "systemReq": "System Requirements",
-    "systemReqDetails": "macOS 13 Ventura or later. Apple Silicon (M1/M2/M3/M4) and Intel x64 supported.",
-    "gatekeeperTitle": "First launch on macOS",
-    "gatekeeperText": "If macOS says the app \"is damaged\", open Terminal and run: xattr -cr /Applications/SSHive.app — then reopen SSHive. This is because the app is not yet notarized by Apple (coming soon)."
+    "systemReqDetails": "macOS 13 Ventura or later. Apple Silicon (M1/M2/M3/M4) and Intel x64 supported."
   },
   "footer": {
     "product": "Product",
@@ -312,7 +307,7 @@
     "subtitle": "Frequently asked questions about SSHive.",
     "faq": {
       "q1": "How do I install SSHive?",
-      "a1": "You can download the DMG directly from sshive.app, install it via Homebrew with `brew install --cask sshive`, or get it from the Mac App Store. SSHive supports macOS 13 Ventura and later.",
+      "a1": "You can get SSHive from the Mac App Store. SSHive supports macOS 13 Ventura and later.",
       "q2": "Is SSHive free?",
       "a2": "Yes. The free version includes SSH terminal, SFTP file manager, 2 concurrent sessions, and 5 saved profiles. You can optionally upgrade to Pro ($9.99, one-time) for unlimited sessions, RDP, VNC, tunnels, and more.",
       "q3": "Does SSHive work on Intel Macs?",
@@ -562,7 +557,7 @@
         "period": "one-time purchase",
         "badge": "Launch offer",
         "savings": "-50%",
-        "cta": "Coming Soon",
+        "cta": "Get Pro on App Store",
         "features": [
           "Unlimited SSH sessions",
           "RDP & VNC remote desktop",

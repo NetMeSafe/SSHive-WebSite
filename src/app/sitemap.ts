@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/changelog',
     '/contact',
+    '/privacy',
+    '/mcp',
   ];
 
   // Add feature pages

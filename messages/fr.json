@@ -133,8 +133,8 @@
       "originalPrice": "19,99 €",
       "period": "achat unique",
       "launchBadge": "Offre de lancement",
-      "cta": "Bientot disponible",
-      "badge": "Bientot disponible",
+      "badge": "Recommande",
+      "cta": "Obtenir Pro sur l'App Store",
       "features": [
         "Sessions SSH illimitees",
         "Profils et dossiers illimites",
@@ -173,9 +173,6 @@
     "dmgSubtitle": "macOS — Universal Binary (Apple Silicon + Intel)",
     "or": "ou",
     "appStoreAlt": "Mac App Store",
-    "brewCommand": "brew install --cask sshive",
-    "brewCopy": "Copier",
-    "brewCopied": "Copie !",
     "noAccount": "Aucun compte requis",
     "noAds": "Pas de pub, pas de tracking dans l'app",
     "keychainSecurity": "Securise — chiffrement via le Trousseau macOS",
@@ -184,9 +181,7 @@
     "emailPlaceholder": "votre@email.com",
     "emailSubscribe": "S'abonner",
     "systemReq": "Configuration requise",
-    "systemReqDetails": "macOS 13 Ventura ou ulterior. Apple Silicon (M1/M2/M3/M4) et Intel x64 supportes.",
-    "gatekeeperTitle": "Premier lancement sur macOS",
-    "gatekeeperText": "Si macOS indique que l'app « est endommagee », ouvrez le Terminal et lancez : xattr -cr /Applications/SSHive.app — puis relancez SSHive. Cela est du au fait que l'app n'est pas encore notarisee par Apple (bientot)."
+    "systemReqDetails": "macOS 13 Ventura ou ulterior. Apple Silicon (M1/M2/M3/M4) et Intel x64 supportes."
   },
   "footer": {
     "product": "Produit",
@@ -312,7 +307,7 @@
     "subtitle": "Questions frequentes sur SSHive.",
     "faq": {
       "q1": "Comment installer SSHive ?",
-      "a1": "Vous pouvez telecharger le DMG directement depuis sshive.app, l'installer via Homebrew avec `brew install --cask sshive`, ou le trouver sur le Mac App Store. SSHive supporte macOS 13 Ventura et versions ulterieures.",
+      "a1": "Vous pouvez obtenir SSHive depuis le Mac App Store. SSHive supporte macOS 13 Ventura et versions ulterieures.",
       "q2": "SSHive est-il gratuit ?",
       "a2": "Oui. La version gratuite inclut le terminal SSH, le gestionnaire SFTP, 2 sessions simultanees et 5 profils enregistres. Vous pouvez optionnellement passer a Pro (9,99 €, achat unique) pour des sessions illimitees, RDP, VNC, tunnels et plus.",
       "q3": "SSHive fonctionne-t-il sur les Mac Intel ?",
@@ -562,7 +557,7 @@
         "period": "achat unique",
         "badge": "Offre de lancement",
         "savings": "-50 %",
-        "cta": "Bientot disponible",
+        "cta": "Obtenir Pro sur l'App Store",
         "features": [
           "Sessions SSH illimitees",
           "Bureau a distance RDP + VNC",

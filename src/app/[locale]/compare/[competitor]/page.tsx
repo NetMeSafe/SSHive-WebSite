@@ -5,6 +5,7 @@ import { Check, X, ArrowRight, CheckCircle, ArrowLeft } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { COMPETITOR_DATA, ALL_COMPETITOR_SLUGS } from '@/lib/competitors';
 import { COMPETITORS } from '@/lib/constants';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import type { Competitor } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 
@@ -133,6 +134,15 @@ export default async function CompetitorPage({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: locale === 'fr' ? 'Comparer' : 'Compare', href: '/compare' },
+          { name: `SSHive vs ${data.name}`, href: `/compare/${slug}` },
+        ]}
+      />
+
       {/* Breadcrumb + Hero */}
       <section className="pt-32 pb-8 md:pt-40 md:pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

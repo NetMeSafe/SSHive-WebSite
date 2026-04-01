@@ -63,7 +63,7 @@ export function Footer() {
               <line x1="540" y1="684" x2="760" y2="684" stroke="#7aa2f7" strokeWidth="64" strokeLinecap="round" opacity="0.8" />
             </svg>
             <a
-              href="https://netmesafe.com/"
+              href="https://netmesafe.com/?utm_source=sshive.app&utm_medium=website&utm_campaign=footer"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-300"

@@ -17,8 +17,8 @@ Objectif : SEO organique + tunnel de vente vers le telechargement du DMG gratuit
 
 - SSHive est une app **payante freemium** — PAS open source, PAS de GitHub public
 - Ne jamais ajouter de references GitHub, open-source, ou MIT
-- Pro est actuellement en "Coming Soon" — pas encore sur l'App Store
-- Le DMG gratuit est le seul telechargement disponible pour l'instant
+- Pro est disponible sur le Mac App Store (id6760705487)
+- Le DMG gratuit reste disponible en telechargement direct
 
 ## Architecture
 

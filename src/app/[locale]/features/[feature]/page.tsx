@@ -17,6 +17,7 @@ import {
   Download,
   ArrowLeft,
 } from 'lucide-react';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 
 const featureIcons: Record<Feature, typeof Terminal> = {
   ssh: Terminal,
@@ -127,6 +128,15 @@ export default async function FeaturePage({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: locale === 'fr' ? 'Fonctionnalites' : 'Features', href: '/features' },
+          { name: title, href: `/features/${feature}` },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

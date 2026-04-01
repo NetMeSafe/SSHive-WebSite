@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { CheckCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { APP_STORE_URL, SITE_URL } from '@/lib/constants';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 export async function generateMetadata({
   params,
@@ -65,6 +67,22 @@ export default async function PricingPage({
 
   return (
     <>
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: a,
+            },
+          })),
+          url: `${SITE_URL}/${locale}/pricing`,
+        }}
+      />
+
       {/* Header */}
       <section className="pt-32 pb-8 md:pt-40 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -134,11 +152,14 @@ export default async function PricingPage({
                   </li>
                 ))}
               </ul>
-              <span
-                className="mt-8 block text-center px-6 py-3 rounded-lg bg-muted text-muted-foreground font-medium cursor-not-allowed"
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block text-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
               >
                 {t('pro.cta')}
-              </span>
+              </a>
             </div>
           </div>
 

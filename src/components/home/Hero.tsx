@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Download, ArrowRight } from 'lucide-react';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
+import { APP_STORE_URL } from '@/lib/constants';
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -45,13 +46,15 @@ export function Hero() {
         {/* CTA Buttons */}
         <ScrollReveal delay={200}>
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-            <Link
-              href="/download"
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-xl font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(122,162,247,0.3)] hover:-translate-y-px text-base"
             >
               <Download className="w-5 h-5 transition-transform group-hover:-translate-y-px" />
               {t('downloadCta')}
-            </Link>
+            </a>
             <Link
               href="/features"
               className="group inline-flex items-center gap-2 border border-border/50 text-foreground px-7 py-3.5 rounded-xl font-medium hover:bg-white/5 hover:border-primary/30 transition-all duration-300 text-base"
