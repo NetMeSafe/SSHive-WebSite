@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "SSHive — SSH/SFTP/RDP Client for macOS | Free & Pro",
-    "description": "SSHive is a SSH, SFTP, RDP & VNC client for macOS. All-in-one terminal inspired by MobaXterm. Download free or get Pro on the App Store."
+    "title": "SSHive — SSH Client for Mac, iPhone & iPad, AI-Ready",
+    "description": "SSHive is the native Apple SSH/SFTP client for Mac, iPhone and iPad — with embedded RDP, VNC, tunnels on macOS, Touch ID-secured Keychain credentials, and a built-in MCP server so Claude Code, Cursor and Claude Desktop can manage your sessions out of the box. Free download."
   },
   "nav": {
     "features": "Features",
@@ -10,7 +10,9 @@
     "blog": "Blog",
     "docs": "Docs",
     "mcp": "MCP",
-    "download": "Download"
+    "download": "Download",
+    "useCases": "Use cases",
+    "howTo": "Guides"
   },
   "hero": {
     "title": "The SSH Client macOS Deserves",
@@ -222,7 +224,7 @@
     "keychainIntegration": "Keychain Integration",
     "connectionProfiles": "Connection Profiles",
     "modernUI": "Modern UI",
-    "metaTitleTemplate": "SSHive vs {competitor} — Best SSH Client for macOS 2026",
+    "metaTitleTemplate": "SSHive vs {competitor} — Free macOS SSH Client Compared (2026)",
     "introTitle": "SSHive vs {competitor}: which is the better SSH client for macOS?",
     "detailedIntro": {
       "mobaxterm": "MobaXterm has been the gold standard all-in-one terminal on Windows for years. With X11 forwarding, embedded SFTP, and RDP support, it set the bar for what a remote management tool should be. SSHive brings this same philosophy to macOS — but with native Keychain security, and modern AI capabilities that MobaXterm does not offer. If you have been searching for a MobaXterm equivalent on Mac, SSHive is built specifically for you. Unlike MobaXterm, which only runs on Windows (or via Wine, with limited success), SSHive is a native macOS application built with Electron and React, optimized for Apple Silicon, and available on the Mac App Store.",
@@ -440,7 +442,7 @@
       "bullets": [
         "Built-in MCP server for AI assistant integration",
         "Auto-configures Claude Code, Cursor, and Claude Desktop",
-        "5 tools: ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file",
+        "5 tools: ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_chunk",
         "Bearer token authentication with auto-generated tokens"
       ]
     },
@@ -685,6 +687,36 @@
       "description": "Download SSHive and connect Claude Code, Cursor, or Claude Desktop to your servers in seconds.",
       "downloadCta": "Download SSHive",
       "featuresCta": "See all features"
+    }
+  },
+  "seoCommon": {
+    "keyCapabilities": "Key capabilities",
+    "relatedFeatures": "Related SSHive features",
+    "relatedUseCases": "Common use cases",
+    "relatedHowTos": "Step-by-step guides",
+    "downloadCta": "Download SSHive Free",
+    "tryFreeTitle": "Try SSHive Free for macOS",
+    "tryFreeDescription": "Get the all-in-one SSH, SFTP, RDP and VNC client for Mac. Free download, no signup required.",
+    "estimatedTime": "Estimated time",
+    "minutes": "minutes",
+    "openInSshive": "Open this in SSHive",
+    "stepCount": "Step {n}",
+    "tableOfContents": "What you'll learn",
+    "introHeading": "Why this matters",
+    "stepsHeading": "Step-by-step",
+    "faqHeading": "Frequently asked questions",
+    "backTo": "Back",
+    "useCases": {
+      "title": "Use cases — SSH, SFTP, RDP & VNC for macOS",
+      "subtitle": "Real-world workflows where SSHive replaces a stack of legacy tools.",
+      "metaTitle": "SSHive Use Cases — SSH, SFTP, RDP & VNC for macOS",
+      "metaDescription": "Discover how SSHive fits real-world workflows: Raspberry Pi, AWS EC2, home servers, Proxmox, Docker, Kubernetes, NAS, and more."
+    },
+    "howTo": {
+      "title": "Step-by-step guides for SSH on macOS",
+      "subtitle": "Practical, copy-paste-ready tutorials for every SSH workflow on a Mac.",
+      "metaTitle": "SSH Tutorials for Mac — Step-by-Step Guides | SSHive",
+      "metaDescription": "Practical tutorials: SSH tunnels, key generation, SFTP file transfer, RDP from Mac, VNC, jump hosts, SOCKS5 proxy, and more."
     }
   }
 }

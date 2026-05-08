@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "SSHive — Client SSH/SFTP/RDP pour macOS | Gratuit & Pro",
-    "description": "SSHive est un client SSH, SFTP, RDP et VNC pour macOS. Terminal tout-en-un inspire de MobaXterm. Telechargez gratuitement ou passez a Pro sur l'App Store."
+    "title": "SSHive — Client SSH pour Mac, iPhone et iPad, pret pour l'IA",
+    "description": "SSHive est le client SSH/SFTP Apple natif pour Mac, iPhone et iPad — avec RDP, VNC et tunnels integres sur macOS, identifiants Trousseau securises par Touch ID, et serveur MCP integre pour que Claude Code, Cursor et Claude Desktop pilotent vos sessions sans setup. Telechargement gratuit."
   },
   "nav": {
     "features": "Fonctionnalites",
@@ -10,7 +10,9 @@
     "blog": "Blog",
     "docs": "Docs",
     "mcp": "MCP",
-    "download": "Telecharger"
+    "download": "Telecharger",
+    "useCases": "Cas d'usage",
+    "howTo": "Guides"
   },
   "hero": {
     "title": "Le client SSH que macOS merite",
@@ -222,7 +224,7 @@
     "keychainIntegration": "Integration Trousseau",
     "connectionProfiles": "Profils de connexion",
     "modernUI": "Interface moderne",
-    "metaTitleTemplate": "SSHive vs {competitor} — Meilleur client SSH pour macOS 2026",
+    "metaTitleTemplate": "SSHive vs {competitor} — Client SSH gratuit macOS compare (2026)",
     "introTitle": "SSHive vs {competitor} : quel est le meilleur client SSH pour macOS ?",
     "detailedIntro": {
       "mobaxterm": "MobaXterm est le standard des terminaux tout-en-un sur Windows depuis des annees. Avec le forwarding X11, le SFTP embarque et le support RDP, il a fixe la barre pour ce que devrait etre un outil de gestion a distance. SSHive apporte cette meme philosophie sur macOS — mais avec la securite native du Trousseau et des capacites IA modernes que MobaXterm n'offre pas. Si vous cherchez un equivalent MobaXterm sur Mac, SSHive est concu specifiquement pour vous. Contrairement a MobaXterm, qui ne fonctionne que sur Windows (ou via Wine, avec un succes limite), SSHive est une application macOS native construite avec Electron et React, optimisee pour Apple Silicon et disponible sur le Mac App Store.",
@@ -440,7 +442,7 @@
       "bullets": [
         "Serveur MCP integre pour l'integration avec les assistants IA",
         "Configuration automatique de Claude Code, Cursor et Claude Desktop",
-        "5 outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file",
+        "5 outils : ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_chunk",
         "Authentification par token Bearer avec generation automatique"
       ]
     },
@@ -685,6 +687,36 @@
       "description": "Telechargez SSHive et connectez Claude Code, Cursor ou Claude Desktop a vos serveurs en quelques secondes.",
       "downloadCta": "Telecharger SSHive",
       "featuresCta": "Voir toutes les fonctionnalites"
+    }
+  },
+  "seoCommon": {
+    "keyCapabilities": "Fonctionnalites cles",
+    "relatedFeatures": "Fonctionnalites SSHive associees",
+    "relatedUseCases": "Cas d'usage courants",
+    "relatedHowTos": "Guides pas-a-pas",
+    "downloadCta": "Telecharger SSHive gratuitement",
+    "tryFreeTitle": "Essayer SSHive gratuitement sur macOS",
+    "tryFreeDescription": "Obtenez le client tout-en-un SSH, SFTP, RDP et VNC pour Mac. Telechargement gratuit, sans inscription.",
+    "estimatedTime": "Duree estimee",
+    "minutes": "minutes",
+    "openInSshive": "Ouvrir ceci dans SSHive",
+    "stepCount": "Etape {n}",
+    "tableOfContents": "Ce que vous allez apprendre",
+    "introHeading": "Pourquoi c'est important",
+    "stepsHeading": "Pas-a-pas",
+    "faqHeading": "Questions frequentes",
+    "backTo": "Retour",
+    "useCases": {
+      "title": "Cas d'usage — SSH, SFTP, RDP et VNC pour macOS",
+      "subtitle": "Des workflows concrets ou SSHive remplace un empilement d'outils legacy.",
+      "metaTitle": "Cas d'usage SSHive — SSH, SFTP, RDP et VNC pour macOS",
+      "metaDescription": "Decouvrez comment SSHive s'integre dans des workflows concrets : Raspberry Pi, AWS EC2, serveurs perso, Proxmox, Docker, Kubernetes, NAS et plus."
+    },
+    "howTo": {
+      "title": "Guides pas-a-pas pour SSH sur macOS",
+      "subtitle": "Tutoriels pratiques, prets a copier-coller, pour chaque workflow SSH sur Mac.",
+      "metaTitle": "Tutoriels SSH pour Mac — Guides pas-a-pas | SSHive",
+      "metaDescription": "Tutoriels pratiques : tunnels SSH, generation de cles, transferts SFTP, RDP depuis Mac, VNC, jump hosts, proxy SOCKS5 et plus."
     }
   }
 }
