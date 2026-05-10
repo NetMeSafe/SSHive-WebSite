@@ -5,6 +5,7 @@ import { ArrowRight, Clock } from 'lucide-react';
 import { LOCALES, SITE_URL } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 import { HOW_TOS } from '@/lib/seo/how-tos';
+import { RelatedLinks } from '@/components/seo/RelatedLinks';
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -86,6 +87,37 @@ export default async function HowToIndex({
           </div>
         </div>
       </section>
+
+      <RelatedLinks
+        heading={tCommon('exploreMore')}
+        items={[
+          {
+            href: '/use-cases',
+            title: tCommon('useCasesHubTitle'),
+            description: tCommon('useCasesHubDesc'),
+          },
+          {
+            href: '/best-ssh-client-for-mac',
+            title: tCommon('bestSshTitle'),
+            description: tCommon('bestSshDesc'),
+          },
+          {
+            href: '/best-sftp-client-for-mac',
+            title: tCommon('bestSftpTitle'),
+            description: tCommon('bestSftpDesc'),
+          },
+          {
+            href: '/compare',
+            title: tCommon('compareHubTitle'),
+            description: tCommon('compareHubDesc'),
+          },
+          {
+            href: '/features',
+            title: tCommon('featuresHubTitle'),
+            description: tCommon('featuresHubDesc'),
+          },
+        ]}
+      />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { APP_VERSION } from '@/lib/constants';
 import { AppStoreLink } from '@/components/download/AppStoreLink';
+import { AIHeroDiagram } from '@/components/home/AIHeroDiagram';
 import {
   Download,
   ArrowRight,
@@ -1027,6 +1028,11 @@ export function HomeShowcase() {
             <p className="mt-6 text-center text-sm text-muted-foreground">
               {t('universalBinary')}
             </p>
+          </ScrollReveal>
+
+          {/* AI-ready hero diagram — Claude → MCP → SSH/SFTP */}
+          <ScrollReveal delay={500}>
+            <AIHeroDiagram />
           </ScrollReveal>
         </div>
       </section>

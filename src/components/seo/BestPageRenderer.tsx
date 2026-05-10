@@ -7,6 +7,7 @@ import { BreadcrumbSchema } from './BreadcrumbSchema';
 import { FAQSchema } from './FAQSchema';
 import { FAQSection } from './FAQSection';
 import { ArticleSchema } from './ArticleSchema';
+import { ItemListSchema } from './ItemListSchema';
 
 interface Props {
   data: BestPageSEO;
@@ -36,6 +37,24 @@ export function BestPageRenderer({
 
   const url = `${SITE_URL}/${locale}/${data.slug}`;
 
+  // Build the ranked ItemList combining SSHive (#1) + the shortlist
+  const listItems = [
+    {
+      position: 1,
+      name: 'SSHive',
+      description: data.ourPickBody[loc],
+      url: `${SITE_URL}/${locale}`,
+    },
+    ...data.shortlist.map((entry) => ({
+      position: entry.rank,
+      name: entry.name,
+      description: entry.bestFor[loc],
+      url: entry.compareSlug
+        ? `${SITE_URL}/${locale}/compare/${entry.compareSlug}`
+        : undefined,
+    })),
+  ];
+
   return (
     <>
       <BreadcrumbSchema
@@ -50,6 +69,11 @@ export function BestPageRenderer({
         headline={data.h1[loc]}
         description={data.hero[loc]}
         url={url}
+      />
+      <ItemListSchema
+        name={data.h1[loc]}
+        description={data.hero[loc]}
+        items={listItems}
       />
 
       {/* Hero */}

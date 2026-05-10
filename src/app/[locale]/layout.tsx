@@ -110,6 +110,11 @@ export async function generateMetadata({
         { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#7aa2f7' },
       ],
     },
+    other: {
+      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-status-bar-style': 'black-translucent',
+      'apple-mobile-web-app-title': 'SSHive',
+    },
     robots: {
       index: true,
       follow: true,
@@ -136,13 +141,19 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className="dark">
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-primary focus:text-primary-foreground focus:font-medium focus:outline-none focus:ring-2 focus:ring-ring"
+        >
+          {messages.seoCommon?.skipToContent ?? 'Skip to main content'}
+        </a>
         <OrganizationSchema />
         <SoftwareApplicationSchema />
         <NextIntlClientProvider messages={messages}>
           <GrainOverlay />
           <div className="min-h-screen flex flex-col">
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1">{children}</main>
             <Footer />
           </div>
         </NextIntlClientProvider>

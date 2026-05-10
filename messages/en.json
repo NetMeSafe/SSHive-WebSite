@@ -23,7 +23,8 @@
     "universalBinary": "Native on Mac (Apple Silicon + Intel) · iPhone · iPad",
     "platforms": "Available on Mac · iPhone · iPad",
     "platformsHint": "Universal Apple app — same profiles, everywhere",
-    "moreOptions": "Also on iPhone and iPad — see all options"
+    "moreOptions": "Also on iPhone and iPad — see all options",
+    "skipToContent": "Skip to main content"
   },
   "socialProof": {
     "appStore": "On the App Store — Mac, iPhone & iPad",
@@ -367,7 +368,7 @@
       },
       "security": {
         "title": "Security",
-        "text": "We take the security of your data seriously:\n\n— Credentials are encrypted using the macOS Keychain via Electron's safeStorage API.\n— All remote connections (SSH, SFTP) use industry-standard encryption protocols.\n— No data is transmitted to our servers, eliminating the risk of server-side breaches.\n— The App is code-signed and distributed via the Mac App Store and direct download (DMG)."
+        "text": "We take the security of your data seriously:\n\n— Credentials are encrypted using the macOS Keychain (or iOS Keychain on iPhone/iPad), gated by Touch ID where supported.\n— All remote connections (SSH, SFTP) use industry-standard encryption protocols.\n— No data is transmitted to our servers, eliminating the risk of server-side breaches.\n— The App is code-signed and distributed exclusively via the Apple App Store (Mac App Store on macOS, App Store on iPhone/iPad)."
       },
       "retention": {
         "title": "Data Retention",
@@ -727,6 +728,33 @@
       "subtitle": "Practical, copy-paste-ready tutorials for every SSH workflow on a Mac.",
       "metaTitle": "SSH Tutorials for Mac — Step-by-Step Guides | SSHive",
       "metaDescription": "Practical tutorials: SSH tunnels, key generation, SFTP file transfer, RDP from Mac, VNC, jump hosts, SOCKS5 proxy, and more."
-    }
+    },
+    "exploreMore": "Explore more",
+    "bestSshTitle": "Best SSH client for Mac",
+    "bestSshDesc": "Our shortlist of the top SSH clients on macOS — and how SSHive compares.",
+    "bestSftpTitle": "Best SFTP client for Mac",
+    "bestSftpDesc": "Native macOS SFTP clients ranked by speed, UX and security.",
+    "useCasesHubTitle": "Use cases",
+    "useCasesHubDesc": "Real workflows: Raspberry Pi, AWS, Proxmox, Docker, Kubernetes, NAS.",
+    "howToHubTitle": "Step-by-step tutorials",
+    "howToHubDesc": "SSH tunnels, key generation, SFTP, RDP, VNC, jump hosts and more.",
+    "compareHubTitle": "Compare alternatives",
+    "compareHubDesc": "SSHive side-by-side with MobaXterm, iTerm2, Termius, PuTTY and more.",
+    "featuresHubTitle": "Features",
+    "featuresHubDesc": "SSH, SFTP, RDP, VNC, MCP/AI, tunnels, broadcast and snippets."
+  },
+  "aiHero": {
+    "label": "AI-Ready",
+    "title": "Your SSH sessions, accessible to AI",
+    "subtitle": "Toggle one switch in settings — Claude Code, Cursor and Claude Desktop are auto-configured to call your live SSH and SFTP sessions through SSHive's built-in MCP server.",
+    "clientLabel": "Your AI client",
+    "clients": "Claude Code · Cursor · Claude Desktop",
+    "mcpLabel": "SSHive MCP server",
+    "mcpDetail": "localhost · Bearer token · macOS Keychain",
+    "serversLabel": "Your servers",
+    "serversDetail": "Active SSH and SFTP sessions in SSHive",
+    "toolsLabel": "5 tools exposed",
+    "tools": "ssh_execute · sftp_list · sftp_read_file · sftp_write_file · sftp_write_chunk",
+    "cta": "Open the MCP integration page"
   }
 }

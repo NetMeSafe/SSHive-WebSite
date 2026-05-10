@@ -4,6 +4,7 @@ import { Check, X, Minus, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { OVERVIEW_COMPETITORS, OVERVIEW_FEATURES } from '@/lib/competitors';
 import type { OverviewCellValue } from '@/lib/competitors';
+import { RelatedLinks } from '@/components/seo/RelatedLinks';
 
 export async function generateMetadata({
   params,
@@ -43,6 +44,7 @@ export default async function ComparePage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'comparePage' });
   const tc = await getTranslations({ locale, namespace: 'comparison' });
+  const tCommon = await getTranslations({ locale, namespace: 'seoCommon' });
 
   const whySwitchReasons = [
     t('whySwitchReasons.allInOne'),
@@ -168,6 +170,37 @@ export default async function ComparePage({
           </div>
         </div>
       </section>
+
+      <RelatedLinks
+        heading={tCommon('exploreMore')}
+        items={[
+          {
+            href: '/best-ssh-client-for-mac',
+            title: tCommon('bestSshTitle'),
+            description: tCommon('bestSshDesc'),
+          },
+          {
+            href: '/best-sftp-client-for-mac',
+            title: tCommon('bestSftpTitle'),
+            description: tCommon('bestSftpDesc'),
+          },
+          {
+            href: '/use-cases',
+            title: tCommon('useCasesHubTitle'),
+            description: tCommon('useCasesHubDesc'),
+          },
+          {
+            href: '/how-to',
+            title: tCommon('howToHubTitle'),
+            description: tCommon('howToHubDesc'),
+          },
+          {
+            href: '/features',
+            title: tCommon('featuresHubTitle'),
+            description: tCommon('featuresHubDesc'),
+          },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 md:py-28 border-t border-border">

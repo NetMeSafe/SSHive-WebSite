@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { LOCALES, SITE_URL } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 import { USE_CASES } from '@/lib/seo/use-cases';
+import { RelatedLinks } from '@/components/seo/RelatedLinks';
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -46,6 +47,7 @@ export default async function UseCasesIndex({
   setRequestLocale(locale);
   const loc = locale as Locale;
   const t = await getTranslations({ locale, namespace: 'seoCommon.useCases' });
+  const tCommon = await getTranslations({ locale, namespace: 'seoCommon' });
 
   return (
     <>
@@ -81,6 +83,37 @@ export default async function UseCasesIndex({
           </div>
         </div>
       </section>
+
+      <RelatedLinks
+        heading={tCommon('exploreMore')}
+        items={[
+          {
+            href: '/how-to',
+            title: tCommon('howToHubTitle'),
+            description: tCommon('howToHubDesc'),
+          },
+          {
+            href: '/best-ssh-client-for-mac',
+            title: tCommon('bestSshTitle'),
+            description: tCommon('bestSshDesc'),
+          },
+          {
+            href: '/best-sftp-client-for-mac',
+            title: tCommon('bestSftpTitle'),
+            description: tCommon('bestSftpDesc'),
+          },
+          {
+            href: '/compare',
+            title: tCommon('compareHubTitle'),
+            description: tCommon('compareHubDesc'),
+          },
+          {
+            href: '/features',
+            title: tCommon('featuresHubTitle'),
+            description: tCommon('featuresHubDesc'),
+          },
+        ]}
+      />
     </>
   );
 }
