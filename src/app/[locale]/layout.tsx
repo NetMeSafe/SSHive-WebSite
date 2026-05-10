@@ -100,11 +100,10 @@ export async function generateMetadata({
       ],
     },
     manifest: '/manifest.json',
+    // Next 16 only auto-emits the <link> for favicon.ico. icon.svg,
+    // apple-icon.png and the Safari mask-icon must be declared explicitly.
     icons: {
-      icon: [
-        { url: '/icon.svg', type: 'image/svg+xml' },
-        { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
-      ],
+      icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
       apple: '/apple-icon.png',
       other: [
         { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#7aa2f7' },
