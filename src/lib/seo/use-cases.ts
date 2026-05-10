@@ -24,8 +24,8 @@ export const USE_CASES: UseCaseSEO[] = [
   {
     slug: 'ssh-from-iphone',
     metaTitle: {
-      en: 'SSH from an iPhone or iPad — Native Apple Client | SSHive',
-      fr: 'SSH depuis iPhone ou iPad — Client Apple natif | SSHive',
+      en: 'SSH from an iPhone or iPad — Native Apple Client',
+      fr: 'SSH depuis iPhone ou iPad — Client Apple natif',
     },
     metaDescription: {
       en: 'Connect to your servers from an iPhone or iPad with SSHive — native iOS SSH terminal and SFTP file manager, profiles synced from your Mac, Touch ID or Face ID-secured Keychain.',
@@ -656,8 +656,8 @@ export const USE_CASES: UseCaseSEO[] = [
   {
     slug: 'all-in-one-ssh-client-mac',
     metaTitle: {
-      en: 'All-in-One SSH Client for macOS — SSH, SFTP, RDP & VNC | SSHive',
-      fr: 'Client SSH tout-en-un pour macOS — SSH, SFTP, RDP et VNC | SSHive',
+      en: 'All-in-One SSH Client for macOS — SSH, SFTP, RDP & VNC',
+      fr: 'Client SSH tout-en-un pour macOS — SSH, SFTP, RDP et VNC',
     },
     metaDescription: {
       en: 'Looking for an all-in-one SSH terminal on macOS that bundles SFTP, RDP, VNC, tunnels and AI integration? SSHive is the native Mac client built for that workflow. Free download.',

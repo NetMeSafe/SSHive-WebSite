@@ -180,7 +180,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'sftp-gui-mac',
     metaTitle: {
       en: 'Best Free SFTP Client for Mac (2026) — SSHive Guide',
-      fr: 'Meilleur client SFTP gratuit pour Mac (2026) — Guide SSHive',
+      fr: 'Meilleur client SFTP gratuit pour Mac (2026) — Guide complet',
     },
     metaDescription: {
       en: 'How to use SFTP on macOS visually — drag & drop file transfers, remote editing, bulk operations. Free SFTP client with SSH terminal in the same window.',

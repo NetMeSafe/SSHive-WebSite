@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "SSHive — SSH Client for Mac, iPhone & iPad, AI-Ready",
-    "description": "SSHive is the native Apple SSH/SFTP client for Mac, iPhone and iPad — with embedded RDP, VNC, tunnels on macOS, Touch ID-secured Keychain credentials, and a built-in MCP server so Claude Code, Cursor and Claude Desktop can manage your sessions out of the box. Free download."
+    "description": "Native Apple SSH/SFTP client for Mac, iPhone and iPad. Embedded RDP, VNC, tunnels and broadcast on macOS. Touch ID-secured Keychain. Built-in MCP for Claude Code and Cursor."
   },
   "nav": {
     "features": "Features",
@@ -15,16 +15,19 @@
     "howTo": "Guides"
   },
   "hero": {
-    "title": "The SSH Client macOS Deserves",
-    "subtitle": "SSH, SFTP, RDP & VNC — all in one app. Free to start.",
-    "downloadCta": "Download Free for macOS",
+    "title": "The SSH Client Apple Devices Deserve",
+    "subtitle": "SSH, SFTP, RDP & VNC — all in one app on Mac, with native SSH and SFTP on iPhone and iPad. Free to start.",
+    "downloadCta": "Download Free",
     "featuresCta": "See features",
-    "version": "Version {version} — macOS 13+",
-    "universalBinary": "Universal Binary (Apple Silicon + Intel)"
+    "version": "Version {version} — macOS 13+ · iOS 16+ · iPadOS 16+",
+    "universalBinary": "Native on Mac (Apple Silicon + Intel) · iPhone · iPad",
+    "platforms": "Available on Mac · iPhone · iPad",
+    "platformsHint": "Universal Apple app — same profiles, everywhere",
+    "moreOptions": "Also on iPhone and iPad — see all options"
   },
   "socialProof": {
-    "appStore": "Available on Mac App Store",
-    "keychainSecurity": "macOS Keychain Security",
+    "appStore": "On the App Store — Mac, iPhone & iPad",
+    "keychainSecurity": "Touch ID + Keychain security",
     "noTelemetry": "No Telemetry"
   },
   "features": {
@@ -170,20 +173,27 @@
   },
   "download": {
     "title": "Download SSHive",
-    "subtitle": "Free to start. macOS 13+.",
-    "dmgButton": "Download SSHive {version}",
-    "dmgSubtitle": "macOS — Universal Binary (Apple Silicon + Intel)",
+    "subtitle": "Free to start. Mac, iPhone & iPad.",
+    "dmgButton": "Get SSHive on the Mac App Store",
+    "dmgSubtitle": "Free on the Mac App Store · Universal binary (Apple Silicon + Intel)",
     "or": "or",
     "appStoreAlt": "Mac App Store",
+    "iosSectionTitle": "Also on iPhone and iPad",
+    "iosSectionDescription": "SSH terminal and SFTP file manager, native on iOS and iPadOS. Profiles created on Mac sync across your devices.",
+    "iosCta": "Get SSHive on the App Store",
+    "iosBadge": "iOS 16+ · iPadOS 16+",
+    "platformSplitTitle": "What works on which Apple device",
+    "platformSplitMacAll": "Mac: SSH, SFTP, RDP, VNC, tunnels (-L/-R/-D), broadcast, MCP server, snippets, network tools",
+    "platformSplitIos": "iPhone & iPad: SSH terminal and SFTP file manager",
     "noAccount": "No account needed",
     "noAds": "No ads, no tracking in the app",
-    "keychainSecurity": "Secure — macOS Keychain encryption",
+    "keychainSecurity": "Secure — Touch ID + Keychain encryption",
     "upgradeLater": "Upgrade to Pro anytime ($9.99, one-time)",
     "emailTitle": "Get notified of new releases",
     "emailPlaceholder": "your@email.com",
     "emailSubscribe": "Subscribe",
     "systemReq": "System Requirements",
-    "systemReqDetails": "macOS 13 Ventura or later. Apple Silicon (M1/M2/M3/M4) and Intel x64 supported."
+    "systemReqDetails": "macOS 13 Ventura or later (Apple Silicon M1/M2/M3/M4 or Intel x64). iOS 16+ on iPhone, iPadOS 16+ on iPad."
   },
   "footer": {
     "product": "Product",
@@ -313,7 +323,7 @@
       "q2": "Is SSHive free?",
       "a2": "Yes. The free version includes SSH terminal, SFTP file manager, 2 concurrent sessions, and 5 saved profiles. You can optionally upgrade to Pro ($9.99, one-time) for unlimited sessions, RDP, VNC, tunnels, and more.",
       "q3": "Does SSHive work on Intel Macs?",
-      "a3": "Yes. SSHive is distributed as a Universal Binary that runs natively on both Apple Silicon (M1/M2/M3/M4) and Intel x64 Macs.",
+      "a3": "Yes. SSHive on the Mac App Store is a Universal Binary — it runs natively on both Apple Silicon (M1/M2/M3/M4) and Intel x64 Macs.",
       "q4": "How do I import my SSH config?",
       "a4": "Go to the connection dialog, click the import button, and select \"Import from ~/.ssh/config\". SSHive will parse your SSH config file and create profiles for each host entry.",
       "q5": "Is my data secure?",

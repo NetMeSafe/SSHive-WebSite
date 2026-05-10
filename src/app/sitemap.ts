@@ -51,9 +51,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: page === '' ? 'weekly' : 'monthly',
         priority: priorityFor(page),
         alternates: {
-          languages: Object.fromEntries(
-            LOCALES.map((l) => [l, `${SITE_URL}/${l}${page}`])
-          ),
+          languages: {
+            ...Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}/${l}${page}`])),
+            'x-default': `${SITE_URL}/en${page}`,
+          },
         },
       });
     }

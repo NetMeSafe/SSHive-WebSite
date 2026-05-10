@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { ArrowLeft, Download, Clock } from 'lucide-react';
 import { LOCALES, SITE_URL } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
-import { HOW_TOS, HOW_TO_SLUGS, getHowTo } from '@/lib/seo/how-tos';
+import { HOW_TO_SLUGS, getHowTo } from '@/lib/seo/how-tos';
 import { getUseCase } from '@/lib/seo/use-cases';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';

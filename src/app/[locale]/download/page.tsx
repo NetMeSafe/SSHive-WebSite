@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { CheckCircle, Mail } from 'lucide-react';
+import { CheckCircle, Mail, Smartphone, Tablet, Laptop, ExternalLink } from 'lucide-react';
 import { DownloadButton } from '@/components/download/DownloadButton';
 import { SoftwareApplicationSchema } from '@/components/seo/SoftwareApplicationSchema';
-import { APP_VERSION } from '@/lib/constants';
+import { APP_VERSION, APP_STORE_UNIVERSAL_URL } from '@/lib/constants';
 
 export async function generateMetadata({
   params,
@@ -63,6 +63,53 @@ export default async function DownloadPage({
             </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* iOS / iPadOS section */}
+      <section className="py-16 md:py-20 border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-8 md:p-10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <Smartphone className="w-5 h-5 text-primary" />
+                  <Tablet className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-mono uppercase tracking-wider text-primary">{t('iosBadge')}</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  {t('iosSectionTitle')}
+                </h2>
+                <p className="mt-3 text-muted-foreground leading-relaxed max-w-xl">
+                  {t('iosSectionDescription')}
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <a
+                  href={APP_STORE_UNIVERSAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-xl font-medium hover:opacity-90 transition-opacity"
+                >
+                  {t('iosCta')}
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Platform split */}
+            <div className="mt-8 pt-6 border-t border-primary/10 space-y-3">
+              <h3 className="text-sm font-semibold text-foreground mb-3">{t('platformSplitTitle')}</h3>
+              <div className="flex items-start gap-3 text-sm">
+                <Laptop className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">{t('platformSplitMacAll')}</span>
+              </div>
+              <div className="flex items-start gap-3 text-sm">
+                <Smartphone className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-muted-foreground">{t('platformSplitIos')}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

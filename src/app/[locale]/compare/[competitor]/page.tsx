@@ -9,7 +9,6 @@ import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { ArticleSchema } from '@/components/seo/ArticleSchema';
 import { FAQSchema } from '@/components/seo/FAQSchema';
 import { FAQSection } from '@/components/seo/FAQSection';
-import { RelatedLinks } from '@/components/seo/RelatedLinks';
 import { SITE_URL } from '@/lib/constants';
 import type { Competitor } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';

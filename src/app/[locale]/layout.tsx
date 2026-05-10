@@ -1,10 +1,20 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/constants';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#1a1b26' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
+  colorScheme: 'dark light',
+};
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { GrainOverlay } from '@/components/ui/GrainOverlay';
@@ -57,6 +67,7 @@ export async function generateMetadata({
       languages: {
         en: '/en',
         fr: '/fr',
+        'x-default': '/en',
       },
     },
     openGraph: {
@@ -65,11 +76,29 @@ export async function generateMetadata({
       siteName: 'SSHive',
       title: t.title,
       description: t.description,
+      url: `${SITE_URL}/${locale}`,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+          type: 'image/png',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t.title,
       description: t.description,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+        },
+      ],
     },
     manifest: '/manifest.json',
     icons: {

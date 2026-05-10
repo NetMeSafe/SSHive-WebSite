@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Laptop, Smartphone, Tablet } from 'lucide-react';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { APP_STORE_URL } from '@/lib/constants';
 
@@ -43,9 +43,32 @@ export function Hero() {
           </p>
         </ScrollReveal>
 
+        {/* Platform badges */}
+        <ScrollReveal delay={150}>
+          <div className="mt-7 flex flex-col items-center gap-2">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-sm">
+              <span className="inline-flex items-center gap-1.5 text-foreground">
+                <Laptop className="w-4 h-4 text-primary" />
+                Mac
+              </span>
+              <span className="text-muted-foreground/60">·</span>
+              <span className="inline-flex items-center gap-1.5 text-foreground">
+                <Smartphone className="w-4 h-4 text-primary" />
+                iPhone
+              </span>
+              <span className="text-muted-foreground/60">·</span>
+              <span className="inline-flex items-center gap-1.5 text-foreground">
+                <Tablet className="w-4 h-4 text-primary" />
+                iPad
+              </span>
+            </div>
+            <p className="text-xs text-muted-foreground">{t('platformsHint')}</p>
+          </div>
+        </ScrollReveal>
+
         {/* CTA Buttons */}
         <ScrollReveal delay={200}>
-          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-7 flex flex-col sm:flex-row items-center gap-4">
             <a
               href={APP_STORE_URL}
               target="_blank"

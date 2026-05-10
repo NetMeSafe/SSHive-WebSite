@@ -1,5 +1,5 @@
 import { JsonLd } from './JsonLd';
-import { SITE_URL, APP_VERSION, DOWNLOAD_URL, APP_STORE_URL, APP_STORE_UNIVERSAL_URL } from '@/lib/constants';
+import { SITE_URL, APP_VERSION, APP_STORE_URL, APP_STORE_UNIVERSAL_URL } from '@/lib/constants';
 
 export function SoftwareApplicationSchema() {
   return (
@@ -30,7 +30,7 @@ export function SoftwareApplicationSchema() {
             url: APP_STORE_URL,
           },
         ],
-        downloadUrl: DOWNLOAD_URL,
+        downloadUrl: APP_STORE_UNIVERSAL_URL,
         installUrl: APP_STORE_UNIVERSAL_URL,
         softwareVersion: APP_VERSION,
         fileSize: '150MB',
