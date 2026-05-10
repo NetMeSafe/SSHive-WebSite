@@ -89,8 +89,8 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
       {
         question: { en: 'Does SSHive support Touch ID for SSH connections?', fr: 'SSHive supporte-t-il Touch ID pour les connexions SSH ?' },
         answer: {
-          en: 'Yes. SSHive uses Touch ID to unlock the credentials stored in the macOS Keychain when you connect to a saved profile. The fingerprint check happens at the OS level — SSHive never sees your fingerprint data. If Touch ID is unavailable (Mac without sensor, or iPhone/iPad), it falls back to your account password or device passcode.',
-          fr: 'Oui. SSHive utilise Touch ID pour deverrouiller les identifiants stockes dans le Trousseau macOS lors de la connexion a un profil sauvegarde. La verification d\'empreinte se passe au niveau de l\'OS — SSHive ne voit jamais vos donnees d\'empreinte. Si Touch ID est indisponible (Mac sans capteur, ou iPhone/iPad), repli sur le mot de passe de session ou le code d\'acces.',
+          en: 'Indirectly, yes. SSHive does not call Touch ID itself — credentials are stored in the macOS Keychain via Electron\'s safeStorage API, and macOS decides when to prompt for Touch ID (or your account password as a fallback) before unlocking that Keychain entry. SSHive never sees your fingerprint data. On iPhone/iPad, the equivalent path is iOS Keychain unlocked by Touch ID / Face ID / device passcode at the OS level.',
+          fr: 'Indirectement, oui. SSHive n\'appelle pas Touch ID lui-meme — les identifiants sont stockes dans le Trousseau macOS via l\'API safeStorage d\'Electron, et c\'est macOS qui decide quand demander Touch ID (ou votre mot de passe de session en repli) avant de deverrouiller cette entree du Trousseau. SSHive ne voit jamais vos donnees d\'empreinte. Sur iPhone/iPad, le chemin equivalent est l\'iOS Keychain deverrouille par Touch ID / Face ID / code d\'acces appareil au niveau de l\'OS.',
         },
       },
       {

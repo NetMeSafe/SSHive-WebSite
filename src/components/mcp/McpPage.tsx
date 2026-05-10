@@ -90,7 +90,7 @@ function McpSettingsMockup({ t }: { t: (key: string) => string }) {
           </div>
         </div>
 
-        {/* Auto-configured clients */}
+        {/* Compatible clients */}
         <div className="p-4 rounded-xl bg-indigo-500/5 border border-indigo-500/20">
           <div className="text-xs text-indigo-300 font-medium mb-3">{t('mockup.autoConfigured')}</div>
           <div className="flex flex-wrap gap-2">
@@ -514,7 +514,7 @@ export function McpPage() {
               </div>
             </ScrollReveal>
 
-            {/* Step 3 — auto-configured */}
+            {/* Step 3 — paste config or run CLI */}
             <ScrollReveal delay={200}>
               <div className="flex gap-6">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center">
