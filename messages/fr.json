@@ -453,7 +453,7 @@
       "bullets": [
         "Serveur MCP integre pour l'integration avec les assistants IA",
         "Compatible avec Claude Code (CLI/IDE), Cursor et Claude Desktop",
-        "5 outils : ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_chunk",
+        "7 outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path",
         "Authentification par token Bearer avec generation automatique"
       ]
     },
@@ -542,7 +542,7 @@
       "title": "Laissez Claude gerer vos serveurs",
       "desc": "Serveur MCP integre, compatible avec Claude Code, Cursor et Claude Desktop. Votre assistant IA peut executer des commandes, lire des logs et parcourir les fichiers sur tout serveur connecte — config copier-coller, ou commande CLI unique pour Claude Code.",
       "b1": "Compatible avec Claude Code, Cursor et Claude Desktop — config copier-coller ou commande CLI unique",
-      "b2": "5 outils : lister les sessions, executer des commandes, parcourir et editer les fichiers",
+      "b2": "7 outils : lister les sessions, executer des commandes, parcourir et lire/ecrire les fichiers (avec uploads par chunks)",
       "b3": "100 % local — authentification Bearer token, aucun relais cloud",
       "learnMore": "Decouvrir l'integration MCP"
     },
@@ -648,14 +648,15 @@
     },
     "tools": {
       "label": "Outils MCP",
-      "title": "5 outils pour un acces complet aux serveurs",
+      "title": "7 outils pour un acces complet aux serveurs",
       "subtitle": "Chaque outil correspond a une operation SSH ou SFTP specifique, donnant aux assistants IA un controle precis sur vos serveurs distants.",
       "sshList": "Liste toutes les sessions SSH actives avec hote, utilisateur, port et statut de connexion.",
       "sshExecute": "Execute une commande sur une session SSH specifique et retourne stdout/stderr.",
       "sftpList": "Liste les fichiers et repertoires a un chemin donne sur un serveur distant.",
       "sftpRead": "Lit le contenu d'un fichier distant et le retourne en texte.",
-      "sftpWrite": "Ecrit du contenu dans un fichier sur le serveur distant.",
-      "sftpWriteChunk": "Stream des fichiers volumineux par morceaux vers le serveur distant."
+      "sftpWrite": "Ecrit du contenu dans un fichier sur le serveur distant (en memoire).",
+      "sftpWriteChunk": "Append des chunks base64 (4 MB chacun) pour les gros fichiers.",
+      "sftpWriteFromLocal": "Stream un fichier local directement vers le distant — zero overhead base64, ideal pour les gros transferts."
     },
     "setup": {
       "label": "Configuration",
@@ -755,8 +756,8 @@
     "mcpDetail": "localhost · Bearer token · Trousseau macOS",
     "serversLabel": "Vos serveurs",
     "serversDetail": "Sessions SSH et SFTP actives dans SSHive",
-    "toolsLabel": "5 outils exposes",
-    "tools": "ssh_execute · sftp_list · sftp_read_file · sftp_write_file · sftp_write_chunk",
+    "toolsLabel": "7 outils exposes",
+    "tools": "ssh_list_sessions · ssh_execute · sftp_list · sftp_read_file · sftp_write_file · sftp_write_file_chunk · sftp_write_from_local_path",
     "cta": "Voir la page d'integration MCP"
   }
 }

@@ -215,11 +215,13 @@ export function McpPage() {
   const t = useTranslations('mcpPage');
 
   const tools = [
+    { name: 'ssh_list_sessions', icon: Terminal, desc: t('tools.sshList') },
     { name: 'ssh_execute', icon: Terminal, desc: t('tools.sshExecute') },
     { name: 'sftp_list', icon: FolderOpen, desc: t('tools.sftpList') },
     { name: 'sftp_read_file', icon: FolderOpen, desc: t('tools.sftpRead') },
     { name: 'sftp_write_file', icon: FolderOpen, desc: t('tools.sftpWrite') },
-    { name: 'sftp_write_chunk', icon: FolderOpen, desc: t('tools.sftpWriteChunk') },
+    { name: 'sftp_write_file_chunk', icon: FolderOpen, desc: t('tools.sftpWriteChunk') },
+    { name: 'sftp_write_from_local_path', icon: FolderOpen, desc: t('tools.sftpWriteFromLocal') },
   ];
 
   const streamableHttpConfig = `{
