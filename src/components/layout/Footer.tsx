@@ -38,6 +38,8 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('comparisons')}</h3>
             <ul className="space-y-3">
+              <li><Link href={'/best-ssh-client-for-mac' as '/best-ssh-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">Best SSH client for Mac</Link></li>
+              <li><Link href={'/best-sftp-client-for-mac' as '/best-sftp-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">Best SFTP client for Mac</Link></li>
               <li><Link href="/compare/mobaxterm" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs MobaXterm</Link></li>
               <li><Link href="/compare/iterm2" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs iTerm2</Link></li>
               <li><Link href="/compare/termius" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs Termius</Link></li>

@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SITE_URL, FEATURES, COMPETITORS, LOCALES } from '@/lib/constants';
 import { USE_CASE_SLUGS } from '@/lib/seo/use-cases';
 import { HOW_TO_SLUGS } from '@/lib/seo/how-tos';
+import { BEST_PAGE_SLUGS } from '@/lib/seo/best-pages';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   COMPETITORS.forEach((c) => pages.push(`/compare/${c}`));
   USE_CASE_SLUGS.forEach((s) => pages.push(`/use-cases/${s}`));
   HOW_TO_SLUGS.forEach((s) => pages.push(`/how-to/${s}`));
+  BEST_PAGE_SLUGS.forEach((s) => pages.push(`/${s}`));
 
   const entries: MetadataRoute.Sitemap = [];
 

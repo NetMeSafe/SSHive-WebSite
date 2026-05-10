@@ -234,7 +234,7 @@
     "keychainIntegration": "Keychain Integration",
     "connectionProfiles": "Connection Profiles",
     "modernUI": "Modern UI",
-    "metaTitleTemplate": "SSHive vs {competitor} — Free macOS SSH Client Compared (2026)",
+    "metaTitleTemplate": "SSHive vs {competitor} — A {competitor} Alternative for Mac (2026)",
     "introTitle": "SSHive vs {competitor}: which is the better SSH client for macOS?",
     "detailedIntro": {
       "mobaxterm": "MobaXterm has been the gold standard all-in-one terminal on Windows for years. With X11 forwarding, embedded SFTP, and RDP support, it set the bar for what a remote management tool should be. SSHive brings this same philosophy to macOS — but with native Keychain security, and modern AI capabilities that MobaXterm does not offer. If you have been searching for a MobaXterm equivalent on Mac, SSHive is built specifically for you. Unlike MobaXterm, which only runs on Windows (or via Wine, with limited success), SSHive is a native macOS application built with Electron and React, optimized for Apple Silicon, and available on the Mac App Store.",

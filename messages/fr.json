@@ -234,7 +234,7 @@
     "keychainIntegration": "Integration Trousseau",
     "connectionProfiles": "Profils de connexion",
     "modernUI": "Interface moderne",
-    "metaTitleTemplate": "SSHive vs {competitor} — Client SSH gratuit macOS compare (2026)",
+    "metaTitleTemplate": "SSHive vs {competitor} — Une alternative a {competitor} sur Mac (2026)",
     "introTitle": "SSHive vs {competitor} : quel est le meilleur client SSH pour macOS ?",
     "detailedIntro": {
       "mobaxterm": "MobaXterm est le standard des terminaux tout-en-un sur Windows depuis des annees. Avec le forwarding X11, le SFTP embarque et le support RDP, il a fixe la barre pour ce que devrait etre un outil de gestion a distance. SSHive apporte cette meme philosophie sur macOS — mais avec la securite native du Trousseau et des capacites IA modernes que MobaXterm n'offre pas. Si vous cherchez un equivalent MobaXterm sur Mac, SSHive est concu specifiquement pour vous. Contrairement a MobaXterm, qui ne fonctionne que sur Windows (ou via Wine, avec un succes limite), SSHive est une application macOS native construite avec Electron et React, optimisee pour Apple Silicon et disponible sur le Mac App Store.",
