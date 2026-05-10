@@ -50,8 +50,8 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('community')}</h3>
             <ul className="space-y-3">
-              <li><a href="https://twitter.com/sshiveapp" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('twitter')}</a></li>
-              <li><a href="https://fosstodon.org/@sshive" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('mastodon')}</a></li>
+              <li><a href="https://www.linkedin.com/company/netmesafe/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('linkedin')}</a></li>
+              <li><a href="mailto:contact@netmesafe.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('email')}</a></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('support')}</Link></li>
             </ul>
           </div>

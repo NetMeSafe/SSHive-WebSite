@@ -215,11 +215,11 @@ export function McpPage() {
   const t = useTranslations('mcpPage');
 
   const tools = [
-    { name: 'ssh_list_sessions', icon: Terminal, desc: t('tools.sshList') },
     { name: 'ssh_execute', icon: Terminal, desc: t('tools.sshExecute') },
     { name: 'sftp_list', icon: FolderOpen, desc: t('tools.sftpList') },
     { name: 'sftp_read_file', icon: FolderOpen, desc: t('tools.sftpRead') },
     { name: 'sftp_write_file', icon: FolderOpen, desc: t('tools.sftpWrite') },
+    { name: 'sftp_write_chunk', icon: FolderOpen, desc: t('tools.sftpWriteChunk') },
   ];
 
   const streamableHttpConfig = `{
@@ -245,6 +245,8 @@ export function McpPage() {
     }
   }
 }`;
+
+  const claudeCliCommand = `claude mcp remove sshive --scope user 2>/dev/null; claude mcp add --transport http --scope user sshive http://127.0.0.1:49422/mcp --header "Authorization:Bearer <your-token>"`;
 
   return (
     <>
@@ -525,19 +527,27 @@ export function McpPage() {
           </div>
 
           {/* Config blocks */}
-          <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="mt-14 space-y-6">
             <ScrollReveal>
               <ConfigBlock
-                title={t('setup.streamableHttp')}
-                config={streamableHttpConfig}
+                title={t('setup.claudeCli')}
+                config={claudeCliCommand}
               />
             </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <ConfigBlock
-                title={t('setup.sse')}
-                config={sseConfig}
-              />
-            </ScrollReveal>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <ScrollReveal>
+                <ConfigBlock
+                  title={t('setup.streamableHttp')}
+                  config={streamableHttpConfig}
+                />
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <ConfigBlock
+                  title={t('setup.sse')}
+                  config={sseConfig}
+                />
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Mail, MessageCircle, LifeBuoy } from 'lucide-react';
+import { Mail, Linkedin, LifeBuoy } from 'lucide-react';
 
 export async function generateMetadata({
   params,
@@ -53,31 +53,31 @@ export default async function ContactPage({
             {t('emailDescription')}
           </p>
           <a
-            href="mailto:hello@sshive.app"
+            href="mailto:contact@netmesafe.com"
             className="mt-4 inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
-            hello@sshive.app
+            contact@netmesafe.com
           </a>
         </div>
 
-        {/* Twitter */}
+        {/* LinkedIn */}
         <div className="bg-card border border-border rounded-xl p-6">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500/20 to-blue-500/20 flex items-center justify-center mb-4">
-            <MessageCircle className="w-6 h-6 text-sky-400" />
+            <Linkedin className="w-6 h-6 text-sky-400" />
           </div>
           <h2 className="text-lg font-bold text-foreground">
-            {t('twitterTitle')}
+            {t('linkedinTitle')}
           </h2>
           <p className="mt-2 text-muted-foreground leading-relaxed">
-            {t('twitterDescription')}
+            {t('linkedinDescription')}
           </p>
           <a
-            href="https://twitter.com/sshiveapp"
+            href="https://www.linkedin.com/company/netmesafe/"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
-            {t('twitterHandle')}
+            {t('linkedinHandle')}
           </a>
         </div>
 
@@ -93,10 +93,10 @@ export default async function ContactPage({
             {t('supportDescription')}
           </p>
           <a
-            href="mailto:support@sshive.app"
+            href="mailto:contact@netmesafe.com"
             className="mt-4 inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
-            support@sshive.app
+            contact@netmesafe.com
           </a>
         </div>
       </div>

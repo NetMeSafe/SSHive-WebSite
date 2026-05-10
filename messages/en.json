@@ -61,7 +61,7 @@
     },
     "mcp": {
       "title": "AI Integration (MCP)",
-      "description": "Built-in MCP server lets Claude Code, Cursor, and Claude Desktop access your SSH/SFTP sessions. Auto-configures AI clients on your machine.",
+      "description": "Built-in MCP server lets Claude Code, Cursor, and Claude Desktop access your SSH/SFTP sessions. Copy-paste config, or one-shot CLI for Claude Code.",
       "shortDesc": "Claude & Cursor integration"
     },
     "broadcast": {
@@ -204,8 +204,8 @@
     "about": "About",
     "contact": "Contact",
     "changelog": "Changelog",
-    "twitter": "Twitter",
-    "mastodon": "Mastodon",
+    "linkedin": "LinkedIn",
+    "email": "Email",
     "support": "Support",
     "madeBy": "Made with love by NetMeSafe",
     "license": "Made in France",
@@ -273,11 +273,11 @@
     "subtitle": "Have a question, found a bug, or want to suggest a feature? Here is how to reach us.",
     "emailTitle": "Email",
     "emailDescription": "For general inquiries, partnerships, or anything else.",
-    "twitterTitle": "Twitter",
-    "twitterDescription": "Follow us for updates, tips, and announcements.",
-    "twitterHandle": "@sshiveapp",
+    "linkedinTitle": "LinkedIn",
+    "linkedinDescription": "Follow NetMeSafe on LinkedIn for product updates and announcements.",
+    "linkedinHandle": "NetMeSafe",
     "supportTitle": "Support",
-    "supportDescription": "Bug reports, feature requests, and technical questions."
+    "supportDescription": "Bug reports, feature requests, and technical questions — same address as general contact."
   },
   "changelog": {
     "title": "Changelog",
@@ -332,7 +332,7 @@
       "q6": "How do SSH tunnels work in SSHive?",
       "a6": "You can configure Local (-L), Remote (-R), and SOCKS5 (-D) tunnels per connection profile. Tunnels start automatically when the SSH connection is established. You can set up to 10 local and 5 remote tunnels per profile.",
       "q7": "Can I use SSHive with Claude or Cursor?",
-      "a7": "Yes. SSHive includes a built-in MCP (Model Context Protocol) server that auto-configures Claude Code, Cursor, and Claude Desktop. AI assistants can list sessions, execute commands, and browse files on your remote servers.",
+      "a7": "Yes. SSHive includes a built-in MCP (Model Context Protocol) server compatible with Claude Code, Cursor, and Claude Desktop. Setup is copy-paste (or a single CLI command for Claude Code) — AI assistants can then execute commands and browse files on your remote servers.",
       "q8": "Where are my profiles stored?",
       "a8": "Profiles are stored in ~/Library/Application Support/SSHive/profiles.json. Credentials are stored separately in credentials.json, encrypted via the macOS Keychain. You can export and import profiles using the built-in export feature."
     }
@@ -449,10 +449,10 @@
     },
     "mcp": {
       "metaTitle": "MCP AI Integration for macOS — Claude & Cursor",
-      "metaDescription": "SSHive's built-in MCP server auto-configures Claude Code, Cursor, and Claude Desktop to access your SSH/SFTP sessions. Free for macOS.",
+      "metaDescription": "Claude Code, Cursor and Claude Desktop can hit your live SSH/SFTP sessions through SSHive's built-in MCP server. Copy-paste config or one-shot CLI. Free for macOS.",
       "bullets": [
         "Built-in MCP server for AI assistant integration",
-        "Auto-configures Claude Code, Cursor, and Claude Desktop",
+        "Compatible with Claude Code (CLI/IDE), Cursor, and Claude Desktop",
         "5 tools: ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_chunk",
         "Bearer token authentication with auto-generated tokens"
       ]
@@ -540,8 +540,8 @@
     "mcp": {
       "label": "AI Integration (MCP)",
       "title": "Let Claude manage your servers",
-      "desc": "Built-in MCP server that auto-configures Claude Code, Cursor, and Claude Desktop. Your AI assistant can execute commands, read logs, and browse files on any connected server.",
-      "b1": "Auto-configures Claude Code, Cursor & Claude Desktop in one click",
+      "desc": "Built-in MCP server compatible with Claude Code, Cursor and Claude Desktop. Your AI assistant can execute commands, read logs, and browse files on any connected server — copy-paste setup, or one-shot CLI for Claude Code.",
+      "b1": "Compatible with Claude Code, Cursor & Claude Desktop — copy-paste config or one-shot CLI",
       "b2": "5 tools: list sessions, execute commands, browse & edit remote files",
       "b3": "100% local — Bearer token auth, no cloud relay",
       "learnMore": "Discover MCP integration"
@@ -585,14 +585,14 @@
   },
   "mcpPage": {
     "metaTitle": "MCP AI Integration — Claude Code, Cursor & Claude Desktop | SSHive",
-    "metaDescription": "SSHive's built-in MCP server lets AI assistants like Claude Code, Cursor, and Claude Desktop access your SSH and SFTP sessions. Auto-configured, secure, local.",
+    "metaDescription": "SSHive's built-in MCP server lets AI assistants like Claude Code, Cursor, and Claude Desktop access your SSH and SFTP sessions. Copy-paste config or one-shot CLI command — local and secure.",
     "backToFeatures": "See all features",
     "sectionLabel": "AI Integration",
     "heroTitle": "Your servers, accessible to AI",
     "heroSubtitle": "SSHive includes a built-in MCP server that lets Claude Code, Cursor, and Claude Desktop interact with your SSH and SFTP sessions — directly from your machine.",
     "hero": {
       "statusMcp": "MCP Server Active",
-      "statusAuto": "Auto-configured",
+      "statusAuto": "Copy-paste setup",
       "statusSecure": "Local & Secure"
     },
     "heroCta": "Download SSHive",
@@ -605,7 +605,7 @@
       "active": "Active",
       "port": "Port",
       "token": "Token Bearer",
-      "autoConfigured": "Auto-configured clients",
+      "autoConfigured": "Compatible clients",
       "claudePrompt": "List all running Docker containers on my production server",
       "claudeThinking": "Using SSHive MCP to access session \"NMS\"…",
       "result": "Result",
@@ -626,8 +626,8 @@
         "desc": "The MCP server runs on 127.0.0.1 with Bearer token authentication. Nothing leaves your machine — no cloud relay, no third-party proxy."
       },
       "auto": {
-        "title": "Zero configuration",
-        "desc": "Activate MCP in Settings and SSHive auto-configures Claude Code, Cursor, and Claude Desktop. Ready in seconds."
+        "title": "Copy-paste setup",
+        "desc": "Enable MCP in Settings, then copy the JSON config into your AI client. Claude Code users can run a single CLI command."
       }
     },
     "demoSsh": {
@@ -654,33 +654,35 @@
       "sshExecute": "Executes a command on a specific SSH session and returns stdout/stderr.",
       "sftpList": "Lists files and directories at a given path on a remote server.",
       "sftpRead": "Reads the content of a remote file and returns it as text.",
-      "sftpWrite": "Writes content to a file on the remote server."
+      "sftpWrite": "Writes content to a file on the remote server.",
+      "sftpWriteChunk": "Streams large files chunk by chunk to the remote server."
     },
     "setup": {
       "label": "Setup",
       "title": "Ready in 3 clicks",
-      "subtitle": "SSHive auto-configures your AI clients. For other tools, copy the JSON config below.",
+      "subtitle": "Copy the ready-to-paste config into your AI client, or run the one-shot Claude Code CLI command below.",
       "step1": {
         "title": "Open SSHive Settings",
         "desc": "Navigate to Settings > MCP in the SSHive sidebar."
       },
       "step2": {
         "title": "Enable the MCP server",
-        "desc": "Toggle the switch to activate the local MCP server on port 49422. A Bearer token is automatically generated."
+        "desc": "Toggle the switch to activate the local MCP server on port 49422. A Bearer token is automatically generated and shown in Settings — you'll paste it into the snippets below."
       },
       "step3": {
-        "title": "Done — Claude Code, Cursor & Claude Desktop are auto-configured",
-        "desc": "SSHive writes the configuration to each client's settings file automatically. Just restart your AI client and you're connected."
+        "title": "Paste the config — or run the Claude Code one-liner",
+        "desc": "For Claude Desktop, Cursor and Cline: copy the JSON config and paste it into your client's MCP settings file. For Claude Code (CLI + IDE), copy the one-shot command — it registers SSHive in `~/.claude.json` in a single step. Restart your client and you're connected."
       },
       "streamableHttp": "Streamable HTTP (Claude Desktop, Cursor, Cline)",
-      "sse": "SSE — Server-Sent Events (legacy)"
+      "sse": "SSE — Server-Sent Events (legacy)",
+      "claudeCli": "Claude Code CLI (one-shot command)"
     },
     "clients": {
       "label": "Compatible Clients",
       "title": "Works with your favorite AI tools",
-      "claudeCode": "Full integration — auto-configured when MCP is enabled in SSHive.",
-      "cursor": "Auto-configured — SSHive writes to Cursor's MCP settings file.",
-      "claudeDesktop": "Auto-configured — seamless integration with Claude Desktop app.",
+      "claudeCode": "One-shot CLI command — `claude mcp add` registers SSHive in ~/.claude.json in a single line.",
+      "cursor": "Paste the JSON snippet into Cursor's MCP settings file — SSHive shows the exact config in Settings.",
+      "claudeDesktop": "Paste the JSON snippet into Claude Desktop's config file (claude_desktop_config.json).",
       "cline": "Compatible via manual Streamable HTTP configuration."
     },
     "security": {
@@ -746,7 +748,7 @@
   "aiHero": {
     "label": "AI-Ready",
     "title": "Your SSH sessions, accessible to AI",
-    "subtitle": "Toggle one switch in settings — Claude Code, Cursor and Claude Desktop are auto-configured to call your live SSH and SFTP sessions through SSHive's built-in MCP server.",
+    "subtitle": "Enable MCP in Settings, then paste SSHive's config (or run the one-shot Claude Code CLI) — your AI client now calls your live SSH and SFTP sessions through SSHive's built-in MCP server.",
     "clientLabel": "Your AI client",
     "clients": "Claude Code · Cursor · Claude Desktop",
     "mcpLabel": "SSHive MCP server",
