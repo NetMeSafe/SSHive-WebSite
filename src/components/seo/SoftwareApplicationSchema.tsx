@@ -1,5 +1,5 @@
 import { JsonLd } from './JsonLd';
-import { SITE_URL, APP_VERSION, DOWNLOAD_URL, APP_STORE_URL } from '@/lib/constants';
+import { SITE_URL, APP_VERSION, APP_STORE_URL, APP_STORE_UNIVERSAL_URL } from '@/lib/constants';
 
 export function SoftwareApplicationSchema() {
   return (
@@ -8,11 +8,11 @@ export function SoftwareApplicationSchema() {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
         name: 'SSHive',
-        operatingSystem: 'macOS 13+',
+        operatingSystem: 'macOS 13+, iOS, iPadOS',
         applicationCategory: 'DeveloperApplication',
         applicationSubCategory: 'SSH Client',
         description:
-          'SSH, SFTP, RDP & VNC client for macOS. All-in-one terminal with Keychain security, SSH tunnels, broadcast mode, and AI integration via MCP.',
+          'Native Apple SSH/SFTP client for Mac, iPhone and iPad. Adds embedded RDP, VNC, SSH tunnels and broadcast on macOS. Touch ID-secured Keychain credentials and a built-in MCP server for Claude Code, Cursor and Claude Desktop.',
         offers: [
           {
             '@type': 'Offer',
@@ -30,8 +30,8 @@ export function SoftwareApplicationSchema() {
             url: APP_STORE_URL,
           },
         ],
-        downloadUrl: DOWNLOAD_URL,
-        installUrl: APP_STORE_URL,
+        downloadUrl: APP_STORE_UNIVERSAL_URL,
+        installUrl: APP_STORE_UNIVERSAL_URL,
         softwareVersion: APP_VERSION,
         fileSize: '150MB',
         author: {
@@ -46,18 +46,19 @@ export function SoftwareApplicationSchema() {
         },
         url: SITE_URL,
         featureList: [
-          'SSH Terminal with GPU-accelerated rendering',
-          'SFTP dual-pane file manager with drag & drop',
-          'RDP remote desktop via IronRDP',
-          'VNC viewer via noVNC',
-          'SSH tunnels (local, remote, SOCKS5)',
-          'Broadcast mode for multi-server commands',
-          'MCP server for AI integration (Claude, Cursor)',
-          'macOS Keychain credential encryption',
-          'Quick commands library',
+          'SSH Terminal (Mac, iPhone, iPad) with GPU-accelerated rendering on macOS',
+          'SFTP dual-pane file manager (Mac, iPhone, iPad)',
+          'RDP remote desktop on macOS via IronRDP / freerdp-native',
+          'VNC viewer on macOS via noVNC',
+          'SSH tunnels (local, remote, SOCKS5) on macOS',
+          'Broadcast mode for multi-server commands on macOS',
+          'MCP server for AI integration (Claude Code, Cursor, Claude Desktop) on macOS',
+          'Touch ID-secured Keychain credential storage',
+          'Quick commands / snippet library',
+          'TOTP / HOTP authenticator with encrypted vault',
         ],
-        softwareRequirements: 'macOS 13 Ventura or later',
-        processorRequirements: 'Apple Silicon (M1/M2/M3/M4) or Intel x64',
+        softwareRequirements: 'macOS 13 Ventura or later, iOS 16+, iPadOS 16+',
+        processorRequirements: 'Apple Silicon (M1/M2/M3/M4) or Intel x64 on Mac; A12 Bionic or later on iPhone/iPad',
         releaseNotes: `${SITE_URL}/en/changelog`,
         screenshot: `${SITE_URL}/opengraph-image`,
       }}

@@ -1,7 +1,8 @@
 export const SITE_URL = 'https://sshive.app';
-export const DOWNLOAD_URL = 'https://github.com/NetMeSafe/SSHive-WebSite/releases/download/v1.0.0/SSHive.dmg';
 export const APP_VERSION = '1.0.0';
 export const APP_STORE_URL = 'https://apps.apple.com/fr/app/sshive/id6760705487?mt=12';
+// Universal App Store URL (no mt= so it resolves to iOS App Store on iPhone/iPad and Mac App Store on Mac).
+export const APP_STORE_UNIVERSAL_URL = 'https://apps.apple.com/app/sshive/id6760705487';
 
 export const LOCALES = ['en', 'fr'] as const;
 export type Locale = (typeof LOCALES)[number];

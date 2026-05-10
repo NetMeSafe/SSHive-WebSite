@@ -90,7 +90,7 @@ function McpSettingsMockup({ t }: { t: (key: string) => string }) {
           </div>
         </div>
 
-        {/* Auto-configured clients */}
+        {/* Compatible clients */}
         <div className="p-4 rounded-xl bg-indigo-500/5 border border-indigo-500/20">
           <div className="text-xs text-indigo-300 font-medium mb-3">{t('mockup.autoConfigured')}</div>
           <div className="flex flex-wrap gap-2">
@@ -220,6 +220,8 @@ export function McpPage() {
     { name: 'sftp_list', icon: FolderOpen, desc: t('tools.sftpList') },
     { name: 'sftp_read_file', icon: FolderOpen, desc: t('tools.sftpRead') },
     { name: 'sftp_write_file', icon: FolderOpen, desc: t('tools.sftpWrite') },
+    { name: 'sftp_write_file_chunk', icon: FolderOpen, desc: t('tools.sftpWriteChunk') },
+    { name: 'sftp_write_from_local_path', icon: FolderOpen, desc: t('tools.sftpWriteFromLocal') },
   ];
 
   const streamableHttpConfig = `{
@@ -245,6 +247,8 @@ export function McpPage() {
     }
   }
 }`;
+
+  const claudeCliCommand = `claude mcp remove sshive --scope user 2>/dev/null; claude mcp add --transport http --scope user sshive http://127.0.0.1:49422/mcp --header "Authorization:Bearer <your-token>"`;
 
   return (
     <>
@@ -510,7 +514,7 @@ export function McpPage() {
               </div>
             </ScrollReveal>
 
-            {/* Step 3 — auto-configured */}
+            {/* Step 3 — paste config or run CLI */}
             <ScrollReveal delay={200}>
               <div className="flex gap-6">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center">
@@ -525,19 +529,27 @@ export function McpPage() {
           </div>
 
           {/* Config blocks */}
-          <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="mt-14 space-y-6">
             <ScrollReveal>
               <ConfigBlock
-                title={t('setup.streamableHttp')}
-                config={streamableHttpConfig}
+                title={t('setup.claudeCli')}
+                config={claudeCliCommand}
               />
             </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <ConfigBlock
-                title={t('setup.sse')}
-                config={sseConfig}
-              />
-            </ScrollReveal>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <ScrollReveal>
+                <ConfigBlock
+                  title={t('setup.streamableHttp')}
+                  config={streamableHttpConfig}
+                />
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <ConfigBlock
+                  title={t('setup.sse')}
+                  config={sseConfig}
+                />
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

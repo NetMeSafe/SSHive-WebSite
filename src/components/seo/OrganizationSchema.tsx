@@ -13,7 +13,7 @@ export function OrganizationSchema() {
         description:
           'NetMeSafe develops SSHive, an all-in-one SSH, SFTP, RDP & VNC client for macOS.',
         email: 'contact@netmesafe.com',
-        sameAs: ['https://twitter.com/sshiveapp'],
+        sameAs: ['https://www.linkedin.com/company/netmesafe/'],
         contactPoint: {
           '@type': 'ContactPoint',
           email: 'contact@netmesafe.com',

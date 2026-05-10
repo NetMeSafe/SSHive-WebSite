@@ -25,12 +25,12 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
     name: 'MobaXterm',
     slug: 'mobaxterm',
     description: {
-      en: 'MobaXterm is a popular all-in-one terminal for Windows. SSHive brings the same concept to macOS with native integration, Keychain security, and AI capabilities that MobaXterm lacks.',
-      fr: 'MobaXterm est un terminal tout-en-un populaire pour Windows. SSHive apporte le meme concept sur macOS avec une integration native, la securite Trousseau et des capacites IA que MobaXterm n\'a pas.',
+      en: 'MobaXterm is a popular Windows terminal that bundles SSH, SFTP, RDP, X11 forwarding and tunnels in one app. SSHive offers a macOS-native take on the all-in-one workflow, with macOS Keychain security and built-in MCP integration for Claude Code, Cursor and Claude Desktop. SSHive can also import sessions from a cleartext MobaXterm.ini file.',
+      fr: 'MobaXterm est un terminal Windows populaire qui regroupe SSH, SFTP, RDP, X11 forwarding et tunnels dans une app. SSHive propose une approche tout-en-un native pour macOS, avec securite Trousseau macOS et integration MCP pour Claude Code, Cursor et Claude Desktop. SSHive peut aussi importer les sessions depuis un fichier MobaXterm.ini en clair.',
     },
     verdict: {
-      en: 'If you\'re looking for a MobaXterm-like experience on macOS, SSHive is the closest alternative — with the added benefits of Keychain security, AI integration, and running natively on Apple Silicon.',
-      fr: 'Si vous cherchez une experience similaire a MobaXterm sur macOS, SSHive est l\'alternative la plus proche — avec les avantages supplementaires de la securite Trousseau, de l\'integration IA et de tourner nativement sur Apple Silicon.',
+      en: 'If you arrive on macOS from a MobaXterm-on-Windows workflow, SSHive is built for the same all-in-one ergonomics: SSH, SFTP, RDP, VNC, tunnels and broadcast in one window, native Apple Silicon, with MCP so Claude Code or Cursor can drive your sessions directly. The MobaXterm.ini importer keeps your accumulated session list when you switch.',
+      fr: 'Si vous arrivez sur macOS depuis un workflow MobaXterm-sur-Windows, SSHive est concu pour la meme ergonomie tout-en-un : SSH, SFTP, RDP, VNC, tunnels et broadcast dans une fenetre, natif Apple Silicon, avec MCP pour que Claude Code ou Cursor pilote vos sessions directement. L\'importeur MobaXterm.ini conserve votre liste de sessions accumulee lors du changement.',
     },
     features: [
       { key: 'sshTerminal', sshive: true, competitor: true },
@@ -43,7 +43,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'nativeMacOS', sshive: true, competitor: false },
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'macAppStore', sshive: true, competitor: false },
-      { key: 'price', sshive: 'Free / $9.99 Pro', competitor: 'Free / $69 Pro' },
+      { key: 'price', sshive: 'Free / $9.99 Pro', competitor: 'Free / paid Pro' },
     ],
   },
   iterm2: {

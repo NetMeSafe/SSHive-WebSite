@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { FEATURES } from '@/lib/constants';
+import { RelatedLinks } from '@/components/seo/RelatedLinks';
 import {
   Terminal,
   FolderOpen,
@@ -74,6 +75,7 @@ export default async function FeaturesPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'featuresPage' });
   const tFeatures = await getTranslations({ locale, namespace: 'features' });
+  const tCommon = await getTranslations({ locale, namespace: 'seoCommon' });
 
   return (
     <>
@@ -132,6 +134,37 @@ export default async function FeaturesPage({
           </div>
         </div>
       </section>
+
+      <RelatedLinks
+        heading={tCommon('exploreMore')}
+        items={[
+          {
+            href: '/best-ssh-client-for-mac',
+            title: tCommon('bestSshTitle'),
+            description: tCommon('bestSshDesc'),
+          },
+          {
+            href: '/best-sftp-client-for-mac',
+            title: tCommon('bestSftpTitle'),
+            description: tCommon('bestSftpDesc'),
+          },
+          {
+            href: '/use-cases',
+            title: tCommon('useCasesHubTitle'),
+            description: tCommon('useCasesHubDesc'),
+          },
+          {
+            href: '/how-to',
+            title: tCommon('howToHubTitle'),
+            description: tCommon('howToHubDesc'),
+          },
+          {
+            href: '/compare',
+            title: tCommon('compareHubTitle'),
+            description: tCommon('compareHubDesc'),
+          },
+        ]}
+      />
     </>
   );
 }

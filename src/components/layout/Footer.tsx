@@ -26,6 +26,8 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('resources')}</h3>
             <ul className="space-y-3">
+              <li><Link href="/use-cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('useCases')}</Link></li>
+              <li><Link href="/how-to" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('howTo')}</Link></li>
               <li><Link href="/docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('docs')}</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('blog')}</Link></li>
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('about')}</Link></li>
@@ -36,6 +38,8 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('comparisons')}</h3>
             <ul className="space-y-3">
+              <li><Link href={'/best-ssh-client-for-mac' as '/best-ssh-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">Best SSH client for Mac</Link></li>
+              <li><Link href={'/best-sftp-client-for-mac' as '/best-sftp-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">Best SFTP client for Mac</Link></li>
               <li><Link href="/compare/mobaxterm" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs MobaXterm</Link></li>
               <li><Link href="/compare/iterm2" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs iTerm2</Link></li>
               <li><Link href="/compare/termius" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs Termius</Link></li>
@@ -46,8 +50,8 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('community')}</h3>
             <ul className="space-y-3">
-              <li><a href="https://twitter.com/sshiveapp" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('twitter')}</a></li>
-              <li><a href="https://fosstodon.org/@sshive" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('mastodon')}</a></li>
+              <li><a href="https://www.linkedin.com/company/netmesafe/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('linkedin')}</a></li>
+              <li><a href="mailto:contact@netmesafe.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('email')}</a></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('support')}</Link></li>
             </ul>
           </div>

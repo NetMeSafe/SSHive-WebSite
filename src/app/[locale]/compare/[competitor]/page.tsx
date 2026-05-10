@@ -4,13 +4,19 @@ import { notFound } from 'next/navigation';
 import { Check, X, ArrowRight, CheckCircle, ArrowLeft } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { COMPETITOR_DATA, ALL_COMPETITOR_SLUGS } from '@/lib/competitors';
-import { COMPETITORS } from '@/lib/constants';
+import { COMPETITORS, LOCALES } from '@/lib/constants';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { ArticleSchema } from '@/components/seo/ArticleSchema';
+import { FAQSchema } from '@/components/seo/FAQSchema';
+import { FAQSection } from '@/components/seo/FAQSection';
+import { SITE_URL } from '@/lib/constants';
 import type { Competitor } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 
 export function generateStaticParams() {
-  return ALL_COMPETITOR_SLUGS.map((competitor) => ({ competitor }));
+  return LOCALES.flatMap((locale) =>
+    ALL_COMPETITOR_SLUGS.map((competitor) => ({ locale, competitor }))
+  );
 }
 
 export async function generateMetadata({
@@ -132,6 +138,36 @@ export default async function CompetitorPage({
   const featureRows = data.features.filter((f) => f.key !== 'price');
   const priceRow = data.features.find((f) => f.key === 'price');
 
+  const compareFaq = [
+    {
+      question:
+        locale === 'fr'
+          ? `Quelle est la difference principale entre SSHive et ${data.name} ?`
+          : `What's the main difference between SSHive and ${data.name}?`,
+      answer: data.verdict[loc],
+    },
+    {
+      question:
+        locale === 'fr'
+          ? `SSHive est-il moins cher que ${data.name} ?`
+          : `Is SSHive cheaper than ${data.name}?`,
+      answer:
+        locale === 'fr'
+          ? `SSHive Pro est un achat unique a 9,99 $ avec mises a jour a vie. ${data.name} se positionne sur ${priceRow?.competitor ?? 'un autre modele tarifaire'}. Sur la duree, SSHive devient generalement plus economique.`
+          : `SSHive Pro is a one-time $9.99 purchase with lifetime updates. ${data.name} is priced at ${priceRow?.competitor ?? 'a different model'}. Over time SSHive typically works out cheaper.`,
+    },
+    {
+      question:
+        locale === 'fr'
+          ? `Puis-je migrer depuis ${data.name} vers SSHive ?`
+          : `Can I migrate from ${data.name} to SSHive?`,
+      answer:
+        locale === 'fr'
+          ? `Oui. SSHive importe les hosts depuis ~/.ssh/config en un clic, ce qui couvre la majorite des migrations. Pour les profils proprietaires de ${data.name}, exportez-les vers OpenSSH config si possible, puis importez dans SSHive.`
+          : `Yes. SSHive can import hosts from ~/.ssh/config in one click, which covers most migrations. For ${data.name}-specific profiles, export them to OpenSSH config format if possible, then import into SSHive.`,
+    },
+  ];
+
   return (
     <>
       <BreadcrumbSchema
@@ -142,6 +178,12 @@ export default async function CompetitorPage({
           { name: `SSHive vs ${data.name}`, href: `/compare/${slug}` },
         ]}
       />
+      <ArticleSchema
+        headline={`SSHive vs ${data.name}`}
+        description={data.description[loc]}
+        url={`${SITE_URL}/${locale}/compare/${slug}`}
+      />
+      <FAQSchema items={compareFaq} />
 
       {/* Breadcrumb + Hero */}
       <section className="pt-32 pb-8 md:pt-40 md:pb-12">
@@ -265,6 +307,11 @@ export default async function CompetitorPage({
           </div>
         </div>
       </section>
+
+      <FAQSection
+        heading={locale === 'fr' ? 'Questions frequentes' : 'Frequently asked questions'}
+        items={compareFaq}
+      />
 
       {/* CTA */}
       <section className="py-20 md:py-28 border-t border-border">

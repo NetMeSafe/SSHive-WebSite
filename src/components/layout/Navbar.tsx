@@ -28,11 +28,11 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/features' as const, label: t('features') },
+    { href: '/use-cases' as const, label: t('useCases') },
+    { href: '/how-to' as const, label: t('howTo') },
     { href: '/compare' as const, label: t('compare') },
     { href: '/pricing' as const, label: t('pricing') },
-    { href: '/blog' as const, label: t('blog') },
     { href: '/docs' as const, label: t('docs') },
-    { href: '/mcp' as const, label: t('mcp') },
   ];
 
   return (

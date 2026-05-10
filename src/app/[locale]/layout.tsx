@@ -1,14 +1,23 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/constants';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#1a1b26' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
+  colorScheme: 'dark light',
+};
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { GrainOverlay } from '@/components/ui/GrainOverlay';
-import { PostHogProvider } from '@/components/providers/PostHogProvider';
 import { OrganizationSchema } from '@/components/seo/OrganizationSchema';
 import { SoftwareApplicationSchema } from '@/components/seo/SoftwareApplicationSchema';
 import '../globals.css';
@@ -57,6 +66,7 @@ export async function generateMetadata({
       languages: {
         en: '/en',
         fr: '/fr',
+        'x-default': '/en',
       },
     },
     openGraph: {
@@ -65,19 +75,44 @@ export async function generateMetadata({
       siteName: 'SSHive',
       title: t.title,
       description: t.description,
+      url: `${SITE_URL}/${locale}`,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+          type: 'image/png',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t.title,
       description: t.description,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+        },
+      ],
     },
     manifest: '/manifest.json',
+    // Next 16 only auto-emits the <link> for favicon.ico. icon.svg,
+    // apple-icon.png and the Safari mask-icon must be declared explicitly.
     icons: {
-      icon: [
-        { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
-        { url: '/icon.svg', type: 'image/svg+xml' },
-      ],
+      icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
       apple: '/apple-icon.png',
+      other: [
+        { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#7aa2f7' },
+      ],
+    },
+    other: {
+      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-status-bar-style': 'black-translucent',
+      'apple-mobile-web-app-title': 'SSHive',
     },
     robots: {
       index: true,
@@ -105,14 +140,19 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className="dark">
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-primary focus:text-primary-foreground focus:font-medium focus:outline-none focus:ring-2 focus:ring-ring"
+        >
+          {messages.seoCommon?.skipToContent ?? 'Skip to main content'}
+        </a>
         <OrganizationSchema />
         <SoftwareApplicationSchema />
         <NextIntlClientProvider messages={messages}>
-          <PostHogProvider />
           <GrainOverlay />
           <div className="min-h-screen flex flex-col">
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1">{children}</main>
             <Footer />
           </div>
         </NextIntlClientProvider>

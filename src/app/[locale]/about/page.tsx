@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight, Cpu, Download } from 'lucide-react';
+import { PersonSchema } from '@/components/seo/PersonSchema';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 
 export async function generateMetadata({
   params,
@@ -33,6 +35,19 @@ export default async function AboutPage({
   const techItems: string[] = t.raw('techItems');
 
   return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/about' },
+        ]}
+      />
+      <PersonSchema
+        name="Lucas Russo"
+        jobTitle={locale === 'fr' ? 'Developpeur, fondateur de SSHive' : 'Developer, founder of SSHive'}
+        description={t('description')}
+      />
     <div className="pt-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -89,5 +104,6 @@ export default async function AboutPage({
         </Link>
       </section>
     </div>
+    </>
   );
 }

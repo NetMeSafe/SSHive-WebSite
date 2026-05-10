@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "SSHive — Client SSH/SFTP/RDP pour macOS | Gratuit & Pro",
-    "description": "SSHive est un client SSH, SFTP, RDP et VNC pour macOS. Terminal tout-en-un inspire de MobaXterm. Telechargez gratuitement ou passez a Pro sur l'App Store."
+    "title": "SSHive — Client SSH pour Mac, iPhone et iPad, pret pour l'IA",
+    "description": "Client SSH/SFTP Apple natif pour Mac, iPhone et iPad. RDP, VNC, tunnels et broadcast integres sur macOS. Trousseau securise par Touch ID. MCP integre pour Claude Code et Cursor."
   },
   "nav": {
     "features": "Fonctionnalites",
@@ -10,19 +10,25 @@
     "blog": "Blog",
     "docs": "Docs",
     "mcp": "MCP",
-    "download": "Telecharger"
+    "download": "Telecharger",
+    "useCases": "Cas d'usage",
+    "howTo": "Guides"
   },
   "hero": {
-    "title": "Le client SSH que macOS merite",
-    "subtitle": "SSH, SFTP, RDP et VNC — tout dans une app. Gratuit pour commencer.",
+    "title": "Le client SSH que vos appareils Apple meritent",
+    "subtitle": "SSH, SFTP, RDP et VNC — tout dans une app sur Mac, avec SSH et SFTP natifs sur iPhone et iPad. Gratuit pour commencer.",
     "downloadCta": "Telecharger gratuitement",
     "featuresCta": "Voir les fonctionnalites",
-    "version": "Version {version} — macOS 13+",
-    "universalBinary": "Universal Binary (Apple Silicon + Intel)"
+    "version": "Version {version} — macOS 13+ · iOS 16+ · iPadOS 16+",
+    "universalBinary": "Natif Mac (Apple Silicon + Intel) · iPhone · iPad",
+    "platforms": "Disponible sur Mac · iPhone · iPad",
+    "platformsHint": "App Apple universelle — les memes profils, partout",
+    "moreOptions": "Aussi sur iPhone et iPad — voir toutes les options",
+    "skipToContent": "Aller au contenu principal"
   },
   "socialProof": {
-    "appStore": "Disponible sur le Mac App Store",
-    "keychainSecurity": "Securite Trousseau macOS",
+    "appStore": "Sur l'App Store — Mac, iPhone et iPad",
+    "keychainSecurity": "Securite Touch ID + Trousseau",
     "noTelemetry": "Aucune telemetrie"
   },
   "features": {
@@ -55,7 +61,7 @@
     },
     "mcp": {
       "title": "Integration IA (MCP)",
-      "description": "Serveur MCP integre permettant a Claude Code, Cursor et Claude Desktop d'acceder a vos sessions SSH/SFTP. Auto-configuration des clients IA.",
+      "description": "Serveur MCP integre permettant a Claude Code, Cursor et Claude Desktop d'acceder a vos sessions SSH/SFTP. Config copier-coller, ou commande CLI unique pour Claude Code.",
       "shortDesc": "Integration Claude et Cursor"
     },
     "broadcast": {
@@ -168,20 +174,27 @@
   },
   "download": {
     "title": "Telecharger SSHive",
-    "subtitle": "Gratuit pour commencer. macOS 13+.",
-    "dmgButton": "Telecharger SSHive {version}",
-    "dmgSubtitle": "macOS — Universal Binary (Apple Silicon + Intel)",
+    "subtitle": "Gratuit pour commencer. Mac, iPhone et iPad.",
+    "dmgButton": "Obtenir SSHive sur le Mac App Store",
+    "dmgSubtitle": "Gratuit sur le Mac App Store · Binaire universel (Apple Silicon + Intel)",
+    "iosSectionTitle": "Aussi sur iPhone et iPad",
+    "iosSectionDescription": "Terminal SSH et gestionnaire SFTP, natifs sur iOS et iPadOS. Les profils crees sur Mac se synchronisent sur vos appareils.",
+    "iosCta": "Obtenir SSHive sur l'App Store",
+    "iosBadge": "iOS 16+ · iPadOS 16+",
+    "platformSplitTitle": "Ce qui fonctionne sur quel appareil Apple",
+    "platformSplitMacAll": "Mac : SSH, SFTP, RDP, VNC, tunnels (-L/-R/-D), broadcast, serveur MCP, snippets, outils reseau",
+    "platformSplitIos": "iPhone et iPad : terminal SSH et gestionnaire SFTP",
     "or": "ou",
     "appStoreAlt": "Mac App Store",
     "noAccount": "Aucun compte requis",
     "noAds": "Pas de pub, pas de tracking dans l'app",
-    "keychainSecurity": "Securise — chiffrement via le Trousseau macOS",
+    "keychainSecurity": "Securise — Touch ID + chiffrement Trousseau",
     "upgradeLater": "Passez a Pro quand vous voulez (9,99 €, achat unique)",
     "emailTitle": "Recevez les notifications de nouvelles versions",
     "emailPlaceholder": "votre@email.com",
     "emailSubscribe": "S'abonner",
     "systemReq": "Configuration requise",
-    "systemReqDetails": "macOS 13 Ventura ou ulterior. Apple Silicon (M1/M2/M3/M4) et Intel x64 supportes."
+    "systemReqDetails": "macOS 13 Ventura ou ulterieur (Apple Silicon M1/M2/M3/M4 ou Intel x64). iOS 16+ sur iPhone, iPadOS 16+ sur iPad."
   },
   "footer": {
     "product": "Produit",
@@ -191,8 +204,8 @@
     "about": "A propos",
     "contact": "Contact",
     "changelog": "Changelog",
-    "twitter": "Twitter",
-    "mastodon": "Mastodon",
+    "linkedin": "LinkedIn",
+    "email": "Email",
     "support": "Support",
     "madeBy": "Fait avec amour par NetMeSafe",
     "license": "Made in France",
@@ -215,23 +228,23 @@
       "allInOne": "Tout-en-un : SSH, SFTP, RDP, VNC, tunnels et IA dans une seule app",
       "securePrivate": "Securise et prive — chiffrement via le Trousseau macOS, aucune telemetrie, donnees sur votre machine",
       "nativeMac": "App macOS native avec integration Trousseau et support Apple Silicon",
-      "oneTimePrice": "Achat unique a 9,99 $ pour Pro, pas d'abonnement recurrent",
+      "oneTimePrice": "Achat unique a 9,99 € pour Pro, pas d'abonnement recurrent",
       "aiIntegration": "Serveur MCP integre pour Claude Code, Cursor et Claude Desktop",
       "appStore": "Disponible sur le Mac App Store pour une installation et des mises a jour faciles"
     },
     "keychainIntegration": "Integration Trousseau",
     "connectionProfiles": "Profils de connexion",
     "modernUI": "Interface moderne",
-    "metaTitleTemplate": "SSHive vs {competitor} — Meilleur client SSH pour macOS 2026",
+    "metaTitleTemplate": "SSHive vs {competitor} — Une alternative a {competitor} sur Mac (2026)",
     "introTitle": "SSHive vs {competitor} : quel est le meilleur client SSH pour macOS ?",
     "detailedIntro": {
       "mobaxterm": "MobaXterm est le standard des terminaux tout-en-un sur Windows depuis des annees. Avec le forwarding X11, le SFTP embarque et le support RDP, il a fixe la barre pour ce que devrait etre un outil de gestion a distance. SSHive apporte cette meme philosophie sur macOS — mais avec la securite native du Trousseau et des capacites IA modernes que MobaXterm n'offre pas. Si vous cherchez un equivalent MobaXterm sur Mac, SSHive est concu specifiquement pour vous. Contrairement a MobaXterm, qui ne fonctionne que sur Windows (ou via Wine, avec un succes limite), SSHive est une application macOS native construite avec Electron et React, optimisee pour Apple Silicon et disponible sur le Mac App Store.",
       "iterm2": "iTerm2 a gagne sa reputation de meilleur emulateur de terminal pour macOS, et a juste titre. Il offre des panneaux divises, des profils, une recherche avancee et une personnalisation incroyable. Cependant, iTerm2 est purement un emulateur de terminal — il n'inclut pas de gestion de fichiers SFTP integree, de RDP, VNC, de gestion de tunnels SSH ou de profils de connexion. SSHive respecte ce qu'iTerm2 fait bien tout en comblant les lacunes dont les administrateurs systeme et ingenieurs DevOps ont besoin. Si votre workflow implique plus que taper des commandes dans un shell, SSHive consolide tout dans une seule fenetre.",
       "terminus": "Tabby (anciennement Terminus) est un terminal moderne et multi-plateforme construit avec des technologies web. Il offre une interface soignee, un systeme de plugins et des fonctionnalites SSH basiques. Cependant, sa focalisation multi-plateforme signifie qu'il manque l'integration macOS profonde que SSHive fournit. SSHive inclut la gestion complete de fichiers SFTP, des clients RDP et VNC embarques, la configuration de tunnels SSH et l'integration IA — des fonctionnalites que Tabby n'a pas du tout ou ne supporte que partiellement via des plugins. Pour les utilisateurs macOS qui veulent une experience de gestion a distance complete, SSHive offre significativement plus pret a l'emploi.",
       "putty": "PuTTY est l'un des clients SSH les plus anciens et les plus reconnus au monde. Initialement concu pour Windows, il a ete porte sur macOS, mais l'experience est loin d'etre native. PuTTY n'a pas de SFTP, RDP, VNC, de theming moderne ni de gestion de profils de connexion. SSHive reprend tout ce qui a fait aimer PuTTY — la simplicite et la fiabilite — et l'enveloppe dans une experience macOS moderne et native avec tous les protocoles et outils dont un administrateur systeme a besoin en 2026.",
-      "termius": "Termius est un client SSH soigne et multi-plateforme connu pour sa belle interface et ses capacites de synchronisation. Cependant, son niveau gratuit est limite, et les fonctionnalites avancees comme les tunnels SSH necessitent un abonnement a 10 $/mois. SSHive offre des fonctionnalites comparables — SSH, SFTP, profils de connexion, securite Trousseau — avec un achat unique a 9,99 $ pour Pro pour des sessions illimitees, RDP, VNC, le mode broadcast et l'integration IA. Pour les utilisateurs macOS qui veulent des outils SSH professionnels sans couts recurrents, SSHive est le choix evident.",
+      "termius": "Termius est un client SSH soigne et multi-plateforme connu pour sa belle interface et ses capacites de synchronisation. Cependant, son niveau gratuit est limite, et les fonctionnalites avancees comme les tunnels SSH necessitent un abonnement a 10 $/mois. SSHive offre des fonctionnalites comparables — SSH, SFTP, profils de connexion, securite Trousseau — avec un achat unique a 9,99 € pour Pro pour des sessions illimitees, RDP, VNC, le mode broadcast et l'integration IA. Pour les utilisateurs macOS qui veulent des outils SSH professionnels sans couts recurrents, SSHive est le choix evident.",
       "royal-tsx": "Royal TSX est un outil de gestion a distance bien etabli pour macOS. Il supporte SSH, RDP, VNC et SFTP via une architecture de plugins. Cependant, Royal TSX coute 29 $ pour une licence unique et n'inclut pas d'integration IA. SSHive fournit tous les memes protocoles dans une seule app unifiee qui coute une fraction du prix et inclut des fonctionnalites modernes comme l'integration IA basee sur MCP pour Claude Code et Cursor.",
-      "securecrt": "SecureCRT de VanDyke Software est le client SSH de niveau entreprise de choix depuis des decennies. Il offre du scripting avance, la gestion de sessions et le support de protocoles. Cependant, a 119 $ par licence, il est tarifie pour les budgets entreprise. SSHive fournit une fonctionnalite SSH et SFTP comparable, ajoute RDP, VNC, le mode broadcast et l'integration IA, et coute soit rien (niveau gratuit) soit 9,99 $ pour Pro. Pour les developpeurs individuels, administrateurs systeme et petites equipes, SSHive offre des fonctionnalites de qualite entreprise a un prix accessible."
+      "securecrt": "SecureCRT de VanDyke Software est le client SSH de niveau entreprise de choix depuis des decennies. Il offre du scripting avance, la gestion de sessions et le support de protocoles. Cependant, a 119 $ par licence, il est tarifie pour les budgets entreprise. SSHive fournit une fonctionnalite SSH et SFTP comparable, ajoute RDP, VNC, le mode broadcast et l'integration IA, et coute soit rien (niveau gratuit) soit 9,99 € pour Pro. Pour les developpeurs individuels, administrateurs systeme et petites equipes, SSHive offre des fonctionnalites de qualite entreprise a un prix accessible."
     }
   },
   "about": {
@@ -260,11 +273,11 @@
     "subtitle": "Une question, un bug a signaler ou une fonctionnalite a suggerer ? Voici comment nous joindre.",
     "emailTitle": "Email",
     "emailDescription": "Pour les questions generales, partenariats ou autre.",
-    "twitterTitle": "Twitter",
-    "twitterDescription": "Suivez-nous pour les mises a jour, astuces et annonces.",
-    "twitterHandle": "@sshiveapp",
+    "linkedinTitle": "LinkedIn",
+    "linkedinDescription": "Suivez NetMeSafe sur LinkedIn pour les nouveautes et annonces.",
+    "linkedinHandle": "NetMeSafe",
     "supportTitle": "Support",
-    "supportDescription": "Rapports de bugs, demandes de fonctionnalites et questions techniques."
+    "supportDescription": "Rapports de bugs, demandes de fonctionnalites et questions techniques — meme adresse que le contact general."
   },
   "changelog": {
     "title": "Changelog",
@@ -311,7 +324,7 @@
       "q2": "SSHive est-il gratuit ?",
       "a2": "Oui. La version gratuite inclut le terminal SSH, le gestionnaire SFTP, 2 sessions simultanees et 5 profils enregistres. Vous pouvez optionnellement passer a Pro (9,99 €, achat unique) pour des sessions illimitees, RDP, VNC, tunnels et plus.",
       "q3": "SSHive fonctionne-t-il sur les Mac Intel ?",
-      "a3": "Oui. SSHive est distribue en Universal Binary qui fonctionne nativement sur les Mac Apple Silicon (M1/M2/M3/M4) et Intel x64.",
+      "a3": "Oui. SSHive sur le Mac App Store est un binaire universel — il tourne nativement sur les Mac Apple Silicon (M1/M2/M3/M4) et Intel x64.",
       "q4": "Comment importer ma config SSH ?",
       "a4": "Allez dans le dialogue de connexion, cliquez sur le bouton d'import et selectionnez « Importer depuis ~/.ssh/config ». SSHive analysera votre fichier de configuration SSH et creera des profils pour chaque entree host.",
       "q5": "Mes donnees sont-elles securisees ?",
@@ -319,7 +332,7 @@
       "q6": "Comment fonctionnent les tunnels SSH dans SSHive ?",
       "a6": "Vous pouvez configurer des tunnels Local (-L), Distant (-R) et SOCKS5 (-D) par profil de connexion. Les tunnels demarrent automatiquement a l'etablissement de la connexion SSH. Vous pouvez configurer jusqu'a 10 tunnels locaux et 5 distants par profil.",
       "q7": "Puis-je utiliser SSHive avec Claude ou Cursor ?",
-      "a7": "Oui. SSHive inclut un serveur MCP (Model Context Protocol) integre qui configure automatiquement Claude Code, Cursor et Claude Desktop. Les assistants IA peuvent lister les sessions, executer des commandes et parcourir les fichiers sur vos serveurs distants.",
+      "a7": "Oui. SSHive inclut un serveur MCP (Model Context Protocol) integre, compatible avec Claude Code, Cursor et Claude Desktop. La configuration se fait par copier-coller (ou via une commande CLI unique pour Claude Code) — les assistants IA peuvent ensuite executer des commandes et parcourir les fichiers sur vos serveurs distants.",
       "q8": "Ou sont stockes mes profils ?",
       "a8": "Les profils sont stockes dans ~/Library/Application Support/SSHive/profiles.json. Les credentials sont stockes separement dans credentials.json, chiffres via le Trousseau macOS. Vous pouvez exporter et importer des profils avec la fonctionnalite d'export integree."
     }
@@ -343,7 +356,7 @@
       },
       "website": {
         "title": "Analyse du site web",
-        "text": "Le site web SSHive (sshive.app) utilise PostHog, heberge sur des serveurs europeens (eu.posthog.com), pour des statistiques d'utilisation anonymes. PostHog nous aide a comprendre les visites et a ameliorer le site.\n\n— Aucun cookie n'est utilise. PostHog utilise le localStorage pour un suivi de session anonyme.\n— Aucune information personnelle n'est collectee.\n— Aucune donnee n'est partagee avec des annonceurs.\n— Vous pouvez bloquer PostHog avec n'importe quel bloqueur de publicites standard.\n\nL'Application elle-meme ne contient aucun code d'analyse, de telemetrie ou de suivi."
+        "text": "Le site web SSHive (sshive.app) n'utilise aucun outil d'analytics, de telemetrie ou de suivi. Aucun cookie, aucun script tiers, aucune empreinte numerique. Nous ne savons pas qui visite le site, quelles pages vous lisez ni combien de temps vous y restez.\n\nL'Application elle-meme ne contient aucun code d'analytics, de telemetrie ou de suivi non plus."
       },
       "thirdParty": {
         "title": "Services tiers",
@@ -355,7 +368,7 @@
       },
       "security": {
         "title": "Securite",
-        "text": "Nous prenons la securite de vos donnees au serieux :\n\n— Les credentials sont chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron.\n— Toutes les connexions distantes (SSH, SFTP) utilisent des protocoles de chiffrement standard de l'industrie.\n— Aucune donnee n'est transmise a nos serveurs, eliminant le risque de failles cote serveur.\n— L'Application est signee numeriquement et distribuee via le Mac App Store et en telechargement direct (DMG)."
+        "text": "Nous prenons la securite de vos donnees au serieux :\n\n— Les credentials sont chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron.\n— Toutes les connexions distantes (SSH, SFTP) utilisent des protocoles de chiffrement standard de l'industrie.\n— Aucune donnee n'est transmise a nos serveurs, eliminant le risque de failles cote serveur.\n— L'Application est signee numeriquement et distribuee exclusivement via l'App Store d'Apple (Mac App Store sur macOS, App Store sur iPhone/iPad)."
       },
       "retention": {
         "title": "Conservation des donnees",
@@ -436,11 +449,11 @@
     },
     "mcp": {
       "metaTitle": "Integration IA MCP pour macOS — Claude et Cursor",
-      "metaDescription": "Le serveur MCP integre de SSHive configure automatiquement Claude Code, Cursor et Claude Desktop pour acceder a vos sessions SSH/SFTP. Gratuit pour macOS.",
+      "metaDescription": "Claude Code, Cursor et Claude Desktop peuvent appeler vos sessions SSH/SFTP actives via le serveur MCP integre de SSHive. Config copier-coller ou commande CLI unique. Gratuit pour macOS.",
       "bullets": [
         "Serveur MCP integre pour l'integration avec les assistants IA",
-        "Configuration automatique de Claude Code, Cursor et Claude Desktop",
-        "5 outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file",
+        "Compatible avec Claude Code (CLI/IDE), Cursor et Claude Desktop",
+        "7 outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path",
         "Authentification par token Bearer avec generation automatique"
       ]
     },
@@ -527,9 +540,9 @@
     "mcp": {
       "label": "Integration IA (MCP)",
       "title": "Laissez Claude gerer vos serveurs",
-      "desc": "Serveur MCP integre qui configure automatiquement Claude Code, Cursor et Claude Desktop. Votre assistant IA peut executer des commandes, lire des logs et parcourir les fichiers sur tout serveur connecte.",
-      "b1": "Auto-configure Claude Code, Cursor et Claude Desktop en un clic",
-      "b2": "5 outils : lister les sessions, executer des commandes, parcourir et editer les fichiers",
+      "desc": "Serveur MCP integre, compatible avec Claude Code, Cursor et Claude Desktop. Votre assistant IA peut executer des commandes, lire des logs et parcourir les fichiers sur tout serveur connecte — config copier-coller, ou commande CLI unique pour Claude Code.",
+      "b1": "Compatible avec Claude Code, Cursor et Claude Desktop — config copier-coller ou commande CLI unique",
+      "b2": "7 outils : lister les sessions, executer des commandes, parcourir et lire/ecrire les fichiers (avec uploads par chunks)",
       "b3": "100 % local — authentification Bearer token, aucun relais cloud",
       "learnMore": "Decouvrir l'integration MCP"
     },
@@ -572,14 +585,14 @@
   },
   "mcpPage": {
     "metaTitle": "Integration IA MCP — Claude Code, Cursor et Claude Desktop | SSHive",
-    "metaDescription": "Le serveur MCP integre de SSHive permet aux assistants IA comme Claude Code, Cursor et Claude Desktop d'acceder a vos sessions SSH et SFTP. Auto-configure, securise, local.",
+    "metaDescription": "Le serveur MCP integre de SSHive permet aux assistants IA comme Claude Code, Cursor et Claude Desktop d'acceder a vos sessions SSH et SFTP. Setup copier-coller ou commande CLI unique, local et securise.",
     "backToFeatures": "Voir toutes les fonctionnalites",
     "sectionLabel": "Integration IA",
     "heroTitle": "Vos serveurs, accessibles a l'IA",
     "heroSubtitle": "SSHive embarque un serveur MCP qui permet a Claude Code, Cursor et Claude Desktop d'interagir avec vos sessions SSH et SFTP — directement depuis votre machine.",
     "hero": {
       "statusMcp": "Serveur MCP actif",
-      "statusAuto": "Auto-configure",
+      "statusAuto": "Setup copier-coller",
       "statusSecure": "Local et securise"
     },
     "heroCta": "Telecharger SSHive",
@@ -592,7 +605,7 @@
       "active": "Actif",
       "port": "Port",
       "token": "Token Bearer",
-      "autoConfigured": "Clients auto-configures",
+      "autoConfigured": "Clients compatibles",
       "claudePrompt": "Liste tous les conteneurs Docker sur mon serveur de production",
       "claudeThinking": "Utilisation du MCP SSHive pour acceder a la session « NMS »…",
       "result": "Resultat",
@@ -613,8 +626,8 @@
         "desc": "Le serveur MCP tourne sur 127.0.0.1 avec authentification Bearer token. Rien ne quitte votre machine — pas de relais cloud, pas de proxy tiers."
       },
       "auto": {
-        "title": "Zero configuration",
-        "desc": "Activez MCP dans les Parametres et SSHive configure automatiquement Claude Code, Cursor et Claude Desktop. Pret en quelques secondes."
+        "title": "Configuration copier-coller",
+        "desc": "Activez MCP dans les Parametres, puis collez la config JSON dans votre client IA. Pour Claude Code, une seule commande CLI suffit."
       }
     },
     "demoSsh": {
@@ -635,39 +648,42 @@
     },
     "tools": {
       "label": "Outils MCP",
-      "title": "5 outils pour un acces complet aux serveurs",
+      "title": "7 outils pour un acces complet aux serveurs",
       "subtitle": "Chaque outil correspond a une operation SSH ou SFTP specifique, donnant aux assistants IA un controle precis sur vos serveurs distants.",
       "sshList": "Liste toutes les sessions SSH actives avec hote, utilisateur, port et statut de connexion.",
       "sshExecute": "Execute une commande sur une session SSH specifique et retourne stdout/stderr.",
       "sftpList": "Liste les fichiers et repertoires a un chemin donne sur un serveur distant.",
       "sftpRead": "Lit le contenu d'un fichier distant et le retourne en texte.",
-      "sftpWrite": "Ecrit du contenu dans un fichier sur le serveur distant."
+      "sftpWrite": "Ecrit du contenu dans un fichier sur le serveur distant (en memoire).",
+      "sftpWriteChunk": "Append des chunks base64 (4 MB chacun) pour les gros fichiers.",
+      "sftpWriteFromLocal": "Stream un fichier local directement vers le distant — zero overhead base64, ideal pour les gros transferts."
     },
     "setup": {
       "label": "Configuration",
       "title": "Pret en 3 clics",
-      "subtitle": "SSHive configure automatiquement vos clients IA. Pour d'autres outils, copiez la config JSON ci-dessous.",
+      "subtitle": "Copiez la config prete a coller dans votre client IA, ou lancez la commande CLI Claude Code unique ci-dessous.",
       "step1": {
         "title": "Ouvrez les Parametres SSHive",
         "desc": "Naviguez vers Parametres > MCP dans la barre laterale SSHive."
       },
       "step2": {
         "title": "Activez le serveur MCP",
-        "desc": "Basculez l'interrupteur pour activer le serveur MCP local sur le port 49422. Un token Bearer est genere automatiquement."
+        "desc": "Basculez l'interrupteur pour activer le serveur MCP local sur le port 49422. Un token Bearer est genere automatiquement et affiche dans les Parametres — vous le collerez dans les snippets ci-dessous."
       },
       "step3": {
-        "title": "Termine — Claude Code, Cursor et Claude Desktop sont auto-configures",
-        "desc": "SSHive ecrit la configuration dans le fichier de parametres de chaque client automatiquement. Redemarrez votre client IA et c'est connecte."
+        "title": "Collez la config — ou lancez la commande Claude Code en une ligne",
+        "desc": "Pour Claude Desktop, Cursor et Cline : copiez la config JSON et collez-la dans le fichier de parametres MCP de votre client. Pour Claude Code (CLI + extension IDE) : copiez la commande unique — elle enregistre SSHive dans `~/.claude.json` en une etape. Redemarrez votre client et c'est connecte."
       },
       "streamableHttp": "Streamable HTTP (Claude Desktop, Cursor, Cline)",
-      "sse": "SSE — Server-Sent Events (ancien)"
+      "sse": "SSE — Server-Sent Events (ancien)",
+      "claudeCli": "CLI Claude Code (commande unique)"
     },
     "clients": {
       "label": "Clients compatibles",
       "title": "Fonctionne avec vos outils IA preferes",
-      "claudeCode": "Integration complete — auto-configure quand le MCP est active dans SSHive.",
-      "cursor": "Auto-configure — SSHive ecrit dans le fichier de parametres MCP de Cursor.",
-      "claudeDesktop": "Auto-configure — integration transparente avec l'app Claude Desktop.",
+      "claudeCode": "Commande CLI unique — `claude mcp add` enregistre SSHive dans ~/.claude.json en une seule ligne.",
+      "cursor": "Collez le snippet JSON dans le fichier de parametres MCP de Cursor — SSHive affiche la config exacte dans les Parametres.",
+      "claudeDesktop": "Collez le snippet JSON dans le fichier de config de Claude Desktop (claude_desktop_config.json).",
       "cline": "Compatible via configuration manuelle Streamable HTTP."
     },
     "security": {
@@ -686,5 +702,62 @@
       "downloadCta": "Telecharger SSHive",
       "featuresCta": "Voir toutes les fonctionnalites"
     }
+  },
+  "seoCommon": {
+    "keyCapabilities": "Fonctionnalites cles",
+    "relatedFeatures": "Fonctionnalites SSHive associees",
+    "relatedUseCases": "Cas d'usage courants",
+    "relatedHowTos": "Guides pas-a-pas",
+    "downloadCta": "Telecharger SSHive gratuitement",
+    "tryFreeTitle": "Essayer SSHive gratuitement sur macOS",
+    "tryFreeDescription": "Obtenez le client tout-en-un SSH, SFTP, RDP et VNC pour Mac. Telechargement gratuit, sans inscription.",
+    "estimatedTime": "Duree estimee",
+    "minutes": "minutes",
+    "openInSshive": "Ouvrir ceci dans SSHive",
+    "stepCount": "Etape {n}",
+    "tableOfContents": "Ce que vous allez apprendre",
+    "introHeading": "Pourquoi c'est important",
+    "stepsHeading": "Pas-a-pas",
+    "faqHeading": "Questions frequentes",
+    "backTo": "Retour",
+    "useCases": {
+      "title": "Cas d'usage — SSH, SFTP, RDP et VNC pour macOS",
+      "subtitle": "Des workflows concrets ou SSHive remplace un empilement d'outils legacy.",
+      "metaTitle": "Cas d'usage SSHive — SSH, SFTP, RDP et VNC pour macOS",
+      "metaDescription": "Decouvrez comment SSHive s'integre dans des workflows concrets : Raspberry Pi, AWS EC2, serveurs perso, Proxmox, Docker, Kubernetes, NAS et plus."
+    },
+    "howTo": {
+      "title": "Guides pas-a-pas pour SSH sur macOS",
+      "subtitle": "Tutoriels pratiques, prets a copier-coller, pour chaque workflow SSH sur Mac.",
+      "metaTitle": "Tutoriels SSH pour Mac — Guides pas-a-pas | SSHive",
+      "metaDescription": "Tutoriels pratiques : tunnels SSH, generation de cles, transferts SFTP, RDP depuis Mac, VNC, jump hosts, proxy SOCKS5 et plus."
+    },
+    "exploreMore": "Explorer plus",
+    "bestSshTitle": "Meilleur client SSH pour Mac",
+    "bestSshDesc": "Notre selection des meilleurs clients SSH sur macOS — et comment SSHive se compare.",
+    "bestSftpTitle": "Meilleur client SFTP pour Mac",
+    "bestSftpDesc": "Clients SFTP natifs macOS classes par vitesse, UX et securite.",
+    "useCasesHubTitle": "Cas d'usage",
+    "useCasesHubDesc": "Workflows reels : Raspberry Pi, AWS, Proxmox, Docker, Kubernetes, NAS.",
+    "howToHubTitle": "Tutoriels pas-a-pas",
+    "howToHubDesc": "Tunnels SSH, generation de cles, SFTP, RDP, VNC, jump hosts et plus.",
+    "compareHubTitle": "Comparer les alternatives",
+    "compareHubDesc": "SSHive face a MobaXterm, iTerm2, Termius, PuTTY et d'autres.",
+    "featuresHubTitle": "Fonctionnalites",
+    "featuresHubDesc": "SSH, SFTP, RDP, VNC, MCP/IA, tunnels, broadcast et snippets."
+  },
+  "aiHero": {
+    "label": "Pret pour l'IA",
+    "title": "Vos sessions SSH, pilotables par l'IA",
+    "subtitle": "Activez MCP dans les Parametres, puis collez la config SSHive (ou lancez la commande Claude Code unique) — votre client IA appelle ensuite vos sessions SSH et SFTP actives via le serveur MCP integre de SSHive.",
+    "clientLabel": "Votre client IA",
+    "clients": "Claude Code · Cursor · Claude Desktop",
+    "mcpLabel": "Serveur MCP SSHive",
+    "mcpDetail": "localhost · Bearer token · Trousseau macOS",
+    "serversLabel": "Vos serveurs",
+    "serversDetail": "Sessions SSH et SFTP actives dans SSHive",
+    "toolsLabel": "7 outils exposes",
+    "tools": "ssh_list_sessions · ssh_execute · sftp_list · sftp_read_file · sftp_write_file · sftp_write_file_chunk · sftp_write_from_local_path",
+    "cta": "Voir la page d'integration MCP"
   }
 }

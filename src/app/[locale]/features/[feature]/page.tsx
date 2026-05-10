@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { FEATURES, LOCALES } from '@/lib/constants';
-import type { Feature } from '@/lib/constants';
+import { FEATURES, LOCALES, SITE_URL } from '@/lib/constants';
+import type { Feature, Locale } from '@/lib/constants';
 import {
   Terminal,
   FolderOpen,
@@ -18,6 +18,13 @@ import {
   ArrowLeft,
 } from 'lucide-react';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { FAQSchema } from '@/components/seo/FAQSchema';
+import { FAQSection } from '@/components/seo/FAQSection';
+import { ArticleSchema } from '@/components/seo/ArticleSchema';
+import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { FEATURE_SEO } from '@/lib/seo/features';
+import { getUseCase } from '@/lib/seo/use-cases';
+import { getHowTo } from '@/lib/seo/how-tos';
 
 const featureIcons: Record<Feature, typeof Terminal> = {
   ssh: Terminal,
@@ -109,8 +116,10 @@ export default async function FeaturePage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'featurePages' });
   const tFeatures = await getTranslations({ locale, namespace: 'features' });
+  const tSeo = await getTranslations({ locale, namespace: 'seoCommon' });
 
   const featureKey = feature as Feature;
+  const loc = locale as Locale;
   const Icon = featureIcons[featureKey];
   const gradient = featureGradients[featureKey];
   const iconColor = featureIconColors[featureKey];
@@ -126,6 +135,36 @@ export default async function FeaturePage({
   const title = tFeatures(`${feature}.title`);
   const description = tFeatures(`${feature}.description`);
 
+  const seo = FEATURE_SEO[featureKey];
+  const faqItems = seo.faq.map((q) => ({
+    question: q.question[loc],
+    answer: q.answer[loc],
+  }));
+
+  const relatedFeatureLinks = seo.relatedFeatures.map((slug) => ({
+    href: `/features/${slug}`,
+    title: tFeatures(`${slug}.title`),
+    description: tFeatures(`${slug}.shortDesc`),
+  }));
+
+  const relatedUseCaseLinks = (seo.relatedUseCases ?? [])
+    .map((slug) => getUseCase(slug))
+    .filter((uc): uc is NonNullable<typeof uc> => Boolean(uc))
+    .map((uc) => ({
+      href: `/use-cases/${uc.slug}`,
+      title: uc.h1[loc],
+      description: uc.hero[loc],
+    }));
+
+  const relatedHowToLinks = (seo.relatedHowTos ?? [])
+    .map((slug) => getHowTo(slug))
+    .filter((h): h is NonNullable<typeof h> => Boolean(h))
+    .map((h) => ({
+      href: `/how-to/${h.slug}`,
+      title: h.h1[loc],
+      description: h.hero[loc],
+    }));
+
   return (
     <>
       <BreadcrumbSchema
@@ -135,6 +174,12 @@ export default async function FeaturePage({
           { name: locale === 'fr' ? 'Fonctionnalites' : 'Features', href: '/features' },
           { name: title, href: `/features/${feature}` },
         ]}
+      />
+      <FAQSchema items={faqItems} />
+      <ArticleSchema
+        headline={title}
+        description={description}
+        url={`${SITE_URL}/${locale}/features/${feature}`}
       />
 
       {/* Hero Section */}
@@ -168,10 +213,22 @@ export default async function FeaturePage({
         </div>
       </section>
 
-      {/* Bullet Points */}
-      <section className="py-16 md:py-20 border-t border-border">
+      {/* Long-form intro */}
+      <section className="py-12 md:py-16 border-t border-border">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-invert prose-lg max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
+            {seo.intro[loc]}
+          </div>
+        </div>
+      </section>
+
+      {/* Key capabilities */}
+      <section className="py-12 md:py-16 border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+            {tSeo('keyCapabilities')}
+          </h2>
+          <div className="space-y-6">
             {bullets.map((bullet, index) => (
               <div
                 key={index}
@@ -188,6 +245,36 @@ export default async function FeaturePage({
           </div>
         </div>
       </section>
+
+      {/* Use cases */}
+      <section className="py-16 md:py-20 border-t border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-10">
+            {seo.useCasesHeading[loc]}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {seo.useCases.map((uc, idx) => (
+              <article
+                key={idx}
+                className="rounded-xl bg-card border border-border p-6"
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  {uc.title[loc]}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {uc.description[loc]}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <FAQSection heading={seo.faqHeading[loc]} items={faqItems} />
+
+      <RelatedLinks heading={tSeo('relatedFeatures')} items={relatedFeatureLinks} />
+      <RelatedLinks heading={tSeo('relatedUseCases')} items={relatedUseCaseLinks} />
+      <RelatedLinks heading={tSeo('relatedHowTos')} items={relatedHowToLinks} />
 
       {/* CTA Section */}
       <section className="py-20 md:py-28">

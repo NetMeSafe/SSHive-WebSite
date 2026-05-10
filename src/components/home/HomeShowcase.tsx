@@ -3,7 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { APP_VERSION, APP_STORE_URL } from '@/lib/constants';
+import { APP_VERSION } from '@/lib/constants';
+import { AppStoreLink } from '@/components/download/AppStoreLink';
+import { AIHeroDiagram } from '@/components/home/AIHeroDiagram';
 import {
   Download,
   ArrowRight,
@@ -189,12 +191,12 @@ function SftpPane({ t }: { t: (key: string) => string }) {
             </div>
           ))}
         </div>
-        {/* Transfer arrows */}
-        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]">
-          <button className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors">
+        {/* Transfer arrows (visual mockup) */}
+        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]" aria-hidden="true">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors">
             <ArrowRight className="w-3 h-3" />
           </button>
-          <button className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground hover:bg-white/10 transition-colors">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground hover:bg-white/10 transition-colors">
             <ArrowRight className="w-3 h-3 rotate-180" />
           </button>
         </div>
@@ -510,12 +512,12 @@ function SftpMockup({ t }: { t: (key: string) => string }) {
           </div>
         </div>
 
-        {/* Transfer arrows */}
-        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]">
-          <button className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary">
+        {/* Transfer arrows (visual mockup) */}
+        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]" aria-hidden="true">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary">
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
-          <button className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground">
             <ArrowRight className="w-3.5 h-3.5 rotate-180" />
           </button>
         </div>
@@ -993,13 +995,10 @@ export function HomeShowcase() {
 
               {/* CTA Buttons */}
               <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  href="/download"
-                  className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-xl font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(122,162,247,0.3)] hover:-translate-y-px text-base"
-                >
+                <AppStoreLink className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-xl font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(122,162,247,0.3)] hover:-translate-y-px text-base">
                   <Download className="w-5 h-5 transition-transform group-hover:-translate-y-px" />
                   {t('downloadCta')}
-                </Link>
+                </AppStoreLink>
                 <Link
                   href="/features"
                   className="group inline-flex items-center gap-2 border border-border/50 text-foreground px-7 py-3.5 rounded-xl font-medium hover:bg-white/5 hover:border-primary/30 transition-all duration-300 text-base"
@@ -1008,6 +1007,12 @@ export function HomeShowcase() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
+              {/* Secondary path for iPhone/iPad users */}
+              <p className="mt-3 text-xs text-muted-foreground">
+                <Link href="/download" className="underline-offset-2 hover:underline">
+                  {t('moreOptions')}
+                </Link>
+              </p>
             </div>
           </ScrollReveal>
 
@@ -1023,6 +1028,11 @@ export function HomeShowcase() {
             <p className="mt-6 text-center text-sm text-muted-foreground">
               {t('universalBinary')}
             </p>
+          </ScrollReveal>
+
+          {/* AI-ready hero diagram — Claude → MCP → SSH/SFTP */}
+          <ScrollReveal delay={500}>
+            <AIHeroDiagram />
           </ScrollReveal>
         </div>
       </section>
@@ -1352,10 +1362,10 @@ export function HomeShowcase() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
-              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(122,162,247,0.35)] hover:-translate-y-px text-base">
+              <AppStoreLink className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(122,162,247,0.35)] hover:-translate-y-px text-base">
                 <Download className="w-5 h-5 transition-transform group-hover:-translate-y-px" />
                 {tD('dmgButton', { version: APP_VERSION })}
-              </a>
+              </AppStoreLink>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={300}>
@@ -1414,13 +1424,10 @@ export function HomeShowcase() {
                     ))}
                   </div>
 
-                  <Link
-                    href={'/download' as '/download'}
-                    className="w-full py-3.5 px-6 border border-border text-foreground font-semibold rounded-xl text-sm flex items-center justify-center gap-2 hover:bg-white/5 transition-all"
-                  >
+                  <AppStoreLink className="w-full py-3.5 px-6 border border-border text-foreground font-semibold rounded-xl text-sm flex items-center justify-center gap-2 hover:bg-white/5 transition-all">
                     <Download className="w-4 h-4" />
                     {tHome('offer.free.cta')}
-                  </Link>
+                  </AppStoreLink>
                 </div>
               </div>
             </ScrollReveal>
