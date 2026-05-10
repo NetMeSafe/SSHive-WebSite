@@ -103,10 +103,13 @@ export async function generateMetadata({
     manifest: '/manifest.json',
     icons: {
       icon: [
-        { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
         { url: '/icon.svg', type: 'image/svg+xml' },
+        { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
       ],
       apple: '/apple-icon.png',
+      other: [
+        { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#7aa2f7' },
+      ],
     },
     robots: {
       index: true,

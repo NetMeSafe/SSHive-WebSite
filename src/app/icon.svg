@@ -1,18 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1b26"/>
-      <stop offset="100%" style="stop-color:#24283b"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#7aa2f7"/>
       <stop offset="100%" style="stop-color:#2ac3de"/>
     </linearGradient>
   </defs>
-  <!-- Background rounded square with border for visibility -->
-  <rect width="1024" height="1024" rx="228" fill="url(#bg)" stroke="#7aa2f7" stroke-width="32" stroke-opacity="0.3"/>
-  <!-- Terminal prompt chevron > -->
-  <path d="M280 340 L480 512 L280 684" stroke="url(#accent)" stroke-width="80" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <!-- Cursor line _ -->
-  <line x1="540" y1="684" x2="760" y2="684" stroke="#7aa2f7" stroke-width="80" stroke-linecap="round"/>
+  <!-- Bright rounded square so the icon stays visible at 16x16 on any tab background -->
+  <rect width="1024" height="1024" rx="228" fill="url(#bg)"/>
+  <!-- Terminal prompt chevron > in white, thicker for small-size readability -->
+  <path d="M280 340 L480 512 L280 684" stroke="#ffffff" stroke-width="120" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Cursor line _ in white -->
+  <line x1="540" y1="684" x2="760" y2="684" stroke="#ffffff" stroke-width="120" stroke-linecap="round"/>
 </svg>
