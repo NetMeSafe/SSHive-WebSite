@@ -355,7 +355,7 @@
       },
       "website": {
         "title": "Website Analytics",
-        "text": "The SSHive website (sshive.app) uses PostHog, hosted on EU servers (eu.posthog.com), for anonymous usage statistics. PostHog helps us understand page visits and improve the website.\n\n— No cookies are used. PostHog uses localStorage for anonymous session tracking.\n— No personal information is collected.\n— No data is shared with advertisers.\n— You can block PostHog with any standard ad blocker.\n\nThe App itself contains zero analytics, telemetry, or tracking code."
+        "text": "The SSHive website (sshive.app) does not use any analytics, telemetry, or tracking code. There are no cookies, no third-party scripts, and no fingerprinting. We do not know who visits the site, which pages you read, or how long you stay.\n\nThe App itself also contains zero analytics, telemetry, or tracking code."
       },
       "thirdParty": {
         "title": "Third-Party Services",

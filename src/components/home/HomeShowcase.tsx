@@ -190,12 +190,12 @@ function SftpPane({ t }: { t: (key: string) => string }) {
             </div>
           ))}
         </div>
-        {/* Transfer arrows */}
-        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]">
-          <button className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors">
+        {/* Transfer arrows (visual mockup) */}
+        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]" aria-hidden="true">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors">
             <ArrowRight className="w-3 h-3" />
           </button>
-          <button className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground hover:bg-white/10 transition-colors">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground hover:bg-white/10 transition-colors">
             <ArrowRight className="w-3 h-3 rotate-180" />
           </button>
         </div>
@@ -511,12 +511,12 @@ function SftpMockup({ t }: { t: (key: string) => string }) {
           </div>
         </div>
 
-        {/* Transfer arrows */}
-        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]">
-          <button className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary">
+        {/* Transfer arrows (visual mockup) */}
+        <div className="flex flex-col items-center justify-center gap-2 px-2 bg-white/[0.01]" aria-hidden="true">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary">
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
-          <button className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground">
+          <button tabIndex={-1} aria-hidden="true" className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-muted-foreground">
             <ArrowRight className="w-3.5 h-3.5 rotate-180" />
           </button>
         </div>

@@ -18,7 +18,6 @@ export const viewport: Viewport = {
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { GrainOverlay } from '@/components/ui/GrainOverlay';
-import { PostHogProvider } from '@/components/providers/PostHogProvider';
 import { OrganizationSchema } from '@/components/seo/OrganizationSchema';
 import { SoftwareApplicationSchema } from '@/components/seo/SoftwareApplicationSchema';
 import '../globals.css';
@@ -140,7 +139,6 @@ export default async function LocaleLayout({
         <OrganizationSchema />
         <SoftwareApplicationSchema />
         <NextIntlClientProvider messages={messages}>
-          <PostHogProvider />
           <GrainOverlay />
           <div className="min-h-screen flex flex-col">
             <Navbar />
