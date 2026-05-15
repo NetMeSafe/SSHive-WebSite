@@ -54,7 +54,7 @@ function FeatureValue({ value }: { value: string | boolean }) {
   if (value === false) {
     return <X className="w-5 h-5 text-muted-foreground/40 mx-auto" />;
   }
-  // String value — could be "partial", "Pro only", price, etc.
+  // String value, could be "partial", "Pro only", price, etc.
   if (value === 'partial') {
     return (
       <span className="inline-block px-2 py-0.5 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-medium">

@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/use-cases',
     '/how-to',
     '/integrations',
+    '/roadmap',
   ];
 
   FEATURES.forEach((f) => pages.push(`/features/${f}`));
@@ -42,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (page === '') return 1;
     if (page === '/download' || page === '/pricing' || page === '/mcp') return 0.9;
     if (page === '/integrations') return 0.9;
+    if (page === '/roadmap') return 0.75;
     if (page.startsWith('/integrations/')) return 0.85;
     if (iosSlugs.has(page)) return 0.9; // high-intent iOS landing pages
     if (bestSlugs.has(page)) return 0.85;

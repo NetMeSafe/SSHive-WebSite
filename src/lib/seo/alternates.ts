@@ -14,7 +14,7 @@ function localeOgTag(locale: Locale): 'en_US' | 'fr_FR' {
  * - `path`: path WITHOUT the locale prefix, e.g. '/features/ssh'.
  *           Pass '' for the locale root (home).
  * - `title` / `description`: per-page values (already localized).
- * - `ogType` (optional): 'website' | 'article' | 'product' — defaults to 'website'.
+ * - `ogType` (optional): 'website' | 'article' | 'product', defaults to 'website'.
  *
  * Emits canonical + hreflang en/fr/x-default + a fully-qualified openGraph
  * (url, title, description, locale, siteName, image) + twitter card.
@@ -61,7 +61,7 @@ export function getPageMetadata({
           url: '/opengraph-image',
           width: 1200,
           height: 630,
-          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+          alt: 'SSHive, SSH/SFTP client for Mac, iPhone and iPad',
           type: 'image/png',
         },
       ],
@@ -75,7 +75,7 @@ export function getPageMetadata({
           url: '/opengraph-image',
           width: 1200,
           height: 630,
-          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+          alt: 'SSHive, SSH/SFTP client for Mac, iPhone and iPad',
         },
       ],
     },

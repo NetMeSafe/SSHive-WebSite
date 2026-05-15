@@ -96,7 +96,7 @@ export function Hero() {
                 <span className="macos-dot macos-dot-red" />
                 <span className="macos-dot macos-dot-yellow" />
                 <span className="macos-dot macos-dot-green" />
-                <span className="ml-4 text-xs text-muted-foreground font-mono">SSHive — Terminal</span>
+                <span className="ml-4 text-xs text-muted-foreground font-mono">SSHive, Terminal</span>
               </div>
               <div className="p-6 font-mono text-sm leading-7 text-left">
                 <div className="flex items-center gap-2">

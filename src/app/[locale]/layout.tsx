@@ -9,7 +9,7 @@ import enMessages from '../../../messages/en.json';
 import frMessages from '../../../messages/fr.json';
 
 // Pre-rendered locales only. Any other value (e.g. /wp-login.php, /.env)
-// returns 404 instead of attempting to render the [locale] layout — this is
+// returns 404 instead of attempting to render the [locale] layout, this is
 // what was crashing the Next process and emitting 5xx to Googlebot.
 export const dynamicParams = false;
 
@@ -98,7 +98,7 @@ export async function generateMetadata({
           url: '/opengraph-image',
           width: 1200,
           height: 630,
-          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+          alt: 'SSHive, SSH/SFTP client for Mac, iPhone and iPad',
           type: 'image/png',
         },
       ],
@@ -112,7 +112,7 @@ export async function generateMetadata({
           url: '/opengraph-image',
           width: 1200,
           height: 630,
-          alt: 'SSHive — SSH/SFTP client for Mac, iPhone and iPad',
+          alt: 'SSHive, SSH/SFTP client for Mac, iPhone and iPad',
         },
       ],
     },

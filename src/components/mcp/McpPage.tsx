@@ -49,7 +49,7 @@ function StatusPill({ active, label }: { active: boolean; label: string }) {
 /* ─── MCP Settings Mockup (inspired by the screenshot) ─── */
 function McpSettingsMockup({ t }: { t: (key: string) => string }) {
   return (
-    <MacWindow title="SSHive — Settings / MCP">
+    <MacWindow title="SSHive, Settings / MCP">
       <div className="p-6 md:p-8 space-y-6">
         {/* Header */}
         <div>
@@ -110,7 +110,7 @@ function McpSettingsMockup({ t }: { t: (key: string) => string }) {
 /* ─── Claude Code demo mockup ─── */
 function ClaudeCodeDemoMockup({ t }: { t: (key: string) => string }) {
   return (
-    <MacWindow title="Claude Code — Terminal">
+    <MacWindow title="Claude Code, Terminal">
       <div className="p-6 font-mono text-sm leading-7 text-left">
         <div className="flex items-center gap-2">
           <span className="text-primary">claude</span>
@@ -150,7 +150,7 @@ postgres-db      Up 14 days`}
 /* ─── SFTP demo mockup ─── */
 function SftpDemoMockup({ t }: { t: (key: string) => string }) {
   return (
-    <MacWindow title="Claude Code — SFTP via MCP">
+    <MacWindow title="Claude Code, SFTP via MCP">
       <div className="p-6 font-mono text-sm leading-7 text-left">
         <div className="flex items-center gap-2">
           <span className="text-primary">claude</span>
@@ -514,7 +514,7 @@ export function McpPage() {
               </div>
             </ScrollReveal>
 
-            {/* Step 3 — paste config or run CLI */}
+            {/* Step 3, paste config or run CLI */}
             <ScrollReveal delay={200}>
               <div className="flex gap-6">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center">

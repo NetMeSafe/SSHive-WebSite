@@ -9,7 +9,7 @@ interface BlogPost {
   pubDate: string;
 }
 
-// Empty for now — fill this when blog posts are published.
+// Empty for now, fill this when blog posts are published.
 const POSTS: BlogPost[] = [];
 
 function escapeXml(s: string): string {

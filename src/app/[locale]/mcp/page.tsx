@@ -72,17 +72,17 @@ function mcpFaqItems(locale: string) {
       {
         question: 'Qu’est-ce que MCP et pourquoi l’utiliser avec SSH ?',
         answer:
-          'MCP (Model Context Protocol) est un standard ouvert d’Anthropic qui permet à un assistant IA comme Claude Code, Cursor ou Claude Desktop d’interagir avec des outils externes. SSHive expose un serveur MCP local qui rend vos sessions SSH et SFTP actives utilisables par l’IA — vous décrivez ce que vous voulez et Claude exécute les commandes ou lit les fichiers à votre place.',
+          'MCP (Model Context Protocol) est un standard ouvert d’Anthropic qui permet à un assistant IA comme Claude Code, Cursor ou Claude Desktop d’interagir avec des outils externes. SSHive expose un serveur MCP local qui rend vos sessions SSH et SFTP actives utilisables par l’IA, vous décrivez ce que vous voulez et Claude exécute les commandes ou lit les fichiers à votre place.',
       },
       {
         question: 'Mes serveurs sont-ils exposés sur Internet ?',
         answer:
-          'Non. Le serveur MCP écoute uniquement sur 127.0.0.1 (loopback), avec authentification par Bearer token généré aléatoirement. Rien ne sort de votre machine — pas de relais cloud, pas de proxy tiers. Les commandes passent via vos sessions SSH déjà ouvertes.',
+          'Non. Le serveur MCP écoute uniquement sur 127.0.0.1 (loopback), avec authentification par Bearer token généré aléatoirement. Rien ne sort de votre machine, pas de relais cloud, pas de proxy tiers. Les commandes passent via vos sessions SSH déjà ouvertes.',
       },
       {
         question: 'Comment configurer Claude Code avec SSHive ?',
         answer:
-          'Activez le serveur MCP dans Settings > MCP. Copiez la commande Claude Code one-shot affichée — elle exécute `claude mcp add ...` et inscrit SSHive dans `~/.claude.json` en une seule étape. Redémarrez Claude Code, vos sessions sont disponibles.',
+          'Activez le serveur MCP dans Settings > MCP. Copiez la commande Claude Code one-shot affichée, elle exécute `claude mcp add ...` et inscrit SSHive dans `~/.claude.json` en une seule étape. Redémarrez Claude Code, vos sessions sont disponibles.',
       },
       {
         question: 'Quels outils MCP SSHive expose-t-il ?',
@@ -100,17 +100,17 @@ function mcpFaqItems(locale: string) {
     {
       question: 'What is MCP and why use it with SSH?',
       answer:
-        'MCP (Model Context Protocol) is an open standard from Anthropic that lets AI assistants like Claude Code, Cursor, and Claude Desktop interact with external tools. SSHive exposes a local MCP server that makes your active SSH and SFTP sessions usable by the model — you describe what you want and Claude executes commands or reads files for you.',
+        'MCP (Model Context Protocol) is an open standard from Anthropic that lets AI assistants like Claude Code, Cursor, and Claude Desktop interact with external tools. SSHive exposes a local MCP server that makes your active SSH and SFTP sessions usable by the model, you describe what you want and Claude executes commands or reads files for you.',
     },
     {
       question: 'Are my servers exposed to the internet?',
       answer:
-        'No. The MCP server binds to 127.0.0.1 (loopback) only, with Bearer-token authentication using a randomly generated secret. Nothing leaves your machine — no cloud relay, no third-party proxy. Commands flow through SSH sessions you already opened in SSHive.',
+        'No. The MCP server binds to 127.0.0.1 (loopback) only, with Bearer-token authentication using a randomly generated secret. Nothing leaves your machine, no cloud relay, no third-party proxy. Commands flow through SSH sessions you already opened in SSHive.',
     },
     {
       question: 'How do I set up Claude Code with SSHive?',
       answer:
-        'Enable the MCP server in Settings > MCP. Copy the Claude Code one-shot command SSHive shows — it runs `claude mcp add ...` and registers SSHive in `~/.claude.json` in a single step. Restart Claude Code and your sessions are available.',
+        'Enable the MCP server in Settings > MCP. Copy the Claude Code one-shot command SSHive shows, it runs `claude mcp add ...` and registers SSHive in `~/.claude.json` in a single step. Restart Claude Code and your sessions are available.',
     },
     {
       question: 'Which MCP tools does SSHive expose?',

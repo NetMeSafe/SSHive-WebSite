@@ -102,7 +102,7 @@ function SidebarProfile({ name, host, active = false, icon }: {
 }
 
 /* ═══════════════════════════════════════════
-   Full SSHive App Mockup — Hero (Interactive)
+   Full SSHive App Mockup, Hero (Interactive)
    ═══════════════════════════════════════════ */
 
 type MockupTab = 'terminal' | 'sftp' | 'rdp';
@@ -159,9 +159,9 @@ function SftpPane({ t }: { t: (key: string) => string }) {
     { name: 'nginx.conf', size: '1.8 KB', icon: <FileText className="w-3 h-3 text-amber-400" /> },
     { name: '.env.production', size: '0.5 KB', icon: <Lock className="w-3 h-3 text-red-400" /> },
     { name: 'deploy.sh', size: '3.1 KB', icon: <Code className="w-3 h-3 text-green-400" /> },
-    { name: 'backup/', size: '—', icon: <FolderOpen className="w-3 h-3 text-yellow-400" /> },
-    { name: 'logs/', size: '—', icon: <FolderOpen className="w-3 h-3 text-yellow-400" /> },
-    { name: 'ssl/', size: '—', icon: <FolderOpen className="w-3 h-3 text-yellow-400" /> },
+    { name: 'backup/', size: ', ', icon: <FolderOpen className="w-3 h-3 text-yellow-400" /> },
+    { name: 'logs/', size: ', ', icon: <FolderOpen className="w-3 h-3 text-yellow-400" /> },
+    { name: 'ssl/', size: ', ', icon: <FolderOpen className="w-3 h-3 text-yellow-400" /> },
   ];
 
   return (
@@ -432,7 +432,7 @@ function SSHiveAppMockup({ t }: { t: (key: string) => string }) {
           </div>
         </div>
 
-        {/* Main content — Interactive tabs */}
+        {/* Main content, Interactive tabs */}
         <div className="flex-1 flex flex-col">
           {/* Tab bar */}
           <div className="flex items-center border-b border-white/[0.06] bg-white/[0.01]">
@@ -485,13 +485,13 @@ function SftpMockup({ t }: { t: (key: string) => string }) {
     { name: 'nginx.conf', size: '1.8 KB', date: 'Mar 12', icon: <FileText className="w-3.5 h-3.5 text-amber-400" /> },
     { name: '.env.production', size: '0.5 KB', date: 'Mar 10', icon: <Lock className="w-3.5 h-3.5 text-red-400" /> },
     { name: 'deploy.sh', size: '3.1 KB', date: 'Mar 14', icon: <Code className="w-3.5 h-3.5 text-green-400" /> },
-    { name: 'backup/', size: '—', date: 'Mar 13', icon: <FolderOpen className="w-3.5 h-3.5 text-yellow-400" /> },
-    { name: 'logs/', size: '—', date: 'Mar 15', icon: <FolderOpen className="w-3.5 h-3.5 text-yellow-400" /> },
-    { name: 'ssl/', size: '—', date: 'Feb 28', icon: <FolderOpen className="w-3.5 h-3.5 text-yellow-400" /> },
+    { name: 'backup/', size: ', ', date: 'Mar 13', icon: <FolderOpen className="w-3.5 h-3.5 text-yellow-400" /> },
+    { name: 'logs/', size: ', ', date: 'Mar 15', icon: <FolderOpen className="w-3.5 h-3.5 text-yellow-400" /> },
+    { name: 'ssl/', size: ', ', date: 'Feb 28', icon: <FolderOpen className="w-3.5 h-3.5 text-yellow-400" /> },
   ];
 
   return (
-    <MacWindow title={`SSHive — SFTP — deploy@production:/opt/app`}>
+    <MacWindow title={`SSHive, SFTP, deploy@production:/opt/app`}>
       <div className="flex min-h-[320px]">
         {/* Local pane */}
         <div className="flex-1 border-r border-white/[0.06]">
@@ -561,12 +561,12 @@ function SftpMockup({ t }: { t: (key: string) => string }) {
 }
 
 /* ═══════════════════════════════════════════
-   RDP Mockup — Remote Desktop
+   RDP Mockup, Remote Desktop
    ═══════════════════════════════════════════ */
 
 function RdpMockup({ t }: { t: (key: string) => string }) {
   return (
-    <MacWindow title={`SSHive — RDP — admin@windows-server`}>
+    <MacWindow title={`SSHive, RDP, admin@windows-server`}>
       <div className="relative min-h-[340px] overflow-hidden">
         {/* Windows 11 wallpaper gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a5c] via-[#0e2a47] to-[#0c1929]">
@@ -693,7 +693,7 @@ function RdpMockup({ t }: { t: (key: string) => string }) {
 function BroadcastMockup({ t }: { t: (key: string) => string }) {
   const servers = ['web-01', 'web-02', 'web-03', 'api-01'];
   return (
-    <MacWindow title={`SSHive — ${t('mockup.broadcastMode')}`}>
+    <MacWindow title={`SSHive, ${t('mockup.broadcastMode')}`}>
       <div className="p-4 space-y-3 min-h-[280px]">
         {/* Broadcast input */}
         <div className="flex items-center gap-2 p-3 rounded-xl bg-red-500/5 border border-red-500/20">
@@ -745,7 +745,7 @@ function McpMockup({ t }: { t: (key: string) => string }) {
     <div className="relative">
       <div className="rounded-xl border border-white/[0.08] bg-[#2b2b2b] shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden">
         <div className="flex min-h-[400px]">
-          {/* Claude Desktop sidebar — matches real app */}
+          {/* Claude Desktop sidebar, matches real app */}
           <div className="w-[48px] bg-[#2b2b2b] border-r border-white/[0.08] flex flex-col items-center pt-4 pb-3 gap-2.5 flex-shrink-0">
             {/* New chat */}
             <div className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-white/10 cursor-pointer mb-1">
@@ -882,7 +882,7 @@ function TunnelsMockup({ t }: { t: (key: string) => string }) {
   ];
 
   return (
-    <MacWindow title={`SSHive — SSH Tunnels — production`}>
+    <MacWindow title={`SSHive, SSH Tunnels, production`}>
       <div className="p-4 space-y-3 min-h-[280px]">
         {tunnels.map((tun, i) => (
           <div key={i} className={`flex items-center gap-3 p-3 rounded-xl border ${tun.bg}`}>
@@ -955,7 +955,7 @@ export function HomeShowcase() {
   return (
     <>
       {/* ═══════════════════════════════════════
-         HERO — Full app mockup with parallax
+         HERO, Full app mockup with parallax
          ═══════════════════════════════════════ */}
       <section className="relative overflow-hidden pt-16">
         {/* Parallax ambient glows */}
@@ -1030,7 +1030,7 @@ export function HomeShowcase() {
             </p>
           </ScrollReveal>
 
-          {/* AI-ready hero diagram — Claude → MCP → SSH/SFTP */}
+          {/* AI-ready hero diagram, Claude → MCP → SSH/SFTP */}
           <ScrollReveal delay={500}>
             <AIHeroDiagram />
           </ScrollReveal>
@@ -1038,7 +1038,7 @@ export function HomeShowcase() {
       </section>
 
       {/* ═══════════════════════════════════════
-         SHOWCASE — Interactive Feature Demos
+         SHOWCASE, Interactive Feature Demos
          ═══════════════════════════════════════ */}
 
       {/* --- SFTP Demo --- */}
@@ -1343,7 +1343,7 @@ export function HomeShowcase() {
         </div>
       </section>
 
-      {/* Old pricing section removed — replaced by launch offer section below */}
+      {/* Old pricing section removed, replaced by launch offer section below */}
 
       {/* ═══════════════════════════════════════
          DOWNLOAD CTA
@@ -1379,7 +1379,7 @@ export function HomeShowcase() {
       </section>
 
       {/* ═══════════════════════════════════════
-         PRICING — Free + Pro side by side
+         PRICING, Free + Pro side by side
          ═══════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         {/* Ambient glow */}
@@ -1441,7 +1441,7 @@ export function HomeShowcase() {
                 <div className="relative h-full rounded-2xl border border-white/[0.08] bg-[#111111] overflow-hidden flex flex-col">
                   {/* Launch badge ribbon */}
                   <div className="bg-gradient-to-r from-primary via-accent to-[#a78bfa] px-4 py-2 text-center">
-                    <span className="text-xs font-bold text-white tracking-wide uppercase">{tHome('offer.pro.badge')} — {tHome('offer.pro.savings')}</span>
+                    <span className="text-xs font-bold text-white tracking-wide uppercase">{tHome('offer.pro.badge')}, {tHome('offer.pro.savings')}</span>
                   </div>
 
                   <div className="p-8 flex-1 flex flex-col">

@@ -105,8 +105,8 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       fr: 'PuTTY est un client SSH classique aime par des generations d\'administrateurs. Bien qu\'il soit simple et fiable, SSHive offre une alternative moderne et riche en fonctionnalites avec une experience macOS native.',
     },
     verdict: {
-      en: 'PuTTY is a timeless classic, but SSHive brings SSH management into 2026 with a modern UI, SFTP, RDP, VNC, and AI integration — all in one native macOS app.',
-      fr: 'PuTTY est un classique intemporel, mais SSHive amene la gestion SSH en 2026 avec une interface moderne, SFTP, RDP, VNC et l\'integration IA — le tout dans une seule app macOS native.',
+      en: 'PuTTY is a timeless classic, but SSHive brings SSH management into 2026 with a modern UI, SFTP, RDP, VNC, and AI integration, all in one native macOS app.',
+      fr: 'PuTTY est un classique intemporel, mais SSHive amene la gestion SSH en 2026 avec une interface moderne, SFTP, RDP, VNC et l\'integration IA, le tout dans une seule app macOS native.',
     },
     features: [
       { key: 'sshTerminal', sshive: true, competitor: true },
@@ -180,8 +180,8 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       fr: 'SecureCRT est un client SSH entreprise de VanDyke Software. SSHive fournit une alternative moderne avec des fonctionnalites comparables a une fraction du prix.',
     },
     verdict: {
-      en: 'SecureCRT is aimed at enterprise users with deep pockets ($119/license). SSHive provides comparable SSH/SFTP functionality with modern additions like RDP, VNC, and AI — all for free or $9.99.',
-      fr: 'SecureCRT vise les utilisateurs entreprise avec un budget consequent (119 $/licence). SSHive fournit une fonctionnalite SSH/SFTP comparable avec des ajouts modernes comme RDP, VNC et l\'IA — le tout gratuit ou a 9,99 $.',
+      en: 'SecureCRT is aimed at enterprise users with deep pockets ($119/license). SSHive provides comparable SSH/SFTP functionality with modern additions like RDP, VNC, and AI, all for free or $9.99.',
+      fr: 'SecureCRT vise les utilisateurs entreprise avec un budget consequent (119 $/licence). SSHive fournit une fonctionnalite SSH/SFTP comparable avec des ajouts modernes comme RDP, VNC et l\'IA, le tout gratuit ou a 9,99 $.',
     },
     features: [
       { key: 'sshTerminal', sshive: true, competitor: true },
@@ -216,7 +216,7 @@ export const OVERVIEW_FEATURES = [
   'macAppStore',
 ] as const;
 
-/** Overview table data — value per competitor per feature */
+/** Overview table data, value per competitor per feature */
 export type OverviewCellValue = 'yes' | 'no' | 'partial';
 
 export interface OverviewCompetitor {

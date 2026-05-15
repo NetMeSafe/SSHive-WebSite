@@ -23,8 +23,8 @@ export async function generateMetadata({
 
   const title =
     locale === 'fr'
-      ? 'Integrations IA — Claude Code, Cursor, Claude Desktop | SSHive'
-      : 'AI Integrations — Claude Code, Cursor, Claude Desktop | SSHive';
+      ? 'Integrations IA, Claude Code, Cursor, Claude Desktop | SSHive'
+      : 'AI Integrations, Claude Code, Cursor, Claude Desktop | SSHive';
   const description =
     locale === 'fr'
       ? 'SSHive expose un serveur MCP local sur macOS pour Claude Code, Cursor et Claude Desktop. Guides de setup pour chaque client, 100 % local, Bearer token.'
@@ -51,8 +51,8 @@ export default async function IntegrationsHubPage({
   const title = locale === 'fr' ? 'Integrations IA' : 'AI Integrations';
   const subtitle =
     locale === 'fr'
-      ? 'Connectez Claude Code, Cursor ou Claude Desktop a vos sessions SSH et SFTP via le serveur MCP integre de SSHive — uniquement sur macOS, 100 % local.'
-      : 'Connect Claude Code, Cursor or Claude Desktop to your live SSH and SFTP sessions through SSHive\'s built-in MCP server — macOS only, 100% local.';
+      ? 'Connectez Claude Code, Cursor ou Claude Desktop a vos sessions SSH et SFTP via le serveur MCP integre de SSHive, uniquement sur macOS, 100 % local.'
+      : 'Connect Claude Code, Cursor or Claude Desktop to your live SSH and SFTP sessions through SSHive\'s built-in MCP server, macOS only, 100% local.';
 
   return (
     <>

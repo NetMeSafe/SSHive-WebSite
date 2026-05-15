@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Tag } from 'lucide-react';
+import { Tag, ArrowRight } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
@@ -79,6 +80,24 @@ export default async function ChangelogPage({
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="mt-20 pt-10 border-t border-border">
+        <h2 className="text-xl font-semibold text-foreground mb-3">
+          {locale === 'fr' ? 'A venir' : 'What is next'}
+        </h2>
+        <p className="text-muted-foreground leading-relaxed mb-5">
+          {locale === 'fr'
+            ? "Sync iCloud des profils, support YubiKey NFC, Mosh, multi-fenetres iPad, et le correctif du bug « repasse en Free apres update ». Voir la roadmap publique pour le detail."
+            : 'iCloud sync for profiles, YubiKey NFC support, Mosh, multi-window on iPad, and a fix for the "back to Free after update" bug. See the public roadmap for the detail.'}
+        </p>
+        <Link
+          href={'/roadmap' as '/roadmap'}
+          className="inline-flex items-center gap-2 text-primary hover:underline"
+        >
+          {locale === 'fr' ? 'Voir la roadmap' : 'See the roadmap'}
+          <ArrowRight className="w-4 h-4" />
+        </Link>
       </section>
     </div>
     </>

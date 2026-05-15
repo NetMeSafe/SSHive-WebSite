@@ -113,7 +113,7 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile hamburger — 44x44 minimum tap target (iOS HIG) */}
+        {/* Mobile hamburger, 44x44 minimum tap target (iOS HIG) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 text-foreground hover:text-primary transition-colors rounded-lg"
@@ -124,7 +124,7 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu — full overlay with blur */}
+      {/* Mobile menu, full overlay with blur */}
       {menuOpen && (
         <div className="md:hidden fixed inset-0 top-16 z-40">
           <div className="absolute inset-0 bg-background/95 backdrop-blur-2xl" />

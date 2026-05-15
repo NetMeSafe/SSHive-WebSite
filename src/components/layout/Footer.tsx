@@ -31,6 +31,7 @@ export function Footer() {
               <li><Link href="/use-cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('useCases')}</Link></li>
               <li><Link href="/how-to" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('howTo')}</Link></li>
               <li><Link href="/docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('docs')}</Link></li>
+              <li><Link href={'/roadmap' as '/roadmap'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Roadmap' : 'Roadmap'}</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('blog')}</Link></li>
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('about')}</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('contact')}</Link></li>

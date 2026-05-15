@@ -24,7 +24,7 @@
 }
 
 /* ========================================
-   Dark theme (default) — refined palette
+   Dark theme (default), refined palette
    ======================================== */
 :root {
   --background: #0A0A0A;
@@ -105,7 +105,7 @@ button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit
 }
 
 /* ========================================
-   Custom scrollbar — minimal macOS style
+   Custom scrollbar, minimal macOS style
    ======================================== */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -148,7 +148,7 @@ button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit
   100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
-/* Fade in up — for scroll reveals */
+/* Fade in up, for scroll reveals */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -160,7 +160,7 @@ button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit
   }
 }
 
-/* Fade in — simple */
+/* Fade in, simple */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -238,7 +238,7 @@ button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit
 .delay-800 { animation-delay: 800ms; }
 
 /* ========================================
-   Scroll reveal — triggered by IntersectionObserver
+   Scroll reveal, triggered by IntersectionObserver
    ======================================== */
 .reveal {
   opacity: 0;
@@ -263,7 +263,7 @@ button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit
 }
 
 /* ========================================
-   Glassmorphism — macOS vibrancy
+   Glassmorphism, macOS vibrancy
    ======================================== */
 .glass {
   background: rgba(20, 20, 20, 0.7);
@@ -393,7 +393,7 @@ button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit
 .macos-dot-green { background: #28c840; }
 
 /* ========================================
-   Section label — VNGZ style
+   Section label, VNGZ style
    ======================================== */
 .section-label {
   display: inline-flex;
@@ -454,7 +454,7 @@ button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit
   transform: translateZ(0);
 }
 
-/* Content visibility for offscreen sections — disabled on hero for LCP */
+/* Content visibility for offscreen sections, disabled on hero for LCP */
 section:nth-of-type(n+3) {
   content-visibility: auto;
   contain-intrinsic-size: auto 600px;
