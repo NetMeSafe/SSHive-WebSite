@@ -60,8 +60,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       fr: 'Terminal xterm-256color, cles Ed25519 avec passphrase, Trousseau Touch ID, broadcast, tunnels — le workflow SSH complet, natif sur iOS et iPadOS.',
     },
     intro: {
-      en: 'Apple never shipped an SSH client. If the prod alert hits at 2am while you are nowhere near a laptop, the default iPhone gives you nothing — no `ssh user@host`, no terminal, no SFTP. You have to either pay for a heavy SaaS like Termius (subscription) or trust a one-shot tool. SSHive solves it with a native iPhone and iPad app: a real xterm-256color terminal built on SwiftTerm, Ed25519 + ECDSA P-256 private-key auth with bcrypt-pbkdf passphrase encryption, jump-host support, broadcast across multiple sessions, and credentials stored in the iOS Keychain behind Face ID or Touch ID — all in a SwiftUI interface that adapts to iPhone TabView and iPad NavigationSplitView.\n\nThe Free tier covers 2 concurrent sessions, 5 saved profiles, 1 local tunnel, 3 snippets and 10 MB-per-file SFTP. Pro is $9.99 one-time on the App Store (Universal Purchase: pay once, use on iPhone, iPad, and Mac) — no subscription, no ads, no tracking.',
-      fr: 'Apple n\'a jamais livre de client SSH. Si l\'alerte prod tombe a 2h alors que vous etes loin d\'un laptop, l\'iPhone par defaut ne vous donne rien — pas de `ssh user@host`, pas de terminal, pas de SFTP. Vous payez un SaaS lourd comme Termius (abonnement) ou faites confiance a un outil one-shot. SSHive resoud ca avec une app iPhone et iPad native : un vrai terminal xterm-256color base sur SwiftTerm, auth par cle privee Ed25519 + ECDSA P-256 avec passphrase bcrypt-pbkdf, support jump-host, broadcast sur plusieurs sessions, et credentials stockes dans le Trousseau iOS derriere Face ID ou Touch ID — le tout dans une interface SwiftUI qui s\'adapte au TabView iPhone et au NavigationSplitView iPad.\n\nLe tier gratuit couvre 2 sessions simultanees, 5 profils sauvegardes, 1 tunnel local, 3 snippets et 10 Mo par fichier SFTP. Pro a 9,99 € unique sur l\'App Store (Universal Purchase : payez une fois, utilisez sur iPhone, iPad et Mac) — sans abonnement, sans pub, sans tracking.',
+      en: 'Apple never shipped an SSH client. If the prod alert hits at 2am while you are nowhere near a laptop, the default iPhone gives you nothing — no `ssh user@host`, no terminal, no SFTP. SSHive fills that gap with a native iPhone and iPad app: a real xterm-256color terminal built on SwiftTerm, Ed25519 + ECDSA P-256 private-key auth with bcrypt-pbkdf passphrase encryption, jump-host support, broadcast across multiple sessions, and credentials stored in the iOS Keychain behind Face ID or Touch ID — all in a SwiftUI interface that adapts to iPhone TabView and iPad NavigationSplitView.\n\nThe model is intentionally simple: no subscription, no data sent off your device, one-time Pro purchase, yours for life. The Free tier covers 2 concurrent sessions, 5 saved profiles, 1 local tunnel, 3 snippets and 10 MB-per-file SFTP. Pro is $9.99 one-time on the App Store (Universal Purchase: pay once, use on iPhone, iPad, and Mac). If something feels off or could be better, we are listening — write to us.',
+      fr: 'Apple n\'a jamais livre de client SSH. Si l\'alerte prod tombe a 2h alors que vous etes loin d\'un laptop, l\'iPhone par defaut ne vous donne rien — pas de `ssh user@host`, pas de terminal, pas de SFTP. SSHive comble ce manque avec une app iPhone et iPad native : un vrai terminal xterm-256color base sur SwiftTerm, auth par cle privee Ed25519 + ECDSA P-256 avec passphrase bcrypt-pbkdf, support jump-host, broadcast sur plusieurs sessions, et credentials stockes dans le Trousseau iOS derriere Face ID ou Touch ID — le tout dans une interface SwiftUI qui s\'adapte au TabView iPhone et au NavigationSplitView iPad.\n\nLe modele est volontairement simple : pas d\'abonnement, pas de donnees qui quittent votre appareil, achat Pro unique, a vous pour la vie. Le tier gratuit couvre 2 sessions simultanees, 5 profils sauvegardes, 1 tunnel local, 3 snippets et 10 Mo par fichier SFTP. Pro a 9,99 € unique sur l\'App Store (Universal Purchase : payez une fois, utilisez sur iPhone, iPad et Mac). Si quelque chose vous semble manquer ou ameliorable, on ecoute — ecrivez-nous.',
     },
     capabilities: [
       {
@@ -113,10 +113,10 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     },
     why: [
       {
-        title: { en: 'No subscription', fr: 'Pas d\'abonnement' },
+        title: { en: 'No subscription, no data sent', fr: 'Pas d\'abonnement, pas de donnees envoyees' },
         body: {
-          en: 'Termius and most modern iOS SSH clients are subscription-based — $5 to $10 per month forever, often required to even sync your hosts. SSHive Pro is a one-time $9.99 purchase, Universal across iPhone, iPad and Mac, lifetime updates. The Free tier is usable without paying anything.',
-          fr: 'Termius et la plupart des clients SSH iOS modernes sont par abonnement — 5 a 10 € par mois pour toujours, souvent obligatoire pour seulement synchroniser vos hotes. SSHive Pro est un achat unique a 9,99 €, Universal sur iPhone, iPad et Mac, mises a jour a vie. Le tier gratuit est utilisable sans payer.',
+          en: 'SSHive Pro is a single $9.99 one-time purchase, Universal across iPhone, iPad and Mac, with lifetime updates. The Free tier is usable without paying anything. Nothing about your sessions or credentials is sent off your device — there is no telemetry to collect and no cloud account to create.',
+          fr: 'SSHive Pro est un achat unique a 9,99 €, Universal sur iPhone, iPad et Mac, mises a jour a vie. Le tier gratuit est utilisable sans payer. Rien sur vos sessions ou identifiants ne quitte votre appareil — pas de telemetrie a collecter et pas de compte cloud a creer.',
         },
       },
       {
@@ -149,33 +149,33 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         name: 'Termius',
         pitch: {
-          en: 'Cross-platform with sync, polished UI. Subscription-based — useful features (port-forwarding, snippet sync, agent forwarding on iOS) sit behind the Pro tier at ~$10/month or $150/year.',
-          fr: 'Cross-platform avec sync, UI soignee. Par abonnement — les features utiles (port-forwarding, sync snippets, agent forwarding sur iOS) sont derriere le tier Pro a ~10 €/mois ou 150 €/an.',
+          en: 'Cross-platform client with cloud sync between Mac, iOS, Windows and Linux. Strong polish and a generous free tier. Advanced features and team sync are part of the paid subscription — a good fit if you want everything in the cloud.',
+          fr: 'Client cross-platform avec sync cloud entre Mac, iOS, Windows et Linux. Bonne finition et tier gratuit genereux. Les fonctionnalites avancees et la sync d\'equipe sont dans l\'abonnement paye — bon choix si vous voulez tout dans le cloud.',
         },
-        pricing: { en: 'Subscription', fr: 'Abonnement' },
+        pricing: { en: 'Free tier + subscription', fr: 'Tier gratuit + abonnement' },
         compareSlug: 'termius',
       },
       {
         name: 'Prompt 3 (Panic)',
         pitch: {
-          en: 'A beloved premium iOS SSH client by Panic. SSH + SFTP only on iOS — no RDP, no VNC, no VPN. One-time purchase but pricier than SSHive Pro.',
-          fr: 'Client SSH iOS premium tres apprecie de Panic. SSH + SFTP uniquement sur iOS — pas de RDP, pas de VNC, pas de VPN. Achat unique mais plus cher que SSHive Pro.',
+          en: 'A long-loved premium iOS SSH client by Panic, with a beautiful UI. SSH + SFTP only on iOS — no RDP, VNC or VPN. A great pick if you want the absolute best terminal experience and nothing else.',
+          fr: 'Un client SSH iOS premium tres apprecie de Panic, avec une UI magnifique. SSH + SFTP uniquement sur iOS — pas de RDP, VNC ou VPN. Tres bon choix si vous voulez la meilleure experience terminal possible et rien d\'autre.',
         },
         pricing: { en: '$24.99 one-time (iOS only)', fr: '24,99 $ unique (iOS uniquement)' },
       },
       {
         name: 'Blink Shell',
         pitch: {
-          en: 'Power-user SSH/Mosh client with a Vim-style command palette. Open source. Steeper learning curve and iOS-only.',
-          fr: 'Client SSH/Mosh pour power-users avec command palette style Vim. Open source. Courbe d\'apprentissage plus raide et iOS-seulement.',
+          en: 'Power-user SSH/Mosh client with a Vim-style command palette. Open source. A great pick if you live in a keyboard-driven workflow and want maximum customization.',
+          fr: 'Client SSH/Mosh pour power-users avec command palette style Vim. Open source. Excellent choix si vous vivez en workflow clavier et voulez le maximum de personnalisation.',
         },
         pricing: { en: 'Free / paid version on App Store', fr: 'Gratuit / version payante sur App Store' },
       },
       {
         name: 'ServerCat',
         pitch: {
-          en: 'Server monitoring + SSH on iOS. Different angle: it watches servers via Netdata/Prometheus and gives you SSH on top. Good for monitoring-first users.',
-          fr: 'Monitoring + SSH sur iOS. Angle different : surveille les serveurs via Netdata/Prometheus et donne SSH par-dessus. Bien pour les utilisateurs monitoring-first.',
+          en: 'A different angle: it watches servers via Netdata/Prometheus and adds SSH on top. Ideal if monitoring is your primary use case and remote shell is the bonus.',
+          fr: 'Un angle different : surveille les serveurs via Netdata/Prometheus et ajoute SSH par-dessus. Ideal si le monitoring est votre cas d\'usage principal et le shell distant le bonus.',
         },
         pricing: { en: 'Free / Pro paid', fr: 'Gratuit / Pro payant' },
       },
@@ -264,8 +264,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       fr: 'Naviguez sur des serveurs distants, editez les configs en place, uploadez des captures de Files en un tap. Meme moteur SFTP que la version Mac, natif sur iOS.',
     },
     intro: {
-      en: 'Reading and writing files on a remote server from an iPhone is awkward by default — you either copy-paste blobs through SSH, or you live with web-based file managers. SSHive ships a real native SFTP client on iOS and iPadOS: a remote file browser, a transfer queue with real-time progress, a built-in text editor for in-place edits, and integration with the iOS Files app so you can drop something from iCloud Drive straight onto a server. Credentials and host keys live in the Keychain behind Face ID or Touch ID — same security model as the SSH terminal.\n\nFree covers 10 MB per file (enough for most configs, scripts and small assets), Pro unlocks unlimited transfer size and adds session logging and `.sshive` profile export/import. Universal Purchase: pay once for Pro on the App Store, use it across iPhone, iPad and Mac.',
-      fr: 'Lire et ecrire des fichiers sur un serveur distant depuis un iPhone est maladroit par defaut — soit copier-coller via SSH, soit vivre avec des web file managers. SSHive embarque un vrai client SFTP natif sur iOS et iPadOS : un explorateur de fichiers distants, une file de transferts avec progression temps reel, un editeur de texte integre pour les edits sur place, et une integration avec l\'app Files iOS pour glisser un fichier d\'iCloud Drive directement sur un serveur. Les credentials et host keys sont dans le Trousseau derriere Face ID ou Touch ID — meme modele de securite que le terminal SSH.\n\nFree couvre 10 Mo par fichier (suffisant pour la plupart des configs, scripts et petits assets), Pro debloque la taille illimitee et ajoute le logging de session et l\'export/import `.sshive`. Universal Purchase : payez Pro une fois sur l\'App Store, utilisez sur iPhone, iPad et Mac.',
+      en: 'Reading and writing files on a remote server from an iPhone is harder than it should be — most workflows end up with copy-paste through an SSH terminal, or a web-based file manager open in a tab. SSHive ships a real native SFTP client on iOS and iPadOS: a remote file browser, a transfer queue with real-time progress, a built-in text editor for in-place edits, and integration with the iOS Files app so you can drop something from iCloud Drive straight onto a server. Credentials and host keys live in the Keychain behind Face ID or Touch ID — same security model as the SSH terminal.\n\nFree covers 10 MB per file (enough for most configs, scripts and small assets), Pro unlocks unlimited transfer size and adds session logging and `.sshive` profile export/import. Universal Purchase: pay once for Pro on the App Store, use it across iPhone, iPad and Mac. No subscription, no data sent to us — and if you hit a use case the editor or browser does not cover well, tell us, we listen.',
+      fr: 'Lire et ecrire des fichiers sur un serveur distant depuis un iPhone est plus penible que ca devrait — la plupart des workflows finissent en copier-coller dans un terminal SSH, ou avec un gestionnaire de fichiers web ouvert dans un onglet. SSHive embarque un vrai client SFTP natif sur iOS et iPadOS : un explorateur de fichiers distants, une file de transferts avec progression temps reel, un editeur de texte integre pour les edits sur place, et une integration avec l\'app Files iOS pour glisser un fichier d\'iCloud Drive directement sur un serveur. Les credentials et host keys sont dans le Trousseau derriere Face ID ou Touch ID — meme modele de securite que le terminal SSH.\n\nFree couvre 10 Mo par fichier (suffisant pour la plupart des configs, scripts et petits assets), Pro debloque la taille illimitee et ajoute le logging de session et l\'export/import `.sshive`. Universal Purchase : payez Pro une fois sur l\'App Store, utilisez sur iPhone, iPad et Mac. Pas d\'abonnement, pas de donnees envoyees vers nous — et si vous tombez sur un cas d\'usage que l\'editeur ou le browser ne couvrent pas bien, dites-le-nous, on ecoute.',
     },
     capabilities: [
       {
@@ -319,8 +319,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         title: { en: 'iOS Files-app integration', fr: 'Integration Files iOS' },
         body: {
-          en: 'Most iOS "SFTP" apps live in a bubble — your remote files are stuck inside the app. SSHive uses the iOS share sheet both ways: anything from another iOS app can be sent into SSHive for upload, and any remote file can be exported back to Files / iCloud Drive / another app.',
-          fr: 'La plupart des apps "SFTP" iOS vivent dans une bulle — vos fichiers distants sont coinces dans l\'app. SSHive utilise la share sheet iOS dans les deux sens : n\'importe quoi d\'une autre app iOS peut etre envoye dans SSHive pour upload, et n\'importe quel fichier distant peut etre exporte vers Files / iCloud Drive / une autre app.',
+          en: 'SSHive uses the iOS share sheet both ways: anything from another iOS app can be sent into SSHive for upload, and any remote file can be exported back to Files / iCloud Drive / another app. Your remote files do not stay locked inside the app.',
+          fr: 'SSHive utilise la share sheet iOS dans les deux sens : n\'importe quoi d\'une autre app iOS peut etre envoye dans SSHive pour upload, et n\'importe quel fichier distant peut etre exporte vers Files / iCloud Drive / une autre app. Vos fichiers distants ne restent pas bloques dans l\'app.',
         },
       },
       {
@@ -346,24 +346,24 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         name: 'Documents by Readdle',
         pitch: {
-          en: 'A full file manager with SFTP support buried in it. Good for occasional transfers, but no in-place text editor, no per-profile keys, no SSH terminal — just file moves.',
-          fr: 'Un gestionnaire de fichiers complet avec support SFTP enfoui dedans. Bien pour des transferts occasionnels, mais pas d\'editeur texte sur place, pas de cles par profil, pas de terminal SSH — juste des deplacements de fichiers.',
+          en: 'A general-purpose file manager that happens to include SFTP. Great if SFTP is one tool among many you need (cloud drives, ZIP, downloads). For SFTP-as-main-use, SSHive\'s editor and per-profile keys tend to be handier.',
+          fr: 'Un gestionnaire de fichiers polyvalent qui inclut le SFTP. Tres bien si le SFTP est un outil parmi d\'autres dont vous avez besoin (cloud drives, ZIP, downloads). Pour le SFTP comme usage principal, l\'editeur et les cles par profil de SSHive sont en general plus pratiques.',
         },
         pricing: { en: 'Free / Documents Pro paid', fr: 'Gratuit / Documents Pro payant' },
       },
       {
         name: 'FE File Explorer',
         pitch: {
-          en: 'Veteran iOS SFTP/SMB/cloud explorer. Reliable, lots of protocol support. UI looks dated, no integration with SSH terminal, no biometric per-profile.',
-          fr: 'Explorateur SFTP/SMB/cloud iOS veteran. Fiable, beaucoup de protocoles. UI vieillotte, pas d\'integration terminal SSH, pas de biometrie par profil.',
+          en: 'A veteran iOS file explorer with strong protocol coverage (SFTP, SMB, cloud). Reliable choice if you need one app that talks to many protocols.',
+          fr: 'Un explorateur de fichiers iOS veteran avec une bonne couverture de protocoles (SFTP, SMB, cloud). Choix fiable si vous voulez une app qui parle a beaucoup de protocoles.',
         },
         pricing: { en: 'Free / Pro paid', fr: 'Gratuit / Pro payant' },
       },
       {
-        name: 'Termius (SFTP add-on)',
+        name: 'Termius (SFTP)',
         pitch: {
-          en: 'SFTP is bundled with Termius\'s subscription tier. Solid execution but locked behind monthly billing.',
-          fr: 'SFTP est inclus dans le tier abonnement de Termius. Execution solide mais derriere une facturation mensuelle.',
+          en: 'Termius bundles SFTP with its subscription tier. Polished execution; a great pick if you already pay for Termius for SSH and want SFTP in the same app.',
+          fr: 'Termius inclut le SFTP dans son tier abonnement. Execution soignee ; bon choix si vous payez deja Termius pour le SSH et voulez le SFTP dans la meme app.',
         },
         pricing: { en: 'Subscription', fr: 'Abonnement' },
         compareSlug: 'termius',
@@ -443,8 +443,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       fr: 'Un vrai client RDP base sur FreeRDP 3 — NLA, Active Directory, NTLMv2, TLS 1.3. Une meilleure alternative a Microsoft Remote Desktop sur iOS.',
     },
     intro: {
-      en: 'Microsoft\'s official Remote Desktop client on iOS is functional but constrained: limited profile management, no per-connection notes, no SSH/SFTP next to it, awkward Active Directory ergonomics (DOMAIN\\username in the username field). SSHive ships an RDP client built on FreeRDP 3, the same battle-tested codebase used in many Linux RDP front-ends, with TLS 1.3, CredSSP, NLA and NTLMv2 — connecting to Windows Server 2016, 2019, 2022, 2025 and Windows 10/11 Pro/Enterprise out of the box. NLA can be disabled per profile for legacy boxes, NetBIOS and FQDN domains are both accepted in a dedicated domain field, and Ctrl+Alt+Del has a dedicated button in the RDP toolbar.\n\nFree includes 2 concurrent RDP sessions; Pro removes the cap. The session survives device rotation on iPhone Pro Max (landscape works), and the integrated VPN client (IKEv2 / IPSec / OpenVPN) can auto-connect before RDP for protected fleets — no app switching between a separate VPN app and the RDP client.',
-      fr: 'Le client Remote Desktop officiel de Microsoft sur iOS est fonctionnel mais contraint : gestion de profils limitee, pas de notes par connexion, pas de SSH/SFTP a cote, ergonomie Active Directory maladroite (DOMAIN\\username dans le champ username). SSHive embarque un client RDP base sur FreeRDP 3, le meme codebase battle-tested utilise dans beaucoup de front-ends RDP Linux, avec TLS 1.3, CredSSP, NLA et NTLMv2 — se connecte a Windows Server 2016, 2019, 2022, 2025 et Windows 10/11 Pro/Enterprise sans config. NLA peut etre desactive par profil pour les boxes legacy, NetBIOS et FQDN tous deux acceptes dans un champ domaine dedie, et Ctrl+Alt+Suppr a un bouton dedie dans la barre RDP.\n\nFree inclut 2 sessions RDP simultanees ; Pro retire la limite. La session survit a la rotation sur iPhone Pro Max (landscape marche), et le client VPN integre (IKEv2 / IPSec / OpenVPN) peut s\'auto-connecter avant le RDP pour les flottes protegees — pas de switch entre une app VPN separee et le client RDP.',
+      en: 'Microsoft Remote Desktop on iOS is the obvious starting point — it is free, official, and gets the basics done. SSHive takes a different angle: bundle a real RDP client into the same app as your SSH terminal, SFTP, VNC and VPN, so you do not need to switch apps to do a full ops task. The RDP engine is FreeRDP 3, the same modern codebase used in many Linux RDP front-ends, with TLS 1.3, CredSSP, NLA and NTLMv2 — connecting to Windows Server 2016, 2019, 2022, 2025 and Windows 10/11 Pro/Enterprise out of the box. NLA can be disabled per profile for legacy boxes, NetBIOS and FQDN domains are both accepted in a dedicated Domain field separate from the username, and Ctrl+Alt+Del has its own button in the RDP toolbar.\n\nFree includes 2 concurrent RDP sessions; Pro removes the cap. The session survives device rotation on iPhone Pro Max (landscape works well), and the integrated VPN client (IKEv2 / IPSec / OpenVPN) can auto-connect before RDP for protected fleets — no need to juggle a separate VPN app. No subscription, no data sent to us. If a corner of the RDP UX could be smoother for your workflow, we are listening.',
+      fr: 'Microsoft Remote Desktop sur iOS est le point de depart evident — gratuit, officiel, et fait les bases. SSHive prend un angle different : embarquer un vrai client RDP dans la meme app que votre terminal SSH, SFTP, VNC et VPN, pour ne pas avoir a changer d\'app pour faire une tache ops complete. Le moteur RDP est FreeRDP 3, le meme codebase moderne utilise dans beaucoup de front-ends RDP Linux, avec TLS 1.3, CredSSP, NLA et NTLMv2 — se connecte a Windows Server 2016, 2019, 2022, 2025 et Windows 10/11 Pro/Enterprise sans config. NLA peut etre desactive par profil pour les boxes legacy, NetBIOS et FQDN tous deux acceptes dans un champ Domaine separe du username, et Ctrl+Alt+Suppr a son bouton dedie dans la barre RDP.\n\nFree inclut 2 sessions RDP simultanees ; Pro retire la limite. La session survit a la rotation sur iPhone Pro Max (landscape marche bien), et le client VPN integre (IKEv2 / IPSec / OpenVPN) peut s\'auto-connecter avant le RDP pour les flottes protegees — pas besoin de jongler avec une app VPN separee. Pas d\'abonnement, pas de donnees envoyees vers nous. Si un coin de l\'UX RDP pourrait etre plus fluide pour votre workflow, on ecoute.',
     },
     capabilities: [
       {
@@ -496,10 +496,10 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     },
     why: [
       {
-        title: { en: 'Real Active Directory UX', fr: 'Vraie UX Active Directory' },
+        title: { en: 'Active Directory the way Windows does it', fr: 'Active Directory comme sur Windows' },
         body: {
-          en: 'Microsoft Remote Desktop on iOS requires you to type DOMAIN\\username in the username field, which trips up half the team. SSHive has a dedicated Domain field that accepts NetBIOS or FQDN, with username and password kept separate — same model AD admins expect on Windows itself.',
-          fr: 'Microsoft Remote Desktop sur iOS exige DOMAIN\\username dans le champ username, ce qui pose probleme a la moitie de l\'equipe. SSHive a un champ Domaine dedie qui accepte NetBIOS ou FQDN, avec username et password separes — meme modele que les admins AD attendent sur Windows.',
+          en: 'A dedicated Domain field, separate from the username, accepting both NetBIOS (`CORP`) and FQDN (`corp.example.com`). NLA + NTLMv2 are negotiated by default. Same input model that AD admins already use on Windows itself, no `DOMAIN\\username` packing required.',
+          fr: 'Un champ Domaine dedie, separe du username, qui accepte NetBIOS (`CORP`) et FQDN (`corp.example.com`). NLA + NTLMv2 negocies par defaut. Meme modele d\'entree que les admins AD utilisent deja sur Windows, pas besoin d\'empaqueter `DOMAIN\\username`.',
         },
       },
       {
@@ -525,24 +525,24 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         name: 'Microsoft Remote Desktop',
         pitch: {
-          en: 'The official Microsoft iOS client. Free, reliable, but limited profile management, awkward Active Directory UX, and isolated from SSH/SFTP workflows.',
-          fr: 'Le client iOS officiel de Microsoft. Gratuit, fiable, mais gestion de profils limitee, UX Active Directory maladroite, et isole des workflows SSH/SFTP.',
+          en: 'The official, free Microsoft client. The right starting point if all you need is RDP to a single Windows VM and you do not need SSH/SFTP next to it.',
+          fr: 'Le client officiel Microsoft, gratuit. Le bon point de depart si vous avez juste besoin de RDP vers une VM Windows et pas de SSH/SFTP a cote.',
         },
         pricing: { en: 'Free', fr: 'Gratuit' },
       },
       {
         name: 'Jump Desktop',
         pitch: {
-          en: 'A polished RDP and VNC client for iOS with cross-platform sync via Jump Desktop Connect.io. Strong UI; subscription on the Connect.io variant.',
-          fr: 'Client RDP et VNC iOS soigne avec sync cross-platform via Jump Desktop Connect.io. UI forte ; abonnement sur la variante Connect.io.',
+          en: 'A polished RDP and VNC client for iOS with cross-platform sync via Jump Desktop Connect.io. Strong UI — a solid choice if cross-device sync is the deciding factor.',
+          fr: 'Client RDP et VNC iOS soigne avec sync cross-platform via Jump Desktop Connect.io. UI forte — bon choix si la sync entre appareils est decisive pour vous.',
         },
         pricing: { en: 'One-time + Connect.io subscription', fr: 'Achat unique + abonnement Connect.io' },
       },
       {
         name: 'Remotix',
         pitch: {
-          en: 'Multi-protocol remote desktop (RDP, VNC) with NEAR-screen acceleration. Subscription-based and aimed at enterprise.',
-          fr: 'Bureau a distance multi-protocole (RDP, VNC) avec acceleration NEAR-screen. Abonnement et oriente entreprise.',
+          en: 'Multi-protocol remote desktop (RDP, VNC) with NEAR-screen acceleration. Built around team and enterprise rollouts.',
+          fr: 'Bureau a distance multi-protocole (RDP, VNC) avec acceleration NEAR-screen. Construit pour les deploiements equipe et entreprise.',
         },
         pricing: { en: 'Subscription', fr: 'Abonnement' },
       },
@@ -621,8 +621,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       fr: 'Bureaux Linux, Raspberry Pi, Macs headless, consoles ESXi. Gestes natifs, chiffrement TLS, support ARD — et tunnelable via SSH en deux clics.',
     },
     intro: {
-      en: 'VNC on iOS has always been the awkward case — Apple Screen Sharing does not exist on iPhone, and most third-party iOS VNC apps are simple RFB clients without TLS, without ARD support, without saved profiles. SSHive ships RoyalVNC under the hood (the same engine used by Royal TSX on Mac), which supports the full VNC protocol family: ARD authentication for Mac-to-Mac, VeNCrypt + TLS for encrypted RFB, and bare RFB for legacy servers — wrapped in an SSH tunnel from SSHive\'s own Tunnels UI when you need encryption that the VNC server itself does not offer.\n\nThe UI is built for touch: tap as left-click, two-finger tap as right-click, pinch to zoom, two-finger pan, and a VNC-specific on-screen keyboard that exposes function keys, modifiers and arrow keys that a phone keyboard does not. Free includes 2 concurrent VNC sessions; Pro removes the cap. Universal Purchase with macOS and iPad.',
-      fr: 'Le VNC sur iOS a toujours ete le cas maladroit — Apple Screen Sharing n\'existe pas sur iPhone, et la plupart des apps VNC iOS tierces sont de simples clients RFB sans TLS, sans support ARD, sans profils sauvegardes. SSHive embarque RoyalVNC sous le capot (le meme moteur utilise par Royal TSX sur Mac), qui supporte toute la famille VNC : auth ARD pour Mac-vers-Mac, VeNCrypt + TLS pour RFB chiffre, et RFB nu pour serveurs legacy — enveloppe dans un tunnel SSH via l\'UI Tunnels de SSHive quand vous avez besoin d\'un chiffrement que le serveur VNC lui-meme n\'offre pas.\n\nL\'UI est concue pour le tactile : tap = clic gauche, tap deux doigts = clic droit, pinch pour zoomer, pan deux doigts, et un clavier VNC a l\'ecran specifique qui expose touches de fonction, modifiers et fleches qu\'un clavier de telephone n\'a pas. Free inclut 2 sessions VNC simultanees ; Pro retire la limite. Universal Purchase avec macOS et iPad.',
+      en: 'VNC on iOS has always been the trickier case — Apple Screen Sharing does not exist on iPhone, and many third-party iOS VNC apps focus on plain RFB without TLS, ARD support or saved profiles. SSHive ships RoyalVNC under the hood (the same engine used by Royal TSX on Mac), which supports the full VNC protocol family: ARD authentication for Mac-to-Mac, VeNCrypt + TLS for encrypted RFB, and bare RFB for legacy servers — wrapped in an SSH tunnel from SSHive\'s own Tunnels UI when you need encryption the VNC server itself does not offer.\n\nThe UI is built for touch: tap as left-click, two-finger tap as right-click, pinch to zoom, two-finger pan, and a VNC-specific on-screen keyboard that exposes the function keys, modifiers and arrow keys a phone keyboard does not. Free includes 2 concurrent VNC sessions; Pro removes the cap. Universal Purchase with macOS and iPad. No subscription, no data sent to us — if a server you connect to misbehaves, tell us, we will look into it.',
+      fr: 'Le VNC sur iOS a toujours ete le cas le plus delicat — Apple Screen Sharing n\'existe pas sur iPhone, et beaucoup d\'apps VNC iOS tierces se concentrent sur le RFB plain sans TLS, sans support ARD, sans profils sauvegardes. SSHive embarque RoyalVNC sous le capot (le meme moteur utilise par Royal TSX sur Mac), qui supporte toute la famille VNC : auth ARD pour Mac-vers-Mac, VeNCrypt + TLS pour RFB chiffre, et RFB nu pour serveurs legacy — enveloppe dans un tunnel SSH via l\'UI Tunnels de SSHive quand vous avez besoin d\'un chiffrement que le serveur VNC lui-meme n\'offre pas.\n\nL\'UI est concue pour le tactile : tap = clic gauche, tap deux doigts = clic droit, pinch pour zoomer, pan deux doigts, et un clavier VNC a l\'ecran specifique qui expose touches de fonction, modifiers et fleches qu\'un clavier de telephone n\'a pas. Free inclut 2 sessions VNC simultanees ; Pro retire la limite. Universal Purchase avec macOS et iPad. Pas d\'abonnement, pas de donnees envoyees vers nous — si un serveur auquel vous vous connectez fait des siennes, dites-le-nous, on regardera.',
     },
     capabilities: [
       {
@@ -660,10 +660,10 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     },
     why: [
       {
-        title: { en: 'No subscription, Universal Purchase', fr: 'Pas d\'abonnement, Universal Purchase' },
+        title: { en: 'One purchase, every Apple device', fr: 'Un achat, tous les appareils Apple' },
         body: {
-          en: 'Most full-featured iOS VNC clients are subscription-based or have a separate iPhone/iPad/Mac purchase. SSHive Pro is a single $9.99 one-time Universal Purchase covering all three.',
-          fr: 'La plupart des clients VNC iOS complets sont par abonnement ou ont des achats iPhone/iPad/Mac separes. SSHive Pro est un achat unique Universal Purchase a 9,99 € qui couvre les trois.',
+          en: 'SSHive Pro is a single $9.99 one-time Universal Purchase covering iPhone, iPad and Mac with lifetime updates. No subscription, no data sent to us, yours for life.',
+          fr: 'SSHive Pro est un achat unique Universal Purchase a 9,99 € qui couvre iPhone, iPad et Mac avec mises a jour a vie. Pas d\'abonnement, pas de donnees envoyees vers nous, a vous pour la vie.',
         },
       },
       {
@@ -813,10 +813,10 @@ export const IOS_PAGES: IosFeatureSEO[] = [
         },
       },
       {
-        title: { en: 'No telemetry, no log harvesting', fr: 'Pas de telemetrie, pas de log harvesting' },
+        title: { en: 'No telemetry, no traffic relayed', fr: 'Pas de telemetrie, pas de trafic relaye' },
         body: {
-          en: 'Free VPN apps make money by monetizing your traffic. SSHive is paid (Pro $9.99 one-time) so we have no incentive to log or sell your VPN sessions. No telemetry, no third-party analytics, no traffic relayed through our servers — the VPN goes directly to your configured endpoint.',
-          fr: 'Les apps VPN gratuites font de l\'argent en monetisant votre trafic. SSHive est payante (Pro 9,99 € unique), donc aucun interet a logger ou vendre vos sessions VPN. Pas de telemetrie, pas d\'analytics tiers, pas de trafic relaye par nos serveurs — le VPN va directement vers votre endpoint configure.',
+          en: 'SSHive is paid (Pro $9.99 one-time) and has no advertising business model, so the app simply does not need to look at your VPN traffic. No telemetry, no third-party analytics, no traffic relayed through servers we control — the VPN goes directly from your iPhone to your configured endpoint.',
+          fr: 'SSHive est payante (Pro 9,99 € unique) et n\'a pas de modele publicitaire, donc l\'app n\'a tout simplement pas besoin de regarder votre trafic VPN. Pas de telemetrie, pas d\'analytics tiers, pas de trafic relaye par des serveurs qu\'on controle — le VPN va directement de votre iPhone a votre endpoint configure.',
         },
       },
       {
@@ -843,8 +843,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         name: 'Cisco AnyConnect / Secure Client',
         pitch: {
-          en: 'Enterprise VPN for Cisco gateways. Mandatory if your corp uses Cisco; useless if it does not. No SSH/RDP companion.',
-          fr: 'VPN enterprise pour les gateways Cisco. Obligatoire si la corp utilise Cisco ; inutile sinon. Pas de compagnon SSH/RDP.',
+          en: 'The standard enterprise VPN client for Cisco gateways. The obvious choice when your company uses Cisco infrastructure. Pair it with SSHive for the SSH/RDP side, no conflict.',
+          fr: 'Le client VPN enterprise standard pour les gateways Cisco. Le choix evident quand votre entreprise utilise une infrastructure Cisco. Associez-le a SSHive pour le cote SSH/RDP, pas de conflit.',
         },
         pricing: { en: 'Free client (server-licensed)', fr: 'Client gratuit (serveur sous licence)' },
       },

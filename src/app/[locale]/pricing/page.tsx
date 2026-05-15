@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { CheckCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { APP_STORE_URL, SITE_URL } from '@/lib/constants';
+import { SITE_URL } from '@/lib/constants';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { AppStoreLink } from '@/components/download/AppStoreLink';
 import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
@@ -160,14 +161,9 @@ export default async function PricingPage({
                   </li>
                 ))}
               </ul>
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 block text-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
-              >
+              <AppStoreLink className="mt-8 block text-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors">
                 {t('pro.cta')}
-              </a>
+              </AppStoreLink>
             </div>
           </div>
 

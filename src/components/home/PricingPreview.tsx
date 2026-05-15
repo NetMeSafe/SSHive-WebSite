@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Check } from 'lucide-react';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { APP_STORE_URL } from '@/lib/constants';
+import { AppStoreLink } from '@/components/download/AppStoreLink';
 
 export function PricingPreview() {
   const t = useTranslations('pricing');
@@ -120,14 +120,9 @@ export function PricingPreview() {
                 ))}
               </ul>
 
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-[0_0_15px_rgba(122,162,247,0.2)]"
-              >
+              <AppStoreLink className="block text-center bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-[0_0_15px_rgba(122,162,247,0.2)]">
                 {t('pro.cta')}
-              </a>
+              </AppStoreLink>
             </div>
           </ScrollReveal>
         </div>

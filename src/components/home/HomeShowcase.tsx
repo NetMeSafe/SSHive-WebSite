@@ -1473,10 +1473,10 @@ export function HomeShowcase() {
                       ))}
                     </div>
 
-                    <button className="w-full py-3.5 px-6 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-xl text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all cursor-pointer shadow-lg shadow-primary/20">
+                    <AppStoreLink className="w-full py-3.5 px-6 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-xl text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all cursor-pointer shadow-lg shadow-primary/20">
                       <Rocket className="w-4 h-4" />
                       {tHome('offer.pro.cta')}
-                    </button>
+                    </AppStoreLink>
                   </div>
                 </div>
               </div>

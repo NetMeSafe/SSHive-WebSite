@@ -329,8 +329,8 @@ export const BEST_PAGES: BestPageSEO[] = [
       fr: 'Cinq clients RDP testes sur macOS — Active Directory, NLA, performances et lequel s\'integre a un vrai workflow SSH/SFTP.',
     },
     intro: {
-      en: 'Connecting to a Windows server from a Mac is still annoying in 2026. Apple ships nothing, Microsoft Remote Desktop on the Mac App Store is functional but limited (no per-connection notes, no AD-friendly defaults), and third-party tools split between expensive multi-protocol suites and one-feature utilities. This guide ranks five RDP clients that actually work on macOS Sonoma/Sequoia, with notes on Active Directory, NLA, gateway configurations and what happens when you also need SSH and SFTP to the same fleet.\n\nWe ranked by real-world ergonomics: how fast you can open a saved connection, whether it remembers domain/username/password securely, how it handles Ctrl+Alt+Del and the Windows key, and whether you have to leave the app to do SSH or SFTP on the same machine. Order is not about screen-redraw FPS — they are all fine on Apple Silicon.',
-      fr: 'Se connecter a un serveur Windows depuis un Mac reste penible en 2026. Apple ne fournit rien, Microsoft Remote Desktop sur le Mac App Store est fonctionnel mais limite (pas de notes par connexion, defaults pas AD-friendly), et les outils tiers se partagent entre suites multi-protocoles cheres et utilitaires mono-feature. Ce guide classe cinq clients RDP qui marchent vraiment sur macOS Sonoma/Sequoia, avec notes sur Active Directory, NLA, gateways et ce qui se passe quand vous avez aussi besoin de SSH et SFTP sur la meme flotte.\n\nClassement par ergonomie reelle : a quelle vitesse on ouvre une connexion sauvegardee, est-ce que les credentials domain/username/password sont retenus en securite, comment Ctrl+Alt+Suppr et la touche Windows sont gerees, et si on doit quitter l\'app pour faire SSH ou SFTP sur la meme machine. L\'ordre ne porte pas sur le FPS de redraw — tous bons sur Apple Silicon.',
+      en: 'macOS has a healthy choice of RDP clients in 2026 — Apple does not ship one, but Microsoft offers a free official client on the Mac App Store, and several strong third-party tools cover the multi-protocol and team scenarios. This guide ranks five RDP clients that work well on macOS Sonoma/Sequoia, with notes on Active Directory, NLA, gateway configurations and what happens when you also need SSH and SFTP to the same fleet.\n\nWe ranked by real-world ergonomics: how fast you can open a saved connection, whether it remembers domain/username/password securely, how it handles Ctrl+Alt+Del and the Windows key, and whether you have to leave the app to do SSH or SFTP on the same machine. Order is not about screen-redraw FPS — they are all fine on Apple Silicon.',
+      fr: 'macOS a un bon choix de clients RDP en 2026 — Apple n\'en fournit pas, mais Microsoft propose un client officiel gratuit sur le Mac App Store, et plusieurs outils tiers solides couvrent les scenarios multi-protocoles et equipe. Ce guide classe cinq clients RDP qui marchent bien sur macOS Sonoma/Sequoia, avec notes sur Active Directory, NLA, gateways et ce qui se passe quand vous avez aussi besoin de SSH et SFTP sur la meme flotte.\n\nClassement par ergonomie reelle : a quelle vitesse on ouvre une connexion sauvegardee, est-ce que les credentials domain/username/password sont retenus en securite, comment Ctrl+Alt+Suppr et la touche Windows sont gerees, et si on doit quitter l\'app pour faire SSH ou SFTP sur la meme machine. L\'ordre ne porte pas sur le FPS de redraw — tous bons sur Apple Silicon.',
     },
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
@@ -352,8 +352,8 @@ export const BEST_PAGES: BestPageSEO[] = [
         rank: 3,
         name: 'Royal TSX',
         bestFor: {
-          en: 'Plugin-based multi-protocol manager. Great for big fleets but heavy and per-user licensing gets expensive.',
-          fr: 'Gestionnaire multi-protocole base sur plugins. Bien pour les grosses flottes mais lourd et licence par utilisateur chere.',
+          en: 'Plugin-based multi-protocol manager. A natural fit for large fleets and team workflows, with a deep license model for organizations.',
+          fr: 'Gestionnaire multi-protocole base sur plugins. Adapte aux grosses flottes et workflows d\'equipe, avec un modele de licence pense pour les organisations.',
         },
         pricing: { en: 'Free limited; paid per-user license', fr: 'Gratuit limite ; licence payante par utilisateur' },
         compareSlug: 'royal-tsx',
@@ -362,8 +362,8 @@ export const BEST_PAGES: BestPageSEO[] = [
         rank: 4,
         name: 'Jump Desktop',
         bestFor: {
-          en: 'Polished RDP and VNC client with cross-platform sync. Good for solo users, but subscription on its Connect.io variant.',
-          fr: 'Client RDP et VNC soigne avec sync cross-platform. Bien pour solo, mais abonnement sur la variante Connect.io.',
+          en: 'Polished RDP and VNC client with cross-platform sync. A strong fit for solo users who value sync between devices.',
+          fr: 'Client RDP et VNC soigne avec sync cross-platform. Bon choix pour les utilisateurs solo qui veulent la sync entre appareils.',
         },
         pricing: { en: '$31.99 one-time or subscription (Connect.io)', fr: '31,99 $ unique ou abonnement (Connect.io)' },
       },
@@ -371,8 +371,8 @@ export const BEST_PAGES: BestPageSEO[] = [
         rank: 5,
         name: 'Parallels Client',
         bestFor: {
-          en: 'Designed for Parallels RAS environments. Overkill unless you actually run Parallels RAS in production.',
-          fr: 'Concu pour les environnements Parallels RAS. Excessif sauf si vous tournez Parallels RAS en production.',
+          en: 'Built for Parallels RAS environments. The right pick when your organization standardises on Parallels RAS.',
+          fr: 'Concu pour les environnements Parallels RAS. Le bon choix quand votre organisation standardise sur Parallels RAS.',
         },
         pricing: { en: 'Free client; requires Parallels RAS server', fr: 'Client gratuit ; serveur Parallels RAS requis' },
       },
@@ -380,10 +380,10 @@ export const BEST_PAGES: BestPageSEO[] = [
     reasonsHeading: { en: 'Why we picked SSHive for RDP on Mac', fr: 'Pourquoi SSHive pour le RDP sur Mac' },
     reasons: [
       {
-        title: { en: 'Active Directory done right', fr: 'Active Directory bien gere' },
+        title: { en: 'Active Directory the way Windows does it', fr: 'Active Directory comme sur Windows' },
         body: {
-          en: 'Domain field separate from username, NetBIOS and FQDN both accepted, NLA + NTLMv2 negotiated by default. Microsoft Remote Desktop requires DOMAIN\\\\username in the username field, which trips up half the team.',
-          fr: 'Champ domaine separe du username, NetBIOS et FQDN acceptes, NLA + NTLMv2 negocies par defaut. Microsoft Remote Desktop exige DOMAIN\\\\username dans le champ username, ce qui pose probleme a la moitie de l\'equipe.',
+          en: 'A dedicated Domain field, separate from the username, accepting both NetBIOS (`CORP`) and FQDN (`corp.example.com`). NLA + NTLMv2 are negotiated by default. Same input model that AD admins already use on Windows itself.',
+          fr: 'Un champ Domaine dedie, separe du username, qui accepte NetBIOS (`CORP`) et FQDN (`corp.example.com`). NLA + NTLMv2 negocies par defaut. Meme modele d\'entree que les admins AD utilisent deja sur Windows.',
         },
       },
       {
