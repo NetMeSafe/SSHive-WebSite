@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "SSHive — SSH Client for Mac, iPhone & iPad, AI-Ready",
-    "description": "Native Apple SSH/SFTP client for Mac, iPhone and iPad. Embedded RDP, VNC, tunnels and broadcast on macOS. Touch ID-secured Keychain. Built-in MCP for Claude Code and Cursor."
+    "title": "SSHive — SSH, SFTP, RDP & VNC Client for Mac, iPhone & iPad",
+    "description": "Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. SSH tunnels, broadcast and Touch ID Keychain on every device. Built-in MCP for Claude Code, Cursor and Claude Desktop on macOS."
   },
   "nav": {
     "features": "Features",
@@ -16,10 +16,10 @@
   },
   "hero": {
     "title": "The SSH Client Apple Devices Deserve",
-    "subtitle": "SSH, SFTP, RDP & VNC — all in one app on Mac, with native SSH and SFTP on iPhone and iPad. Free to start.",
+    "subtitle": "SSH, SFTP, RDP, VNC, VPN and SSH tunnels — all in one native app on Mac, iPhone and iPad. Free to start. MCP for AI is on macOS.",
     "downloadCta": "Download Free",
     "featuresCta": "See features",
-    "version": "Version {version} — macOS 13+ · iOS 16+ · iPadOS 16+",
+    "version": "Version {version} — macOS 13+ · iOS 17+ · iPadOS 17+",
     "universalBinary": "Native on Mac (Apple Silicon + Intel) · iPhone · iPad",
     "platforms": "Available on Mac · iPhone · iPad",
     "platformsHint": "Universal Apple app — same profiles, everywhere",
@@ -179,13 +179,13 @@
     "dmgSubtitle": "Free on the Mac App Store · Universal binary (Apple Silicon + Intel)",
     "or": "or",
     "appStoreAlt": "Mac App Store",
-    "iosSectionTitle": "Also on iPhone and iPad",
-    "iosSectionDescription": "SSH terminal and SFTP file manager, native on iOS and iPadOS. Profiles created on Mac sync across your devices.",
+    "iosSectionTitle": "Native iPhone and iPad app",
+    "iosSectionDescription": "SSH, SFTP, RDP (FreeRDP 3 with NLA + Active Directory), VNC (RoyalVNC), VPN (IKEv2/IPSec/OpenVPN), SSH tunnels, broadcast and network tools — all native on iPhone and iPad. Touch ID and Face ID. Universal Purchase with the macOS version.",
     "iosCta": "Get SSHive on the App Store",
-    "iosBadge": "iOS 16+ · iPadOS 16+",
+    "iosBadge": "iOS 17+ · iPadOS 17+",
     "platformSplitTitle": "What works on which Apple device",
-    "platformSplitMacAll": "Mac: SSH, SFTP, RDP, VNC, tunnels (-L/-R/-D), broadcast, MCP server, snippets, network tools",
-    "platformSplitIos": "iPhone & iPad: SSH terminal and SFTP file manager",
+    "platformSplitMacAll": "macOS: everything on iOS plus the built-in MCP server for Claude Code, Cursor and Claude Desktop.",
+    "platformSplitIos": "iPhone & iPad: SSH terminal, SFTP, RDP, VNC, VPN, SSH tunnels, broadcast, network tools — everything except MCP.",
     "noAccount": "No account needed",
     "noAds": "No ads, no tracking in the app",
     "keychainSecurity": "Secure — Touch ID + Keychain encryption",
@@ -194,7 +194,7 @@
     "emailPlaceholder": "your@email.com",
     "emailSubscribe": "Subscribe",
     "systemReq": "System Requirements",
-    "systemReqDetails": "macOS 13 Ventura or later (Apple Silicon M1/M2/M3/M4 or Intel x64). iOS 16+ on iPhone, iPadOS 16+ on iPad."
+    "systemReqDetails": "macOS 13 Ventura or later (Apple Silicon M1/M2/M3/M4 or Intel x64). iOS 17+ on iPhone, iPadOS 17+ on iPad. arm64 / arm64e."
   },
   "footer": {
     "product": "Product",

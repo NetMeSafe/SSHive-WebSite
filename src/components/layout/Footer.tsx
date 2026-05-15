@@ -1,9 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
 export function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
+  const locale = useLocale();
+  const fr = locale === 'fr';
 
   return (
     <footer className="relative border-t border-white/[0.04] mt-auto">
@@ -11,7 +13,7 @@ export function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           {/* Product */}
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('product')}</h3>
@@ -34,16 +36,29 @@ export function Footer() {
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('contact')}</Link></li>
             </ul>
           </div>
-          {/* Compare */}
+          {/* Best for Mac + Compare */}
           <div>
-            <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{t('comparisons')}</h3>
+            <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{fr ? 'Pour Mac' : 'For Mac'}</h3>
             <ul className="space-y-3">
-              <li><Link href={'/best-ssh-client-for-mac' as '/best-ssh-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">Best SSH client for Mac</Link></li>
-              <li><Link href={'/best-sftp-client-for-mac' as '/best-sftp-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">Best SFTP client for Mac</Link></li>
-              <li><Link href="/compare/mobaxterm" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs MobaXterm</Link></li>
-              <li><Link href="/compare/iterm2" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs iTerm2</Link></li>
+              <li><Link href={'/best-ssh-client-for-mac' as '/best-ssh-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client SSH Mac' : 'Best SSH client for Mac'}</Link></li>
+              <li><Link href={'/best-sftp-client-for-mac' as '/best-sftp-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client SFTP Mac' : 'Best SFTP client for Mac'}</Link></li>
+              <li><Link href={'/best-rdp-client-for-mac' as '/best-rdp-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client RDP Mac' : 'Best RDP client for Mac'}</Link></li>
+              <li><Link href={'/best-vnc-client-for-mac' as '/best-vnc-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client VNC Mac' : 'Best VNC viewer for Mac'}</Link></li>
               <li><Link href="/compare/termius" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs Termius</Link></li>
-              <li><Link href="/compare/putty" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs PuTTY</Link></li>
+              <li><Link href="/compare/mobaxterm" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs MobaXterm</Link></li>
+            </ul>
+          </div>
+
+          {/* Apple ecosystem (iOS + integrations) */}
+          <div>
+            <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{fr ? 'iPhone et iPad' : 'iPhone & iPad'}</h3>
+            <ul className="space-y-3">
+              <li><Link href={'/ios-ssh-client' as '/ios-ssh-client'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Client SSH iOS' : 'iOS SSH client'}</Link></li>
+              <li><Link href={'/ios-sftp-app' as '/ios-sftp-app'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'App SFTP iOS' : 'iOS SFTP app'}</Link></li>
+              <li><Link href={'/iphone-remote-desktop' as '/iphone-remote-desktop'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'RDP iPhone' : 'iPhone RDP'}</Link></li>
+              <li><Link href={'/iphone-vnc-client' as '/iphone-vnc-client'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'VNC iPhone' : 'iPhone VNC'}</Link></li>
+              <li><Link href={'/iphone-vpn-client' as '/iphone-vpn-client'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'VPN iPhone' : 'iPhone VPN'}</Link></li>
+              <li><Link href="/integrations" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Integrations IA' : 'AI integrations'}</Link></li>
             </ul>
           </div>
           {/* Community */}
