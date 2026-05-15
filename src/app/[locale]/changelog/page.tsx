@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Tag } from 'lucide-react';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -8,16 +10,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'changelog' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/changelog',
     title: t('title'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/changelog`,
-      languages: { en: '/en/changelog', fr: '/fr/changelog' },
-    },
-  };
+  });
 }
 
 export default async function ChangelogPage({
@@ -32,6 +33,14 @@ export default async function ChangelogPage({
   const v100Features: string[] = t.raw('v100.features');
 
   return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/changelog' },
+        ]}
+      />
     <div className="pt-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -72,5 +81,6 @@ export default async function ChangelogPage({
         </ul>
       </section>
     </div>
+    </>
   );
 }

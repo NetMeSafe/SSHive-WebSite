@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 import { headers } from 'next/headers';
 import { routing } from '@/i18n/routing';
 
@@ -25,8 +25,8 @@ export default async function RootRedirect() {
   const h = await headers();
   const cookieLocale = h.get('cookie')?.match(/NEXT_LOCALE=([^;]+)/)?.[1];
   if (cookieLocale && routing.locales.includes(cookieLocale as 'en' | 'fr')) {
-    redirect(`/${cookieLocale}`);
+    permanentRedirect(`/${cookieLocale}`);
   }
   const accept = h.get('accept-language') ?? '';
-  redirect(`/${pickLocale(accept)}`);
+  permanentRedirect(`/${pickLocale(accept)}`);
 }

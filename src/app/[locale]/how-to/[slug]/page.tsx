@@ -13,6 +13,7 @@ import { FAQSection } from '@/components/seo/FAQSection';
 import { HowToSchema } from '@/components/seo/HowToSchema';
 import { ArticleSchema } from '@/components/seo/ArticleSchema';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
@@ -26,27 +27,18 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (!isLocale(locale)) return {};
   const howTo = getHowTo(slug);
   if (!howTo) return {};
   const loc = locale as Locale;
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: `/how-to/${slug}`,
     title: howTo.metaTitle[loc],
     description: howTo.metaDescription[loc],
-    alternates: {
-      canonical: `/${locale}/how-to/${slug}`,
-      languages: {
-        en: `/en/how-to/${slug}`,
-        fr: `/fr/how-to/${slug}`,
-      },
-    },
-    openGraph: {
-      type: 'article',
-      title: howTo.metaTitle[loc],
-      description: howTo.metaDescription[loc],
-      url: `${SITE_URL}/${locale}/how-to/${slug}`,
-    },
-  };
+    ogType: 'article',
+  });
 }
 
 export default async function HowToPage({

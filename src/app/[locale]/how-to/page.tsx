@@ -6,6 +6,9 @@ import { LOCALES, SITE_URL } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 import { HOW_TOS } from '@/lib/seo/how-tos';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -17,25 +20,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'seoCommon.howTo' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/how-to',
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/how-to`,
-      languages: {
-        en: '/en/how-to',
-        fr: '/fr/how-to',
-      },
-    },
-    openGraph: {
-      type: 'website',
-      title: t('metaTitle'),
-      description: t('metaDescription'),
-      url: `${SITE_URL}/${locale}/how-to`,
-    },
-  };
+  });
 }
 
 export default async function HowToIndex({
@@ -51,6 +44,28 @@ export default async function HowToIndex({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/how-to' },
+        ]}
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: t('title'),
+          description: t('subtitle'),
+          url: `${SITE_URL}/${locale}/how-to`,
+          hasPart: HOW_TOS.map((h) => ({
+            '@type': 'HowTo',
+            name: h.h1[loc],
+            url: `${SITE_URL}/${locale}/how-to/${h.slug}`,
+            totalTime: `PT${h.estimatedMinutes}M`,
+          })),
+        }}
+      />
       <section className="pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">

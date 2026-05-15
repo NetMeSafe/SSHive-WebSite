@@ -5,6 +5,19 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/constants';
+import enMessages from '../../../messages/en.json';
+import frMessages from '../../../messages/fr.json';
+
+// Pre-rendered locales only. Any other value (e.g. /wp-login.php, /.env)
+// returns 404 instead of attempting to render the [locale] layout — this is
+// what was crashing the Next process and emitting 5xx to Googlebot.
+export const dynamicParams = false;
+
+const MESSAGES_BY_LOCALE = { en: enMessages, fr: frMessages } as const;
+type SupportedLocale = keyof typeof MESSAGES_BY_LOCALE;
+function isSupportedLocale(value: string): value is SupportedLocale {
+  return value === 'en' || value === 'fr';
+}
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -51,7 +64,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const messages = (await import(`../../../messages/${locale}.json`)).default;
+  if (!isSupportedLocale(locale)) {
+    return {};
+  }
+  const messages = MESSAGES_BY_LOCALE[locale];
   const t = messages.metadata;
 
   return {

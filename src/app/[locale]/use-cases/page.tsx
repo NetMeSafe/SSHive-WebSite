@@ -2,10 +2,14 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
-import { LOCALES, SITE_URL } from '@/lib/constants';
+import { LOCALES } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 import { USE_CASES } from '@/lib/seo/use-cases';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
+import { SITE_URL } from '@/lib/constants';
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -17,25 +21,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'seoCommon.useCases' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/use-cases',
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/use-cases`,
-      languages: {
-        en: '/en/use-cases',
-        fr: '/fr/use-cases',
-      },
-    },
-    openGraph: {
-      type: 'website',
-      title: t('metaTitle'),
-      description: t('metaDescription'),
-      url: `${SITE_URL}/${locale}/use-cases`,
-    },
-  };
+  });
 }
 
 export default async function UseCasesIndex({
@@ -51,6 +45,27 @@ export default async function UseCasesIndex({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/use-cases' },
+        ]}
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: t('title'),
+          description: t('subtitle'),
+          url: `${SITE_URL}/${locale}/use-cases`,
+          hasPart: USE_CASES.map((u) => ({
+            '@type': 'WebPage',
+            name: u.h1[loc],
+            url: `${SITE_URL}/${locale}/use-cases/${u.slug}`,
+          })),
+        }}
+      />
       <section className="pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">

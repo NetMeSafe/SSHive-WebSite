@@ -12,6 +12,7 @@ import { FAQSchema } from '@/components/seo/FAQSchema';
 import { FAQSection } from '@/components/seo/FAQSection';
 import { ArticleSchema } from '@/components/seo/ArticleSchema';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
@@ -25,27 +26,18 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (!isLocale(locale)) return {};
   const useCase = getUseCase(slug);
   if (!useCase) return {};
   const loc = locale as Locale;
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: `/use-cases/${slug}`,
     title: useCase.metaTitle[loc],
     description: useCase.metaDescription[loc],
-    alternates: {
-      canonical: `/${locale}/use-cases/${slug}`,
-      languages: {
-        en: `/en/use-cases/${slug}`,
-        fr: `/fr/use-cases/${slug}`,
-      },
-    },
-    openGraph: {
-      type: 'article',
-      title: useCase.metaTitle[loc],
-      description: useCase.metaDescription[loc],
-      url: `${SITE_URL}/${locale}/use-cases/${slug}`,
-    },
-  };
+    ogType: 'article',
+  });
 }
 
 export default async function UseCasePage({

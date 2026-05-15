@@ -3,7 +3,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { CheckCircle, Mail, Smartphone, Tablet, Laptop, ExternalLink } from 'lucide-react';
 import { DownloadButton } from '@/components/download/DownloadButton';
 import { SoftwareApplicationSchema } from '@/components/seo/SoftwareApplicationSchema';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { APP_VERSION, APP_STORE_UNIVERSAL_URL } from '@/lib/constants';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -11,16 +13,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'download' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/download',
     title: t('title'),
     description: t('subtitle'),
-    alternates: {
-      canonical: `/${locale}/download`,
-      languages: { en: '/en/download', fr: '/fr/download' },
-    },
-  };
+  });
 }
 
 export default async function DownloadPage({
@@ -42,6 +43,13 @@ export default async function DownloadPage({
   return (
     <>
       <SoftwareApplicationSchema />
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/download' },
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-28">

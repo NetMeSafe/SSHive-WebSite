@@ -5,6 +5,8 @@ import { Link } from '@/i18n/navigation';
 import { OVERVIEW_COMPETITORS, OVERVIEW_FEATURES } from '@/lib/competitors';
 import type { OverviewCellValue } from '@/lib/competitors';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -12,16 +14,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'comparePage' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/compare',
     title: t('overviewMetaTitle'),
     description: t('overviewMetaDescription'),
-    alternates: {
-      canonical: `/${locale}/compare`,
-      languages: { en: '/en/compare', fr: '/fr/compare' },
-    },
-  };
+  });
 }
 
 function CellIcon({ value }: { value: OverviewCellValue }) {
@@ -57,6 +58,13 @@ export default async function ComparePage({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('overviewTitle'), href: '/compare' },
+        ]}
+      />
       {/* Hero */}
       <section className="pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

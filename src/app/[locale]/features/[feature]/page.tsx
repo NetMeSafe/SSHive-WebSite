@@ -25,6 +25,7 @@ import { RelatedLinks } from '@/components/seo/RelatedLinks';
 import { FEATURE_SEO } from '@/lib/seo/features';
 import { getUseCase } from '@/lib/seo/use-cases';
 import { getHowTo } from '@/lib/seo/how-tos';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 const featureIcons: Record<Feature, typeof Terminal> = {
   ssh: Terminal,
@@ -83,23 +84,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, feature } = await params;
 
-  if (!FEATURES.includes(feature as Feature)) {
+  if (!FEATURES.includes(feature as Feature) || !isLocale(locale)) {
     return {};
   }
 
   const t = await getTranslations({ locale, namespace: 'featurePages' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: `/features/${feature}`,
     title: t(`${feature}.metaTitle`),
     description: t(`${feature}.metaDescription`),
-    alternates: {
-      canonical: `/${locale}/features/${feature}`,
-      languages: {
-        en: `/en/features/${feature}`,
-        fr: `/fr/features/${feature}`,
-      },
-    },
-  };
+    ogType: 'article',
+  });
 }
 
 export default async function FeaturePage({

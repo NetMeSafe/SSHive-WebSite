@@ -4,6 +4,8 @@ import { CheckCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { APP_STORE_URL, SITE_URL } from '@/lib/constants';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -11,16 +13,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'pricing' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/pricing',
     title: t('title'),
     description: t('subtitle'),
-    alternates: {
-      canonical: `/${locale}/pricing`,
-      languages: { en: '/en/pricing', fr: '/fr/pricing' },
-    },
-  };
+  });
 }
 
 export default async function PricingPage({
@@ -67,6 +68,13 @@ export default async function PricingPage({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/pricing' },
+        ]}
+      />
       <JsonLd
         data={{
           '@context': 'https://schema.org',

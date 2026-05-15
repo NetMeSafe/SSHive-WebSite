@@ -3,6 +3,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { FEATURES } from '@/lib/constants';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 import {
   Terminal,
   FolderOpen,
@@ -54,16 +56,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'featuresPage' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/features',
     title: t('title'),
     description: t('subtitle'),
-    alternates: {
-      canonical: `/${locale}/features`,
-      languages: { en: '/en/features', fr: '/fr/features' },
-    },
-  };
+  });
 }
 
 export default async function FeaturesPage({
@@ -79,6 +80,13 @@ export default async function FeaturesPage({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/features' },
+        ]}
+      />
       {/* Header */}
       <section className="pt-32 pb-8 md:pt-40 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

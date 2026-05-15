@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { ArrowRight, Cpu, Download } from 'lucide-react';
 import { PersonSchema } from '@/components/seo/PersonSchema';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -11,16 +12,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'about' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/about',
     title: t('title'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/about`,
-      languages: { en: '/en/about', fr: '/fr/about' },
-    },
-  };
+  });
 }
 
 export default async function AboutPage({

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { SITE_URL } from '@/lib/constants';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'] as const;
 
@@ -10,16 +11,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'docs' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/docs',
     title: t('title'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/docs`,
-      languages: { en: '/en/docs', fr: '/fr/docs' },
-    },
-  };
+  });
 }
 
 export default async function DocsPage({
@@ -51,6 +51,13 @@ export default async function DocsPage({
 
   return (
     <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/docs' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

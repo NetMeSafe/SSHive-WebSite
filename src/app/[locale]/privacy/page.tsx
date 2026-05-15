@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -7,16 +9,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'privacy' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/privacy',
     title: t('title'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/privacy`,
-      languages: { en: '/en/privacy', fr: '/fr/privacy' },
-    },
-  };
+  });
 }
 
 const SECTIONS = [
@@ -43,6 +44,14 @@ export default async function PrivacyPage({
   const t = await getTranslations({ locale, namespace: 'privacy' });
 
   return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/privacy' },
+        ]}
+      />
     <div className="pt-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <h1 className="text-3xl md:text-4xl font-bold text-foreground">
         {t('title')}
@@ -64,5 +73,6 @@ export default async function PrivacyPage({
         ))}
       </div>
     </div>
+    </>
   );
 }

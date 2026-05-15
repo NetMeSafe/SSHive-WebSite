@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Mail, Linkedin, LifeBuoy } from 'lucide-react';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -8,16 +10,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'contact' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/contact',
     title: t('title'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/contact`,
-      languages: { en: '/en/contact', fr: '/fr/contact' },
-    },
-  };
+  });
 }
 
 export default async function ContactPage({
@@ -30,6 +31,14 @@ export default async function ContactPage({
   const t = await getTranslations({ locale, namespace: 'contact' });
 
   return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/contact' },
+        ]}
+      />
     <div className="pt-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -101,5 +110,6 @@ export default async function ContactPage({
         </div>
       </div>
     </div>
+    </>
   );
 }

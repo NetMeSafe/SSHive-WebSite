@@ -12,6 +12,7 @@ import { FAQSection } from '@/components/seo/FAQSection';
 import { SITE_URL } from '@/lib/constants';
 import type { Competitor } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
@@ -27,7 +28,7 @@ export async function generateMetadata({
   const { locale, competitor } = await params;
   const slug = competitor as Competitor;
 
-  if (!COMPETITORS.includes(slug)) {
+  if (!COMPETITORS.includes(slug) || !isLocale(locale)) {
     return {};
   }
 
@@ -37,22 +38,13 @@ export async function generateMetadata({
   const title = t('metaTitleTemplate', { competitor: data.name });
   const description = t('description', { competitor: data.name });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: `/compare/${slug}`,
     title,
     description,
-    alternates: {
-      canonical: `/${locale}/compare/${slug}`,
-      languages: {
-        en: `/en/compare/${slug}`,
-        fr: `/fr/compare/${slug}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-    },
-  };
+    ogType: 'article',
+  });
 }
 
 function FeatureValue({ value }: { value: string | boolean }) {

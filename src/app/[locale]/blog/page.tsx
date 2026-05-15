@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PenLine, Mail } from 'lucide-react';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 export async function generateMetadata({
   params,
@@ -8,16 +10,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'blog' });
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: '/blog',
     title: t('title'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `/${locale}/blog`,
-      languages: { en: '/en/blog', fr: '/fr/blog' },
-    },
-  };
+  });
 }
 
 export default async function BlogPage({
@@ -30,6 +31,14 @@ export default async function BlogPage({
   const t = await getTranslations({ locale, namespace: 'blog' });
 
   return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: 'SSHive', href: '' },
+          { name: t('title'), href: '/blog' },
+        ]}
+      />
     <div className="pt-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -70,5 +79,6 @@ export default async function BlogPage({
         </div>
       </section>
     </div>
+    </>
   );
 }

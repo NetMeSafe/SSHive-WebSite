@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { LOCALES, SITE_URL } from '@/lib/constants';
+import { LOCALES } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 import { getBestPage } from '@/lib/seo/best-pages';
 import { BestPageRenderer } from '@/components/seo/BestPageRenderer';
+import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
 const SLUG = 'best-sftp-client-for-mac';
 
@@ -18,27 +19,18 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!isLocale(locale)) return {};
   const data = getBestPage(SLUG);
   if (!data) return {};
   const loc = locale as Locale;
 
-  return {
+  return getPageMetadata({
+    locale,
+    path: `/${SLUG}`,
     title: data.metaTitle[loc],
     description: data.metaDescription[loc],
-    alternates: {
-      canonical: `/${locale}/${SLUG}`,
-      languages: {
-        en: `/en/${SLUG}`,
-        fr: `/fr/${SLUG}`,
-      },
-    },
-    openGraph: {
-      type: 'article',
-      title: data.metaTitle[loc],
-      description: data.metaDescription[loc],
-      url: `${SITE_URL}/${locale}/${SLUG}`,
-    },
-  };
+    ogType: 'article',
+  });
 }
 
 export default async function BestSFTPClientForMacPage({
