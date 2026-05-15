@@ -21,6 +21,18 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Lock body scroll while the mobile menu overlay is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.dataset.scrollLocked = '1';
+    } else {
+      delete document.body.dataset.scrollLocked;
+    }
+    return () => {
+      delete document.body.dataset.scrollLocked;
+    };
+  }, [menuOpen]);
+
   const switchLocale = () => {
     const next = locale === 'en' ? 'fr' : 'en';
     router.replace(pathname, { locale: next });
@@ -101,13 +113,14 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — 44x44 minimum tap target (iOS HIG) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+          className="md:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 text-foreground hover:text-primary transition-colors rounded-lg"
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
-          {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
 

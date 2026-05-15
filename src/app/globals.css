@@ -85,6 +85,25 @@ body {
   overflow-x: hidden;
 }
 
+/* Lock background scroll when the mobile menu sets data-scroll-locked on body. */
+body[data-scroll-locked='1'] {
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* iOS Safari zooms into <input>/<textarea>/<select> when their font-size
+   is below 16px. Force 16px on mobile so taps don't trigger a zoom. */
+@media (max-width: 768px) {
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+/* Remove the 300ms tap delay on mobile and avoid double-tap zoom on UI */
+button, a[role='button'], a.inline-flex, a.block, [type='button'], [type='submit'] {
+  touch-action: manipulation;
+}
+
 /* ========================================
    Custom scrollbar — minimal macOS style
    ======================================== */

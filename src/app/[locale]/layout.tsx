@@ -33,6 +33,7 @@ import { Footer } from '@/components/layout/Footer';
 import { GrainOverlay } from '@/components/ui/GrainOverlay';
 import { OrganizationSchema } from '@/components/seo/OrganizationSchema';
 import { SoftwareApplicationSchema } from '@/components/seo/SoftwareApplicationSchema';
+import { WebSiteSchema } from '@/components/seo/WebSiteSchema';
 import '../globals.css';
 
 const inter = Inter({
@@ -163,6 +164,7 @@ export default async function LocaleLayout({
           {messages.seoCommon?.skipToContent ?? 'Skip to main content'}
         </a>
         <OrganizationSchema />
+        <WebSiteSchema />
         <SoftwareApplicationSchema />
         <NextIntlClientProvider messages={messages}>
           <GrainOverlay />
