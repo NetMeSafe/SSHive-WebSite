@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { APP_VERSION } from '@/lib/constants';
@@ -910,6 +910,8 @@ function TunnelsMockup({ t }: { t: (key: string) => string }) {
    ═══════════════════════════════════════════ */
 
 export function HomeShowcase() {
+  const locale = useLocale();
+  const fr = locale === 'fr';
   const t = useTranslations('hero');
   const tF = useTranslations('features');
   const tW = useTranslations('whySSHive');
@@ -1009,6 +1011,10 @@ export function HomeShowcase() {
               </div>
               {/* Secondary path for iPhone/iPad users */}
               <p className="mt-3 text-xs text-muted-foreground">
+                <Link href={'/ios-ssh-client' as '/ios-ssh-client'} className="underline-offset-2 hover:underline">
+                  {fr ? 'Sur iPhone & iPad' : 'iPhone & iPad'}
+                </Link>
+                {' · '}
                 <Link href="/download" className="underline-offset-2 hover:underline">
                   {t('moreOptions')}
                 </Link>
@@ -1200,6 +1206,13 @@ export function HomeShowcase() {
                   {tHome('mcp.learnMore')}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
+                <div className="mt-4 flex flex-wrap gap-3 text-xs text-muted-foreground">
+                  <Link href={'/integrations/claude-code' as '/integrations/claude-code'} className="hover:text-primary transition-colors link-underline">Claude Code</Link>
+                  <span>·</span>
+                  <Link href={'/integrations/cursor' as '/integrations/cursor'} className="hover:text-primary transition-colors link-underline">Cursor</Link>
+                  <span>·</span>
+                  <Link href={'/integrations/claude-desktop' as '/integrations/claude-desktop'} className="hover:text-primary transition-colors link-underline">Claude Desktop</Link>
+                </div>
               </ScrollReveal>
             </div>
             <ScrollReveal delay={200} scale>
@@ -1344,6 +1357,41 @@ export function HomeShowcase() {
       </section>
 
       {/* Old pricing section removed, replaced by launch offer section below */}
+
+      {/* ═══════════════════════════════════════
+         GUIDES & INTERNAL LINKS
+         ═══════════════════════════════════════ */}
+      <section className="py-12 border-t border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-6 text-center">
+              {fr ? 'Guides et comparatifs' : 'Guides & comparisons'}
+            </p>
+          </ScrollReveal>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { href: '/best-ssh-client-for-mac', label: fr ? 'Meilleur SSH Mac' : 'Best SSH client for Mac' },
+              { href: '/best-sftp-client-for-mac', label: fr ? 'Meilleur SFTP Mac' : 'Best SFTP client for Mac' },
+              { href: '/best-rdp-client-for-mac', label: fr ? 'Meilleur RDP Mac' : 'Best RDP client for Mac' },
+              { href: '/best-vnc-client-for-mac', label: fr ? 'Meilleur VNC Mac' : 'Best VNC viewer for Mac' },
+              { href: '/ios-ssh-client', label: fr ? 'Client SSH iOS' : 'iOS SSH client' },
+              { href: '/ios-sftp-app', label: fr ? 'App SFTP iOS' : 'iOS SFTP app' },
+              { href: '/iphone-remote-desktop', label: fr ? 'RDP iPhone' : 'iPhone RDP' },
+              { href: '/iphone-vnc-client', label: fr ? 'VNC iPhone' : 'iPhone VNC' },
+              { href: '/iphone-vpn-client', label: fr ? 'VPN iPhone' : 'iPhone VPN' },
+            ].map(({ href, label }) => (
+              <ScrollReveal key={href}>
+                <Link
+                  href={href as '/best-ssh-client-for-mac'}
+                  className="inline-block text-sm text-muted-foreground hover:text-foreground border border-border/40 rounded-lg px-4 py-2 hover:border-primary/30 hover:bg-white/[0.02] transition-all duration-200"
+                >
+                  {label}
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ═══════════════════════════════════════
          DOWNLOAD CTA
