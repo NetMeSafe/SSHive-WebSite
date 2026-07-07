@@ -1,8 +1,9 @@
 import type { Bilingual } from './features';
 
-export type RoadmapStatus = 'in-progress' | 'planned' | 'considering';
+export type RoadmapStatus = 'shipped' | 'in-progress' | 'planned' | 'considering';
 
 export const STATUS_LABEL: Record<RoadmapStatus, Bilingual> = {
+  shipped: { en: 'Shipped', fr: 'Livre' },
   'in-progress': { en: 'In progress', fr: 'En cours' },
   planned: { en: 'Planned', fr: 'Prevu' },
   considering: { en: 'Considering', fr: 'En reflexion' },
@@ -34,14 +35,14 @@ export const ROADMAP: RoadmapItem[] = [
   },
   {
     id: 'icloud-sync',
-    status: 'planned',
+    status: 'shipped',
     title: {
       en: 'iCloud sync for connection profiles',
       fr: 'Synchronisation iCloud des profils de connexion',
     },
     body: {
-      en: 'Today, profiles created on your Mac stay on your Mac, profiles on iPhone stay on iPhone, and you exchange them with the .sshive JSON export. The next step is opt-in iCloud sync via CloudKit so that adding a host on your Mac shows up on your iPhone within seconds, with the same tags, notes and jump-host chain.\n\nWe will not sync the secrets themselves. Passwords, SSH passphrases and private keys stay on each device, in the per-device Keychain. iCloud will only carry the host, port, username, tags, notes and tunnel definitions, so the security model does not change. You will be able to turn the sync off per device, and we will document exactly what fields move across.',
-      fr: 'Aujourd\'hui, les profils crees sur Mac restent sur Mac, ceux de l\'iPhone restent sur l\'iPhone, et vous les echangez avec l\'export JSON .sshive. La prochaine etape, c\'est une sync iCloud opt-in via CloudKit, pour qu\'ajouter un hote sur le Mac apparaisse sur l\'iPhone en quelques secondes, avec les memes tags, notes et chaine de jump-host.\n\nOn ne synchronisera pas les secrets eux-memes. Mots de passe, passphrases SSH et cles privees restent sur chaque appareil, dans le Trousseau local. iCloud transportera uniquement l\'hote, le port, le username, les tags, les notes et les definitions de tunnels, le modele de securite ne change pas. Vous pourrez couper la sync par appareil, et on documentera precisement les champs qui transitent.',
+      en: 'Shipped. Turn on iCloud sync (Pro, opt-in) and your connection profiles follow you: add a host on the Mac and it shows up on iPhone and iPad within seconds, with the same tags, notes and tunnel definitions. Everything goes through your own private iCloud (CloudKit) database, there is no SSHive account and no server of ours in the loop, and you can switch the sync off per device at any time.\n\nProfiles and shared accounts sync as metadata; credentials travel through a separate end-to-end encrypted channel, so what leaves a device is unreadable to anyone but your own devices. If you prefer to keep everything strictly local, leave the toggle off and use the encrypted .sshive export instead.',
+      fr: 'Livre. Activez la sync iCloud (Pro, opt-in) et vos profils de connexion vous suivent : ajoutez un hote sur le Mac, il apparait sur iPhone et iPad en quelques secondes, avec les memes tags, notes et definitions de tunnels. Tout passe par votre propre base iCloud privee (CloudKit), pas de compte SSHive, aucun serveur a nous dans la boucle, et vous pouvez couper la sync par appareil a tout moment.\n\nLes profils et comptes partages se synchronisent en metadonnees ; les credentials transitent par un canal separe chiffre de bout en bout, donc ce qui quitte un appareil est illisible pour quiconque sauf vos propres appareils. Si vous preferez tout garder strictement local, laissez le toggle coupe et utilisez l\'export chiffre .sshive.',
     },
     platforms: ['mac', 'iphone', 'ipad'],
   },

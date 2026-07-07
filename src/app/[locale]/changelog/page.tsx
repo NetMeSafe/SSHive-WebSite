@@ -92,8 +92,8 @@ export default async function ChangelogPage({
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-5">
           {locale === 'fr'
-            ? "Sync iCloud des profils, support YubiKey NFC, Mosh, multi-fenetres iPad, et le correctif du bug « repasse en Free apres update ». Voir la roadmap publique pour le detail."
-            : 'iCloud sync for profiles, YubiKey NFC support, Mosh, multi-window on iPad, and a fix for the "back to Free after update" bug. See the public roadmap for the detail.'}
+            ? "Support YubiKey NFC, multi-fenetres iPad, et le correctif du bug « repasse en Free apres update ». La sync iCloud des profils est livree. Voir la roadmap publique pour le detail."
+            : 'YubiKey NFC support, multi-window on iPad, and a fix for the "back to Free after update" bug. iCloud profile sync has shipped. See the public roadmap for the detail.'}
         </p>
         <Link
           href={'/roadmap' as const}

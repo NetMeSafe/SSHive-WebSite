@@ -39,6 +39,7 @@ export async function generateMetadata({
 }
 
 const STATUS_STYLE: Record<string, string> = {
+  shipped: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300',
   'in-progress': 'border-amber-500/30 bg-amber-500/10 text-amber-300',
   planned: 'border-primary/30 bg-primary/10 text-primary',
   considering: 'border-muted-foreground/30 bg-muted-foreground/10 text-muted-foreground',

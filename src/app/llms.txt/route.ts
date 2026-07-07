@@ -63,6 +63,7 @@ Key facts:
 - MCP server: runs locally on port 49422 with Bearer-token auth; exposes 11 tools (ssh_execute, ssh_list_sessions, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path, sftp_download_to_local_path, sftp_mkdir, sftp_rename, sftp_delete); auto-configures Claude Code, Cursor and Claude Desktop.
 - Built-in AI terminal assistant (macOS): explain command output or ask questions from the terminal, using your own API key (Anthropic Claude, OpenAI GPT, or Google Gemini); keys stored encrypted in the Keychain, requests go straight from your machine to the provider.
 - Security: credentials in the macOS Keychain / iOS Keychain, known-hosts fingerprint management, app lock, built-in TOTP/HOTP authenticator; nothing routed through SSHive servers.
+- iCloud profile sync (Pro, opt-in): profiles follow you across Mac, iPhone and iPad through your own private CloudKit database; credentials go through a separate end-to-end encrypted channel; no SSHive account, no SSHive server involved.
 - Imports: ~/.ssh/config, PuTTY, Royal TSX .rtsz, cleartext MobaXterm.ini.
 - Pricing: free tier with generous limits; Pro is a one-time purchase on the App Store: ${APP_STORE_UNIVERSAL_URL}
 - SSHive is proprietary software (not open source).

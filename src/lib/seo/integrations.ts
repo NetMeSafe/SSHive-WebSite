@@ -236,8 +236,8 @@ export const INTEGRATIONS: IntegrationSEO[] = [
       {
         title: { en: 'Reload Cursor', fr: 'Rechargez Cursor' },
         body: {
-          en: 'Cmd+Shift+P → "Reload Window". When Cursor restarts, the MCP indicator in the bottom bar should show `sshive` connected with 7 tools. Click it to verify.',
-          fr: 'Cmd+Shift+P → "Reload Window". Au redemarrage, l\'indicateur MCP en bas doit afficher `sshive` connecte avec 7 outils. Cliquez pour verifier.',
+          en: 'Cmd+Shift+P → "Reload Window". When Cursor restarts, the MCP indicator in the bottom bar should show `sshive` connected with 11 tools. Click it to verify.',
+          fr: 'Cmd+Shift+P → "Reload Window". Au redemarrage, l\'indicateur MCP en bas doit afficher `sshive` connecte avec 11 outils. Cliquez pour verifier.',
         },
       },
       {

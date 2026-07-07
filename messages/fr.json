@@ -146,6 +146,7 @@
       "features": [
         "Sessions SSH illimitees",
         "Profils et dossiers illimites",
+        "Sync iCloud des profils entre Mac, iPhone et iPad (opt-in, CloudKit prive)",
         "Bureau a distance RDP",
         "Visionneuse VNC",
         "Tunnels SSH illimites : local (-L), distant (-R), proxy SOCKS5 (-D)",
@@ -288,26 +289,6 @@
     "title": "Changelog",
     "metaDescription": "Historique des versions de SSHive. Decouvrez les nouveautes de chaque version du client SSH/SFTP/RDP pour macOS.",
     "subtitle": "Tous les changements notables de SSHive sont documentes ici.",
-    "v100": {
-      "version": "1.0.0",
-      "date": "Mars 2026",
-      "title": "Version initiale",
-      "features": [
-        "Version initiale de SSHive pour macOS",
-        "Terminal SSH avec rendu accelere GPU (xterm.js WebGL)",
-        "Gestionnaire SFTP double-panneau avec glisser-deposer et editeur distant",
-        "Client RDP embarque propulse par IronRDP (Rust)",
-        "Client VNC embarque propulse par noVNC",
-        "Tunnels SSH : Redirection locale (-L), distante (-R), proxy SOCKS5 (-D)",
-        "Mode Broadcast, envoyez des commandes a toutes les sessions simultanement",
-        "Serveur MCP pour integration IA (Claude Code, Cursor, Claude Desktop)",
-        "Bibliotheque de commandes rapides avec 14 presets integres",
-        "Outils reseau : DNS lookup, Ping, Traceroute, Whois",
-        "Themes sombre et clair",
-        "Localisation francaise et anglaise",
-        "Support Mac App Store avec modele freemium"
-      ]
-    },
     "releases": [
       {
         "version": "1.0.6",
