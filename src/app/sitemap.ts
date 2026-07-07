@@ -6,6 +6,12 @@ import { BEST_PAGE_SLUGS } from '@/lib/seo/best-pages';
 import { IOS_PAGE_SLUGS } from '@/lib/seo/ios-pages';
 import { INTEGRATION_SLUGS } from '@/lib/seo/integrations';
 
+// Date of the last real content change, bumped manually on content updates.
+// Google cross-checks <lastmod> against actual page changes and starts
+// ignoring the field site-wide if every deploy claims "modified today",
+// so this must NOT be `new Date()`.
+const LAST_CONTENT_UPDATE = new Date('2026-07-07');
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     '',
@@ -63,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of LOCALES) {
       entries.push({
         url: `${SITE_URL}/${locale}${page}`,
-        lastModified: new Date(),
+        lastModified: LAST_CONTENT_UPDATE,
         changeFrequency: page === '' ? 'weekly' : 'monthly',
         priority: priorityFor(page),
         alternates: {
