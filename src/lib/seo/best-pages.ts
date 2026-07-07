@@ -165,8 +165,8 @@ export const BEST_PAGES: BestPageSEO[] = [
       {
         question: { en: 'Can I import my existing SSH config or sessions from another tool?', fr: 'Puis-je importer ma config SSH ou mes sessions d\'un autre outil ?' },
         answer: {
-          en: 'Yes. SSHive imports `~/.ssh/config`, PuTTY registry exports, Royal TSX `.rtsz`, and cleartext MobaXterm.ini files. Profiles created on Mac can also be exported as encrypted `.webssh` for iPhone or iPad.',
-          fr: 'Oui. SSHive importe `~/.ssh/config`, les exports registry PuTTY, les fichiers Royal TSX `.rtsz` et les fichiers MobaXterm.ini en clair. Les profils crees sur Mac peuvent aussi etre exportes en `.webssh` chiffres pour iPhone ou iPad.',
+          en: 'Yes. SSHive imports `~/.ssh/config`, PuTTY registry exports, Royal TSX `.rtsz`, and cleartext MobaXterm.ini files. Profiles created on Mac can also be exported as an encrypted `.sshive` file (scrypt + AES-256-GCM, passphrase required) and imported on iPhone or iPad.',
+          fr: 'Oui. SSHive importe `~/.ssh/config`, les exports registry PuTTY, les fichiers Royal TSX `.rtsz` et les fichiers MobaXterm.ini en clair. Les profils crees sur Mac peuvent aussi etre exportes en fichier `.sshive` chiffre (scrypt + AES-256-GCM, passphrase requise) et importes sur iPhone ou iPad.',
         },
       },
       {

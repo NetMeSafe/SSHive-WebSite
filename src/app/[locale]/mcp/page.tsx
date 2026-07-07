@@ -87,7 +87,7 @@ function mcpFaqItems(locale: string) {
       {
         question: 'Quels outils MCP SSHive expose-t-il ?',
         answer:
-          'Sept outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path. Ils couvrent l’exécution de commandes SSH et la navigation/lecture/écriture SFTP, y compris des transferts streaming sans overhead base64.',
+          'Onze outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path, sftp_download_to_local_path, sftp_mkdir, sftp_rename, sftp_delete. Ils couvrent l’exécution de commandes SSH et la gestion complète des fichiers SFTP (lecture, écriture, download, mkdir, rename, delete), y compris des transferts streaming sans overhead base64.',
       },
       {
         question: 'MCP marche-t-il avec Cursor, Claude Desktop, Cline ?',
@@ -115,7 +115,7 @@ function mcpFaqItems(locale: string) {
     {
       question: 'Which MCP tools does SSHive expose?',
       answer:
-        'Seven tools: ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path. They cover SSH command execution and SFTP browse/read/write, including streaming uploads with no base64 overhead.',
+        'Eleven tools: ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path, sftp_download_to_local_path, sftp_mkdir, sftp_rename, sftp_delete. They cover SSH command execution and full SFTP file management (read, write, download, mkdir, rename, delete), including streaming transfers with no base64 overhead.',
     },
     {
       question: 'Does MCP work with Cursor, Claude Desktop, Cline?',

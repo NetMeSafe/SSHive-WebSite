@@ -31,7 +31,12 @@ export default async function ChangelogPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'changelog' });
 
-  const v100Features: string[] = t.raw('v100.features');
+  const releases: {
+    version: string;
+    date: string;
+    title: string;
+    features: string[];
+  }[] = t.raw('releases');
 
   return (
     <>
@@ -51,36 +56,35 @@ export default async function ChangelogPage({
         {t('subtitle')}
       </p>
 
-      {/* Version 1.0.0 */}
-      <section className="mt-16">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-            <Tag className="w-4 h-4 text-primary" />
-            <span className="font-mono font-bold text-primary">
-              {t('v100.version')}
-            </span>
+      {releases.map((release) => (
+        <section className="mt-16" key={release.version}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <Tag className="w-4 h-4 text-primary" />
+              <span className="font-mono font-bold text-primary">
+                {release.version}
+              </span>
+            </div>
+            <span className="text-muted-foreground">{release.date}</span>
           </div>
-          <span className="text-muted-foreground">
-            {t('v100.date')}
-          </span>
-        </div>
 
-        <h2 className="text-2xl font-bold text-foreground mb-6">
-          {t('v100.title')}
-        </h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">
+            {release.title}
+          </h2>
 
-        <ul className="space-y-3">
-          {v100Features.map((feature, index) => (
-            <li
-              key={index}
-              className="flex items-start gap-3 text-muted-foreground leading-relaxed"
-            >
-              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
+          <ul className="space-y-3">
+            {release.features.map((feature, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-3 text-muted-foreground leading-relaxed"
+              >
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
 
       <section className="mt-20 pt-10 border-t border-border">
         <h2 className="text-xl font-semibold text-foreground mb-3">
@@ -92,7 +96,7 @@ export default async function ChangelogPage({
             : 'iCloud sync for profiles, YubiKey NFC support, Mosh, multi-window on iPad, and a fix for the "back to Free after update" bug. See the public roadmap for the detail.'}
         </p>
         <Link
-          href={'/roadmap' as '/roadmap'}
+          href={'/roadmap' as const}
           className="inline-flex items-center gap-2 text-primary hover:underline"
         >
           {locale === 'fr' ? 'Voir la roadmap' : 'See the roadmap'}

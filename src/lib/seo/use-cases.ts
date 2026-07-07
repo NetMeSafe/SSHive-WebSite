@@ -77,8 +77,8 @@ export const USE_CASES: UseCaseSEO[] = [
       {
         question: { en: 'Can I import my Mac SSHive profiles into the iPhone app?', fr: 'Puis-je importer mes profils SSHive Mac dans l\'app iPhone ?' },
         answer: {
-          en: 'Yes, profiles can be exported from Mac and imported on iPhone/iPad via the encrypted `.webssh` format with passphrase. Cross-device profile management is part of the design: configure once on Mac, use anywhere.',
-          fr: 'Oui, les profils peuvent etre exportes depuis le Mac et importes sur iPhone/iPad via le format `.webssh` chiffre avec passphrase. La gestion cross-device des profils fait partie du design : configurez une fois sur Mac, utilisez partout.',
+          en: 'Yes, profiles can be exported from Mac and imported on iPhone/iPad via the encrypted `.sshive` format with passphrase. Cross-device profile management is part of the design: configure once on Mac, use anywhere.',
+          fr: 'Oui, les profils peuvent etre exportes depuis le Mac et importes sur iPhone/iPad via le format `.sshive` chiffre avec passphrase. La gestion cross-device des profils fait partie du design : configurez une fois sur Mac, utilisez partout.',
         },
       },
       {

@@ -53,15 +53,16 @@ function list(paths: string[], prefix = ''): string {
 export function GET(): Response {
   const body = `# SSHive
 
-> SSHive is a native SSH, SFTP, RDP and VNC client for macOS, iPhone and iPad. Its differentiator: a built-in MCP (Model Context Protocol) server that lets AI assistants such as Claude Code, Cursor and Claude Desktop drive SSH sessions and SFTP transfers directly, with no extra install. Freemium: the macOS app is a free direct download (DMG), SSHive Pro is a one-time purchase (no subscription) on the App Store (Universal Purchase: Mac, iPhone, iPad).
+> SSHive is a native SSH, SFTP, RDP, VNC and VPN client for macOS, iPhone and iPad. Its differentiator: a built-in MCP (Model Context Protocol) server that lets AI assistants such as Claude Code, Cursor and Claude Desktop drive SSH sessions and SFTP transfers directly, with no extra install. Freemium: free on the App Store, SSHive Pro is a one-time purchase (no subscription, Universal Purchase: Mac, iPhone, iPad).
 
 Key facts:
 
-- Platforms: macOS 13+ (Apple Silicon native), iOS 16+, iPadOS 16+.
-- Universal features (Mac + iPhone + iPad): SSH terminal, SFTP file manager, connection profiles, jump hosts, biometric unlock (Touch ID / Face ID).
-- macOS-only features: embedded RDP, embedded VNC, SSH tunnels (local -L, remote -R, SOCKS5 -D), multi-host broadcast, snippet library, network tools, local MCP server.
-- MCP server: runs locally on port 49422 with Bearer-token auth; exposes ssh_execute and sftp_list / sftp_read_file / sftp_write_file tools; auto-configures Claude Code, Cursor and Claude Desktop.
-- Security: credentials in the macOS Keychain / iOS Keychain, known-hosts fingerprint management, app lock, built-in TOTP/HOTP authenticator; no cloud sync, nothing leaves the device.
+- Platforms: macOS 13+ (Apple Silicon native + Intel), iOS 17+, iPadOS 17+.
+- Universal features (Mac + iPhone + iPad): SSH terminal, SFTP file manager, RDP remote desktop (FreeRDP 3, NLA, Active Directory), VNC viewer (RoyalVNC), local SSH tunnels (-L), snippets, network tools (ping, traceroute, DNS, MX, whois, DNSBL), connection profiles, biometric unlock (Touch ID / Face ID).
+- macOS-only: the local MCP server for AI assistants, broadcast mode (run a command on every open session), remote (-R) and SOCKS5 (-D) tunnels, jump hosts, TOTP/HOTP authenticator, shared accounts, session logging. iOS/iPadOS-only: VPN client (IKEv2, IPSec/Xauth, OpenVPN).
+- MCP server: runs locally on port 49422 with Bearer-token auth; exposes 11 tools (ssh_execute, ssh_list_sessions, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path, sftp_download_to_local_path, sftp_mkdir, sftp_rename, sftp_delete); auto-configures Claude Code, Cursor and Claude Desktop.
+- Built-in AI terminal assistant (macOS): explain command output or ask questions from the terminal, using your own API key (Anthropic Claude, OpenAI GPT, or Google Gemini); keys stored encrypted in the Keychain, requests go straight from your machine to the provider.
+- Security: credentials in the macOS Keychain / iOS Keychain, known-hosts fingerprint management, app lock, built-in TOTP/HOTP authenticator; nothing routed through SSHive servers.
 - Imports: ~/.ssh/config, PuTTY, Royal TSX .rtsz, cleartext MobaXterm.ini.
 - Pricing: free tier with generous limits; Pro is a one-time purchase on the App Store: ${APP_STORE_UNIVERSAL_URL}
 - SSHive is proprietary software (not open source).

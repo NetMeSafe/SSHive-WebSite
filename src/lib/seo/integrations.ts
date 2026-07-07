@@ -78,8 +78,8 @@ export const INTEGRATIONS: IntegrationSEO[] = [
       {
         title: { en: 'Restart Claude Code', fr: 'Redemarrez Claude Code' },
         body: {
-          en: 'Quit any running `claude` session and reopen. The next time you run `claude` (or launch the IDE plugin), it loads the new MCP config and discovers the SSHive tools: `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file`, `sftp_write_file`, `sftp_write_file_chunk`, `sftp_write_from_local_path`.',
-          fr: 'Quittez toute session `claude` en cours et rouvrez. La prochaine fois que vous lancez `claude` (ou le plugin IDE), il charge la nouvelle config MCP et decouvre les outils SSHive : `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file`, `sftp_write_file`, `sftp_write_file_chunk`, `sftp_write_from_local_path`.',
+          en: 'Quit any running `claude` session and reopen. The next time you run `claude` (or launch the IDE plugin), it loads the new MCP config and discovers the 11 SSHive tools: `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file`, `sftp_write_file`, `sftp_write_file_chunk`, `sftp_write_from_local_path`, `sftp_download_to_local_path`, `sftp_mkdir`, `sftp_rename`, `sftp_delete`.',
+          fr: 'Quittez toute session `claude` en cours et rouvrez. La prochaine fois que vous lancez `claude` (ou le plugin IDE), il charge la nouvelle config MCP et decouvre les 11 outils SSHive : `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file`, `sftp_write_file`, `sftp_write_file_chunk`, `sftp_write_from_local_path`, `sftp_download_to_local_path`, `sftp_mkdir`, `sftp_rename`, `sftp_delete`.',
         },
       },
       {

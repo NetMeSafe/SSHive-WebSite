@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "SSHive, SSH, SFTP, RDP & VNC Client for Mac, iPhone & iPad",
-    "description": "Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. SSH tunnels, broadcast and Touch ID Keychain on every device. Built-in MCP for Claude Code, Cursor and Claude Desktop on macOS."
+    "description": "Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. SSH tunnels and Touch ID / Face ID Keychain on every device. Broadcast mode and built-in MCP server for Claude Code, Cursor and Claude Desktop on macOS."
   },
   "nav": {
     "features": "Features",
@@ -56,12 +56,12 @@
     },
     "tunnels": {
       "title": "SSH Tunnels",
-      "description": "Local forwarding (-L), remote forwarding (-R), and SOCKS5 proxy (-D) with full IPv4/IPv6/domain support. Up to 10 local + 5 remote tunnels per profile.",
+      "description": "Local forwarding (-L), remote forwarding (-R), and SOCKS5 proxy (-D) with full IPv4/IPv6/domain support. Up to 10 local + 5 remote tunnels per profile (Free includes 1 local tunnel; Pro unlocks remote & SOCKS5).",
       "shortDesc": "Local, remote & SOCKS5 proxy"
     },
     "mcp": {
       "title": "AI Integration (MCP)",
-      "description": "Built-in MCP server lets Claude Code, Cursor, and Claude Desktop access your SSH/SFTP sessions. Copy-paste config, or one-shot CLI for Claude Code.",
+      "description": "Built-in MCP server lets Claude Code, Cursor, and Claude Desktop drive your SSH/SFTP sessions (11 tools). Plus an in-terminal AI assistant: explain output or ask questions with your own Claude, GPT or Gemini API key.",
       "shortDesc": "Claude & Cursor integration"
     },
     "broadcast": {
@@ -125,10 +125,12 @@
       "period": "forever",
       "cta": "Download Free",
       "features": [
-        "2 SSH sessions",
+        "2 simultaneous SSH sessions",
         "5 saved profiles",
-        "Basic SFTP file manager",
-        "14 built-in quick commands",
+        "SFTP file manager (uploads up to 10 MB)",
+        "1 local SSH tunnel (-L)",
+        "Built-in snippet library + 3 custom snippets",
+        "OTP authenticator (3 tokens)",
         "Dark theme",
         "macOS Keychain security"
       ]
@@ -146,24 +148,25 @@
         "Unlimited profiles & folders",
         "RDP remote desktop",
         "VNC viewer",
-        "SSH tunnels (L/R/D)",
-        "SOCKS5 proxy",
-        "Broadcast mode",
-        "MCP / AI integration",
+        "Unlimited SSH tunnels: local (-L), remote (-R), SOCKS5 proxy (-D)",
+        "Unlimited SFTP transfer size",
+        "Broadcast mode (multi-server commands)",
+        "MCP server / AI integration",
         "Jump host support",
+        "Shared accounts (reusable credentials)",
         "Export/import profiles",
-        "Custom snippets",
-        "All themes",
-        "Priority updates"
+        "Session logging",
+        "Unlimited custom snippets & OTP tokens",
+        "All themes (dark, light, system)"
       ]
     },
     "noSubscription": "One-time purchase. No subscription. Yours forever.",
     "faq": {
       "title": "Frequently Asked Questions",
       "q1": "Is SSHive really free?",
-      "a1": "Yes. The free version includes SSH terminal, SFTP file manager, 2 concurrent sessions, and 5 saved profiles. No account, no trial, no time limit.",
+      "a1": "Yes. The free version includes the SSH terminal, the SFTP file manager (uploads up to 10 MB), 2 simultaneous sessions, 5 saved profiles, 1 local SSH tunnel, and the OTP authenticator. No account, no trial, no time limit.",
       "q2": "What do I get with Pro?",
-      "a2": "Pro unlocks unlimited sessions, unlimited profiles, RDP, VNC, SSH tunnels, broadcast mode, MCP/AI integration, jump hosts, and all themes. It's a one-time purchase on the Mac App Store.",
+      "a2": "Pro unlocks unlimited sessions and profiles, RDP, VNC, unlimited SSH tunnels (remote -R and SOCKS5 -D included), broadcast mode, the MCP server for AI integration, jump hosts, shared accounts, export/import, session logging, and all themes. It's a one-time purchase on the Mac App Store.",
       "q3": "Can I upgrade later?",
       "a3": "Absolutely. Start with the free version and upgrade to Pro anytime from the Mac App Store. Your profiles and settings carry over seamlessly.",
       "q4": "Is there a subscription?",
@@ -182,12 +185,12 @@
     "or": "or",
     "appStoreAlt": "Mac App Store",
     "iosSectionTitle": "Native iPhone and iPad app",
-    "iosSectionDescription": "SSH, SFTP, RDP (FreeRDP 3 with NLA + Active Directory), VNC (RoyalVNC), VPN (IKEv2/IPSec/OpenVPN), SSH tunnels, broadcast and network tools, all native on iPhone and iPad. Touch ID and Face ID. Universal Purchase with the macOS version.",
+    "iosSectionDescription": "SSH, SFTP, RDP (FreeRDP 3 with NLA + Active Directory), VNC (RoyalVNC), VPN (IKEv2/IPSec/OpenVPN), local SSH tunnels and network tools, all native on iPhone and iPad. Touch ID and Face ID. Universal Purchase with the macOS version.",
     "iosCta": "Get SSHive on the App Store",
     "iosBadge": "iOS 17+ · iPadOS 17+",
     "platformSplitTitle": "What works on which Apple device",
-    "platformSplitMacAll": "macOS: everything on iOS plus the built-in MCP server for Claude Code, Cursor and Claude Desktop.",
-    "platformSplitIos": "iPhone & iPad: SSH terminal, SFTP, RDP, VNC, VPN, SSH tunnels, broadcast, network tools, everything except MCP.",
+    "platformSplitMacAll": "macOS: everything on iOS plus broadcast mode, the OTP authenticator, remote (-R) and SOCKS5 (-D) tunnels, and the built-in MCP server for Claude Code, Cursor and Claude Desktop.",
+    "platformSplitIos": "iPhone & iPad: SSH terminal, SFTP, RDP, VNC, VPN, local SSH tunnels, network tools.",
     "noAccount": "No account needed",
     "noAds": "No ads, no tracking in the app",
     "keychainSecurity": "Secure, Touch ID + Keychain encryption",
@@ -304,7 +307,73 @@
         "French and English localization",
         "Mac App Store support with freemium model"
       ]
-    }
+    },
+    "releases": [
+      {
+        "version": "1.0.6",
+        "date": "July 2026",
+        "title": "Reliable transfers & polish",
+        "features": [
+          "Reliable SFTP and FTP downloads under the Mac App Store sandbox",
+          "Hardened transfer pipeline with shared, unit-tested path helpers",
+          "Stability fixes across SFTP and FTP sessions"
+        ]
+      },
+      {
+        "version": "1.0.5",
+        "date": "June 2026",
+        "title": "Complete localization",
+        "features": [
+          "Complete French, English and Spanish localization across the whole app",
+          "Native macOS dialogs and system notifications fully translated"
+        ]
+      },
+      {
+        "version": "1.0.3",
+        "date": "April 2026",
+        "title": "Spanish, RDP fullscreen, network tools",
+        "features": [
+          "Interface available in Spanish (in addition to French and English), switchable on the fly",
+          "RDP: true fullscreen, MacBook Pro notch support, Mac-to-Windows copy/paste (Cmd+C/V/X), resolution selector, 60 FPS streaming with automatic quality adaptation",
+          "SFTP: drag & drop entire folders, recursive folder download, upload conflict dialog (Replace / Keep both / Skip)",
+          "Network tools: DNS lookup (A, AAAA, MX, CNAME, TXT), reverse DNS, network interfaces, redesigned Whois, DNSBL check across 8 blacklists, MX lookup",
+          "MCP: per-client setup accordion (Claude Code, Cursor, Claude Desktop) with one-click config, Bearer token regeneration, large file transfer via AI, notification on every MCP tool call",
+          "Fixed macOS special characters in the terminal (|, \\, @, ~, {, }) via Option + key",
+          "New app icon and more compact sidebar"
+        ]
+      },
+      {
+        "version": "1.0.2",
+        "date": "April 2026",
+        "title": "Native RDP for the Mac App Store",
+        "features": [
+          "New native in-process FreeRDP engine for the Mac App Store build",
+          "60 FPS binary WebSocket RDP streaming pipeline",
+          "Purchase-restore fix for Pro (StoreKit)",
+          "RDP stability and SSL fixes"
+        ]
+      },
+      {
+        "version": "1.0.0",
+        "date": "March 2026",
+        "title": "Initial Release",
+        "features": [
+          "Initial release of SSHive for macOS",
+          "SSH terminal with GPU-accelerated rendering (xterm.js WebGL)",
+          "SFTP dual-pane file manager with drag & drop and remote editor",
+          "RDP embedded client powered by IronRDP (Rust)",
+          "VNC embedded client powered by noVNC",
+          "SSH tunnels: Local forwarding (-L), Remote forwarding (-R), SOCKS5 proxy (-D)",
+          "Broadcast mode, send commands to all sessions simultaneously",
+          "MCP server for AI integration (Claude Code, Cursor, Claude Desktop)",
+          "Command snippets library with 14 built-in presets",
+          "Network tools: DNS lookup, Ping, Traceroute, Whois",
+          "Dark and Light theme support",
+          "French and English localization",
+          "Mac App Store support with freemium model"
+        ]
+      }
+    ]
   },
   "blog": {
     "title": "Blog",
@@ -455,7 +524,7 @@
       "bullets": [
         "Built-in MCP server for AI assistant integration",
         "Compatible with Claude Code (CLI/IDE), Cursor, and Claude Desktop",
-        "7 tools: ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path",
+        "11 tools: ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path, sftp_download_to_local_path, sftp_mkdir, sftp_rename, sftp_delete",
         "Bearer token authentication with auto-generated tokens"
       ]
     },
@@ -544,7 +613,7 @@
       "title": "Let Claude manage your servers",
       "desc": "Built-in MCP server compatible with Claude Code, Cursor and Claude Desktop. Your AI assistant can execute commands, read logs, and browse files on any connected server, copy-paste setup, or one-shot CLI for Claude Code.",
       "b1": "Compatible with Claude Code, Cursor & Claude Desktop, copy-paste config or one-shot CLI",
-      "b2": "7 tools: list sessions, execute commands, browse & read/write remote files (incl. chunked uploads)",
+      "b2": "11 tools: list sessions, execute commands, browse, read/write, download, mkdir, rename and delete remote files (incl. streamed transfers)",
       "b3": "100% local, Bearer token auth, no cloud relay",
       "learnMore": "Discover MCP integration"
     },
@@ -650,7 +719,7 @@
     },
     "tools": {
       "label": "MCP Tools",
-      "title": "7 tools for full server access",
+      "title": "11 tools for full server access",
       "subtitle": "Each tool maps to a specific SSH or SFTP operation, giving AI assistants precise control over your remote servers.",
       "sshList": "Lists all active SSH sessions with host, user, port, and connection status.",
       "sshExecute": "Executes a command on a specific SSH session and returns stdout/stderr.",
@@ -758,7 +827,7 @@
     "mcpDetail": "localhost · Bearer token · macOS Keychain",
     "serversLabel": "Your servers",
     "serversDetail": "Active SSH and SFTP sessions in SSHive",
-    "toolsLabel": "7 tools exposed",
+    "toolsLabel": "11 tools exposed",
     "tools": "ssh_list_sessions · ssh_execute · sftp_list · sftp_read_file · sftp_write_file · sftp_write_file_chunk · sftp_write_from_local_path",
     "cta": "Open the MCP integration page"
   }

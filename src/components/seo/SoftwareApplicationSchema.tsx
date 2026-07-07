@@ -12,7 +12,7 @@ export function SoftwareApplicationSchema() {
         applicationCategory: 'DeveloperApplication',
         applicationSubCategory: 'SSH Client',
         description:
-          'Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. SSH tunnels, broadcast and Touch ID Keychain on every device. Built-in MCP server for Claude Code, Cursor and Claude Desktop on macOS.',
+          'Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. SSH tunnels and Touch ID / Face ID Keychain on every device. Broadcast mode and built-in MCP server for Claude Code, Cursor and Claude Desktop on macOS.',
         offers: [
           {
             '@type': 'Offer',
@@ -51,13 +51,13 @@ export function SoftwareApplicationSchema() {
           'RDP remote desktop (Mac, iPhone, iPad), FreeRDP 3, NLA, Active Directory',
           'VNC viewer (Mac, iPhone, iPad), RoyalVNC, TLS, ARD',
           'VPN client (iPhone, iPad), IKEv2, IPSec/Xauth, OpenVPN, NetworkExtension',
-          'SSH tunnels (Mac, iPhone, iPad), local, remote, SOCKS5 dynamic',
-          'Broadcast mode for multi-server commands (Mac, iPhone, iPad)',
+          'SSH tunnels: local (-L), remote (-R) and SOCKS5 (-D) on Mac; local (-L) on iPhone and iPad',
+          'Broadcast mode for multi-server commands (Mac)',
           'MCP server for AI integration (Claude Code, Cursor, Claude Desktop), macOS only',
           'Network tools (Mac, iPhone, iPad), ping, traceroute, DNS, MX, whois, DNSBL',
           'Touch ID / Face ID-secured Keychain credential storage',
           'Quick commands / snippet library',
-          'TOTP / HOTP authenticator with encrypted vault',
+          'TOTP / HOTP authenticator with encrypted vault (Mac)',
         ],
         softwareRequirements: 'macOS 13 Ventura or later, iOS 17+, iPadOS 17+',
         processorRequirements: 'Apple Silicon (M1/M2/M3/M4) or Intel x64 on Mac; A12 Bionic or later on iPhone/iPad',

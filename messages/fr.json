@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "SSHive, Client SSH, SFTP, RDP et VNC pour Mac, iPhone et iPad",
-    "description": "Client SSH, SFTP, RDP, VNC et VPN natif pour Mac, iPhone et iPad. Tunnels SSH, broadcast et Trousseau Touch ID sur tous les appareils. MCP integre pour Claude Code, Cursor et Claude Desktop sur macOS."
+    "description": "Client SSH, SFTP, RDP, VNC et VPN natif Apple pour Mac, iPhone et iPad. Tunnels SSH et Trousseau Touch ID / Face ID sur chaque appareil. Mode broadcast et serveur MCP integre pour Claude Code, Cursor et Claude Desktop sur macOS."
   },
   "nav": {
     "features": "Fonctionnalites",
@@ -56,12 +56,12 @@
     },
     "tunnels": {
       "title": "Tunnels SSH",
-      "description": "Redirection locale (-L), distante (-R), et proxy SOCKS5 (-D) avec support IPv4/IPv6/domaine complet. Jusqu'a 10 tunnels locaux + 5 distants par profil.",
+      "description": "Forwarding local (-L), distant (-R) et proxy SOCKS5 (-D) avec support complet IPv4/IPv6/domaine. Jusqu'a 10 tunnels locaux + 5 distants par profil (Gratuit : 1 tunnel local ; Pro debloque distant et SOCKS5).",
       "shortDesc": "Local, distant et proxy SOCKS5"
     },
     "mcp": {
       "title": "Integration IA (MCP)",
-      "description": "Serveur MCP integre permettant a Claude Code, Cursor et Claude Desktop d'acceder a vos sessions SSH/SFTP. Config copier-coller, ou commande CLI unique pour Claude Code.",
+      "description": "Serveur MCP integre : Claude Code, Cursor et Claude Desktop pilotent vos sessions SSH/SFTP (11 outils). Plus un assistant IA dans le terminal : expliquer une sortie ou poser une question avec votre propre cle Claude, GPT ou Gemini.",
       "shortDesc": "Integration Claude et Cursor"
     },
     "broadcast": {
@@ -125,10 +125,12 @@
       "period": "pour toujours",
       "cta": "Telecharger gratuitement",
       "features": [
-        "2 sessions SSH",
+        "2 sessions SSH simultanees",
         "5 profils enregistres",
-        "Gestionnaire SFTP basique",
-        "14 commandes rapides integrees",
+        "Gestionnaire SFTP (uploads jusqu'a 10 Mo)",
+        "1 tunnel SSH local (-L)",
+        "Bibliotheque de snippets integree + 3 snippets personnalises",
+        "Authenticator OTP (3 jetons)",
         "Theme sombre",
         "Securite via le Trousseau macOS"
       ]
@@ -146,24 +148,25 @@
         "Profils et dossiers illimites",
         "Bureau a distance RDP",
         "Visionneuse VNC",
-        "Tunnels SSH (L/R/D)",
-        "Proxy SOCKS5",
-        "Mode Broadcast",
-        "Integration MCP / IA",
+        "Tunnels SSH illimites : local (-L), distant (-R), proxy SOCKS5 (-D)",
+        "Taille de transfert SFTP illimitee",
+        "Mode Broadcast (commandes multi-serveurs)",
+        "Serveur MCP / integration IA",
         "Support Jump Host",
+        "Comptes partages (credentials reutilisables)",
         "Export/import de profils",
-        "Snippets personnalises",
-        "Tous les themes",
-        "Mises a jour prioritaires"
+        "Journalisation de session",
+        "Snippets personnalises et jetons OTP illimites",
+        "Tous les themes (sombre, clair, systeme)"
       ]
     },
     "noSubscription": "Achat unique. Pas d'abonnement. A vous pour toujours.",
     "faq": {
       "title": "Questions frequentes",
       "q1": "SSHive est-il vraiment gratuit ?",
-      "a1": "Oui. La version gratuite inclut le terminal SSH, le gestionnaire SFTP, 2 sessions simultanees et 5 profils enregistres. Pas de compte, pas d'essai, pas de limite de temps.",
+      "a1": "Oui. La version gratuite inclut le terminal SSH, le gestionnaire SFTP (uploads jusqu'a 10 Mo), 2 sessions simultanees, 5 profils enregistres, 1 tunnel SSH local et l'authenticator OTP. Pas de compte, pas d'essai, pas de limite de temps.",
       "q2": "Qu'est-ce que Pro apporte ?",
-      "a2": "Pro debloque les sessions illimitees, les profils illimites, RDP, VNC, les tunnels SSH, le mode broadcast, l'integration MCP/IA, les jump hosts et tous les themes. C'est un achat unique sur le Mac App Store.",
+      "a2": "Pro debloque les sessions et profils illimites, RDP, VNC, les tunnels SSH illimites (distant -R et SOCKS5 -D inclus), le mode broadcast, le serveur MCP pour l'integration IA, les jump hosts, les comptes partages, l'export/import, la journalisation de session et tous les themes. C'est un achat unique sur le Mac App Store.",
       "q3": "Puis-je passer a Pro plus tard ?",
       "a3": "Absolument. Commencez avec la version gratuite et passez a Pro quand vous voulez depuis le Mac App Store. Vos profils et parametres sont conserves.",
       "q4": "Y a-t-il un abonnement ?",
@@ -180,12 +183,12 @@
     "dmgButton": "Obtenir SSHive sur le Mac App Store",
     "dmgSubtitle": "Gratuit sur le Mac App Store · Binaire universel (Apple Silicon + Intel)",
     "iosSectionTitle": "App iPhone et iPad native",
-    "iosSectionDescription": "SSH, SFTP, RDP (FreeRDP 3 avec NLA + Active Directory), VNC (RoyalVNC), VPN (IKEv2/IPSec/OpenVPN), tunnels SSH, broadcast et outils reseau, tout natif sur iPhone et iPad. Touch ID et Face ID. Universal Purchase avec la version macOS.",
+    "iosSectionDescription": "SSH, SFTP, RDP (FreeRDP 3 avec NLA + Active Directory), VNC (RoyalVNC), VPN (IKEv2/IPSec/OpenVPN), tunnels SSH locaux et outils reseau, tout natif sur iPhone et iPad. Touch ID et Face ID. Universal Purchase avec la version macOS.",
     "iosCta": "Obtenir SSHive sur l'App Store",
     "iosBadge": "iOS 17+ · iPadOS 17+",
     "platformSplitTitle": "Ce qui fonctionne sur quel appareil Apple",
-    "platformSplitMacAll": "macOS : tout ce qui est sur iOS, plus le serveur MCP integre pour Claude Code, Cursor et Claude Desktop.",
-    "platformSplitIos": "iPhone et iPad : SSH, SFTP, RDP, VNC, VPN, tunnels SSH, broadcast, outils reseau, tout sauf MCP.",
+    "platformSplitMacAll": "macOS : tout ce qu'il y a sur iOS plus le mode broadcast, l'authenticator OTP, les tunnels distants (-R) et SOCKS5 (-D), et le serveur MCP integre pour Claude Code, Cursor et Claude Desktop.",
+    "platformSplitIos": "iPhone et iPad : SSH, SFTP, RDP, VNC, VPN, tunnels SSH locaux, outils reseau.",
     "or": "ou",
     "appStoreAlt": "Mac App Store",
     "noAccount": "Aucun compte requis",
@@ -304,7 +307,73 @@
         "Localisation francaise et anglaise",
         "Support Mac App Store avec modele freemium"
       ]
-    }
+    },
+    "releases": [
+      {
+        "version": "1.0.6",
+        "date": "Juillet 2026",
+        "title": "Transferts fiables et finitions",
+        "features": [
+          "Downloads SFTP et FTP fiables sous la sandbox du Mac App Store",
+          "Pipeline de transfert durci avec des helpers de chemins partages et testes unitairement",
+          "Correctifs de stabilite sur les sessions SFTP et FTP"
+        ]
+      },
+      {
+        "version": "1.0.5",
+        "date": "Juin 2026",
+        "title": "Localisation complete",
+        "features": [
+          "Localisation complete francais, anglais et espagnol dans toute l'app",
+          "Dialogues macOS natifs et notifications systeme entierement traduits"
+        ]
+      },
+      {
+        "version": "1.0.3",
+        "date": "Avril 2026",
+        "title": "Espagnol, RDP plein ecran, outils reseau",
+        "features": [
+          "Interface disponible en espagnol (en plus du francais et de l'anglais), changement a la volee",
+          "RDP : vrai plein ecran, support du notch MacBook Pro, copier/coller Mac vers Windows (Cmd+C/V/X), selecteur de resolution, streaming 60 FPS avec adaptation automatique de la qualite",
+          "SFTP : glisser-deposer de dossiers entiers, download recursif de dossiers, dialogue de conflit a l'upload (Remplacer / Garder les deux / Ignorer)",
+          "Outils reseau : DNS lookup (A, AAAA, MX, CNAME, TXT), reverse DNS, interfaces reseau, Whois repense, verification DNSBL sur 8 blacklists, MX lookup",
+          "MCP : accordeon de configuration par client (Claude Code, Cursor, Claude Desktop) avec config en un clic, regeneration du Bearer token, transfert de gros fichiers via l'IA, notification a chaque appel d'outil MCP",
+          "Correction des caracteres speciaux macOS dans le terminal (|, \\, @, ~, {, }) via Option + touche",
+          "Nouvelle icone et sidebar plus compacte"
+        ]
+      },
+      {
+        "version": "1.0.2",
+        "date": "Avril 2026",
+        "title": "RDP natif pour le Mac App Store",
+        "features": [
+          "Nouveau moteur FreeRDP natif in-process pour le build Mac App Store",
+          "Pipeline de streaming RDP WebSocket binaire a 60 FPS",
+          "Correctif de restauration d'achat Pro (StoreKit)",
+          "Correctifs de stabilite et SSL du RDP"
+        ]
+      },
+      {
+        "version": "1.0.0",
+        "date": "Mars 2026",
+        "title": "Version initiale",
+        "features": [
+          "Version initiale de SSHive pour macOS",
+          "Terminal SSH avec rendu accelere GPU (xterm.js WebGL)",
+          "Gestionnaire SFTP double-panneau avec glisser-deposer et editeur distant",
+          "Client RDP embarque propulse par IronRDP (Rust)",
+          "Client VNC embarque propulse par noVNC",
+          "Tunnels SSH : Redirection locale (-L), distante (-R), proxy SOCKS5 (-D)",
+          "Mode Broadcast, envoyez des commandes a toutes les sessions simultanement",
+          "Serveur MCP pour integration IA (Claude Code, Cursor, Claude Desktop)",
+          "Bibliotheque de commandes rapides avec 14 presets integres",
+          "Outils reseau : DNS lookup, Ping, Traceroute, Whois",
+          "Themes sombre et clair",
+          "Localisation francaise et anglaise",
+          "Support Mac App Store avec modele freemium"
+        ]
+      }
+    ]
   },
   "blog": {
     "title": "Blog",
@@ -455,7 +524,7 @@
       "bullets": [
         "Serveur MCP integre pour l'integration avec les assistants IA",
         "Compatible avec Claude Code (CLI/IDE), Cursor et Claude Desktop",
-        "7 outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path",
+        "11 outils : ssh_list_sessions, ssh_execute, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path, sftp_download_to_local_path, sftp_mkdir, sftp_rename, sftp_delete",
         "Authentification par token Bearer avec generation automatique"
       ]
     },
@@ -544,7 +613,7 @@
       "title": "Laissez Claude gerer vos serveurs",
       "desc": "Serveur MCP integre, compatible avec Claude Code, Cursor et Claude Desktop. Votre assistant IA peut executer des commandes, lire des logs et parcourir les fichiers sur tout serveur connecte, config copier-coller, ou commande CLI unique pour Claude Code.",
       "b1": "Compatible avec Claude Code, Cursor et Claude Desktop, config copier-coller ou commande CLI unique",
-      "b2": "7 outils : lister les sessions, executer des commandes, parcourir et lire/ecrire les fichiers (avec uploads par chunks)",
+      "b2": "11 outils : lister les sessions, executer des commandes, parcourir, lire/ecrire, telecharger, creer, renommer et supprimer les fichiers distants (avec transferts streames)",
       "b3": "100 % local, authentification Bearer token, aucun relais cloud",
       "learnMore": "Decouvrir l'integration MCP"
     },
@@ -650,7 +719,7 @@
     },
     "tools": {
       "label": "Outils MCP",
-      "title": "7 outils pour un acces complet aux serveurs",
+      "title": "11 outils pour un acces complet aux serveurs",
       "subtitle": "Chaque outil correspond a une operation SSH ou SFTP specifique, donnant aux assistants IA un controle precis sur vos serveurs distants.",
       "sshList": "Liste toutes les sessions SSH actives avec hote, utilisateur, port et statut de connexion.",
       "sshExecute": "Execute une commande sur une session SSH specifique et retourne stdout/stderr.",
@@ -758,7 +827,7 @@
     "mcpDetail": "localhost · Bearer token · Trousseau macOS",
     "serversLabel": "Vos serveurs",
     "serversDetail": "Sessions SSH et SFTP actives dans SSHive",
-    "toolsLabel": "7 outils exposes",
+    "toolsLabel": "11 outils exposes",
     "tools": "ssh_list_sessions · ssh_execute · sftp_list · sftp_read_file · sftp_write_file · sftp_write_file_chunk · sftp_write_from_local_path",
     "cta": "Voir la page d'integration MCP"
   }
