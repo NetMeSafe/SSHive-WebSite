@@ -32,15 +32,13 @@ import {
   ChevronRight,
   Server,
   Database,
-  Cloud,
   Upload,
   FileText,
   Rocket,
-  Play,
   Clock,
   CheckCircle,
 } from 'lucide-react';
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 
 /* ═══════════════════════════════════════════
    Hooks
@@ -916,7 +914,6 @@ export function HomeShowcase() {
   const tF = useTranslations('features');
   const tW = useTranslations('whySSHive');
   const tC = useTranslations('comparison');
-  const tP = useTranslations('pricing');
   const tD = useTranslations('download');
   const tHome = useTranslations('homeShowcase');
   const scrollY = useScrollY();
@@ -1011,7 +1008,7 @@ export function HomeShowcase() {
               </div>
               {/* Secondary path for iPhone/iPad users */}
               <p className="mt-3 text-xs text-muted-foreground">
-                <Link href={'/ios-ssh-client' as '/ios-ssh-client'} className="underline-offset-2 hover:underline">
+                <Link href={'/ios-ssh-client' as const} className="underline-offset-2 hover:underline">
                   {fr ? 'Sur iPhone & iPad' : 'iPhone & iPad'}
                 </Link>
                 {' · '}
@@ -1207,11 +1204,11 @@ export function HomeShowcase() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <div className="mt-4 flex flex-wrap gap-3 text-xs text-muted-foreground">
-                  <Link href={'/integrations/claude-code' as '/integrations/claude-code'} className="hover:text-primary transition-colors link-underline">Claude Code</Link>
+                  <Link href={'/integrations/claude-code' as const} className="hover:text-primary transition-colors link-underline">Claude Code</Link>
                   <span>·</span>
-                  <Link href={'/integrations/cursor' as '/integrations/cursor'} className="hover:text-primary transition-colors link-underline">Cursor</Link>
+                  <Link href={'/integrations/cursor' as const} className="hover:text-primary transition-colors link-underline">Cursor</Link>
                   <span>·</span>
-                  <Link href={'/integrations/claude-desktop' as '/integrations/claude-desktop'} className="hover:text-primary transition-colors link-underline">Claude Desktop</Link>
+                  <Link href={'/integrations/claude-desktop' as const} className="hover:text-primary transition-colors link-underline">Claude Desktop</Link>
                 </div>
               </ScrollReveal>
             </div>

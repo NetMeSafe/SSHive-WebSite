@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "SSHive, SSH, SFTP, RDP & VNC Client for Mac, iPhone & iPad",
-    "description": "Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. SSH tunnels and Touch ID / Face ID Keychain on every device. Broadcast mode and built-in MCP server for Claude Code, Cursor and Claude Desktop on macOS."
+    "description": "Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. Touch ID Keychain, iCloud sync, and a built-in MCP server for Claude Code and Cursor."
   },
   "nav": {
     "features": "Features",
@@ -176,7 +176,9 @@
       "a5": "No. SSHive works completely offline with no account required. Your data stays on your machine, secured by the macOS Keychain.",
       "q6": "After updating, the app says I am back on Free. What do I do?",
       "a6": "A small number of users see this happen the first time the app launches after an update, because the StoreKit receipt has not been refreshed yet. The fix is one tap: open Settings, Subscription / Purchases, and tap \"Restore Purchases\". Pro comes right back, and it does not cost anything (you are not buying it a second time, Apple is simply re-confirming your previous purchase). A permanent fix is on the roadmap so the restore is no longer needed. If restoring does not bring Pro back, email contact@netmesafe.com with your App Store country and we will check on our side."
-    }
+    },
+    "metaDescription": "SSHive is free to start: SSH terminal, SFTP and 2 sessions. Pro is a one-time $9.99 purchase, no subscription: RDP, VNC, unlimited tunnels, MCP AI and iCloud sync.",
+    "metaTitle": "SSHive Pricing, Free vs Pro, $9.99 One-Time"
   },
   "download": {
     "title": "Download SSHive",
@@ -200,7 +202,9 @@
     "emailPlaceholder": "your@email.com",
     "emailSubscribe": "Subscribe",
     "systemReq": "System Requirements",
-    "systemReqDetails": "macOS 13 Ventura or later (Apple Silicon M1/M2/M3/M4 or Intel x64). iOS 17+ on iPhone, iPadOS 17+ on iPad. arm64 / arm64e."
+    "systemReqDetails": "macOS 13 Ventura or later (Apple Silicon M1/M2/M3/M4 or Intel x64). iOS 17+ on iPhone, iPadOS 17+ on iPad. arm64 / arm64e.",
+    "metaDescription": "Download SSHive free on the App Store for Mac, iPhone and iPad. Native SSH, SFTP, RDP, VNC and VPN client with Touch ID, no account required.",
+    "metaTitle": "Download SSHive for Mac, iPhone & iPad"
   },
   "footer": {
     "product": "Product",
@@ -636,8 +640,8 @@
     }
   },
   "mcpPage": {
-    "metaTitle": "MCP AI Integration, Claude Code, Cursor & Claude Desktop | SSHive",
-    "metaDescription": "SSHive's built-in MCP server lets AI assistants like Claude Code, Cursor, and Claude Desktop access your SSH and SFTP sessions. Copy-paste config or one-shot CLI command, local and secure.",
+    "metaTitle": "MCP Server for Claude Code, Cursor & Claude Desktop",
+    "metaDescription": "SSHive's built-in MCP server lets Claude Code, Cursor and Claude Desktop run commands and manage files on your SSH servers. One toggle, local and secure.",
     "backToFeatures": "See all features",
     "sectionLabel": "AI Integration",
     "heroTitle": "Your servers, accessible to AI",
@@ -781,7 +785,7 @@
     "howTo": {
       "title": "Step-by-step guides for SSH on macOS",
       "subtitle": "Practical, copy-paste-ready tutorials for every SSH workflow on a Mac.",
-      "metaTitle": "SSH Tutorials for Mac, Step-by-Step Guides | SSHive",
+      "metaTitle": "SSH Tutorials for Mac, Step-by-Step Guides",
       "metaDescription": "Practical tutorials: SSH tunnels, key generation, SFTP file transfer, RDP from Mac, VNC, jump hosts, SOCKS5 proxy, and more."
     },
     "exploreMore": "Explore more",

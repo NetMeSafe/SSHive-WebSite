@@ -13,7 +13,6 @@ interface Props {
   data: IntegrationSEO;
   locale: string;
   loc: Locale;
-  homeBreadcrumb: string;
   ctaTitle: string;
   ctaDescription: string;
   ctaButton: string;
@@ -25,7 +24,6 @@ export function IntegrationPageRenderer({
   data,
   locale,
   loc,
-  homeBreadcrumb,
   ctaTitle,
   ctaDescription,
   ctaButton,

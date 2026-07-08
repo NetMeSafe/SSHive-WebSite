@@ -14,9 +14,7 @@ import {
   Terminal,
   FolderOpen,
   CheckCircle,
-  Copy,
   ArrowRight,
-  Cpu,
   Lock,
   Sparkles,
 } from 'lucide-react';

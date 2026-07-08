@@ -20,8 +20,8 @@ export async function generateMetadata({
   return getPageMetadata({
     locale,
     path: '/pricing',
-    title: t('title'),
-    description: t('subtitle'),
+    title: t('metaTitle'),
+    description: t('metaDescription'),
   });
 }
 

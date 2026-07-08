@@ -19,8 +19,8 @@ export async function generateMetadata({
   return getPageMetadata({
     locale,
     path: '/download',
-    title: t('title'),
-    description: t('subtitle'),
+    title: t('metaTitle'),
+    description: t('metaDescription'),
   });
 }
 

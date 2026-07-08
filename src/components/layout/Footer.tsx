@@ -31,7 +31,7 @@ export function Footer() {
               <li><Link href="/use-cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('useCases')}</Link></li>
               <li><Link href="/how-to" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('howTo')}</Link></li>
               <li><Link href="/docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('docs')}</Link></li>
-              <li><Link href={'/roadmap' as '/roadmap'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Roadmap' : 'Roadmap'}</Link></li>
+              <li><Link href={'/roadmap' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Roadmap' : 'Roadmap'}</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('blog')}</Link></li>
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('about')}</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{t('contact')}</Link></li>
@@ -41,10 +41,10 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{fr ? 'Pour Mac' : 'For Mac'}</h3>
             <ul className="space-y-3">
-              <li><Link href={'/best-ssh-client-for-mac' as '/best-ssh-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client SSH Mac' : 'Best SSH client for Mac'}</Link></li>
-              <li><Link href={'/best-sftp-client-for-mac' as '/best-sftp-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client SFTP Mac' : 'Best SFTP client for Mac'}</Link></li>
-              <li><Link href={'/best-rdp-client-for-mac' as '/best-rdp-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client RDP Mac' : 'Best RDP client for Mac'}</Link></li>
-              <li><Link href={'/best-vnc-client-for-mac' as '/best-vnc-client-for-mac'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client VNC Mac' : 'Best VNC viewer for Mac'}</Link></li>
+              <li><Link href={'/best-ssh-client-for-mac' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client SSH Mac' : 'Best SSH client for Mac'}</Link></li>
+              <li><Link href={'/best-sftp-client-for-mac' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client SFTP Mac' : 'Best SFTP client for Mac'}</Link></li>
+              <li><Link href={'/best-rdp-client-for-mac' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client RDP Mac' : 'Best RDP client for Mac'}</Link></li>
+              <li><Link href={'/best-vnc-client-for-mac' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Meilleur client VNC Mac' : 'Best VNC viewer for Mac'}</Link></li>
               <li><Link href="/compare/termius" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs Termius</Link></li>
               <li><Link href="/compare/mobaxterm" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">vs MobaXterm</Link></li>
             </ul>
@@ -54,11 +54,11 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-foreground mb-5 uppercase tracking-wider">{fr ? 'iPhone et iPad' : 'iPhone & iPad'}</h3>
             <ul className="space-y-3">
-              <li><Link href={'/ios-ssh-client' as '/ios-ssh-client'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Client SSH iOS' : 'iOS SSH client'}</Link></li>
-              <li><Link href={'/ios-sftp-app' as '/ios-sftp-app'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'App SFTP iOS' : 'iOS SFTP app'}</Link></li>
-              <li><Link href={'/iphone-remote-desktop' as '/iphone-remote-desktop'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'RDP iPhone' : 'iPhone RDP'}</Link></li>
-              <li><Link href={'/iphone-vnc-client' as '/iphone-vnc-client'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'VNC iPhone' : 'iPhone VNC'}</Link></li>
-              <li><Link href={'/iphone-vpn-client' as '/iphone-vpn-client'} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'VPN iPhone' : 'iPhone VPN'}</Link></li>
+              <li><Link href={'/ios-ssh-client' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Client SSH iOS' : 'iOS SSH client'}</Link></li>
+              <li><Link href={'/ios-sftp-app' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'App SFTP iOS' : 'iOS SFTP app'}</Link></li>
+              <li><Link href={'/iphone-remote-desktop' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'RDP iPhone' : 'iPhone RDP'}</Link></li>
+              <li><Link href={'/iphone-vnc-client' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'VNC iPhone' : 'iPhone VNC'}</Link></li>
+              <li><Link href={'/iphone-vpn-client' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'VPN iPhone' : 'iPhone VPN'}</Link></li>
               <li><Link href="/integrations" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Integrations IA' : 'AI integrations'}</Link></li>
             </ul>
           </div>

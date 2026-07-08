@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type ReactNode } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 
 const APP_ID = '6760705487';
 const HTTPS_URL = `https://apps.apple.com/app/sshive/id${APP_ID}`;
@@ -31,21 +31,25 @@ interface Props {
   onClick?: () => void;
 }
 
+// The href stays on the universal HTTPS URL (what crawlers and no-JS users
+// see); the native itms-apps/macappstore scheme is resolved at click time.
 export function AppStoreLink({ children, className, onClick }: Props) {
-  // SSR-safe: start with the universal HTTPS URL, swap on mount.
-  const [href, setHref] = useState<string>(HTTPS_URL);
-
-  useEffect(() => {
-    setHref(getNativeUrl());
-  }, []);
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    onClick?.();
+    const native = getNativeUrl();
+    if (native !== HTTPS_URL) {
+      event.preventDefault();
+      window.location.href = native;
+    }
+  };
 
   return (
     <a
-      href={href}
+      href={HTTPS_URL}
       target="_blank"
       rel="noopener noreferrer"
       className={className}
-      onClick={onClick}
+      onClick={handleClick}
     >
       {children}
     </a>

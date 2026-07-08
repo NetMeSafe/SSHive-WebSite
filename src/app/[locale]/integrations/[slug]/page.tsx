@@ -52,7 +52,6 @@ export default async function IntegrationPage({
       data={data}
       locale={locale}
       loc={loc}
-      homeBreadcrumb={locale === 'fr' ? 'Accueil' : 'Home'}
       integrationsBreadcrumb={locale === 'fr' ? 'Integrations IA' : 'AI Integrations'}
       ctaTitle={t('tryFreeTitle')}
       ctaDescription={t('tryFreeDescription')}
