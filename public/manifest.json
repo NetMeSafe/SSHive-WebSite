@@ -1,7 +1,7 @@
 {
   "name": "SSHive — SSH/SFTP Client for Mac, iPhone & iPad",
   "short_name": "SSHive",
-  "description": "Native Apple SSH/SFTP client for Mac, iPhone and iPad. Embedded RDP, VNC, tunnels and broadcast on macOS. Touch ID-secured Keychain. Built-in MCP for Claude Code and Cursor.",
+  "description": "Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. Touch ID / Face ID Keychain. Broadcast mode and built-in MCP server for Claude Code and Cursor on macOS.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
