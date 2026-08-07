@@ -372,26 +372,107 @@
   },
   "docs": {
     "title": "Documentation",
-    "metaDescription": "Documentation et questions frequentes de SSHive. Apprenez a installer, configurer et utiliser SSHive sur macOS.",
-    "subtitle": "Questions frequentes sur SSHive.",
-    "faq": {
-      "q1": "Comment installer SSHive ?",
-      "a1": "Vous pouvez obtenir SSHive depuis le Mac App Store. SSHive supporte macOS 13 Ventura et versions ulterieures.",
-      "q2": "SSHive est-il gratuit ?",
-      "a2": "Oui. La version gratuite inclut le terminal SSH, le gestionnaire SFTP, 2 sessions simultanees et 5 profils enregistres. Vous pouvez optionnellement passer a Pro (9,99 €, achat unique) pour des sessions illimitees, RDP, VNC, tunnels et plus.",
-      "q3": "SSHive fonctionne-t-il sur les Mac Intel ?",
-      "a3": "Oui. SSHive sur le Mac App Store est un binaire universel, il tourne nativement sur les Mac Apple Silicon (M1/M2/M3/M4) et Intel x64.",
-      "q4": "Comment importer ma config SSH ?",
-      "a4": "Allez dans le dialogue de connexion, cliquez sur le bouton d'import et selectionnez « Importer depuis ~/.ssh/config ». SSHive analysera votre fichier de configuration SSH et creera des profils pour chaque entrée host.",
-      "q5": "Mes données sont-elles sécurisées ?",
-      "a5": "Oui. Les mots de passe et passphrases de clés privees sont chiffres via le Trousseau macOS grace a l'API safeStorage d'Electron. SSHive n'a aucune telemetrie, aucune analyse et aucun appel réseau en dehors de vos connexions SSH/SFTP/RDP/VNC. Toutes les données restent sur votre machine.",
-      "q6": "Comment fonctionnent les tunnels SSH dans SSHive ?",
-      "a6": "Vous pouvez configurer des tunnels Local (-L), Distant (-R) et SOCKS5 (-D) par profil de connexion. Les tunnels demarrent automatiquement a l'etablissement de la connexion SSH. Vous pouvez configurer jusqu'a 10 tunnels locaux et 5 distants par profil.",
-      "q7": "Puis-je utiliser SSHive avec Claude ou Cursor ?",
-      "a7": "Oui. SSHive inclut un serveur MCP (Model Context Protocol) integre, compatible avec Claude Code, Cursor et Claude Desktop. La configuration se fait par copier-coller (ou via une commande CLI unique pour Claude Code), les assistants IA peuvent ensuite exécuter des commandes et parcourir les fichiers sur vos serveurs distants.",
-      "q8": "Ou sont stockes mes profils ?",
-      "a8": "Les profils sont stockes dans ~/Library/Application Support/SSHive/profiles.json. Les credentials sont stockes separement dans credentials.json, chiffres via le Trousseau macOS. Vous pouvez exporter et importer des profils avec la fonctionnalité d'export integree."
-    }
+    "metaDescription": "Documentation SSHive : installation sur Mac, iPhone et iPad, limites gratuit et Pro, import de config SSH, tunnels, MCP pour Claude et Cursor, sécurité.",
+    "subtitle": "Installation, licence, connexions, intégration IA et sécurité, en clair.",
+    "sections": [
+      {
+        "title": "Installation et plateformes",
+        "items": [
+          {
+            "q": "Comment installer SSHive ?",
+            "a": "SSHive est sur l'App Store. Sur Mac, ouvrez le Mac App Store et cherchez SSHive, ou passez par la page de téléchargement. Sur iPhone et iPad, ouvrez l'App Store. C'est un Universal Purchase : acheter Pro une fois couvre les trois plateformes. Un téléchargement direct est aussi proposé pour macOS hors App Store."
+          },
+          {
+            "q": "Quels systèmes sont supportés ?",
+            "a": "macOS 13 Ventura ou ultérieur sur Mac, iOS 17 ou ultérieur sur iPhone, iPadOS 17 ou ultérieur sur iPad. La version Mac est un binaire universel qui tourne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel x64."
+          },
+          {
+            "q": "Faut-il créer un compte ?",
+            "a": "Non. SSHive n'a ni compte, ni inscription, ni connexion. Rien concernant vos serveurs ne nous est envoyé. L'app fonctionne entièrement hors ligne, en dehors des connexions que vous ouvrez vous-même."
+          },
+          {
+            "q": "Quelles fonctionnalités sont réservées au Mac ?",
+            "a": "Le serveur MCP pour les assistants IA, le mode broadcast, les tunnels distants (-R) et SOCKS5 (-D), les jump hosts, l'authenticator OTP intégré, les comptes partagés et la journalisation de session sont des fonctionnalités macOS. SSH, SFTP, RDP, VNC, les tunnels locaux, les snippets et les outils réseau tournent sur les trois plateformes. Le client VPN est spécifique à l'iPhone et à l'iPad."
+          }
+        ]
+      },
+      {
+        "title": "Gratuit et Pro",
+        "items": [
+          {
+            "q": "Que contient la version gratuite ?",
+            "a": "Le terminal SSH, le gestionnaire SFTP avec des uploads jusqu'à 10 Mo par fichier, 2 sessions simultanées, 5 profils enregistrés, 1 tunnel SSH local (-L), la bibliothèque de snippets intégrée plus 3 snippets personnalisés, 3 jetons OTP et le thème sombre. Pas de période d'essai, pas d'expiration : le gratuit reste gratuit."
+          },
+          {
+            "q": "Qu'est-ce que Pro débloque ?",
+            "a": "Sessions et profils illimités, taille de transfert SFTP illimitée, RDP et VNC, tunnels distants (-R) et SOCKS5 (-D), mode broadcast, serveur MCP, jump hosts, comptes partagés, export et import chiffrés de profils, journalisation de session, sync iCloud optionnelle, snippets et jetons OTP illimités, et tous les thèmes."
+          },
+          {
+            "q": "Combien coûte Pro, est-ce un abonnement ?",
+            "a": "Pro est un achat unique de 9,99 $ sur l'App Store. Pas d'abonnement, pas de frais récurrents. C'est un Universal Purchase : l'acheter une fois débloque Pro sur Mac, iPhone et iPad avec le même identifiant Apple."
+          },
+          {
+            "q": "Après une mise à jour, l'app repasse en Free. Que faire ?",
+            "a": "Ouvrez les Réglages, section Achats, et touchez Restaurer les achats. Cela reconfirme votre achat auprès d'Apple et ne coûte rien. Le cas survient quand le reçu StoreKit ne s'est pas encore rafraîchi au premier lancement après une mise à jour. Un correctif définitif est sur la roadmap ; si la restauration ne suffit pas, écrivez à contact@netmesafe.com avec votre pays App Store."
+          }
+        ]
+      },
+      {
+        "title": "Connexions et profils",
+        "items": [
+          {
+            "q": "Comment importer ma configuration SSH existante ?",
+            "a": "Dans la boîte de dialogue de connexion, utilisez le bouton d'import et choisissez Importer depuis ~/.ssh/config. SSHive analyse les entrées Host, HostName, User, Port, IdentityFile et ProxyJump et crée un profil par hôte, en conservant votre hiérarchie de dossiers. Il importe aussi les exports registry PuTTY, les fichiers Royal TSX .rtsz et les fichiers MobaXterm.ini en clair."
+          },
+          {
+            "q": "Puis-je transférer mes profils sur une autre machine ?",
+            "a": "Oui, de deux façons. Les utilisateurs Pro peuvent activer la sync iCloud optionnelle, qui garde les profils alignés entre Mac, iPhone et iPad via votre propre base iCloud privée. Sinon, exportez un fichier .sshive chiffré protégé par une passphrase (dérivation scrypt et AES-256-GCM) et importez-le sur l'autre appareil."
+          },
+          {
+            "q": "Comment fonctionnent les tunnels SSH ?",
+            "a": "Les tunnels se configurent par profil dans la section Avancé de la boîte de dialogue, et démarrent automatiquement à l'établissement de la connexion. Les forwards locaux (-L) mappent un port de votre machine vers un hôte joignable depuis le serveur. Les forwards distants (-R) et le proxy dynamique SOCKS5 (-D) sont des fonctionnalités Pro sur macOS. Le gratuit inclut un tunnel local."
+          },
+          {
+            "q": "Où sont stockées mes données ?",
+            "a": "Les profils de connexion sont dans le répertoire de support de l'application. Les mots de passe et passphrases de clés privées ne sont jamais stockés à côté : ils vont dans le Trousseau macOS via safeStorage d'Electron, ou dans le Trousseau iOS derrière Face ID ou Touch ID sur iPhone et iPad. Les empreintes d'hôtes sont conservées dans un magasin known-hosts que vous pouvez consulter."
+          }
+        ]
+      },
+      {
+        "title": "IA et automatisation",
+        "items": [
+          {
+            "q": "Claude ou Cursor peuvent-ils piloter mes serveurs via SSHive ?",
+            "a": "Oui, sur macOS. SSHive lance un serveur MCP (Model Context Protocol) local sur 127.0.0.1 port 49422, protégé par un Bearer token, et expose 11 outils couvrant l'exécution de commandes SSH et la gestion complète des fichiers SFTP. Activez-le dans Réglages, MCP : SSHive écrit lui-même la configuration de Claude Code et Cursor, et affiche un bloc à copier-coller pour Claude Desktop. MCP est une fonctionnalité Pro."
+          },
+          {
+            "q": "L'IA peut-elle voir mes mots de passe ou mes clés privées ?",
+            "a": "Non. Le serveur MCP expose les sessions, pas les identifiants. Vos clés, passphrases et configurations d'hôtes restent dans le Trousseau. Un assistant peut lancer une commande sur une session que vous avez déjà ouverte, mais il ne peut pas lire vos secrets, et il n'atteint que les serveurs auxquels vous êtes connecté."
+          },
+          {
+            "q": "Y a-t-il un assistant IA dans le terminal ?",
+            "a": "Oui, sur macOS. Sélectionnez une sortie et demandez à SSHive d'expliquer une erreur, ou posez une question libre. Il utilise votre propre clé API Anthropic Claude, OpenAI ou Google Gemini ; la clé est stockée chiffrée dans le Trousseau et les requêtes partent directement de votre Mac vers le fournisseur choisi. Rien ne transite par nos serveurs."
+          }
+        ]
+      },
+      {
+        "title": "Sécurité et confidentialité",
+        "items": [
+          {
+            "q": "Mes données sont-elles en sécurité ?",
+            "a": "Les identifiants sont chiffrés via le Trousseau du système, l'app valide chaque appel interne, et le renderer tourne en sandbox avec isolation de contexte. Il n'y a ni télémétrie ni analytics dans l'app, et aucun trafic réseau au-delà des connexions SSH, SFTP, RDP et VNC que vous ouvrez. Vous pouvez aussi verrouiller l'app derrière un mot de passe maître."
+          },
+          {
+            "q": "SSHive envoie-t-il quelque chose dans le cloud ?",
+            "a": "Pas sans votre accord. La seule fonctionnalité réseau optionnelle est la sync iCloud, désactivée par défaut, réservée à Pro, et qui utilise votre propre base iCloud privée plutôt qu'un serveur à nous ; les identifiants transitent par un canal séparé chiffré de bout en bout."
+          },
+          {
+            "q": "SSHive vérifie-t-il les clés d'hôtes ?",
+            "a": "Oui. SSHive conserve un magasin known-hosts et vous demande confirmation la première fois qu'il voit un serveur, puis vous alerte si une empreinte change, ce qui vous protège d'une attaque de l'intercepteur. Vous pouvez consulter et supprimer les empreintes enregistrées depuis les réglages."
+          }
+        ]
+      }
+    ]
   },
   "privacy": {
     "title": "Politique de confidentialite",

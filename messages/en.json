@@ -372,26 +372,107 @@
   },
   "docs": {
     "title": "Documentation",
-    "metaDescription": "SSHive documentation and frequently asked questions. Learn how to install, configure, and use SSHive on macOS.",
-    "subtitle": "Frequently asked questions about SSHive.",
-    "faq": {
-      "q1": "How do I install SSHive?",
-      "a1": "You can get SSHive from the Mac App Store. SSHive supports macOS 13 Ventura and later.",
-      "q2": "Is SSHive free?",
-      "a2": "Yes. The free version includes SSH terminal, SFTP file manager, 2 concurrent sessions, and 5 saved profiles. You can optionally upgrade to Pro ($9.99, one-time) for unlimited sessions, RDP, VNC, tunnels, and more.",
-      "q3": "Does SSHive work on Intel Macs?",
-      "a3": "Yes. SSHive on the Mac App Store is a Universal Binary, it runs natively on both Apple Silicon (M1/M2/M3/M4) and Intel x64 Macs.",
-      "q4": "How do I import my SSH config?",
-      "a4": "Go to the connection dialog, click the import button, and select \"Import from ~/.ssh/config\". SSHive will parse your SSH config file and create profiles for each host entry.",
-      "q5": "Is my data secure?",
-      "a5": "Yes. Passwords and private key passphrases are encrypted using the macOS Keychain via Electron's safeStorage API. SSHive has no telemetry, no analytics, and no network calls besides your SSH/SFTP/RDP/VNC connections. All data stays on your machine.",
-      "q6": "How do SSH tunnels work in SSHive?",
-      "a6": "You can configure Local (-L), Remote (-R), and SOCKS5 (-D) tunnels per connection profile. Tunnels start automatically when the SSH connection is established. You can set up to 10 local and 5 remote tunnels per profile.",
-      "q7": "Can I use SSHive with Claude or Cursor?",
-      "a7": "Yes. SSHive includes a built-in MCP (Model Context Protocol) server compatible with Claude Code, Cursor, and Claude Desktop. Setup is copy-paste (or a single CLI command for Claude Code), AI assistants can then execute commands and browse files on your remote servers.",
-      "q8": "Where are my profiles stored?",
-      "a8": "Profiles are stored in ~/Library/Application Support/SSHive/profiles.json. Credentials are stored separately in credentials.json, encrypted via the macOS Keychain. You can export and import profiles using the built-in export feature."
-    }
+    "metaDescription": "SSHive documentation: install on Mac, iPhone and iPad, free vs Pro limits, importing SSH config, tunnels, MCP for Claude and Cursor, and security.",
+    "subtitle": "Install, licensing, connections, AI integration and security, answered.",
+    "sections": [
+      {
+        "title": "Install & platforms",
+        "items": [
+          {
+            "q": "How do I install SSHive?",
+            "a": "SSHive is on the App Store. On a Mac, open the Mac App Store and search for SSHive, or use the download page. On iPhone and iPad, open the App Store. It is a Universal Purchase: buying Pro once covers all three platforms. A direct download is also offered for macOS outside the App Store."
+          },
+          {
+            "q": "Which systems does SSHive support?",
+            "a": "macOS 13 Ventura or later on Mac, iOS 17 or later on iPhone, and iPadOS 17 or later on iPad. The Mac build is a Universal Binary that runs natively on Apple Silicon (M1, M2, M3, M4) and on Intel x64."
+          },
+          {
+            "q": "Do I need an account?",
+            "a": "No. SSHive has no account, no sign-up and no login. Nothing about your servers is sent to us. The app works fully offline apart from the connections you open yourself."
+          },
+          {
+            "q": "Which features are Mac-only?",
+            "a": "The MCP server for AI assistants, broadcast mode, remote (-R) and SOCKS5 (-D) tunnels, jump hosts, the built-in OTP authenticator, shared accounts and session logging are macOS features. SSH, SFTP, RDP, VNC, local tunnels, snippets and the network tools run on all three platforms. The VPN client is specific to iPhone and iPad."
+          }
+        ]
+      },
+      {
+        "title": "Free and Pro",
+        "items": [
+          {
+            "q": "What does the free version include?",
+            "a": "The SSH terminal, the SFTP file manager with uploads up to 10 MB per file, 2 simultaneous sessions, 5 saved profiles, 1 local SSH tunnel (-L), the built-in snippet library plus 3 custom snippets, 3 OTP tokens and the dark theme. There is no trial period and no expiry: the free tier stays free."
+          },
+          {
+            "q": "What does Pro unlock?",
+            "a": "Unlimited sessions and profiles, unlimited SFTP transfer size, RDP and VNC, remote (-R) and SOCKS5 (-D) tunnels, broadcast mode, the MCP server, jump hosts, shared accounts, encrypted profile export and import, session logging, opt-in iCloud sync, unlimited custom snippets and OTP tokens, and every theme."
+          },
+          {
+            "q": "How much is Pro, and is it a subscription?",
+            "a": "Pro is a one-time purchase of $9.99 on the App Store. There is no subscription and no recurring fee. It is a Universal Purchase, so buying it once unlocks Pro on Mac, iPhone and iPad with the same Apple ID."
+          },
+          {
+            "q": "After an update the app says I am back on Free. What do I do?",
+            "a": "Open Settings, go to Purchases, and tap Restore Purchases. This re-confirms your existing purchase with Apple and costs nothing. It happens when the StoreKit receipt has not refreshed yet on the first launch after an update. A permanent fix is on the roadmap; if restoring does not work, email contact@netmesafe.com with your App Store country."
+          }
+        ]
+      },
+      {
+        "title": "Connections & profiles",
+        "items": [
+          {
+            "q": "How do I import my existing SSH config?",
+            "a": "In the connection dialog, use the import button and pick Import from ~/.ssh/config. SSHive parses Host, HostName, User, Port, IdentityFile and ProxyJump entries and creates one profile per host, preserving your folder hierarchy. It also imports PuTTY registry exports, Royal TSX .rtsz files and cleartext MobaXterm.ini files."
+          },
+          {
+            "q": "Can I move my profiles to another machine?",
+            "a": "Yes, two ways. Pro users can turn on opt-in iCloud sync, which keeps profiles in step across Mac, iPhone and iPad through your own private iCloud database. Alternatively, export an encrypted .sshive file protected by a passphrase (scrypt key derivation and AES-256-GCM) and import it on the other device."
+          },
+          {
+            "q": "How do SSH tunnels work?",
+            "a": "Tunnels are configured per profile in the Advanced section of the profile dialog and start automatically when the connection is established. Local forwards (-L) map a port on your machine to a host reachable from the server. Remote forwards (-R) and the SOCKS5 dynamic proxy (-D) are Pro features on macOS. The free tier includes one local tunnel."
+          },
+          {
+            "q": "Where is my data stored?",
+            "a": "Connection profiles live in the application support directory. Passwords and private key passphrases are never stored next to them: they go into the macOS Keychain through Electron's safeStorage, or the iOS Keychain behind Face ID or Touch ID on iPhone and iPad. Host fingerprints are kept in a known-hosts store you can review."
+          }
+        ]
+      },
+      {
+        "title": "AI and automation",
+        "items": [
+          {
+            "q": "Can Claude or Cursor drive my servers through SSHive?",
+            "a": "Yes, on macOS. SSHive runs a local MCP (Model Context Protocol) server on 127.0.0.1 port 49422, protected by a Bearer token, and exposes 11 tools covering SSH command execution and full SFTP file management. Turn it on in Settings, MCP: SSHive writes the configuration for Claude Code and Cursor itself, and shows a copy-paste block for Claude Desktop. MCP is a Pro feature."
+          },
+          {
+            "q": "Can the AI see my passwords or private keys?",
+            "a": "No. The MCP server exposes sessions, not credentials. Your keys, passphrases and host configuration stay in the Keychain. An assistant can run a command on a session you have already opened, but it cannot read your secrets, and it can only reach servers you are currently connected to."
+          },
+          {
+            "q": "Is there an AI assistant inside the terminal?",
+            "a": "Yes, on macOS. Select some output and ask SSHive to explain an error, or ask a free-form question. It uses your own API key for Anthropic Claude, OpenAI or Google Gemini; the key is stored encrypted in the Keychain and requests go straight from your Mac to the provider you picked. Nothing passes through our servers."
+          }
+        ]
+      },
+      {
+        "title": "Security & privacy",
+        "items": [
+          {
+            "q": "Is my data secure?",
+            "a": "Credentials are encrypted through the operating system Keychain, the app validates every internal call, and the renderer runs sandboxed with context isolation. There is no telemetry and no analytics inside the app, and no network traffic beyond the SSH, SFTP, RDP and VNC connections you open. You can also lock the app itself behind a master password."
+          },
+          {
+            "q": "Does SSHive send anything to the cloud?",
+            "a": "Not unless you ask for it. The only optional network feature is iCloud sync, which is off by default, is a Pro feature, and uses your own private iCloud database rather than any server of ours; credentials travel through a separate end-to-end encrypted channel."
+          },
+          {
+            "q": "Does SSHive verify host keys?",
+            "a": "Yes. SSHive keeps a known-hosts store and prompts you the first time it sees a server, then warns you if a fingerprint ever changes, which is what protects you from a man-in-the-middle. You can review and remove stored fingerprints from the settings."
+          }
+        ]
+      }
+    ]
   },
   "privacy": {
     "title": "Privacy Policy",

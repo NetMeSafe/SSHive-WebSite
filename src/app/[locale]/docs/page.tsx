@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { getPageMetadata, isLocale } from '@/lib/seo/alternates';
 
-const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'] as const;
 
 export async function generateMetadata({
   params,
@@ -31,10 +30,11 @@ export default async function DocsPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'docs' });
 
-  const faqItems = FAQ_KEYS.map((key) => ({
-    question: t(`faq.${key}`),
-    answer: t(`faq.a${key.slice(1)}`),
-  }));
+  const sections: { title: string; items: { q: string; a: string }[] }[] =
+    t.raw('sections');
+  const faqItems = sections.flatMap((section) =>
+    section.items.map((item) => ({ question: item.q, answer: item.a })),
+  );
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -72,19 +72,26 @@ export default async function DocsPage({
           {t('subtitle')}
         </p>
 
-        {/* FAQ */}
-        <section className="mt-12 space-y-0 divide-y divide-border">
-          {faqItems.map((item, index) => (
-            <div key={index} className="py-8 first:pt-0 last:pb-0">
-              <h2 className="text-lg font-bold text-foreground">
-                {item.question}
-              </h2>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
-                {item.answer}
-              </p>
+        {/* Sections */}
+        {sections.map((section) => (
+          <section key={section.title} className="mt-14">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground pb-3 border-b border-border">
+              {section.title}
+            </h2>
+            <div className="divide-y divide-border">
+              {section.items.map((item) => (
+                <article key={item.q} className="py-7">
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {item.q}
+                  </h3>
+                  <p className="mt-3 text-muted-foreground leading-relaxed">
+                    {item.a}
+                  </p>
+                </article>
+              ))}
             </div>
-          ))}
-        </section>
+          </section>
+        ))}
       </div>
     </>
   );
