@@ -6,11 +6,18 @@ import { IOS_PAGE_SLUGS } from '@/lib/seo/ios-pages';
 import { INTEGRATION_SLUGS } from '@/lib/seo/integrations';
 import { NETWORK_TOOL_SLUGS } from '@/lib/seo/network-tools';
 
-// /llms.txt — llmstxt.org convention. A curated, plain-markdown map of the
-// site for AI crawlers and answer engines (ChatGPT, Claude, Perplexity...),
-// so they can ground answers about SSHive on canonical URLs instead of
-// third-party summaries. Served statically; English only (LLM lingua franca),
-// each page links its own FR alternate via hreflang.
+// /llms.txt — llmstxt.org convention.
+//
+// Be clear-eyed about what this is: a developer-agent convenience, NOT an SEO
+// asset. Google states verbatim that Search (including AI Overviews and AI
+// Mode) ignores it, no other vendor has ever confirmed reading it, and a
+// 137k-domain log study found 97% of these files receive zero requests. It
+// earns its place here for one honest reason: SSHive's audience are the
+// developers running Claude Code and Cursor, and those agents DO fetch a
+// llms.txt when you hand them a URL. Keep it accurate; do not budget SEO
+// effort against it.
+//
+// English only (each page declares its FR alternate via hreflang).
 export const dynamic = 'force-static';
 
 const WORD_OVERRIDES: Record<string, string> = {

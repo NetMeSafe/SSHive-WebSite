@@ -8,6 +8,10 @@ import { NETWORK_TOOLS } from '@/lib/seo/network-tools';
 /**
  * /llms-full.txt — the long-form companion to /llms.txt.
  *
+ * Naming note: this is a Mintlify convention, not part of the llmstxt.org
+ * spec (which defines llms-ctx.txt / llms-ctx-full.txt). Same caveat as
+ * /llms.txt: it serves coding agents, not search engines.
+ *
  * /llms.txt is a map (links + one-line summaries). This file inlines the
  * substance, so an assistant that fetches exactly one URL still gets the
  * complete, accurate picture instead of stitching together whatever pages it

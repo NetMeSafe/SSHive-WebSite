@@ -131,9 +131,20 @@ export async function generateMetadata({
       'apple-mobile-web-app-status-bar-style': 'black-translucent',
       'apple-mobile-web-app-title': 'SSHive',
     },
+    // Snippet directives are the only documented control over what Google may
+    // use as direct input for AI Overviews and AI Mode, so the posture here is
+    // maximum permissiveness. Never add `noarchive`: Microsoft documents that
+    // it removes a site from Copilot answers entirely.
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-snippet': -1,
+        'max-image-preview': 'large',
+        'max-video-preview': -1,
+      },
     },
   };
 }

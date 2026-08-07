@@ -1,4 +1,10 @@
 import { JsonLd } from './JsonLd';
+
+/**
+ * HowTo markup. Google retired HowTo rich results in 2023, so this buys no
+ * SERP feature either. Kept for the same reason as FAQPage: it makes step
+ * boundaries explicit to a parser at zero cost.
+ */
 import { SITE_URL } from '@/lib/constants';
 
 export interface HowToStep {

@@ -2,9 +2,12 @@ import { JsonLd } from './JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
 /**
- * WebSite schema. Helps Google render a sitelinks searchbox once the site
- * earns enough authority, and consolidates the site identity across hreflang
- * variants by declaring a single inLanguage list.
+ * WebSite schema — site identity, not a rich result.
+ *
+ * It does NOT produce a sitelinks searchbox: Google removed that feature on
+ * 2024-11-21. It is kept because it names the site as one entity across both
+ * hreflang variants and gives an extractor an unambiguous publisher, which is
+ * what actually matters for an assistant trying to attribute a claim.
  */
 export function WebSiteSchema() {
   return (

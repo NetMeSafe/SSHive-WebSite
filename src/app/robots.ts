@@ -2,10 +2,24 @@ import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
 import { SITEMAP_SECTIONS } from '@/lib/seo/sitemap-sections';
 
-// AI/LLM crawlers we explicitly welcome: being cited by ChatGPT, Claude,
-// Perplexity & co. is a distribution channel (generative engine optimization).
-// The `*` rule already allows them, but explicit entries are immune to future
-// tightening of the default rule and act as a clear opt-in signal.
+// Non-content paths. Under RFC 9309 a crawler obeys exactly ONE group — the
+// most specific user-agent match — and ignores `*` entirely, so every named
+// group below has to repeat these or it silently opts that crawler out of
+// them. That is why this list is a shared const rather than inline.
+const COMMON_DISALLOW = [
+  '/api/',
+  // Bait paths bots scan: keep crawlers away so any 404/500 noise around them
+  // never bleeds into the indexable set.
+  '/wp-login.php',
+  '/wp-admin/',
+  '/.env',
+  '/.git/',
+];
+
+// AI crawlers we explicitly welcome. Being readable by them is a distribution
+// channel, but note the honest limit: for Google's AI surfaces, a page must
+// first be indexed and snippet-eligible in ordinary Search, so this file
+// grants access, it does not grant visibility.
 const AI_CRAWLERS = [
   'GPTBot',
   'OAI-SearchBot',
@@ -19,6 +33,7 @@ const AI_CRAWLERS = [
   'Applebot',
   'Applebot-Extended',
   'meta-externalagent',
+  'meta-webindexer',
   'CCBot',
 ];
 
@@ -28,20 +43,15 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        // Only block true non-content. Never disallow rendering resources
-        // (/_next/static/*): Google renders pages and needs CSS/JS/fonts,
-        // and blocked resources degrade the "page experience" evaluation.
-        disallow: [
-          '/api/',
-          // Bait paths bots scan: keep crawlers away from them so any future
-          // 404/500 noise around these doesn't bleed into the indexable set.
-          '/wp-login.php',
-          '/wp-admin/',
-          '/.env',
-          '/.git/',
-        ],
+        // Never disallow rendering resources (/_next/static/*): Google renders
+        // pages and needs the CSS, JS and fonts to evaluate them.
+        disallow: COMMON_DISALLOW,
       },
-      ...AI_CRAWLERS.map((userAgent) => ({ userAgent, allow: '/' })),
+      ...AI_CRAWLERS.map((userAgent) => ({
+        userAgent,
+        allow: '/',
+        disallow: COMMON_DISALLOW,
+      })),
       // Throttle aggressive SEO crawlers
       { userAgent: 'AhrefsBot', crawlDelay: 10 },
       { userAgent: 'SemrushBot', crawlDelay: 10 },
@@ -56,6 +66,5 @@ export default function robots(): MetadataRoute.Robots {
         (s) => `${SITE_URL}/sitemap-${s.id}.xml`,
       ),
     ],
-    host: SITE_URL,
   };
 }
