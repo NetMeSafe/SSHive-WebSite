@@ -4,6 +4,7 @@ import { HOW_TO_SLUGS } from '@/lib/seo/how-tos';
 import { BEST_PAGE_SLUGS } from '@/lib/seo/best-pages';
 import { IOS_PAGE_SLUGS } from '@/lib/seo/ios-pages';
 import { INTEGRATION_SLUGS } from '@/lib/seo/integrations';
+import { NETWORK_TOOL_SLUGS } from '@/lib/seo/network-tools';
 
 // /llms.txt — llmstxt.org convention. A curated, plain-markdown map of the
 // site for AI crawlers and answer engines (ChatGPT, Claude, Perplexity...),
@@ -108,6 +109,13 @@ ${list(HOW_TO_SLUGS, '/how-to')}
 ## Integrations
 
 ${list(INTEGRATION_SLUGS, '/integrations')}
+
+## Network diagnostic tools
+
+Beyond remote access, SSHive ships network diagnostics. Engines differ per platform and the pages say so explicitly: ping is real ICMP only on the macOS direct-download build and a TCP-connect probe elsewhere; traceroute measures real hops only on the macOS direct download and on Windows.
+
+- [Network tools overview](${SITE_URL}/en/network-tools)
+${list(NETWORK_TOOL_SLUGS, '/network-tools')}
 
 ## Optional
 
