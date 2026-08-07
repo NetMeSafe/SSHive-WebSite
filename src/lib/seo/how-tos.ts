@@ -39,7 +39,7 @@ export const HOW_TOS: HowToSEO[] = [
     },
     intro: {
       en: 'An SSH tunnel forwards a network port over an encrypted SSH connection. There are three flavors: Local (`-L`) brings a remote port to your Mac, Remote (`-R`) exposes a Mac port on the remote server, Dynamic SOCKS5 (`-D`) gives you a per-app proxy. This guide covers all three using OpenSSH (built into macOS) and visually using SSHive\'s Tunnels UI, pick whichever fits your workflow. The end result is the same: secure, ephemeral port forwarding without VPN overhead.',
-      fr: 'Un tunnel SSH forwarde un port reseau sur une connexion SSH chiffree. Trois saveurs : Local (`-L`) ramene un port distant sur le Mac, Remote (`-R`) expose un port Mac sur le serveur distant, Dynamic SOCKS5 (`-D`) donne un proxy par app. Ce guide couvre les trois en OpenSSH (integre a macOS) et visuellement dans l\'UI Tunnels de SSHive, choisissez selon votre workflow. Le resultat est le meme : port forwarding sur, ephemere, sans overhead VPN.',
+      fr: 'Un tunnel SSH forwarde un port réseau sur une connexion SSH chiffree. Trois saveurs : Local (`-L`) ramene un port distant sur le Mac, Remote (`-R`) expose un port Mac sur le serveur distant, Dynamic SOCKS5 (`-D`) donne un proxy par app. Ce guide couvre les trois en OpenSSH (integre a macOS) et visuellement dans l\'UI Tunnels de SSHive, choisissez selon votre workflow. Le résultat est le même : port forwarding sur, ephemere, sans overhead VPN.',
     },
     estimatedMinutes: 5,
     steps: [
@@ -54,7 +54,7 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Add a Local forward (-L), the most common case', fr: 'Ajouter un forward Local (-L), le cas le plus courant' },
         text: {
           en: 'Under "Local tunnels" click + Add. Three fields appear inline: Local port (e.g. `5433`, pick something ≥ 1024 to avoid sudo), Remote host (`db.internal`, what the SSH server can reach; use `localhost` if the target runs on the bastion itself), Remote port (`5432`). Save. The tunnel auto-mounts every time you connect to this profile. SSHive binds to 127.0.0.1 by default, no bind-address field exposed, that\'s a deliberate safety choice. Free tier: 1 Local tunnel max. Pro: 10.',
-          fr: 'Sous "Tunnels locaux" cliquez sur + Ajouter. Trois champs apparaissent en ligne : Port local (ex. `5433`, choisissez ≥ 1024 pour eviter sudo), Hote distant (`db.internal`, ce que le serveur SSH peut atteindre ; mettez `localhost` si la cible tourne sur le bastion), Port distant (`5432`). Sauvegardez. Le tunnel se monte automatiquement a chaque connexion sur ce profil. SSHive bind sur 127.0.0.1 par defaut, pas de champ bind-address expose, c\'est un choix securite. Free : 1 tunnel Local max. Pro : 10.',
+          fr: 'Sous "Tunnels locaux" cliquez sur + Ajouter. Trois champs apparaissent en ligne : Port local (ex. `5433`, choisissez ≥ 1024 pour éviter sudo), Hote distant (`db.internal`, ce que le serveur SSH peut atteindre ; mettez `localhost` si la cible tourne sur le bastion), Port distant (`5432`). Sauvegardez. Le tunnel se monte automatiquement a chaque connexion sur ce profil. SSHive bind sur 127.0.0.1 par defaut, pas de champ bind-address expose, c\'est un choix securite. Free : 1 tunnel Local max. Pro : 10.',
         },
       },
       {
@@ -68,7 +68,7 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Read the ⇄ status pill in the bottom bar', fr: 'Lire la pastille ⇄ dans la barre du bas' },
         text: {
           en: 'Once connected, the status bar shows `⇄ N` where N is the number of active tunnels (Local + Remote + SOCKS combined). Click the pill to open the Tunnel Status panel: each tunnel is listed with its type, local port, target and live state, plus a per-tunnel close button. If a tunnel fails to bind (port already in use), the SSH session stays connected and the failure is logged, N just won\'t include that one.',
-          fr: 'Une fois connecte, la barre de statut affiche `⇄ N` ou N est le nombre de tunnels actifs (Local + Distant + SOCKS combines). Cliquez sur la pastille pour ouvrir le panneau Tunnel Status : chaque tunnel y est liste avec son type, port local, cible, etat live, et un bouton de fermeture par tunnel. Si un tunnel echoue a se bind (port deja utilise), la session SSH reste connectee et l\'echec est logge, N ne le compte juste pas.',
+          fr: 'Une fois connecte, la barre de statut affiche `⇄ N` ou N est le nombre de tunnels actifs (Local + Distant + SOCKS combines). Cliquez sur la pastille pour ouvrir le panneau Tunnel Status : chaque tunnel y est liste avec son type, port local, cible, état live, et un bouton de fermeture par tunnel. Si un tunnel echoue a se bind (port déjà utilise), la session SSH reste connectée et l\'échec est logge, N ne le compte juste pas.',
         },
       },
       {
@@ -84,7 +84,7 @@ export const HOW_TOS: HowToSEO[] = [
         question: { en: 'Tunnel dies when my SSH session ends?', fr: 'Le tunnel meurt quand ma session SSH finit ?' },
         answer: {
           en: 'Yes, tunnels live with the SSH connection. In SSHive, enable auto-reconnect on the profile and tunnels reattach automatically when the connection comes back. For long-running tunnels, set `ServerAliveInterval 60` in OpenSSH or use SSHive\'s built-in keepalive (default: 30s).',
-          fr: 'Oui, les tunnels vivent avec la connexion SSH. Dans SSHive, activez l\'auto-reconnect sur le profil et les tunnels se rattachent automatiquement quand la connexion revient. Pour les tunnels longue duree, reglez `ServerAliveInterval 60` en OpenSSH ou utilisez le keepalive integre de SSHive (defaut : 30s).',
+          fr: 'Oui, les tunnels vivent avec la connexion SSH. Dans SSHive, activez l\'auto-reconnect sur le profil et les tunnels se rattachent automatiquement quand la connexion revient. Pour les tunnels longue durée, reglez `ServerAliveInterval 60` en OpenSSH ou utilisez le keepalive integre de SSHive (defaut : 30s).',
         },
       },
       {
@@ -103,20 +103,20 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'ssh-key-mac',
     metaTitle: {
       en: 'How to Generate and Use SSH Keys on a Mac (2026)',
-      fr: 'Comment generer et utiliser des cles SSH sur Mac (2026)',
+      fr: 'Comment generer et utiliser des clés SSH sur Mac (2026)',
     },
     metaDescription: {
       en: 'Generate ed25519 SSH keys on macOS, copy them to remote servers, configure ssh-agent and the Apple Keychain, use them in SSHive, complete 2026 guide.',
-      fr: 'Generez des cles SSH ed25519 sur macOS, copiez-les sur les serveurs distants, configurez ssh-agent et le Trousseau Apple, utilisez-les dans SSHive, guide complet 2026.',
+      fr: 'Generez des clés SSH ed25519 sur macOS, copiez-les sur les serveurs distants, configurez ssh-agent et le Trousseau Apple, utilisez-les dans SSHive, guide complet 2026.',
     },
-    h1: { en: 'How to generate and use SSH keys on a Mac', fr: 'Comment generer et utiliser des cles SSH sur Mac' },
+    h1: { en: 'How to generate and use SSH keys on a Mac', fr: 'Comment generer et utiliser des clés SSH sur Mac' },
     hero: {
       en: 'From `ssh-keygen` to passwordless servers in 5 minutes, covers ed25519, ssh-agent, the Apple Keychain, and SSHive integration.',
-      fr: 'De `ssh-keygen` aux serveurs sans mot de passe en 5 min, couvre ed25519, ssh-agent, le Trousseau Apple et l\'integration SSHive.',
+      fr: 'De `ssh-keygen` aux serveurs sans mot de passe en 5 min, couvre ed25519, ssh-agent, le Trousseau Apple et l\'intégration SSHive.',
     },
     intro: {
       en: 'Password authentication for SSH is a security smell, bots scan port 22 looking for weak passwords 24/7. SSH key authentication replaces "something you know" with "something you have", and once configured, you also stop typing passwords every time you connect. This guide gets you from no keys to a passwordless production server in 5 minutes, using ed25519 (the modern, fast, short keypair) and SSHive\'s built-in key management.',
-      fr: 'L\'auth par mot de passe SSH est un signe de mauvaise securite, les bots scannent le port 22 a la recherche de mots de passe faibles 24/7. L\'auth par cle SSH remplace "ce que vous savez" par "ce que vous avez", et une fois configuree, vous arretez de taper des mots de passe a chaque connexion. Ce guide vous emmene de zero cle a un serveur prod sans mot de passe en 5 min, avec ed25519 (la paire moderne, rapide, courte) et la gestion de cles integree de SSHive.',
+      fr: 'L\'auth par mot de passe SSH est un signe de mauvaise sécurité, les bots scannent le port 22 a la recherche de mots de passe faibles 24/7. L\'auth par clé SSH remplace "ce que vous savez" par "ce que vous avez", et une fois configurée, vous arrêtez de taper des mots de passe a chaque connexion. Ce guide vous emmene de zero clé a un serveur prod sans mot de passe en 5 min, avec ed25519 (la paire moderne, rapide, courte) et la gestion de clés intégrée de SSHive.',
     },
     estimatedMinutes: 5,
     steps: [
@@ -124,35 +124,35 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Generate the keypair (one-time, in any terminal)', fr: 'Generer la paire (une seule fois, dans n\'importe quel terminal)' },
         text: {
           en: 'SSHive does not embed a key generator, keep one source of truth at `~/.ssh/`. Open Terminal.app (or SSHive\'s built-in local terminal via Cmd+T) and run `ssh-keygen -t ed25519 -C "your-email@example.com"`. Press Enter to accept the default path (`~/.ssh/id_ed25519`). Set a passphrase, the macOS Keychain will remember it via SSHive\'s safeStorage so you only type it once.',
-          fr: 'SSHive n\'embarque pas de generateur de cle, on garde une seule source de verite dans `~/.ssh/`. Ouvrez Terminal.app (ou le terminal local de SSHive via Cmd+T) et lancez `ssh-keygen -t ed25519 -C "votre-email@example.com"`. Entree pour accepter le chemin par defaut (`~/.ssh/id_ed25519`). Mettez une passphrase, le Trousseau macOS la retiendra via le safeStorage de SSHive, donc tapee une seule fois.',
+          fr: 'SSHive n\'embarque pas de generateur de clé, on garde une seule source de verite dans `~/.ssh/`. Ouvrez Terminal.app (ou le terminal local de SSHive via Cmd+T) et lancez `ssh-keygen -t ed25519 -C "votre-email@example.com"`. Entrée pour accepter le chemin par defaut (`~/.ssh/id_ed25519`). Mettez une passphrase, le Trousseau macOS la retiendra via le safeStorage de SSHive, donc tapee une seule fois.',
         },
       },
       {
-        name: { en: 'Copy the public key to the server (last time you type the password)', fr: 'Copier la cle publique sur le serveur (derniere fois que vous tapez le mot de passe)' },
+        name: { en: 'Copy the public key to the server (last time you type the password)', fr: 'Copier la clé publique sur le serveur (dernière fois que vous tapez le mot de passe)' },
         text: {
           en: 'Run `ssh-copy-id user@host` and authenticate with the password one last time. The command appends your public key to `~/.ssh/authorized_keys` on the server. From now on the server accepts the key.',
-          fr: 'Lancez `ssh-copy-id user@host` et authentifiez-vous avec le mot de passe une derniere fois. La commande ajoute votre cle publique a `~/.ssh/authorized_keys` sur le serveur. A partir de la, le serveur accepte la cle.',
+          fr: 'Lancez `ssh-copy-id user@host` et authentifiez-vous avec le mot de passe une dernière fois. La commande ajoute votre clé publique a `~/.ssh/authorized_keys` sur le serveur. A partir de la, le serveur accepte la cle.',
         },
       },
       {
-        name: { en: 'Wire the key into a SSHive profile (3 clicks)', fr: 'Brancher la cle dans un profil SSHive (3 clics)' },
+        name: { en: 'Wire the key into a SSHive profile (3 clicks)', fr: 'Brancher la clé dans un profil SSHive (3 clics)' },
         text: {
           en: 'Open the profile dialog. The Authentication block has three radios: Password, Private Key, Agent. Pick **Private Key**. The "Browse" button opens the macOS file picker, navigate to `~/.ssh/id_ed25519`. The selected path appears in a read-only field with a green ✓ if SSHive can read it (or an orange ⚠ if the sandbox needs you to re-pick the file to mint a security-scoped bookmark). Tick "Protected by passphrase" if applicable, type the passphrase once, save.',
-          fr: 'Ouvrez le dialog du profil. Le bloc Authentification a trois radios : Mot de passe, Cle privee, Agent. Choisissez **Cle privee**. Le bouton "Parcourir" ouvre le file picker macOS, naviguez vers `~/.ssh/id_ed25519`. Le chemin selectionne apparait dans un champ read-only avec un ✓ vert si SSHive peut le lire (ou un ⚠ orange si la sandbox demande de re-selectionner le fichier pour creer un security-scoped bookmark). Cochez "Protegee par passphrase" si applicable, tapez la passphrase une fois, sauvegardez.',
+          fr: 'Ouvrez le dialog du profil. Le bloc Authentification a trois radios : Mot de passe, Clé privee, Agent. Choisissez **Clé privee**. Le bouton "Parcourir" ouvre le file picker macOS, naviguez vers `~/.ssh/id_ed25519`. Le chemin selectionne apparait dans un champ read-only avec un ✓ vert si SSHive peut le lire (ou un ⚠ orange si la sandbox demande de re-sélectionner le fichier pour créer un security-scoped bookmark). Cochez "Protégée par passphrase" si applicable, tapez la passphrase une fois, sauvegardez.',
         },
       },
       {
         name: { en: 'Where SSHive stores what, a 4-line summary', fr: 'Ce que SSHive stocke ou, resume en 4 lignes' },
         text: {
           en: 'The key file path lives in `profiles.json` (just a path, in clear). The macOS sandbox bookmark for the file lives in the same JSON as `privateKeyBookmark` (binary). The passphrase lives in macOS Keychain via Electron safeStorage under `${profileId}:passphrase`. The plaintext password (if you used Password auth) lives in safeStorage under `${profileId}`. Touch ID prompt? macOS shows it automatically the first time SSHive\'s safeStorage touches the Keychain, SSHive itself does not call Touch ID directly.',
-          fr: 'Le chemin du fichier de cle vit dans `profiles.json` (juste un chemin, en clair). Le bookmark sandbox macOS vit dans le meme JSON sous `privateKeyBookmark` (binaire). La passphrase vit dans le Trousseau macOS via safeStorage d\'Electron sous `${profileId}:passphrase`. Le mot de passe en clair (si auth Mot de passe) vit dans safeStorage sous `${profileId}`. Prompt Touch ID ? macOS l\'affiche automatiquement la premiere fois que safeStorage de SSHive touche le Trousseau, SSHive lui-meme ne declenche pas Touch ID directement.',
+          fr: 'Le chemin du fichier de clé vit dans `profiles.json` (juste un chemin, en clair). Le bookmark sandbox macOS vit dans le même JSON sous `privateKeyBookmark` (binaire). La passphrase vit dans le Trousseau macOS via safeStorage d\'Electron sous `${profileId}:passphrase`. Le mot de passe en clair (si auth Mot de passe) vit dans safeStorage sous `${profileId}`. Prompt Touch ID ? macOS l\'affiche automatiquement la première fois que safeStorage de SSHive touche le Trousseau, SSHive lui-même ne declenche pas Touch ID directement.',
         },
       },
       {
         name: { en: 'Lock down password auth on the remote', fr: 'Verrouiller l\'auth par mot de passe cote serveur' },
         text: {
           en: 'Once SSHive connects with the key, harden the server: edit `/etc/ssh/sshd_config`, set `PasswordAuthentication no`, reload sshd (`sudo systemctl reload ssh`). Now nothing on that server accepts a password, bots scanning port 22 give up. Note: same auth options work in Free and Pro, there is no Pro gating on password / key / agent.',
-          fr: 'Une fois que SSHive se connecte avec la cle, durcissez le serveur : editez `/etc/ssh/sshd_config`, mettez `PasswordAuthentication no`, reloadez sshd (`sudo systemctl reload ssh`). Plus rien sur ce serveur n\'accepte un mot de passe, les bots qui scannent le port 22 abandonnent. Note : les memes options d\'auth marchent en Free et en Pro, pas de gating Pro sur mot de passe / cle / agent.',
+          fr: 'Une fois que SSHive se connecte avec la clé, durcissez le serveur : editez `/etc/ssh/sshd_config`, mettez `PasswordAuthentication no`, reloadez sshd (`sudo systemctl reload ssh`). Plus rien sur ce serveur n\'accepte un mot de passe, les bots qui scannent le port 22 abandonnent. Note : les mêmes options d\'auth marchent en Free et en Pro, pas de gating Pro sur mot de passe / clé / agent.',
         },
       },
     ],
@@ -161,14 +161,14 @@ export const HOW_TOS: HowToSEO[] = [
         question: { en: 'Should I use RSA, ECDSA, or ed25519?', fr: 'Dois-je utiliser RSA, ECDSA ou ed25519 ?' },
         answer: {
           en: 'ed25519 is the right answer in 2026: faster, shorter, no known cryptographic weaknesses. Use RSA 4096 only when connecting to ancient OpenSSH versions (< 6.5) that don\'t support ed25519. Avoid ECDSA, it has more failure modes than ed25519.',
-          fr: 'ed25519 est la bonne reponse en 2026 : plus rapide, plus court, pas de faiblesse cryptographique connue. Utilisez RSA 4096 uniquement pour vous connecter a des OpenSSH antiques (< 6.5) qui ne supportent pas ed25519. Evitez ECDSA, plus de modes d\'echec qu\'ed25519.',
+          fr: 'ed25519 est la bonne réponse en 2026 : plus rapide, plus court, pas de faiblesse cryptographique connue. Utilisez RSA 4096 uniquement pour vous connecter a des OpenSSH antiques (< 6.5) qui ne supportent pas ed25519. Evitez ECDSA, plus de modes d\'échec qu\'ed25519.',
         },
       },
       {
-        question: { en: 'Where are my SSH keys stored on macOS?', fr: 'Ou sont stockees mes cles SSH sur macOS ?' },
+        question: { en: 'Where are my SSH keys stored on macOS?', fr: 'Ou sont stockées mes clés SSH sur macOS ?' },
         answer: {
           en: 'The keys themselves stay where ssh-keygen puts them, `~/.ssh/`. The passphrase that unlocks an encrypted key is what ends up in the macOS Keychain (via `--apple-use-keychain` or SSHive\'s safeStorage integration). The private key file is yours to back up, losing it locks you out of every server you copied it to.',
-          fr: 'Les cles elles-memes restent ou ssh-keygen les pose, `~/.ssh/`. La passphrase qui deverrouille une cle chiffree finit dans le Trousseau macOS (via `--apple-use-keychain` ou l\'integration safeStorage de SSHive). Le fichier de cle privee est a vous de sauvegarder, le perdre vous bloque hors de chaque serveur sur lequel vous l\'avez copie.',
+          fr: 'Les clés elles-mêmes restent ou ssh-keygen les pose, `~/.ssh/`. La passphrase qui deverrouille une clé chiffrée finit dans le Trousseau macOS (via `--apple-use-keychain` ou l\'intégration safeStorage de SSHive). Le fichier de clé privee est a vous de sauvegarder, le perdre vous bloque hors de chaque serveur sur lequel vous l\'avez copie.',
         },
       },
     ],
@@ -184,16 +184,16 @@ export const HOW_TOS: HowToSEO[] = [
     },
     metaDescription: {
       en: 'How to use SFTP on macOS visually, drag & drop file transfers, remote editing, bulk operations. Free SFTP client with SSH terminal in the same window.',
-      fr: 'Comment utiliser SFTP sur macOS visuellement, transferts drag & drop, edition distante, operations en lot. Client SFTP gratuit avec terminal SSH dans la meme fenetre.',
+      fr: 'Comment utiliser SFTP sur macOS visuellement, transferts drag & drop, edition distante, opérations en lot. Client SFTP gratuit avec terminal SSH dans la même fenetre.',
     },
     h1: { en: 'How to use SFTP on a Mac (drag & drop, free)', fr: 'Comment utiliser SFTP sur Mac (drag & drop, gratuit)' },
     hero: {
       en: 'Drag-and-drop SFTP transfers, remote file editing, bulk ops, in the same window as your SSH terminal. Free.',
-      fr: 'Transferts SFTP drag-and-drop, edition de fichiers distants, operations en lot, dans la meme fenetre que votre terminal SSH. Gratuit.',
+      fr: 'Transferts SFTP drag-and-drop, edition de fichiers distants, opérations en lot, dans la même fenêtre que votre terminal SSH. Gratuit.',
     },
     intro: {
       en: 'SFTP is the file-transfer side of SSH, same auth, same encryption, same connection. macOS doesn\'t ship a graphical SFTP client; the Finder doesn\'t speak it natively (despite what some old tutorials claim). Free options have traditionally been Cyberduck (good but a separate window) or scp from the terminal (functional but slow). SSHive integrates SFTP in the same window as the SSH terminal, drag, drop, edit, save. This guide shows you how.',
-      fr: 'SFTP est le cote transfert de fichiers de SSH, meme auth, meme chiffrement, meme connexion. macOS ne livre pas de client SFTP graphique ; le Finder ne le parle pas nativement (malgre ce que disent certains vieux tutos). Les options gratuites historiques : Cyberduck (bon mais fenetre separee) ou scp depuis le terminal (fonctionnel mais lent). SSHive integre SFTP dans la meme fenetre que le terminal SSH, drag, drop, edit, save. Ce guide vous montre comment.',
+      fr: 'SFTP est le cote transfert de fichiers de SSH, même auth, même chiffrement, même connexion. macOS ne livre pas de client SFTP graphique ; le Finder ne le parle pas nativement (malgre ce que disent certains vieux tutos). Les options gratuites historiques : Cyberduck (bon mais fenêtre séparée) ou scp depuis le terminal (fonctionnel mais lent). SSHive integre SFTP dans la même fenêtre que le terminal SSH, drag, drop, edit, save. Ce guide vous montre comment.',
     },
     estimatedMinutes: 3,
     steps: [
@@ -201,14 +201,14 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Open the SFTP panel next to a live SSH terminal', fr: 'Ouvrir le panneau SFTP a cote du terminal SSH actif' },
         text: {
           en: 'Connect to a profile (the SSH terminal opens). In the terminal toolbar, click the **folder icon** on the right, or hit **Cmd+Shift+F**. The SFTP panel slides in next to the terminal as a split view. Use the layout-toggle button in the same toolbar to switch between horizontal (SFTP left, terminal right) and vertical (SFTP top, terminal bottom). The divider is draggable; double-click it to reset the ratio. To close the panel, hit × in the SFTP nav bar or re-toggle from the toolbar.',
-          fr: 'Connectez-vous a un profil (le terminal SSH s\'ouvre). Dans la toolbar du terminal, cliquez sur l\'**icone dossier** a droite, ou tapez **Cmd+Shift+F**. Le panneau SFTP apparait a cote du terminal en split view. Le bouton toggle layout dans la meme toolbar bascule entre horizontal (SFTP a gauche, terminal a droite) et vertical (SFTP en haut, terminal en bas). Le divider est draggable ; double-clic dessus pour reset le ratio. Pour fermer : × dans la barre de nav SFTP ou re-toggler depuis la toolbar.',
+          fr: 'Connectez-vous a un profil (le terminal SSH s\'ouvre). Dans la toolbar du terminal, cliquez sur l\'**icone dossier** a droite, ou tapez **Cmd+Shift+F**. Le panneau SFTP apparait a cote du terminal en split view. Le bouton toggle layout dans la même toolbar bascule entre horizontal (SFTP a gauche, terminal a droite) et vertical (SFTP en haut, terminal en bas). Le divider est draggable ; double-clic dessus pour reset le ratio. Pour fermer : × dans la barre de nav SFTP ou re-toggler depuis la toolbar.',
         },
       },
       {
         name: { en: 'Drag-and-drop from Finder (whole folders work)', fr: 'Drag-and-drop depuis le Finder (les dossiers entiers marchent)' },
         text: {
           en: 'Drag a file or an entire folder from Finder onto the SFTP panel, the drop overlay highlights and SSHive uploads recursively. Multi-file selections work too. If a file already exists on the remote, a dialog gives you three choices: **Replace / Duplicate** (suffix `(2)`) **/ Skip**. Free tier caps each file at 10 MB (the check happens server-side in `LicenseService.check(\'sftp.upload\')` before the transfer). Pro is unlimited per file. Download capacity is unlimited on both tiers.',
-          fr: 'Glissez un fichier ou un **dossier entier** depuis le Finder sur le panneau SFTP, l\'overlay de drop s\'allume et SSHive upload de facon recursive. Les multi-selections marchent aussi. Si un fichier existe deja cote distant, un dialog propose trois choix : **Remplacer / Dupliquer** (suffixe `(2)`) **/ Ignorer**. En Free, chaque fichier est plafonne a 10 MB (le check passe par `LicenseService.check(\'sftp.upload\')` cote main process avant le transfert). Pro : illimite par fichier. Le download est illimite dans les deux tiers.',
+          fr: 'Glissez un fichier ou un **dossier entier** depuis le Finder sur le panneau SFTP, l\'overlay de drop s\'allume et SSHive upload de facon recursive. Les multi-selections marchent aussi. Si un fichier existe déjà cote distant, un dialog propose trois choix : **Remplacer / Dupliquer** (suffixe `(2)`) **/ Ignorer**. En Free, chaque fichier est plafonne a 10 MB (le check passe par `LicenseService.check(\'sftp.upload\')` cote main process avant le transfert). Pro : illimite par fichier. Le download est illimite dans les deux tiers.',
         },
       },
       {
@@ -219,10 +219,10 @@ export const HOW_TOS: HowToSEO[] = [
         },
       },
       {
-        name: { en: 'Binary files (images, PDFs, archives), download, edit, push back', fr: 'Fichiers binaires (images, PDF, archives), telecharger, editer, repousser' },
+        name: { en: 'Binary files (images, PDFs, archives), download, edit, push back', fr: 'Fichiers binaires (images, PDF, archives), télécharger, editer, repousser' },
         text: {
           en: 'SSHive does not auto-watch binaries opened in external apps, that pattern is fragile across macOS sandbox modes. Instead: double-click a binary → SSHive offers Download (macOS save dialog). Edit it locally with whatever app you want, then drag the modified file back into the SFTP panel. The Replace/Duplicate/Skip dialog appears, pick Replace. Two clicks more than auto-watch, zero surprises.',
-          fr: 'SSHive ne surveille pas automatiquement les binaires ouverts dans des apps externes, ce pattern casse selon les modes sandbox macOS. A la place : double-clic sur un binaire → SSHive propose Telecharger (dialog macOS de sauvegarde). Editez en local avec l\'app que vous voulez, puis re-glissez le fichier modifie dans le panneau SFTP. Le dialog Remplacer/Dupliquer/Ignorer apparait, choisissez Remplacer. Deux clics de plus qu\'un auto-watch, zero surprise.',
+          fr: 'SSHive ne surveille pas automatiquement les binaires ouverts dans des apps externes, ce pattern casse selon les modes sandbox macOS. A la place : double-clic sur un binaire → SSHive propose Télécharger (dialog macOS de sauvegarde). Editez en local avec l\'app que vous voulez, puis re-glissez le fichier modifie dans le panneau SFTP. Le dialog Remplacer/Dupliquer/Ignorer apparait, choisissez Remplacer. Deux clics de plus qu\'un auto-watch, zero surprise.',
         },
       },
       {
@@ -245,7 +245,7 @@ export const HOW_TOS: HowToSEO[] = [
         question: { en: 'How does SSHive compare to Cyberduck for SFTP?', fr: 'Comment SSHive se compare a Cyberduck pour SFTP ?' },
         answer: {
           en: 'For pure SFTP, both are good. Cyberduck supports more protocols (S3, WebDAV, FTP). SSHive\'s win is bundling SFTP with the SSH terminal, you can fix a config and restart the service in the same window. If 95% of your file work is over SSH, SSHive saves a window.',
-          fr: 'Pour le SFTP pur, les deux sont bons. Cyberduck supporte plus de protocoles (S3, WebDAV, FTP). L\'avantage de SSHive : bundler SFTP avec le terminal SSH, vous corrigez une config et redemarrez le service dans la meme fenetre. Si 95% de votre travail fichier est via SSH, SSHive economise une fenetre.',
+          fr: 'Pour le SFTP pur, les deux sont bons. Cyberduck supporte plus de protocoles (S3, WebDAV, FTP). L\'avantage de SSHive : bundler SFTP avec le terminal SSH, vous corrigez une config et redemarrez le service dans la même fenetre. Si 95% de votre travail fichier est via SSH, SSHive economise une fenetre.',
         },
       },
     ],
@@ -261,16 +261,16 @@ export const HOW_TOS: HowToSEO[] = [
     },
     metaDescription: {
       en: 'Connect to Windows desktops or servers from macOS via RDP, built-in SSHive client (no Microsoft Remote Desktop window-juggling), keyboard mapping, clipboard.',
-      fr: 'Connectez-vous a des bureaux ou serveurs Windows depuis macOS via RDP, client SSHive integre (pas de jonglage de fenetres avec Microsoft Remote Desktop), mapping clavier, presse-papiers.',
+      fr: 'Connectez-vous a des bureaux ou serveurs Windows depuis macOS via RDP, client SSHive integre (pas de jonglage de fenêtres avec Microsoft Remote Desktop), mapping clavier, presse-papiers.',
     },
     h1: { en: 'How to RDP from a Mac to a Windows host', fr: 'Comment faire du RDP depuis Mac vers un hote Windows' },
     hero: {
       en: 'Embedded RDP client in macOS, no window-switching to Microsoft Remote Desktop, full keyboard mapping, encrypted via SSH if needed.',
-      fr: 'Client RDP integre dans macOS, pas de switch de fenetre vers Microsoft Remote Desktop, mapping clavier complet, chiffre via SSH si besoin.',
+      fr: 'Client RDP integre dans macOS, pas de switch de fenêtre vers Microsoft Remote Desktop, mapping clavier complet, chiffre via SSH si besoin.',
     },
     intro: {
       en: 'RDP (Remote Desktop Protocol) is Microsoft\'s graphical remote-access protocol. From a Mac, the obvious tool is Microsoft Remote Desktop, works fine, but it lives in its own window away from your terminal and SFTP pane. SSHive includes a built-in RDP client (powered by IronRDP, a Rust implementation of the protocol) that opens RDP sessions as tabs alongside SSH/SFTP, one window for everything.',
-      fr: 'RDP (Remote Desktop Protocol) est le protocole d\'acces distant graphique de Microsoft. Depuis Mac, l\'outil evident est Microsoft Remote Desktop, marche bien, mais vit dans sa propre fenetre loin de votre terminal et panneau SFTP. SSHive inclut un client RDP integre (powered by IronRDP, une implementation Rust du protocole) qui ouvre les sessions RDP en onglets a cote du SSH/SFTP, une fenetre pour tout.',
+      fr: 'RDP (Remote Desktop Protocol) est le protocole d\'accès distant graphique de Microsoft. Depuis Mac, l\'outil evident est Microsoft Remote Desktop, marche bien, mais vit dans sa propre fenêtre loin de votre terminal et panneau SFTP. SSHive inclut un client RDP integre (powered by IronRDP, une implementation Rust du protocole) qui ouvre les sessions RDP en onglets a cote du SSH/SFTP, une fenêtre pour tout.',
     },
     estimatedMinutes: 4,
     steps: [
@@ -278,35 +278,35 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Enable RDP on the Windows host', fr: 'Activer RDP sur l\'hote Windows' },
         text: {
           en: 'Windows: Settings → System → Remote Desktop → toggle Enable. Note the PC name or IP. On Windows Server: Server Manager → Local Server → Remote Desktop → enable. Add your user to the Remote Desktop Users group if you\'re not admin. Port 3389 in the Windows firewall is usually opened automatically by enabling RDP.',
-          fr: 'Windows : Parametres → Systeme → Bureau a distance → toggle Activer. Notez le nom du PC ou l\'IP. Sur Windows Server : Server Manager → Local Server → Remote Desktop → activer. Ajoutez votre user au groupe Remote Desktop Users si pas admin. Le port 3389 dans le firewall Windows est generalement ouvert automatiquement a l\'activation RDP.',
+          fr: 'Windows : Paramètres → Système → Bureau a distance → toggle Activer. Notez le nom du PC ou l\'IP. Sur Windows Server : Server Manager → Local Server → Remote Desktop → activer. Ajoutez votre user au groupe Remote Desktop Users si pas admin. Le port 3389 dans le firewall Windows est généralement ouvert automatiquement a l\'activation RDP.',
         },
       },
       {
-        name: { en: 'Create the RDP profile in SSHive (Pro required)', fr: 'Creer le profil RDP dans SSHive (Pro requis)' },
+        name: { en: 'Create the RDP profile in SSHive (Pro required)', fr: 'Créer le profil RDP dans SSHive (Pro requis)' },
         text: {
           en: 'Sidebar → +. The connection dialog has a **type selector** at the top: SSH | RDP | VNC | Local | Tools. Pick **RDP**, port flips to `3389` automatically. Fill Name, Host, Username, Password (with the "Save" checkbox to put it in macOS Keychain), and the optional **Domain** field for Active Directory (placeholder shows `DOMAIN`). RDP is **Pro-only**: in Free, picking RDP triggers the upgrade modal at save time, it never reaches `LicenseService.check(\'session.rdp\')`.',
-          fr: 'Sidebar → +. Le dialog de connexion a un **selecteur de type** en haut : SSH | RDP | VNC | Local | Outils. Choisissez **RDP**, le port bascule a `3389` automatiquement. Remplissez Nom, Hote, Username, Mot de passe (avec la checkbox "Sauvegarder" pour le mettre dans le Trousseau macOS), et le champ **Domain** optionnel pour Active Directory (placeholder `DOMAIN`). RDP est **Pro uniquement** : en Free, choisir RDP declenche la modal d\'upgrade au save, la requete n\'atteint jamais `LicenseService.check(\'session.rdp\')`.',
+          fr: 'Sidebar → +. Le dialog de connexion a un **selecteur de type** en haut : SSH | RDP | VNC | Local | Outils. Choisissez **RDP**, le port bascule a `3389` automatiquement. Remplissez Nom, Hote, Username, Mot de passe (avec la checkbox "Sauvegarder" pour le mettre dans le Trousseau macOS), et le champ **Domain** optionnel pour Active Directory (placeholder `DOMAIN`). RDP est **Pro uniquement** : en Free, choisir RDP declenche la modal d\'upgrade au save, la requête n\'atteint jamais `LicenseService.check(\'session.rdp\')`.',
         },
       },
       {
-        name: { en: 'Pick a Quality preset and a Resolution, that\'s it', fr: 'Choisir un preset Qualite et une Resolution, c\'est tout' },
+        name: { en: 'Pick a Quality preset and a Resolution, that\'s it', fr: 'Choisir un preset Qualite et une Résolution, c\'est tout' },
         text: {
           en: 'Two visible knobs: **Quality** = Auto (default, adjusts dynamically based on inter-frame latency) / High (95% / 60fps) / Balanced (80% / 60fps) / Low (50% / 15fps). **Resolution** = Auto (matches the SSHive window) / 1280×720 / 1366×768 / 1600×900 / 1920×1080 / 2560×1440 / 3840×2160. Compression (RDP6 + bulk + JPEG via libjpeg-turbo SIMD on Mac App Store builds), bitmap cache, clipboard redirect (bidirectional CLIPRDR), and audio I/O are **on by default and not exposed in the UI**, leave Auto unless you have a measured reason to change.',
-          fr: 'Deux boutons visibles : **Qualite** = Auto (defaut, ajuste dynamiquement selon la latence inter-frame) / High (95% / 60fps) / Balanced (80% / 60fps) / Low (50% / 15fps). **Resolution** = Auto (suit la fenetre SSHive) / 1280×720 / 1366×768 / 1600×900 / 1920×1080 / 2560×1440 / 3840×2160. La compression (RDP6 + bulk + JPEG via libjpeg-turbo SIMD sur les builds Mac App Store), le cache bitmap, le clipboard bidirectionnel (CLIPRDR) et l\'I/O audio sont **actives par defaut et non exposes dans la UI**, laissez Auto sauf raison mesuree.',
+          fr: 'Deux boutons visibles : **Qualite** = Auto (defaut, ajuste dynamiquement selon la latence inter-frame) / High (95% / 60fps) / Balanced (80% / 60fps) / Low (50% / 15fps). **Résolution** = Auto (suit la fenêtre SSHive) / 1280×720 / 1366×768 / 1600×900 / 1920×1080 / 2560×1440 / 3840×2160. La compression (RDP6 + bulk + JPEG via libjpeg-turbo SIMD sur les builds Mac App Store), le cache bitmap, le clipboard bidirectionnel (CLIPRDR) et l\'I/O audio sont **actives par defaut et non exposes dans la UI**, laissez Auto sauf raison mesuree.',
         },
       },
       {
-        name: { en: 'Connect, the window resizes the remote desktop live', fr: 'Connecter, la fenetre redimensionne le bureau distant en live' },
+        name: { en: 'Connect, the window resizes the remote desktop live', fr: 'Connecter, la fenêtre redimensionne le bureau distant en live' },
         text: {
           en: 'Double-click the profile to start the session. SSHive resizes the Windows desktop dynamically as you resize the SSHive window (500ms debounce on the resolution event). Cmd is mapped to Ctrl (Cmd+C → Ctrl+C, etc.); AltGr is mapped for international keyboards. Drive redirect and printer redirect are not available, copy files via SFTP in parallel if needed.',
-          fr: 'Double-clic sur le profil pour demarrer la session. SSHive redimensionne le bureau Windows dynamiquement quand vous redimensionnez la fenetre SSHive (debounce 500ms sur l\'event de resolution). Cmd est mappe sur Ctrl (Cmd+C → Ctrl+C, etc.) ; AltGr est mappe pour les claviers internationaux. La redirection de disque et d\'imprimante n\'est pas dispo, copiez les fichiers via SFTP en parallele si besoin.',
+          fr: 'Double-clic sur le profil pour démarrer la session. SSHive redimensionne le bureau Windows dynamiquement quand vous redimensionnez la fenêtre SSHive (debounce 500ms sur l\'event de résolution). Cmd est mappe sur Ctrl (Cmd+C → Ctrl+C, etc.) ; AltGr est mappe pour les claviers internationaux. La redirection de disque et d\'imprimante n\'est pas dispo, copiez les fichiers via SFTP en parallele si besoin.',
         },
       },
       {
         name: { en: 'Tunnel RDP through SSH if 3389 is not Internet-exposed', fr: 'Tunneliser RDP via SSH si 3389 n\'est pas expose a Internet' },
         text: {
           en: 'There is **no "via jump host" field on the RDP profile itself**, the chaining is done via two profiles. (1) Create the SSH profile of your bastion, add a Local forward `13389 → windows-host:3389` under Advanced. (2) Create the RDP profile pointing at `localhost:13389`. Connect the SSH profile first (the tunnel auto-mounts), then the RDP profile. Never expose 3389 directly, RDP brute-forcing is industrial-scale.',
-          fr: 'Il n\'y a **pas de champ "via jump host" sur le profil RDP**, le chainage se fait via deux profils. (1) Creez le profil SSH de votre bastion, ajoutez un forward Local `13389 → windows-host:3389` dans Avance. (2) Creez le profil RDP pointant sur `localhost:13389`. Connectez d\'abord le profil SSH (le tunnel se monte tout seul), puis le profil RDP. N\'exposez jamais 3389 directement, le brute-force RDP est industriel.',
+          fr: 'Il n\'y a **pas de champ "via jump host" sur le profil RDP**, le chainage se fait via deux profils. (1) Créez le profil SSH de votre bastion, ajoutez un forward Local `13389 → windows-host:3389` dans Avance. (2) Créez le profil RDP pointant sur `localhost:13389`. Connectez d\'abord le profil SSH (le tunnel se monte tout seul), puis le profil RDP. N\'exposez jamais 3389 directement, le brute-force RDP est industriel.',
         },
       },
     ],
@@ -359,33 +359,33 @@ export const HOW_TOS: HowToSEO[] = [
         },
       },
       {
-        name: { en: 'Create the VNC profile in SSHive (Pro required)', fr: 'Creer le profil VNC dans SSHive (Pro requis)' },
+        name: { en: 'Create the VNC profile in SSHive (Pro required)', fr: 'Créer le profil VNC dans SSHive (Pro requis)' },
         text: {
           en: 'Sidebar → +. In the type selector at the top, pick **VNC**, port flips to `5900`. Fill Name, Host, Port, Password. That is the entire VNC form, no domain, no quality preset, no resolution dropdown like RDP. VNC is **Pro-only**: in Free, picking VNC triggers the upgrade modal at save (the check happens in `LicenseService.check(\'session.vnc\')`). All the protocol knobs (encodings, quality, compression) are negotiated automatically.',
-          fr: 'Sidebar → +. Dans le selecteur de type en haut, choisissez **VNC**, le port bascule a `5900`. Remplissez Nom, Hote, Port, Mot de passe. C\'est tout le formulaire VNC, pas de domain, pas de preset qualite, pas de dropdown resolution comme RDP. VNC est **Pro uniquement** : en Free, choisir VNC declenche la modal d\'upgrade au save (le check passe par `LicenseService.check(\'session.vnc\')`). Tous les boutons protocole (encodings, qualite, compression) sont negocies automatiquement.',
+          fr: 'Sidebar → +. Dans le selecteur de type en haut, choisissez **VNC**, le port bascule a `5900`. Remplissez Nom, Hote, Port, Mot de passe. C\'est tout le formulaire VNC, pas de domain, pas de preset qualite, pas de dropdown résolution comme RDP. VNC est **Pro uniquement** : en Free, choisir VNC declenche la modal d\'upgrade au save (le check passe par `LicenseService.check(\'session.vnc\')`). Tous les boutons protocole (encodings, qualite, compression) sont negocies automatiquement.',
         },
       },
       {
         name: { en: 'What runs under the hood, and what is intentionally not exposed', fr: 'Ce qui tourne sous le capot, et ce qui n\'est volontairement pas expose' },
         text: {
           en: 'SSHive\'s VNC client is **noVNC** running RFB 3.x in the renderer, with a WebSocket proxy on a dynamic 127.0.0.1 port (localhost-only, never reachable from the network). Encodings auto-negotiate: Tight, Hextile, RRE, Raw, ZRLE, CopyRect, DesktopSize. Authentication uses the standard RFB password. There is no TLS/RFB-encryption toggle in the UI, encryption is meant to come from the SSH tunnel below (see next step). DesktopSize is enabled, so resizing the SSHive window resizes the remote desktop.',
-          fr: 'Le client VNC de SSHive est **noVNC** qui parle RFB 3.x dans le renderer, avec un proxy WebSocket sur un port dynamique 127.0.0.1 (localhost uniquement, jamais joignable depuis le reseau). Les encodings sont auto-negocies : Tight, Hextile, RRE, Raw, ZRLE, CopyRect, DesktopSize. L\'auth utilise le mot de passe RFB standard. Pas de toggle TLS/RFB-encryption dans la UI, le chiffrement est cense venir du tunnel SSH en dessous (etape suivante). DesktopSize est active, donc redimensionner la fenetre SSHive redimensionne le bureau distant.',
+          fr: 'Le client VNC de SSHive est **noVNC** qui parle RFB 3.x dans le renderer, avec un proxy WebSocket sur un port dynamique 127.0.0.1 (localhost uniquement, jamais joignable depuis le réseau). Les encodings sont auto-negocies : Tight, Hextile, RRE, Raw, ZRLE, CopyRect, DesktopSize. L\'auth utilise le mot de passe RFB standard. Pas de toggle TLS/RFB-encryption dans la UI, le chiffrement est cense venir du tunnel SSH en dessous (étape suivante). DesktopSize est active, donc redimensionner la fenêtre SSHive redimensionne le bureau distant.',
         },
       },
       {
         name: { en: 'Tunnel VNC through SSH (two profiles, no broker logic)', fr: 'Tunneliser VNC via SSH (deux profils, pas de logique broker)' },
         text: {
           en: 'There is **no jump-host field on the VNC profile itself**, same model as RDP. (1) Create your SSH profile, add a Local forward `15900 → localhost:5900` under Advanced. (2) Create the VNC profile pointing at `localhost:15900`. Connect SSH first, then VNC. Plain VNC password authentication is weak; the SSH tunnel is what actually keeps the traffic away from anyone on the network.',
-          fr: 'Il n\'y a **pas de champ jump-host sur le profil VNC**, meme modele que RDP. (1) Creez votre profil SSH, ajoutez un forward Local `15900 → localhost:5900` dans Avance. (2) Creez le profil VNC pointant sur `localhost:15900`. Connectez SSH d\'abord, puis VNC. L\'auth mot de passe VNC seule est faible ; le tunnel SSH est ce qui isole reellement le trafic du reseau.',
+          fr: 'Il n\'y a **pas de champ jump-host sur le profil VNC**, même modèle que RDP. (1) Créez votre profil SSH, ajoutez un forward Local `15900 → localhost:5900` dans Avance. (2) Créez le profil VNC pointant sur `localhost:15900`. Connectez SSH d\'abord, puis VNC. L\'auth mot de passe VNC seule est faible ; le tunnel SSH est ce qui isole reellement le trafic du reseau.',
         },
       },
     ],
     faq: [
       {
-        question: { en: 'Will SSHive work with Apple Screen Sharing on a Mac?', fr: 'SSHive marchera-t-il avec Partage d\'ecran Apple sur Mac ?' },
+        question: { en: 'Will SSHive work with Apple Screen Sharing on a Mac?', fr: 'SSHive marchera-t-il avec Partage d\'écran Apple sur Mac ?' },
         answer: {
           en: 'Yes, Apple\'s vncserver speaks RFB, port 5900. Enable on the target Mac: System Settings → General → Sharing → Screen Sharing. SSHive can connect, though for Apple-to-Apple, the built-in client is still richer (audio, drag-drop).',
-          fr: 'Oui, le vncserver d\'Apple parle RFB, port 5900. Activez sur le Mac cible : Reglages Systeme → General → Partage → Partage d\'ecran. SSHive peut s\'y connecter, bien que pour Mac-Mac, le client integre soit plus riche (audio, drag-drop).',
+          fr: 'Oui, le vncserver d\'Apple parle RFB, port 5900. Activez sur le Mac cible : Réglages Système → Général → Partage → Partage d\'ecran. SSHive peut s\'y connecter, bien que pour Mac-Mac, le client integre soit plus riche (audio, drag-drop).',
         },
       },
     ],
@@ -410,36 +410,36 @@ export const HOW_TOS: HowToSEO[] = [
     },
     intro: {
       en: 'A jump host (bastion) is a single Internet-exposed SSH server through which you reach private hosts in a network. Set up a bastion once, every other server is reachable via it. The OpenSSH way is `ssh -J bastion target` or `ProxyJump bastion` in `~/.ssh/config`. SSHive makes it visual: configure the bastion as a profile, then tag any other profile with "Jump Host: bastion", no config-file editing.',
-      fr: 'Un jump host (bastion) est un serveur SSH expose a Internet via lequel vous atteignez des hotes prives. Configurez un bastion une fois, tous les autres serveurs sont joignables par lui. La maniere OpenSSH : `ssh -J bastion target` ou `ProxyJump bastion` dans `~/.ssh/config`. SSHive le rend visuel : configurez le bastion en profil, puis taggez n\'importe quel autre profil avec "Jump Host : bastion", pas d\'edition de config.',
+      fr: 'Un jump host (bastion) est un serveur SSH expose a Internet via lequel vous atteignez des hotes prives. Configurez un bastion une fois, tous les autres serveurs sont joignables par lui. La manière OpenSSH : `ssh -J bastion target` ou `ProxyJump bastion` dans `~/.ssh/config`. SSHive le rend visuel : configurez le bastion en profil, puis taggez n\'importe quel autre profil avec "Jump Host : bastion", pas d\'edition de config.',
     },
     estimatedMinutes: 3,
     steps: [
       {
-        name: { en: 'Create the bastion profile first (it has no jumps itself)', fr: 'Creer d\'abord le profil bastion (lui n\'a aucun saut)' },
+        name: { en: 'Create the bastion profile first (it has no jumps itself)', fr: 'Créer d\'abord le profil bastion (lui n\'a aucun saut)' },
         text: {
           en: 'Sidebar → + → SSH. Fill the bastion\'s public hostname/IP, port, user, auth (key recommended). The Advanced section is left empty for the bastion, it has no Jump Chain itself. Save and connect once to accept the host key. Reason this matters: SSHive\'s Jump Host UI is **a dropdown that lists existing SSH profiles**, there is no free-text "user@host" field, so the bastion profile must exist before any profile can reference it.',
-          fr: 'Sidebar → + → SSH. Remplissez le hostname/IP public du bastion, port, user, auth (cle recommandee). La section Avance reste vide pour le bastion, il n\'a pas de Jump Chain lui-meme. Sauvegardez et connectez une fois pour accepter la cle hote. Pourquoi c\'est important : l\'UI Jump Host de SSHive est **un dropdown qui liste les profils SSH existants**, pas de champ texte libre "user@host", donc le profil bastion doit exister avant qu\'un autre profil puisse le referencer.',
+          fr: 'Sidebar → + → SSH. Remplissez le hostname/IP public du bastion, port, user, auth (clé recommandee). La section Avance reste vide pour le bastion, il n\'a pas de Jump Chain lui-meme. Sauvegardez et connectez une fois pour accepter la clé hote. Pourquoi c\'est important : l\'UI Jump Host de SSHive est **un dropdown qui liste les profils SSH existants**, pas de champ texte libre "user@host", donc le profil bastion doit exister avant qu\'un autre profil puisse le referencer.',
         },
       },
       {
         name: { en: 'Build the chain on the target profile (Pro only)', fr: 'Construire la chaine sur le profil cible (Pro uniquement)' },
         text: {
           en: 'Create a new SSH profile for the target. Fill its **private** address (as seen from inside the bastion\'s network) and the auth that the target itself accepts. Click **Advanced** → **Jump Chain** block. Click **+ Add hop**, a `<select>` appears listing all your other SSH profiles (filtered to type = ssh, excluding the current one). Pick the bastion. The chain visualizes at the bottom: `bastion → target`. Each hop has up/down/remove buttons. Save. Jump Host is **Pro-only** (`LicenseService.check(\'jumphost\')`); in Free the whole block is greyed and shows the PRO badge.',
-          fr: 'Creez un nouveau profil SSH pour la cible. Remplissez son adresse **privee** (vue depuis le reseau interne du bastion) et l\'auth que la cible accepte. Cliquez **Avance** → bloc **Jump Chain**. Cliquez **+ Ajouter un saut**, un `<select>` apparait listant tous vos autres profils SSH (filtres sur type = ssh, excluant le profil courant). Choisissez le bastion. La chaine se visualise en bas : `bastion → cible`. Chaque saut a des boutons monter/descendre/supprimer. Sauvegardez. Jump Host est **Pro uniquement** (`LicenseService.check(\'jumphost\')`) ; en Free le bloc entier est grise avec le badge PRO.',
+          fr: 'Créez un nouveau profil SSH pour la cible. Remplissez son adresse **privee** (vue depuis le réseau interne du bastion) et l\'auth que la cible accepte. Cliquez **Avance** → bloc **Jump Chain**. Cliquez **+ Ajouter un saut**, un `<select>` apparait listant tous vos autres profils SSH (filtres sur type = ssh, excluant le profil courant). Choisissez le bastion. La chaine se visualise en bas : `bastion → cible`. Chaque saut a des boutons monter/descendre/supprimer. Sauvegardez. Jump Host est **Pro uniquement** (`LicenseService.check(\'jumphost\')`) ; en Free le bloc entier est grise avec le badge PRO.',
         },
       },
       {
         name: { en: 'Each hop carries its own auth, no agent juggling required', fr: 'Chaque saut porte sa propre auth, pas besoin de jongler avec l\'agent' },
         text: {
           en: 'Unlike OpenSSH `ProxyJump` (which needs an agent or matching keys to chain auth), every profile in SSHive\'s chain has its own auth, password / private key / agent / passphrase, and SSHive uses each profile\'s auth as it walks the chain. Bastion uses ed25519, target uses agent-only? Fine. The Forward Agent checkbox in Advanced is a separate toggle: enable it on the bastion only if a *third-party* tool on the bastion needs your local agent (e.g. `git push` from the bastion using your laptop\'s key).',
-          fr: 'Contrairement a OpenSSH `ProxyJump` (qui a besoin d\'un agent ou de cles correspondantes pour chainer l\'auth), chaque profil dans la chaine SSHive a sa propre auth, mot de passe / cle privee / agent / passphrase, et SSHive utilise l\'auth de chaque profil en parcourant la chaine. Bastion en ed25519, cible en agent-only ? Aucun probleme. La checkbox Forward Agent dans Avance est un toggle a part : activez-la sur le bastion uniquement si un outil *tiers* sur le bastion a besoin de votre agent local (ex. `git push` depuis le bastion avec la cle de votre laptop).',
+          fr: 'Contrairement a OpenSSH `ProxyJump` (qui a besoin d\'un agent ou de clés correspondantes pour chainer l\'auth), chaque profil dans la chaine SSHive a sa propre auth, mot de passe / clé privee / agent / passphrase, et SSHive utilise l\'auth de chaque profil en parcourant la chaine. Bastion en ed25519, cible en agent-only ? Aucun probleme. La checkbox Forward Agent dans Avance est un toggle a part : activez-la sur le bastion uniquement si un outil *tiers* sur le bastion a besoin de votre agent local (ex. `git push` depuis le bastion avec la clé de votre laptop).',
         },
       },
       {
         name: { en: 'Multi-hop (up to 5): A → B → C → target', fr: 'Multi-saut (jusqu\'a 5) : A → B → C → cible' },
         text: {
           en: 'Need to chain through more than one bastion? Create profile A (no jump), profile B with Jump Chain `[A]`, profile C with Jump Chain `[A, B]`, order matters. The chain editor accepts up to 5 hops. SFTP and tunnels on the final profile work transparently through every hop in the chain.',
-          fr: 'Besoin de chainer plus d\'un bastion ? Creez le profil A (pas de saut), le profil B avec Jump Chain `[A]`, le profil C avec Jump Chain `[A, B]`, l\'ordre compte. L\'editeur de chaine accepte jusqu\'a 5 sauts. SFTP et tunnels sur le profil final marchent de facon transparente a travers chaque saut de la chaine.',
+          fr: 'Besoin de chainer plus d\'un bastion ? Créez le profil A (pas de saut), le profil B avec Jump Chain `[A]`, le profil C avec Jump Chain `[A, B]`, l\'ordre compte. L\'editeur de chaine accepte jusqu\'a 5 sauts. SFTP et tunnels sur le profil final marchent de facon transparente a travers chaque saut de la chaine.',
         },
       },
     ],
@@ -464,16 +464,16 @@ export const HOW_TOS: HowToSEO[] = [
     },
     metaDescription: {
       en: 'Import existing OpenSSH config (~/.ssh/config) into SSHive: profiles created automatically with hostnames, ports, keys, ProxyJump. Bidirectional sync supported.',
-      fr: 'Importez votre config OpenSSH existante (~/.ssh/config) dans SSHive : profils crees automatiquement avec hostnames, ports, cles, ProxyJump. Sync bidirectionnelle supportee.',
+      fr: 'Importez votre config OpenSSH existante (~/.ssh/config) dans SSHive : profils crees automatiquement avec hostnames, ports, clés, ProxyJump. Sync bidirectionnelle supportee.',
     },
     h1: { en: 'Import ~/.ssh/config into SSHive', fr: 'Importer ~/.ssh/config dans SSHive' },
     hero: {
       en: 'Bring your existing OpenSSH config into SSHive, every Host entry becomes a profile in seconds.',
-      fr: 'Apportez votre config OpenSSH existante dans SSHive, chaque entree Host devient un profil en quelques secondes.',
+      fr: 'Apportez votre config OpenSSH existante dans SSHive, chaque entrée Host devient un profil en quelques secondes.',
     },
     intro: {
       en: 'If you\'ve been using SSH on a Mac for years, you have a `~/.ssh/config` packed with Host entries, bastions, production servers, IoT boxes. SSHive can parse it and turn each Host into a profile, including ProxyJump, IdentityFile, Port, User, and HostName directives. The original file stays untouched, so you can keep using `ssh server-name` from any other terminal in parallel.',
-      fr: 'Si vous utilisez SSH sur Mac depuis des annees, vous avez un `~/.ssh/config` rempli d\'entrees Host, bastions, serveurs prod, boxes IoT. SSHive peut le parser et transformer chaque Host en profil, y compris les directives ProxyJump, IdentityFile, Port, User et HostName. Le fichier original reste intact, vous pouvez continuer a utiliser `ssh server-name` depuis n\'importe quel autre terminal en parallele.',
+      fr: 'Si vous utilisez SSH sur Mac depuis des annees, vous avez un `~/.ssh/config` rempli d\'entrées Host, bastions, serveurs prod, boxes IoT. SSHive peut le parser et transformer chaque Host en profil, y compris les directives ProxyJump, IdentityFile, Port, User et HostName. Le fichier original reste intact, vous pouvez continuer a utiliser `ssh server-name` depuis n\'importe quel autre terminal en parallele.',
     },
     estimatedMinutes: 2,
     steps: [
@@ -488,7 +488,7 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'No preview, silent import + a single toast', fr: 'Pas de previsualisation, import silencieux + un seul toast' },
         text: {
           en: 'There is no "here are X profiles, pick which to import" dialog. The click runs the parse synchronously and shows a toast: ✅ `N profile(s) imported` (or ⚠️ `M duplicate(s) skipped` if applicable). Deduplication is done by `host:port:username`, same triple = silent skip, no merge/overwrite modal.',
-          fr: 'Pas de dialog "voici X profils, choisissez lesquels importer". Le clic lance le parse de facon synchrone et affiche un toast : ✅ `N profil(s) importe(s)` (ou ⚠️ `M doublon(s) ignore(s)` si applicable). La deduplication se fait sur le triple `host:port:username`, meme triple = skip silencieux, pas de modal merge/overwrite.',
+          fr: 'Pas de dialog "voici X profils, choisissez lesquels importer". Le clic lance le parse de facon synchrone et affiche un toast : ✅ `N profil(s) importe(s)` (ou ⚠️ `M doublon(s) ignore(s)` si applicable). La deduplication se fait sur le triple `host:port:username`, même triple = skip silencieux, pas de modal merge/overwrite.',
         },
       },
       {
@@ -502,7 +502,7 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Read-only, SSHive never writes back to ~/.ssh/config', fr: 'Lecture seule, SSHive ne reecrit jamais ~/.ssh/config' },
         text: {
           en: 'Sync is **one-way**: import-only. The original file is untouched, so `ssh hostname` from Terminal still works. If you change `~/.ssh/config` later, re-run the import, duplicates will be skipped, only new entries land. Free tier note: imports are subject to the 5-profile cap. If `~/.ssh/config` has 12 hosts and you\'re on Free, only the first 5 are saved (`ProfileService` truncates at the limit), upgrade to Pro before importing if you need them all.',
-          fr: 'La sync est **a sens unique** : import-only. Le fichier original n\'est pas touche, `ssh hostname` depuis Terminal marche toujours. Si vous modifiez `~/.ssh/config` plus tard, relancez l\'import, les doublons seront skip, seules les nouvelles entrees atterrissent. Note Free : les imports respectent le plafond de 5 profils. Si `~/.ssh/config` a 12 hotes et que vous etes en Free, seuls les 5 premiers sont sauvegardes (`ProfileService` tronque a la limite), passez en Pro avant l\'import si vous les voulez tous.',
+          fr: 'La sync est **a sens unique** : import-only. Le fichier original n\'est pas touche, `ssh hostname` depuis Terminal marche toujours. Si vous modifiez `~/.ssh/config` plus tard, relancez l\'import, les doublons seront skip, seules les nouvelles entrées atterrissent. Note Free : les imports respectent le plafond de 5 profils. Si `~/.ssh/config` a 12 hotes et que vous etes en Free, seuls les 5 premiers sont sauvegardes (`ProfileService` tronque a la limite), passez en Pro avant l\'import si vous les voulez tous.',
         },
       },
     ],
@@ -511,14 +511,14 @@ export const HOW_TOS: HowToSEO[] = [
         question: { en: 'Does SSHive modify my ~/.ssh/config?', fr: 'SSHive modifie-t-il mon ~/.ssh/config ?' },
         answer: {
           en: 'No, read-only. The original file is untouched, so `ssh hostname` from Terminal still works. SSHive\'s profiles are an independent copy. To pick up new edits to `~/.ssh/config`, re-run the import from the sidebar ⋮ menu; duplicates are skipped, only new entries are added.',
-          fr: 'Non, lecture seule. Le fichier original n\'est pas touche, `ssh hostname` depuis Terminal marche toujours. Les profils SSHive sont une copie independante. Pour recuperer de nouvelles edits dans `~/.ssh/config`, relancez l\'import depuis le menu ⋮ de la sidebar ; les doublons sont skip, seules les nouvelles entrees sont ajoutees.',
+          fr: 'Non, lecture seule. Le fichier original n\'est pas touche, `ssh hostname` depuis Terminal marche toujours. Les profils SSHive sont une copie independante. Pour récupérer de nouvelles edits dans `~/.ssh/config`, relancez l\'import depuis le menu ⋮ de la sidebar ; les doublons sont skip, seules les nouvelles entrées sont ajoutees.',
         },
       },
       {
         question: { en: 'Can I export SSHive profiles back to ~/.ssh/config?', fr: 'Puis-je exporter les profils SSHive vers ~/.ssh/config ?' },
         answer: {
           en: 'Not at the moment, SSHive does not write back to `~/.ssh/config`. Pro users have an encrypted export of their profile bundle for backup and team sharing, but that is a SSHive-format file, not OpenSSH config.',
-          fr: 'Pas pour le moment, SSHive ne reecrit pas dans `~/.ssh/config`. Les utilisateurs Pro ont un export chiffre du bundle de profils pour backup et partage en equipe, mais c\'est un fichier au format SSHive, pas une config OpenSSH.',
+          fr: 'Pas pour le moment, SSHive ne reecrit pas dans `~/.ssh/config`. Les utilisateurs Pro ont un export chiffre du bundle de profils pour backup et partage en équipe, mais c\'est un fichier au format SSHive, pas une config OpenSSH.',
         },
       },
     ],
@@ -539,19 +539,19 @@ export const HOW_TOS: HowToSEO[] = [
     h1: { en: 'How to set up a SOCKS5 proxy via SSH on a Mac', fr: 'Comment configurer un proxy SOCKS5 via SSH sur Mac' },
     hero: {
       en: 'Route browser traffic through a remote server, encrypted, untouchable by hotel networks. Free, no VPN service.',
-      fr: 'Routez le trafic navigateur via un serveur distant, chiffre, intouchable par les reseaux d\'hotel. Gratuit, sans service VPN.',
+      fr: 'Routez le trafic navigateur via un serveur distant, chiffre, intouchable par les réseaux d\'hotel. Gratuit, sans service VPN.',
     },
     intro: {
       en: 'SSH\'s `-D` flag turns the connection into a SOCKS5 proxy. Your browser/app sends traffic to `localhost:1080`, SSH forwards it through the encrypted tunnel to the remote server, and the remote server makes the actual outbound request. End result: web traffic appears to come from the remote server\'s IP, encrypted from your Mac all the way to the SSH endpoint. No paid VPN service needed if you have any SSH-accessible server (your home server, a $5 VPS, even a Raspberry Pi at home).',
-      fr: 'Le flag `-D` de SSH transforme la connexion en proxy SOCKS5. Votre navigateur/app envoie le trafic a `localhost:1080`, SSH le forwarde via le tunnel chiffre vers le serveur distant, et le serveur distant fait la requete sortante reelle. Resultat : le trafic web semble venir de l\'IP du serveur distant, chiffre de Mac jusqu\'au endpoint SSH. Pas besoin de service VPN payant si vous avez un serveur SSH-accessible (serveur perso, VPS a 5 $, meme un Raspberry Pi a la maison).',
+      fr: 'Le flag `-D` de SSH transforme la connexion en proxy SOCKS5. Votre navigateur/app envoie le trafic a `localhost:1080`, SSH le forwarde via le tunnel chiffre vers le serveur distant, et le serveur distant fait la requête sortante reelle. Résultat : le trafic web semble venir de l\'IP du serveur distant, chiffre de Mac jusqu\'au endpoint SSH. Pas besoin de service VPN payant si vous avez un serveur SSH-accessible (serveur perso, VPS a 5 $, même un Raspberry Pi a la maison).',
     },
     estimatedMinutes: 3,
     steps: [
       {
-        name: { en: 'Pick (or create) the SSH profile you want to proxy through', fr: 'Choisir (ou creer) le profil SSH a travers lequel proxyfier' },
+        name: { en: 'Pick (or create) the SSH profile you want to proxy through', fr: 'Choisir (ou créer) le profil SSH a travers lequel proxyfier' },
         text: {
           en: 'Any SSH-reachable server works: home server, $5 VPS, even a Raspberry Pi at home. For browsing speed, pick something close to the geography you want to appear from. Make sure `AllowTcpForwarding yes` is set in the remote sshd_config (it usually is by default). In SSHive: Sidebar → + (or right-click an existing profile → Edit) → fill name, host, port, user, auth.',
-          fr: 'N\'importe quel serveur SSH-joignable marche : serveur perso, VPS a 5 $, meme un Raspberry Pi a la maison. Pour la vitesse de navigation, choisissez quelque chose proche de la geographie d\'ou vous voulez apparaitre. Assurez-vous que `AllowTcpForwarding yes` est mis dans le sshd_config distant (c\'est generalement le defaut). Dans SSHive : Sidebar → + (ou clic droit sur un profil existant → Modifier) → remplissez nom, hote, port, user, auth.',
+          fr: 'N\'importe quel serveur SSH-joignable marche : serveur perso, VPS a 5 $, même un Raspberry Pi a la maison. Pour la vitesse de navigation, choisissez quelque chose proche de la geographie d\'ou vous voulez apparaitre. Assurez-vous que `AllowTcpForwarding yes` est mis dans le sshd_config distant (c\'est généralement le defaut). Dans SSHive : Sidebar → + (ou clic droit sur un profil existant → Modifier) → remplissez nom, hote, port, user, auth.',
         },
       },
       {
@@ -565,14 +565,14 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Connect, the proxy auto-starts on 127.0.0.1:1080', fr: 'Connecter, le proxy demarre tout seul sur 127.0.0.1:1080' },
         text: {
           en: 'Double-click the profile. The SSH session goes connected and the SOCKS5 listener auto-starts on `127.0.0.1:1080`. The status bar shows the **⇄** pill, click it to see the SOCKS tunnel listed in the Tunnel Status panel with its live state. Verify from a terminal: `lsof -i :1080` shows the SSH process. Tear down? Disconnect the SSH session, the listener closes with it. No manual cleanup.',
-          fr: 'Double-clic sur le profil. La session SSH passe a connectee et le listener SOCKS5 demarre tout seul sur `127.0.0.1:1080`. La barre de statut affiche la pastille **⇄**, clic pour voir le tunnel SOCKS liste dans le panneau Tunnel Status avec son etat live. Verification depuis un terminal : `lsof -i :1080` montre le process SSH. Pour fermer ? Deconnectez la session SSH, le listener se ferme avec. Pas de cleanup manuel.',
+          fr: 'Double-clic sur le profil. La session SSH passe a connectée et le listener SOCKS5 demarre tout seul sur `127.0.0.1:1080`. La barre de statut affiche la pastille **⇄**, clic pour voir le tunnel SOCKS liste dans le panneau Tunnel Status avec son état live. Vérification depuis un terminal : `lsof -i :1080` montre le process SSH. Pour fermer ? Deconnectez la session SSH, le listener se ferme avec. Pas de cleanup manuel.',
         },
       },
       {
         name: { en: 'Point your browser/OS at the proxy', fr: 'Pointer votre navigateur/OS sur le proxy' },
         text: {
           en: 'Firefox: Preferences → Network Settings → Manual proxy → SOCKS Host `127.0.0.1`, Port `1080`, SOCKS v5, "Proxy DNS when using SOCKS v5" checked. Chrome has no UI; launch with `--proxy-server=socks5://127.0.0.1:1080`. Safari: System Settings → Network → your interface → Proxies → SOCKS Proxy. Visit `whatismyip.com`, your IP should now be the remote server\'s. Routing is per-app on macOS by default; use Proxifier (paid) if you want a system-wide forced routing for non-browser traffic.',
-          fr: 'Firefox : Preferences → Network Settings → Manual proxy → SOCKS Host `127.0.0.1`, Port `1080`, SOCKS v5, "Proxy DNS when using SOCKS v5" coche. Chrome n\'a pas d\'UI ; lancez-le avec `--proxy-server=socks5://127.0.0.1:1080`. Safari : Reglages Systeme → Reseau → votre interface → Proxies → Proxy SOCKS. Visitez `whatismyip.com`, votre IP doit maintenant etre celle du serveur distant. Le routing est par app sur macOS par defaut ; utilisez Proxifier (payant) pour forcer un routing system-wide sur le trafic non-navigateur.',
+          fr: 'Firefox : Préférences → Network Settings → Manual proxy → SOCKS Host `127.0.0.1`, Port `1080`, SOCKS v5, "Proxy DNS when using SOCKS v5" coche. Chrome n\'a pas d\'UI ; lancez-le avec `--proxy-server=socks5://127.0.0.1:1080`. Safari : Réglages Système → Réseau → votre interface → Proxies → Proxy SOCKS. Visitez `whatismyip.com`, votre IP doit maintenant être celle du serveur distant. Le routing est par app sur macOS par defaut ; utilisez Proxifier (payant) pour forcer un routing system-wide sur le trafic non-navigateur.',
         },
       },
     ],
@@ -581,14 +581,14 @@ export const HOW_TOS: HowToSEO[] = [
         question: { en: 'Is SOCKS5 over SSH safe enough on hotel Wi-Fi?', fr: 'SOCKS5 sur SSH est-il assez sur sur Wi-Fi d\'hotel ?' },
         answer: {
           en: 'For browser traffic, yes, the SSH tunnel encrypts everything between your Mac and your remote server. The hotel network sees only one encrypted SSH stream. The remote server\'s onward traffic still uses HTTPS (or not), so SSH alone doesn\'t guarantee end-to-end encryption to every web destination. Use HTTPS-only browser settings as well.',
-          fr: 'Pour le trafic navigateur, oui, le tunnel SSH chiffre tout entre Mac et serveur distant. Le reseau d\'hotel ne voit qu\'un stream SSH chiffre. Le trafic sortant du serveur distant utilise encore HTTPS (ou pas), donc SSH seul ne garantit pas le chiffrement bout-en-bout vers chaque destination web. Utilisez aussi les reglages HTTPS-only du navigateur.',
+          fr: 'Pour le trafic navigateur, oui, le tunnel SSH chiffre tout entre Mac et serveur distant. Le réseau d\'hotel ne voit qu\'un stream SSH chiffre. Le trafic sortant du serveur distant utilise encore HTTPS (ou pas), donc SSH seul ne garantit pas le chiffrement bout-en-bout vers chaque destination web. Utilisez aussi les réglages HTTPS-only du navigateur.',
         },
       },
       {
         question: { en: 'How does SOCKS5 over SSH compare to a real VPN?', fr: 'Comment SOCKS5 sur SSH se compare a un vrai VPN ?' },
         answer: {
           en: 'SOCKS5 is per-app (browser, IRC client, etc.); a VPN is system-wide. SOCKS5 is free if you have any SSH server; a VPN service has a subscription cost. SOCKS5 doesn\'t handle UDP traffic well; a VPN does. For browsing, SOCKS5 is enough; for everything-routed (gaming, streaming, app traffic), use WireGuard or Tailscale.',
-          fr: 'SOCKS5 est par app (navigateur, client IRC, etc.) ; un VPN est system-wide. SOCKS5 est gratuit si vous avez un serveur SSH ; un service VPN a un cout d\'abonnement. SOCKS5 gere mal le trafic UDP ; un VPN si. Pour la navigation, SOCKS5 suffit ; pour tout-route (gaming, streaming, trafic app), utilisez WireGuard ou Tailscale.',
+          fr: 'SOCKS5 est par app (navigateur, client IRC, etc.) ; un VPN est system-wide. SOCKS5 est gratuit si vous avez un serveur SSH ; un service VPN a un cout d\'abonnement. SOCKS5 gère mal le trafic UDP ; un VPN si. Pour la navigation, SOCKS5 suffit ; pour tout-route (gaming, streaming, trafic app), utilisez WireGuard ou Tailscale.',
         },
       },
     ],
@@ -604,7 +604,7 @@ export const HOW_TOS: HowToSEO[] = [
     },
     metaDescription: {
       en: 'Send the same command to many SSH servers simultaneously from macOS, without Ansible. Use SSHive\'s broadcast mode for instant fleet operations.',
-      fr: 'Envoyez la meme commande a plusieurs serveurs SSH simultanement depuis macOS, sans Ansible. Utilisez le mode broadcast de SSHive pour les ops flotte instantanees.',
+      fr: 'Envoyez la même commande a plusieurs serveurs SSH simultanement depuis macOS, sans Ansible. Utilisez le mode broadcast de SSHive pour les ops flotte instantanees.',
     },
     h1: { en: 'Run a command on multiple SSH servers from Mac', fr: 'Lancer une commande sur plusieurs serveurs SSH depuis Mac' },
     hero: {
@@ -613,7 +613,7 @@ export const HOW_TOS: HowToSEO[] = [
     },
     intro: {
       en: 'When you have a fleet of similar servers, sometimes you just need to run `apt update`, `df -h`, or `systemctl status` on all of them at once. Ansible is the right answer for repeatable orchestration, but for ad-hoc one-offs, "I just want to see where each server stands right now", it\'s overkill. SSHive\'s broadcast mode types the same keystrokes into every active SSH session simultaneously, with each output visible in its own pane. No agent, no inventory, no YAML.',
-      fr: 'Quand vous avez une flotte de serveurs similaires, parfois il faut juste lancer `apt update`, `df -h` ou `systemctl status` sur tous d\'un coup. Ansible est la bonne reponse pour l\'orchestration repetee, mais pour les ad-hoc one-offs, "je veux juste voir ou chaque serveur en est maintenant", c\'est excessif. Le mode broadcast de SSHive tape les memes touches dans chaque session SSH active en meme temps, chaque sortie visible dans son panneau. Pas d\'agent, pas d\'inventaire, pas de YAML.',
+      fr: 'Quand vous avez une flotte de serveurs similaires, parfois il faut juste lancer `apt update`, `df -h` ou `systemctl status` sur tous d\'un coup. Ansible est la bonne réponse pour l\'orchestration repetee, mais pour les ad-hoc one-offs, "je veux juste voir ou chaque serveur en est maintenant", c\'est excessif. Le mode broadcast de SSHive tape les mêmes touches dans chaque session SSH active en même temps, chaque sortie visible dans son panneau. Pas d\'agent, pas d\'inventaire, pas de YAML.',
     },
     estimatedMinutes: 2,
     steps: [
@@ -621,7 +621,7 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Open every SSH session you want to hit (Pro required)', fr: 'Ouvrir toutes les sessions SSH que vous voulez toucher (Pro requis)' },
         text: {
           en: 'Connect to every server you care about, each becomes an SSH tab. Broadcast itself is **Pro-only** (`LicenseService.check(\'broadcast\')`). The check is enforced **at every send**, not just when toggling the bar, so even if Free could open the input, the actual command would be blocked. In Free, hitting the shortcut opens the upgrade modal directly.',
-          fr: 'Connectez-vous a chaque serveur concerne, chacun devient un onglet SSH. Broadcast est **Pro uniquement** (`LicenseService.check(\'broadcast\')`). Le check est applique **a chaque envoi**, pas juste au toggle de la barre, donc meme si Free pouvait ouvrir l\'input, la commande effective serait bloquee. En Free, le raccourci ouvre directement la modal d\'upgrade.',
+          fr: 'Connectez-vous a chaque serveur concerne, chacun devient un onglet SSH. Broadcast est **Pro uniquement** (`LicenseService.check(\'broadcast\')`). Le check est applique **a chaque envoi**, pas juste au toggle de la barre, donc même si Free pouvait ouvrir l\'input, la commande effective serait bloquee. En Free, le raccourci ouvre directement la modal d\'upgrade.',
         },
       },
       {
@@ -635,7 +635,7 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Type into the dedicated input, not into a terminal', fr: 'Taper dans l\'input dedie, pas dans un terminal' },
         text: {
           en: 'There is **no Cmd+click multi-select on terminal tabs**. The broadcast bar has its own dedicated input. Type your command there and hit **Enter** (or click "Send"). The command goes to **all** connected SSH sessions simultaneously, there is no per-session checkbox to filter. After sending, a toast confirms: `Broadcast sent, "<command>" → N session(s)`. Each session\'s output appears in its own terminal tab as usual.',
-          fr: 'Il n\'y a **pas de Cmd+clic multi-select sur les onglets terminaux**. La barre broadcast a son propre input dedie. Tapez votre commande dedans et tapez **Entree** (ou cliquez "Envoyer"). La commande part vers **toutes** les sessions SSH connectees en meme temps, pas de checkbox par session pour filtrer. Apres envoi, un toast confirme : `Broadcast envoye, "<commande>" → N session(s)`. La sortie de chaque session apparait dans son onglet terminal comme d\'habitude.',
+          fr: 'Il n\'y a **pas de Cmd+clic multi-select sur les onglets terminaux**. La barre broadcast a son propre input dedie. Tapez votre commande dedans et tapez **Entrée** (ou cliquez "Envoyer"). La commande part vers **toutes** les sessions SSH connectées en même temps, pas de checkbox par session pour filtrer. Après envoi, un toast confirme : `Broadcast envoye, "<commande>" → N session(s)`. La sortie de chaque session apparait dans son onglet terminal comme d\'habitude.',
         },
       },
       {
@@ -658,7 +658,7 @@ export const HOW_TOS: HowToSEO[] = [
         question: { en: 'Should I use broadcast or Ansible?', fr: 'Dois-je utiliser broadcast ou Ansible ?' },
         answer: {
           en: 'Broadcast for one-off, ad-hoc commands you want to see immediately. Ansible for repeatable, idempotent, audited operations. Both have their place, broadcast is faster for "I want to see what version of OpenSSL is on each box right now"; Ansible is better for "deploy this config across the fleet every time we update it".',
-          fr: 'Broadcast pour les commandes one-off, ad-hoc que vous voulez voir immediatement. Ansible pour les operations repetables, idempotentes, auditees. Chacun sa place, broadcast est plus rapide pour "je veux voir quelle version d\'OpenSSL sur chaque box maintenant" ; Ansible est meilleur pour "deploie cette config sur la flotte a chaque mise a jour".',
+          fr: 'Broadcast pour les commandes one-off, ad-hoc que vous voulez voir immediatement. Ansible pour les opérations repetables, idempotentes, auditees. Chacun sa place, broadcast est plus rapide pour "je veux voir quelle version d\'OpenSSL sur chaque box maintenant" ; Ansible est meilleur pour "deploie cette config sur la flotte a chaque mise a jour".',
         },
       },
     ],
@@ -674,24 +674,24 @@ export const HOW_TOS: HowToSEO[] = [
     },
     metaDescription: {
       en: 'Let Claude or Cursor execute commands and read files on your remote SSH servers via SSHive\'s built-in MCP server. One-toggle setup, copy-paste config, local and secure.',
-      fr: 'Laissez Claude ou Cursor executer des commandes et lire des fichiers sur vos serveurs SSH distants via le serveur MCP integre de SSHive. Setup en un toggle, config copier-coller, local et securise.',
+      fr: 'Laissez Claude ou Cursor exécuter des commandes et lire des fichiers sur vos serveurs SSH distants via le serveur MCP integre de SSHive. Setup en un toggle, config copier-coller, local et securise.',
     },
     h1: { en: 'Connect Claude Code or Cursor to SSH via MCP', fr: 'Connecter Claude Code ou Cursor au SSH via MCP' },
     hero: {
       en: 'Let your AI assistant execute commands, read files, and triage incidents directly on your servers, through SSHive\'s built-in MCP server.',
-      fr: 'Laissez votre assistant IA executer des commandes, lire des fichiers et trier les incidents directement sur vos serveurs, via le serveur MCP integre de SSHive.',
+      fr: 'Laissez votre assistant IA exécuter des commandes, lire des fichiers et trier les incidents directement sur vos serveurs, via le serveur MCP integre de SSHive.',
     },
     intro: {
       en: 'MCP (Model Context Protocol) is the open standard Anthropic introduced for AI assistants to talk to local tools. SSHive ships with an MCP server built-in, meaning Claude Code, Cursor, or Claude Desktop can read your active SSH sessions, run commands, and browse SFTP filesystems. The server only listens on localhost, uses Bearer token auth stored in the macOS Keychain, and inherits the permissions of your existing SSH connections. Setup takes 30 seconds.',
-      fr: 'MCP (Model Context Protocol) est le standard ouvert introduit par Anthropic pour que les assistants IA parlent aux outils locaux. SSHive embarque un serveur MCP integre, Claude Code, Cursor ou Claude Desktop peuvent lire vos sessions SSH actives, lancer des commandes et parcourir des filesystems SFTP. Le serveur n\'ecoute que sur localhost, utilise une auth Bearer token stockee dans le Trousseau macOS et herite des permissions de vos connexions SSH existantes. Setup en 30 secondes.',
+      fr: 'MCP (Model Context Protocol) est le standard ouvert introduit par Anthropic pour que les assistants IA parlent aux outils locaux. SSHive embarque un serveur MCP integre, Claude Code, Cursor ou Claude Desktop peuvent lire vos sessions SSH actives, lancer des commandes et parcourir des filesystems SFTP. Le serveur n\'ecoute que sur localhost, utilise une auth Bearer token stockée dans le Trousseau macOS et herite des permissions de vos connexions SSH existantes. Setup en 30 secondes.',
     },
     estimatedMinutes: 3,
     steps: [
       {
-        name: { en: 'Open Settings → MCP and flip the single toggle (Pro required)', fr: 'Ouvrir Parametres → MCP et basculer l\'unique toggle (Pro requis)' },
+        name: { en: 'Open Settings → MCP and flip the single toggle (Pro required)', fr: 'Ouvrir Paramètres → MCP et basculer l\'unique toggle (Pro requis)' },
         text: {
           en: 'Open SSHive Settings, pick **MCP** in the sidebar. The page is dominated by one switch: **"Enable MCP server"**. Toggling ON does three things at once: starts the local HTTP server (default port `49422`, customizable via the port field with the Apply button), generates a Bearer-token UUID stored in `settings.json`, and auto-injects an `mcpServers.sshive` entry into the config files of every detected AI client (`~/.claude.json`, `~/.cursor/mcp.json`, plus Claude Desktop\'s config). Toggle OFF stops the server **and** removes those entries. MCP is **Pro-only**: in Free, the toggle triggers the upgrade modal instead of starting the server.',
-          fr: 'Ouvrez les Parametres SSHive, choisissez **MCP** dans la sidebar. La page est dominee par un seul switch : **"Activer le serveur MCP"**. Basculer ON fait trois choses a la fois : demarre le serveur HTTP local (port par defaut `49422`, customisable via le champ port avec le bouton Appliquer), genere un UUID Bearer-token persiste dans `settings.json`, et auto-injecte une entree `mcpServers.sshive` dans les fichiers de config de chaque client IA detecte (`~/.claude.json`, `~/.cursor/mcp.json`, plus la config Claude Desktop). Basculer OFF arrete le serveur **et** retire ces entrees. MCP est **Pro uniquement** : en Free, le toggle declenche la modal d\'upgrade au lieu de demarrer le serveur.',
+          fr: 'Ouvrez les Paramètres SSHive, choisissez **MCP** dans la sidebar. La page est dominee par un seul switch : **"Activer le serveur MCP"**. Basculer ON fait trois choses a la fois : demarre le serveur HTTP local (port par defaut `49422`, customisable via le champ port avec le bouton Appliquer), genere un UUID Bearer-token persiste dans `settings.json`, et auto-injecte une entrée `mcpServers.sshive` dans les fichiers de config de chaque client IA detecte (`~/.claude.json`, `~/.cursor/mcp.json`, plus la config Claude Desktop). Basculer OFF arrete le serveur **et** retire ces entrees. MCP est **Pro uniquement** : en Free, le toggle declenche la modal d\'upgrade au lieu de démarrer le serveur.',
         },
       },
       {
@@ -705,20 +705,20 @@ export const HOW_TOS: HowToSEO[] = [
         name: { en: 'Connect SSH sessions in SSHive, they become the AI\'s tools', fr: 'Connecter des sessions SSH dans SSHive, elles deviennent les outils de l\'IA' },
         text: {
           en: 'The MCP server only exposes sessions that are **currently connected** in SSHive. Connect to prod, staging or whatever servers you want the AI to reach. The exposed tool surface: `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file` (1 MB max), `sftp_write_file` (in-memory), `sftp_write_file_chunk` (4 MB chunks for big files via base64 append) and `sftp_write_from_local_path` (read a local file → write to remote, zero base64, best for large transfers).',
-          fr: 'Le serveur MCP n\'expose que les sessions **actuellement connectees** dans SSHive. Connectez-vous a prod, staging ou aux serveurs que vous voulez rendre accessibles a l\'IA. La surface d\'outils exposee : `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file` (1 MB max), `sftp_write_file` (en memoire), `sftp_write_file_chunk` (chunks de 4 MB pour gros fichiers via append base64) et `sftp_write_from_local_path` (lit un fichier local → ecrit sur le distant, zero base64, meilleur pour les gros transferts).',
+          fr: 'Le serveur MCP n\'expose que les sessions **actuellement connectées** dans SSHive. Connectez-vous a prod, staging ou aux serveurs que vous voulez rendre accessibles a l\'IA. La surface d\'outils exposee : `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file` (1 MB max), `sftp_write_file` (en memoire), `sftp_write_file_chunk` (chunks de 4 MB pour gros fichiers via append base64) et `sftp_write_from_local_path` (lit un fichier local → ecrit sur le distant, zero base64, meilleur pour les gros transferts).',
         },
       },
       {
         name: { en: 'Restart the AI client and ask away', fr: 'Redemarrer le client IA et demander' },
         text: {
           en: 'Restart Claude Code, Cursor or Claude Desktop so they pick up the new MCP entry. Ask: "run `df -h` on the prod SSH session and flag any volume above 80%". The AI calls `ssh_execute` against your live SSHive session, parses, summarizes, and SSHive logs every tool call so you can audit what happened. To rotate the Bearer token: hit "Regenerate token" in Settings → MCP (a double-click confirmation gives you 4 seconds to back out). Old configs become invalid and SSHive re-writes the new token into the client config files it manages (`~/.claude.json`, `~/.cursor/mcp.json`).',
-          fr: 'Redemarrez Claude Code, Cursor ou Claude Desktop pour qu\'ils prennent en compte la nouvelle entree MCP. Demandez : "lance `df -h` sur la session SSH de prod et signale tout volume au-dessus de 80%". L\'IA appelle `ssh_execute` sur votre session SSHive live, parse, resume, et SSHive logge chaque appel d\'outil pour audit. Pour faire tourner le Bearer token : "Regenerer le token" dans Parametres → MCP (un double-clic de confirmation laisse 4 secondes pour annuler). Les anciennes configs deviennent invalides et SSHive reecrit le nouveau token dans les fichiers de config clients qu\'il gere (`~/.claude.json`, `~/.cursor/mcp.json`).',
+          fr: 'Redemarrez Claude Code, Cursor ou Claude Desktop pour qu\'ils prennent en compte la nouvelle entrée MCP. Demandez : "lance `df -h` sur la session SSH de prod et signale tout volume au-dessus de 80%". L\'IA appelle `ssh_execute` sur votre session SSHive live, parse, resume, et SSHive logge chaque appel d\'outil pour audit. Pour faire tourner le Bearer token : "Regenerer le token" dans Paramètres → MCP (un double-clic de confirmation laisse 4 secondes pour annuler). Les anciennes configs deviennent invalides et SSHive reecrit le nouveau token dans les fichiers de config clients qu\'il gère (`~/.claude.json`, `~/.cursor/mcp.json`).',
         },
       },
     ],
     faq: [
       {
-        question: { en: 'Is the MCP integration safe?', fr: 'L\'integration MCP est-elle sure ?' },
+        question: { en: 'Is the MCP integration safe?', fr: 'L\'intégration MCP est-elle sure ?' },
         answer: {
           en: 'The AI can only do what you can do via the active SSH session, it has no extra privileges. SSHive logs each tool call. The MCP HTTP server binds to `127.0.0.1` only, never reachable from the network. The Bearer token lives in `settings.json` (rotatable from the UI), and the auto-written client configs are mode `0600` (owner read/write only).',
           fr: 'L\'IA ne peut faire que ce que vous pouvez via la session SSH active, pas de privilege supplementaire. SSHive logge chaque appel d\'outil. Le serveur HTTP MCP bind uniquement sur `127.0.0.1`, jamais joignable depuis le reseau. Le Bearer token vit dans `settings.json` (rotatable depuis l\'UI), et les configs clients auto-ecrites sont en mode `0600` (lecture/ecriture proprietaire uniquement).',

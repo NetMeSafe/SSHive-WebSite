@@ -30,6 +30,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li><Link href="/use-cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('useCases')}</Link></li>
               <li><Link href="/how-to" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('howTo')}</Link></li>
+              <li><Link href={'/network-tools' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Outils réseau' : 'Network tools'}</Link></li>
               <li><Link href="/docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('docs')}</Link></li>
               <li><Link href={'/roadmap' as const} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{fr ? 'Roadmap' : 'Roadmap'}</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline">{nav('blog')}</Link></li>

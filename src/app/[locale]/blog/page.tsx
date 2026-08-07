@@ -13,12 +13,19 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'blog' });
 
-  return getPageMetadata({
-    locale,
-    path: '/blog',
-    title: t('title'),
-    description: t('metaDescription'),
-  });
+  return {
+    ...getPageMetadata({
+      locale,
+      path: '/blog',
+      title: t('title'),
+      description: t('metaDescription'),
+    }),
+    // The blog has no articles yet. Indexing a "coming soon" placeholder feeds
+    // Google a thin-content signal on a site already fighting for indexation;
+    // `follow` keeps link equity flowing. Remove this block (and re-add /blog
+    // to sitemap.ts) as soon as the first article ships.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function BlogPage({

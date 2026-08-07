@@ -41,7 +41,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     metaTitle: {
       en: 'Claude Code + SSH, MCP Integration via SSHive (macOS)',
-      fr: 'Claude Code + SSH, Integration MCP via SSHive (macOS)',
+      fr: 'Claude Code + SSH, Intégration MCP via SSHive (macOS)',
     },
     metaDescription: {
       en: 'Connect Claude Code to your live SSH and SFTP sessions through SSHive\'s built-in MCP server. One-shot `claude mcp add` command, 100% local, Bearer-token auth. macOS only.',
@@ -57,21 +57,21 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     intro: {
       en: 'Claude Code is Anthropic\'s CLI and IDE assistant, `claude` in your terminal, plus integrations for VS Code, Cursor and JetBrains. It is great at writing and refactoring code, but until you give it MCP servers, it has no idea what is running on your actual infrastructure. SSHive\'s built-in MCP server bridges that gap on macOS: every SSH and SFTP session you have open in SSHive becomes a tool Claude can call, with the same credentials, the same jump-host chain, the same Keychain protection. No new authentication, no separate session pool, Claude reuses what you already have.\n\nThe MCP server runs on `127.0.0.1` only, with a random Bearer token regenerated on every SSHive launch. Nothing leaves your machine. Note: MCP is a macOS-only feature because it needs an always-on local HTTP server that iOS background restrictions prevent.',
-      fr: 'Claude Code est l\'assistant CLI et IDE d\'Anthropic, `claude` dans votre terminal, plus des integrations pour VS Code, Cursor et JetBrains. Il est tres bon pour ecrire et refactorer du code, mais tant que vous ne lui donnez pas de serveurs MCP, il n\'a aucune idee de ce qui tourne sur votre vraie infrastructure. Le serveur MCP integre de SSHive comble ce gap sur macOS : chaque session SSH et SFTP ouverte dans SSHive devient un outil que Claude peut appeler, avec les memes credentials, la meme chaine de jump-host, la meme protection Trousseau. Pas de nouvelle auth, pas de pool de sessions separe, Claude reutilise ce que vous avez deja.\n\nLe serveur MCP tourne sur `127.0.0.1` uniquement, avec un Bearer token aleatoire regenere a chaque lancement de SSHive. Rien ne quitte votre machine. Note : MCP est une feature macOS uniquement parce qu\'il faut un serveur HTTP local toujours actif, ce que les restrictions de background iOS empechent.',
+      fr: 'Claude Code est l\'assistant CLI et IDE d\'Anthropic, `claude` dans votre terminal, plus des intégrations pour VS Code, Cursor et JetBrains. Il est très bon pour écrire et refactorer du code, mais tant que vous ne lui donnez pas de serveurs MCP, il n\'a aucune idee de ce qui tourne sur votre vraie infrastructure. Le serveur MCP integre de SSHive comble ce gap sur macOS : chaque session SSH et SFTP ouverte dans SSHive devient un outil que Claude peut appeler, avec les mêmes credentials, la même chaine de jump-host, la même protection Trousseau. Pas de nouvelle auth, pas de pool de sessions separe, Claude reutilise ce que vous avez deja.\n\nLe serveur MCP tourne sur `127.0.0.1` uniquement, avec un Bearer token aleatoire regenere a chaque lancement de SSHive. Rien ne quitte votre machine. Note : MCP est une feature macOS uniquement parce qu\'il faut un serveur HTTP local toujours actif, ce que les restrictions de background iOS empechent.',
     },
     steps: [
       {
         title: { en: 'Enable the MCP server in SSHive', fr: 'Activez le serveur MCP dans SSHive' },
         body: {
           en: 'Open SSHive on macOS, go to Settings → MCP, toggle "Enable MCP server". A random Bearer token appears just below, copy it. The server is now listening on `http://127.0.0.1:49422/mcp`.',
-          fr: 'Ouvrez SSHive sur macOS, allez dans Reglages → MCP, activez "Enable MCP server". Un Bearer token aleatoire apparait juste en dessous, copiez-le. Le serveur ecoute sur `http://127.0.0.1:49422/mcp`.',
+          fr: 'Ouvrez SSHive sur macOS, allez dans Réglages → MCP, activez "Enable MCP server". Un Bearer token aleatoire apparait juste en dessous, copiez-le. Le serveur ecoute sur `http://127.0.0.1:49422/mcp`.',
         },
       },
       {
         title: { en: 'Run the one-shot `claude mcp add` command', fr: 'Lancez la commande one-shot `claude mcp add`' },
         body: {
           en: 'In your terminal, paste the command SSHive shows you in the same Settings panel. It tears down any old `sshive` MCP entry and registers the new one in `~/.claude.json` in a single step.',
-          fr: 'Dans votre terminal, collez la commande que SSHive affiche dans le meme panneau Reglages. Elle supprime toute ancienne entree `sshive` et enregistre la nouvelle dans `~/.claude.json` en une etape.',
+          fr: 'Dans votre terminal, collez la commande que SSHive affiche dans le même panneau Reglages. Elle supprime toute ancienne entrée `sshive` et enregistre la nouvelle dans `~/.claude.json` en une etape.',
         },
         code: 'claude mcp remove sshive --scope user 2>/dev/null; claude mcp add --transport http --scope user sshive http://127.0.0.1:49422/mcp --header "Authorization:Bearer <your-token>"',
       },
@@ -86,7 +86,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         title: { en: 'Open the SSH sessions you want Claude to see', fr: 'Ouvrez les sessions SSH que vous voulez exposer' },
         body: {
           en: 'Claude only sees sessions that are actually connected in SSHive. Open the prod, staging, db-master profiles you want, Claude can now `ssh_list_sessions` to discover them and `ssh_execute` to run commands. Sessions you close vanish from Claude\'s tools.',
-          fr: 'Claude ne voit que les sessions reellement connectees dans SSHive. Ouvrez les profils prod, staging, db-master que vous voulez, Claude peut ensuite faire `ssh_list_sessions` pour les decouvrir et `ssh_execute` pour lancer des commandes. Les sessions fermees disparaissent des outils de Claude.',
+          fr: 'Claude ne voit que les sessions reellement connectées dans SSHive. Ouvrez les profils prod, staging, db-master que vous voulez, Claude peut ensuite faire `ssh_list_sessions` pour les decouvrir et `ssh_execute` pour lancer des commandes. Les sessions fermees disparaissent des outils de Claude.',
         },
       },
     ],
@@ -112,7 +112,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         },
         behaviour: {
           en: 'Claude calls `sftp_list` on `/etc/nginx/sites-enabled/`, then `sftp_read_file` on each entry, summarizes server blocks and listed domains.',
-          fr: 'Claude appelle `sftp_list` sur `/etc/nginx/sites-enabled/`, puis `sftp_read_file` sur chaque entree, resume les blocs server et les domaines listes.',
+          fr: 'Claude appelle `sftp_list` sur `/etc/nginx/sites-enabled/`, puis `sftp_read_file` sur chaque entrée, resume les blocs server et les domaines listes.',
         },
       },
       {
@@ -122,7 +122,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         },
         behaviour: {
           en: 'Claude `sftp_read_file`s the log, finds the error stanza, correlates with the previous successful entry, and proposes the likely root cause in plain English.',
-          fr: 'Claude `sftp_read_file` le log, trouve la stanza d\'erreur, la correle avec l\'entree reussie precedente, et propose la cause racine probable en clair.',
+          fr: 'Claude `sftp_read_file` le log, trouve la stanza d\'erreur, la correle avec l\'entrée reussie precedente, et propose la cause racine probable en clair.',
         },
       },
     ],
@@ -130,11 +130,11 @@ export const INTEGRATIONS: IntegrationSEO[] = [
       {
         question: {
           en: 'Does Claude see my SSH private keys?',
-          fr: 'Claude voit-il mes cles privees SSH ?',
+          fr: 'Claude voit-il mes clés privees SSH ?',
         },
         answer: {
           en: 'No. SSHive\'s MCP server exposes the *sessions*, not the credentials. Your keys, passphrases, and host configs stay inside SSHive\'s Keychain entries. Claude can call `ssh_execute` on a connected session, but it cannot ask for your private key.',
-          fr: 'Non. Le serveur MCP de SSHive expose les *sessions*, pas les credentials. Vos cles, passphrases et configs d\'hote restent dans les entrees Trousseau de SSHive. Claude peut appeler `ssh_execute` sur une session connectee, mais il ne peut pas demander votre cle privee.',
+          fr: 'Non. Le serveur MCP de SSHive expose les *sessions*, pas les credentials. Vos clés, passphrases et configs d\'hote restent dans les entrées Trousseau de SSHive. Claude peut appeler `ssh_execute` sur une session connectée, mais il ne peut pas demander votre clé privee.',
         },
       },
       {
@@ -150,11 +150,11 @@ export const INTEGRATIONS: IntegrationSEO[] = [
       {
         question: {
           en: 'Can Claude write files to my servers via SFTP?',
-          fr: 'Claude peut-il ecrire des fichiers sur mes serveurs via SFTP ?',
+          fr: 'Claude peut-il écrire des fichiers sur mes serveurs via SFTP ?',
         },
         answer: {
           en: 'Yes, if you let it, the `sftp_write_file`, `sftp_write_file_chunk` and `sftp_write_from_local_path` tools are exposed. Claude will ask you to confirm before writing if your Claude Code permission profile is set to require approval. You can also disable individual tools in SSHive Settings → MCP.',
-          fr: 'Oui si vous l\'autorisez, les outils `sftp_write_file`, `sftp_write_file_chunk` et `sftp_write_from_local_path` sont exposes. Claude demande confirmation avant d\'ecrire si le profil de permission Claude Code l\'exige. Vous pouvez aussi desactiver des outils individuellement dans Reglages → MCP.',
+          fr: 'Oui si vous l\'autorisez, les outils `sftp_write_file`, `sftp_write_file_chunk` et `sftp_write_from_local_path` sont exposes. Claude demande confirmation avant d\'écrire si le profil de permission Claude Code l\'exige. Vous pouvez aussi desactiver des outils individuellement dans Réglages → MCP.',
         },
       },
       {
@@ -174,7 +174,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     why: {
       en: 'Claude Code does its best work when it has real context. Without MCP, you spend half the session pasting `docker ps` output back and forth, summarizing log files for Claude, copy-pasting config blocks one screenful at a time. SSHive\'s MCP server collapses that loop: Claude calls the tool, gets the live output, reasons over it, suggests a fix. The fix lands faster, the conversation stays terse, and your hands stop translating between two terminals.\n\nWhat is unique about SSHive vs other ways of giving Claude SSH access:\n\n• It uses sessions you already have open. Other approaches require you to give Claude raw SSH credentials, which means the credentials end up in the model\'s context, which is a security risk for any non-toy fleet. SSHive instead exposes *your existing authenticated sessions*, Claude never sees the key material, only the side effect of running commands.\n\n• It runs locally. Some "SSH for AI" tools spin up a cloud relay so the model can reach your servers through their infrastructure. SSHive\'s MCP server is bound to `127.0.0.1`, your traffic never leaves your Mac.\n\n• It survives across model versions. The MCP standard is Anthropic\'s, and Claude Code, Cursor, Claude Desktop and an increasing number of other clients implement it. The same SSHive MCP server works with all of them without per-client configuration drift.',
-      fr: 'Claude Code donne le meilleur quand il a du vrai contexte. Sans MCP, vous passez la moitie de la session a copier-coller la sortie de `docker ps` aller-retour, a resumer des fichiers de log pour Claude, a copier-coller des blocs de config un ecran a la fois. Le serveur MCP de SSHive ecrase cette boucle : Claude appelle l\'outil, recupere la sortie live, raisonne dessus, propose un fix. Le fix arrive plus vite, la conversation reste concise, et vos mains arretent de traduire entre deux terminaux.\n\nCe qui est unique a SSHive vs d\'autres facons de donner du SSH a Claude :\n\n• Il utilise les sessions deja ouvertes. Les autres approches obligent a donner a Claude des credentials SSH bruts, ce qui les fait atterrir dans le contexte du modele, risque securite pour toute flotte non-jouet. SSHive expose plutot *vos sessions deja authentifiees*, Claude ne voit jamais le materiel cle, seulement l\'effet de bord des commandes.\n\n• Il tourne en local. Certains outils "SSH pour IA" montent un relais cloud pour que le modele atteigne vos serveurs via leur infra. Le serveur MCP de SSHive est lie a `127.0.0.1`, votre trafic ne quitte jamais votre Mac.\n\n• Il survit aux versions de modeles. Le standard MCP est d\'Anthropic, et Claude Code, Cursor, Claude Desktop et un nombre croissant d\'autres clients l\'implementent. Le meme serveur MCP de SSHive marche avec tous, sans drift de config par client.',
+      fr: 'Claude Code donne le meilleur quand il a du vrai contexte. Sans MCP, vous passez la moitie de la session a copier-coller la sortie de `docker ps` aller-retour, a resumer des fichiers de log pour Claude, a copier-coller des blocs de config un écran a la fois. Le serveur MCP de SSHive ecrase cette boucle : Claude appelle l\'outil, recupere la sortie live, raisonne dessus, propose un fix. Le fix arrive plus vite, la conversation reste concise, et vos mains arretent de traduire entre deux terminaux.\n\nCe qui est unique a SSHive vs d\'autres facons de donner du SSH a Claude :\n\n• Il utilise les sessions déjà ouvertes. Les autres approches obligent a donner a Claude des credentials SSH bruts, ce qui les fait atterrir dans le contexte du modèle, risque sécurité pour toute flotte non-jouet. SSHive expose plutot *vos sessions déjà authentifiees*, Claude ne voit jamais le materiel clé, seulement l\'effet de bord des commandes.\n\n• Il tourne en local. Certains outils "SSH pour IA" montent un relais cloud pour que le modèle atteigne vos serveurs via leur infra. Le serveur MCP de SSHive est lie a `127.0.0.1`, votre trafic ne quitte jamais votre Mac.\n\n• Il survit aux versions de modeles. Le standard MCP est d\'Anthropic, et Claude Code, Cursor, Claude Desktop et un nombre croissant d\'autres clients l\'implementent. Le même serveur MCP de SSHive marche avec tous, sans drift de config par client.',
     },
   },
   /* ────────────────────────────────────────────────────────────────────
@@ -189,11 +189,11 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     metaTitle: {
       en: 'Cursor + SSH, MCP Integration via SSHive (macOS)',
-      fr: 'Cursor + SSH, Integration MCP via SSHive (macOS)',
+      fr: 'Cursor + SSH, Intégration MCP via SSHive (macOS)',
     },
     metaDescription: {
       en: 'Give Cursor access to your live SSH and SFTP sessions through SSHive\'s built-in MCP server. JSON config snippet, 100% local, Bearer-token auth. macOS only.',
-      fr: 'Donnez a Cursor l\'acces a vos sessions SSH et SFTP via le serveur MCP integre de SSHive. Snippet JSON, 100 % local, auth Bearer token. macOS uniquement.',
+      fr: 'Donnez a Cursor l\'accès a vos sessions SSH et SFTP via le serveur MCP integre de SSHive. Snippet JSON, 100 % local, auth Bearer token. macOS uniquement.',
     },
     h1: {
       en: 'Cursor + SSH through SSHive\'s MCP server',
@@ -205,21 +205,21 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     intro: {
       en: 'Cursor is a VS Code fork built around AI-assisted coding, Cmd+K for inline edits, Cmd+L for chat, agent mode for multi-step refactors. Its MCP support lets external tool servers expose capabilities the model can call. SSHive\'s MCP server gives Cursor seven tools: list active SSH sessions, run SSH commands, browse and read/write files over SFTP, and stream large file uploads without base64 overhead. All scoped to sessions you have actively open in SSHive, all authenticated through the macOS Keychain, all running on `127.0.0.1` only.\n\nThe pairing is most useful when Cursor is editing code that depends on remote state, a Dockerfile that needs the host\'s actual `apt list --installed`, an nginx config that has to match the deployed version, a database migration that needs to know what tables actually exist. Instead of guessing or asking you to paste, Cursor asks the SSHive MCP server.',
-      fr: 'Cursor est un fork de VS Code construit autour du coding assiste par IA, Cmd+K pour les edits inline, Cmd+L pour le chat, mode agent pour les refactors multi-etapes. Son support MCP laisse des serveurs d\'outils externes exposer des capacites que le modele peut appeler. Le serveur MCP de SSHive donne a Cursor sept outils : lister les sessions SSH actives, lancer des commandes SSH, parcourir et lire/ecrire des fichiers en SFTP, et streamer les gros uploads sans overhead base64. Tout cible aux sessions actives dans SSHive, tout authentifie via le Trousseau macOS, tout sur `127.0.0.1` uniquement.\n\nLa paire est la plus utile quand Cursor edite du code qui depend d\'etat distant, un Dockerfile qui a besoin du vrai `apt list --installed` de l\'hote, une config nginx qui doit matcher la version deployee, une migration de base qui doit savoir quelles tables existent. Au lieu de deviner ou de vous demander de coller, Cursor demande au serveur MCP de SSHive.',
+      fr: 'Cursor est un fork de VS Code construit autour du coding assiste par IA, Cmd+K pour les edits inline, Cmd+L pour le chat, mode agent pour les refactors multi-etapes. Son support MCP laisse des serveurs d\'outils externes exposer des capacites que le modèle peut appeler. Le serveur MCP de SSHive donne a Cursor sept outils : lister les sessions SSH actives, lancer des commandes SSH, parcourir et lire/ecrire des fichiers en SFTP, et streamer les gros uploads sans overhead base64. Tout cible aux sessions actives dans SSHive, tout authentifie via le Trousseau macOS, tout sur `127.0.0.1` uniquement.\n\nLa paire est la plus utile quand Cursor edite du code qui depend d\'état distant, un Dockerfile qui a besoin du vrai `apt list --installed` de l\'hote, une config nginx qui doit matcher la version deployee, une migration de base qui doit savoir quelles tables existent. Au lieu de deviner ou de vous demander de coller, Cursor demande au serveur MCP de SSHive.',
     },
     steps: [
       {
         title: { en: 'Enable the MCP server in SSHive', fr: 'Activez le serveur MCP dans SSHive' },
         body: {
           en: 'Open SSHive on macOS, Settings → MCP, toggle "Enable MCP server". Copy the Bearer token displayed below.',
-          fr: 'Ouvrez SSHive sur macOS, Reglages → MCP, activez "Enable MCP server". Copiez le Bearer token affiche.',
+          fr: 'Ouvrez SSHive sur macOS, Réglages → MCP, activez "Enable MCP server". Copiez le Bearer token affiche.',
         },
       },
       {
-        title: { en: 'Open Cursor\'s MCP settings', fr: 'Ouvrez les reglages MCP de Cursor' },
+        title: { en: 'Open Cursor\'s MCP settings', fr: 'Ouvrez les réglages MCP de Cursor' },
         body: {
           en: 'In Cursor: Cmd+Shift+J → Cursor Settings → MCP. Click "Add new MCP server" and paste the JSON snippet from SSHive\'s MCP settings panel (replace `<your-token>` with the actual Bearer token).',
-          fr: 'Dans Cursor : Cmd+Shift+J → Cursor Settings → MCP. Cliquez "Add new MCP server" et collez le snippet JSON depuis le panneau Reglages MCP de SSHive (remplacez `<your-token>` par le vrai Bearer token).',
+          fr: 'Dans Cursor : Cmd+Shift+J → Cursor Settings → MCP. Cliquez "Add new MCP server" et collez le snippet JSON depuis le panneau Réglages MCP de SSHive (remplacez `<your-token>` par le vrai Bearer token).',
         },
         code: `{
   "mcpServers": {
@@ -244,7 +244,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         title: { en: 'Open SSH sessions to expose', fr: 'Ouvrez les sessions SSH a exposer' },
         body: {
           en: 'In SSHive, connect to the servers you want Cursor to see (Cursor only sees connected sessions). Now in Cursor chat, ask: "What containers are running on prod?", Cursor calls `ssh_list_sessions`, picks prod, runs `docker ps`, replies.',
-          fr: 'Dans SSHive, connectez-vous aux serveurs que vous voulez exposer a Cursor (Cursor ne voit que les sessions connectees). Dans le chat Cursor, demandez : « Quels conteneurs tournent sur prod ? », Cursor appelle `ssh_list_sessions`, choisit prod, lance `docker ps`, repond.',
+          fr: 'Dans SSHive, connectez-vous aux serveurs que vous voulez exposer a Cursor (Cursor ne voit que les sessions connectées). Dans le chat Cursor, demandez : « Quels conteneurs tournent sur prod ? », Cursor appelle `ssh_list_sessions`, choisit prod, lance `docker ps`, repond.',
         },
       },
     ],
@@ -280,7 +280,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         },
         behaviour: {
           en: 'Cursor calls `ssh_execute` with `docker logs -f api-gateway 2>&1 | head -200`, scans for 500-status entries, summarizes the stack trace.',
-          fr: 'Cursor appelle `ssh_execute` avec `docker logs -f api-gateway 2>&1 | head -200`, scanne les entrees 500, resume la stack trace.',
+          fr: 'Cursor appelle `ssh_execute` avec `docker logs -f api-gateway 2>&1 | head -200`, scanne les entrées 500, resume la stack trace.',
         },
       },
     ],
@@ -302,7 +302,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         },
         answer: {
           en: 'Yes. The MCP tools are exposed to both chat mode and agent mode. In agent mode, Cursor can chain multiple SSHive tool calls automatically, for instance, `ssh_list_sessions` → `ssh_execute` → `sftp_read_file`, without you confirming each step if you set agent permissions accordingly.',
-          fr: 'Oui. Les outils MCP sont exposes au mode chat et au mode agent. En mode agent, Cursor peut chainer plusieurs appels SSHive automatiquement, par exemple `ssh_list_sessions` → `ssh_execute` → `sftp_read_file`, sans que vous confirmiez chaque etape si les permissions agent le permettent.',
+          fr: 'Oui. Les outils MCP sont exposes au mode chat et au mode agent. En mode agent, Cursor peut chainer plusieurs appels SSHive automatiquement, par exemple `ssh_list_sessions` → `ssh_execute` → `sftp_read_file`, sans que vous confirmiez chaque étape si les permissions agent le permettent.',
         },
       },
       {
@@ -312,7 +312,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         },
         answer: {
           en: 'The MCP server runs on the host where Cursor\'s UI lives, i.e. your local Mac. Cursor SSH Remote runs the language server on the remote machine, but the MCP integration is configured client-side, so it points at your local SSHive. Your Mac talks to SSHive, your Mac talks to the remote dev box, the two are independent.',
-          fr: 'Le serveur MCP tourne sur l\'hote ou vit l\'UI de Cursor, c\'est-a-dire votre Mac local. Cursor SSH Remote fait tourner le language server sur la machine distante, mais l\'integration MCP est configuree cote client, donc elle pointe sur votre SSHive local. Votre Mac parle a SSHive, votre Mac parle au dev box distant, les deux sont independants.',
+          fr: 'Le serveur MCP tourne sur l\'hote ou vit l\'UI de Cursor, c\'est-a-dire votre Mac local. Cursor SSH Remote fait tourner le language server sur la machine distante, mais l\'intégration MCP est configurée cote client, donc elle pointe sur votre SSHive local. Votre Mac parle a SSHive, votre Mac parle au dev box distant, les deux sont independants.',
         },
       },
     ],
@@ -322,7 +322,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     why: {
       en: 'Cursor is at its best when generating code; it is at its weakest when reasoning about deployed state. Your repo and the deployed system drift constantly, and Cursor cannot know about that drift without help. SSHive\'s MCP server is the bridge: Cursor edits the code, SSHive feeds it ground truth about the running fleet. The result is code changes that align with reality on day one instead of after the second deploy fails.\n\nThe security tradeoff is favorable: SSHive\'s sessions are pre-authenticated on the Mac running Cursor, so Cursor never sees credentials. The MCP server is loopback-only and Bearer-token-gated, so even another app on the same Mac cannot piggyback. And because the protocol is open (Anthropic\'s MCP), you can disable, switch to a different MCP client, or audit the traffic anytime, nothing is proprietary lock-in.',
-      fr: 'Cursor est a son meilleur pour generer du code ; son point faible est raisonner sur l\'etat deploye. Votre repo et le systeme deploye drift constamment, et Cursor ne peut pas connaitre ce drift sans aide. Le serveur MCP de SSHive est le pont : Cursor edite le code, SSHive lui fournit la verite terrain sur la flotte qui tourne. Le resultat : des changements de code alignes sur la realite des le jour 1 au lieu d\'apres le deuxieme deploy raté.\n\nLe tradeoff securite est favorable : les sessions SSHive sont pre-authentifiees sur le Mac qui fait tourner Cursor, donc Cursor ne voit jamais les credentials. Le serveur MCP est loopback-only et Bearer-token-gated, donc meme une autre app sur le meme Mac ne peut pas piggyback. Et comme le protocole est ouvert (le MCP d\'Anthropic), vous pouvez desactiver, switcher vers un autre client MCP, ou auditer le trafic n\'importe quand, pas de lock-in proprietaire.',
+      fr: 'Cursor est a son meilleur pour generer du code ; son point faible est raisonner sur l\'état deploye. Votre repo et le système deploye drift constamment, et Cursor ne peut pas connaitre ce drift sans aide. Le serveur MCP de SSHive est le pont : Cursor edite le code, SSHive lui fournit la verite terrain sur la flotte qui tourne. Le résultat : des changements de code alignes sur la realite des le jour 1 au lieu d\'après le deuxieme deploy raté.\n\nLe tradeoff sécurité est favorable : les sessions SSHive sont pre-authentifiees sur le Mac qui fait tourner Cursor, donc Cursor ne voit jamais les credentials. Le serveur MCP est loopback-only et Bearer-token-gated, donc même une autre app sur le même Mac ne peut pas piggyback. Et comme le protocole est ouvert (le MCP d\'Anthropic), vous pouvez desactiver, switcher vers un autre client MCP, ou auditer le trafic n\'importe quand, pas de lock-in proprietaire.',
     },
   },
   /* ────────────────────────────────────────────────────────────────────
@@ -353,21 +353,21 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     intro: {
       en: 'Claude Desktop is Anthropic\'s standalone macOS app, chat with Claude in a window outside of any IDE, with file uploads, project memory, and MCP server support. SSHive\'s MCP integration with Claude Desktop is the simplest of the three (Claude Code, Cursor, Claude Desktop) because the config is a single JSON edit. You paste, you restart, you ask Claude to look at your servers.\n\nThis is the right pairing when you want a "chat with my fleet" experience without committing to a coding session. Open Claude Desktop, ask "What is the disk usage on prod?", Claude calls SSHive\'s `ssh_execute` with `df -h`, replies with a summary. No IDE context, no code edits, just a stateful conversation about your infrastructure.',
-      fr: 'Claude Desktop est l\'app macOS autonome d\'Anthropic, chattez avec Claude dans une fenetre hors IDE, avec uploads de fichiers, memoire de projet, et support des serveurs MCP. L\'integration MCP de SSHive avec Claude Desktop est la plus simple des trois (Claude Code, Cursor, Claude Desktop) parce que la config est un seul edit JSON. Vous collez, vous redemarrez, vous demandez a Claude de regarder vos serveurs.\n\nC\'est la bonne paire quand vous voulez une experience « chat avec ma flotte » sans s\'engager dans une session de code. Ouvrez Claude Desktop, demandez « C\'est combien le disk usage de prod ? », Claude appelle `ssh_execute` de SSHive avec `df -h`, repond avec un resume. Pas de contexte IDE, pas d\'edits de code, juste une conversation persistante sur votre infrastructure.',
+      fr: 'Claude Desktop est l\'app macOS autonome d\'Anthropic, chattez avec Claude dans une fenêtre hors IDE, avec uploads de fichiers, memoire de projet, et support des serveurs MCP. L\'intégration MCP de SSHive avec Claude Desktop est la plus simple des trois (Claude Code, Cursor, Claude Desktop) parce que la config est un seul edit JSON. Vous collez, vous redemarrez, vous demandez a Claude de regarder vos serveurs.\n\nC\'est la bonne paire quand vous voulez une experience « chat avec ma flotte » sans s\'engager dans une session de code. Ouvrez Claude Desktop, demandez « C\'est combien le disk usage de prod ? », Claude appelle `ssh_execute` de SSHive avec `df -h`, repond avec un resume. Pas de contexte IDE, pas d\'edits de code, juste une conversation persistante sur votre infrastructure.',
     },
     steps: [
       {
         title: { en: 'Enable the MCP server in SSHive', fr: 'Activez le serveur MCP dans SSHive' },
         body: {
           en: 'Open SSHive, Settings → MCP, toggle on. Copy the Bearer token.',
-          fr: 'Ouvrez SSHive, Reglages → MCP, activez. Copiez le Bearer token.',
+          fr: 'Ouvrez SSHive, Réglages → MCP, activez. Copiez le Bearer token.',
         },
       },
       {
         title: { en: 'Open the Claude Desktop config file', fr: 'Ouvrez le fichier de config Claude Desktop' },
         body: {
           en: 'In Finder, navigate to `~/Library/Application Support/Claude/claude_desktop_config.json`. If it does not exist, create it with the snippet below. Otherwise, merge the `mcpServers.sshive` key into the existing `mcpServers` object.',
-          fr: 'Dans le Finder, naviguez vers `~/Library/Application Support/Claude/claude_desktop_config.json`. S\'il n\'existe pas, creez-le avec le snippet ci-dessous. Sinon, mergez la cle `mcpServers.sshive` dans l\'objet `mcpServers` existant.',
+          fr: 'Dans le Finder, naviguez vers `~/Library/Application Support/Claude/claude_desktop_config.json`. S\'il n\'existe pas, créez-le avec le snippet ci-dessous. Sinon, mergez la clé `mcpServers.sshive` dans l\'objet `mcpServers` existant.',
         },
         code: `{
   "mcpServers": {
@@ -428,7 +428,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
         },
         behaviour: {
           en: 'Claude `sftp_read_file`s `/etc/systemd/system/nginx.service` (or wherever it lives), audits ExecStart/ExecReload/Restart settings, flags anything non-standard.',
-          fr: 'Claude `sftp_read_file` `/etc/systemd/system/nginx.service` (ou ou il vit), audite les reglages ExecStart/ExecReload/Restart, signale tout non-standard.',
+          fr: 'Claude `sftp_read_file` `/etc/systemd/system/nginx.service` (ou ou il vit), audite les réglages ExecStart/ExecReload/Restart, signale tout non-standard.',
         },
       },
     ],
@@ -436,11 +436,11 @@ export const INTEGRATIONS: IntegrationSEO[] = [
       {
         question: {
           en: 'Where is Claude Desktop\'s config file again?',
-          fr: 'Ou est le fichier de config Claude Desktop deja ?',
+          fr: 'Ou est le fichier de config Claude Desktop déjà ?',
         },
         answer: {
           en: '`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS. If you have never installed an MCP server, the file does not exist yet, create it with the snippet from SSHive Settings → MCP.',
-          fr: '`~/Library/Application Support/Claude/claude_desktop_config.json` sur macOS. Si vous n\'avez jamais installe de serveur MCP, le fichier n\'existe pas encore, creez-le avec le snippet depuis Reglages → MCP de SSHive.',
+          fr: '`~/Library/Application Support/Claude/claude_desktop_config.json` sur macOS. Si vous n\'avez jamais installe de serveur MCP, le fichier n\'existe pas encore, créez-le avec le snippet depuis Réglages → MCP de SSHive.',
         },
       },
       {
@@ -470,7 +470,7 @@ export const INTEGRATIONS: IntegrationSEO[] = [
     },
     why: {
       en: 'Claude Desktop is the right paired client when your task is not "write code" but "ask questions about my fleet". Examples: triaging an alert at 9pm, doing a security audit pass on a server config, getting a summary of what is unusual in the last 24h of logs. You do not need an IDE\'s editing context for those; you need a conversational interface with the ability to actually look. Claude Desktop\'s standalone window stays out of your way and keeps a longer-running thread alive than a code-focused CLI session.\n\nThe other reason to pick Claude Desktop is multi-MCP composition. Anthropic ships a Claude Desktop MCP server registry with filesystem, GitHub, Slack, Linear, Sentry, and dozens more. You can have SSHive\'s SSH/SFTP MCP server alongside the Sentry MCP server, Claude can correlate an alert from Sentry with a `journalctl -u myservice` on the implicated host via SSHive, in one chat, without you switching apps. The composability is where Claude Desktop\'s MCP shines, and SSHive slots in naturally as the SSH/SFTP/Mac-fleet provider.',
-      fr: 'Claude Desktop est le bon client paire quand la tache n\'est pas « ecrire du code » mais « poser des questions sur ma flotte ». Exemples : trier une alerte a 21h, faire une passe d\'audit securite sur une config serveur, avoir un resume de ce qui est inhabituel dans les 24h de logs. Pas besoin du contexte d\'edition d\'un IDE ; il faut une interface conversationnelle avec la capacite de vraiment regarder. La fenetre autonome de Claude Desktop reste hors du chemin et garde un thread plus long que une session CLI orientee code.\n\nL\'autre raison de choisir Claude Desktop est la composition multi-MCP. Anthropic livre un registre de serveurs MCP Claude Desktop avec filesystem, GitHub, Slack, Linear, Sentry, et des dizaines d\'autres. Vous pouvez avoir le serveur MCP SSH/SFTP de SSHive a cote du serveur MCP Sentry, Claude peut correler une alerte Sentry avec un `journalctl -u myservice` sur l\'hote implique via SSHive, dans un chat, sans switch d\'app. La composabilite est la ou le MCP de Claude Desktop brille, et SSHive s\'y insere naturellement comme provider SSH/SFTP/flotte Mac.',
+      fr: 'Claude Desktop est le bon client paire quand la tache n\'est pas « écrire du code » mais « poser des questions sur ma flotte ». Exemples : trier une alerte a 21h, faire une passe d\'audit sécurité sur une config serveur, avoir un resume de ce qui est inhabituel dans les 24h de logs. Pas besoin du contexte d\'edition d\'un IDE ; il faut une interface conversationnelle avec la capacite de vraiment regarder. La fenêtre autonome de Claude Desktop reste hors du chemin et garde un thread plus long que une session CLI orientee code.\n\nL\'autre raison de choisir Claude Desktop est la composition multi-MCP. Anthropic livre un registre de serveurs MCP Claude Desktop avec filesystem, GitHub, Slack, Linear, Sentry, et des dizaines d\'autres. Vous pouvez avoir le serveur MCP SSH/SFTP de SSHive a cote du serveur MCP Sentry, Claude peut correler une alerte Sentry avec un `journalctl -u myservice` sur l\'hote implique via SSHive, dans un chat, sans switch d\'app. La composabilite est la ou le MCP de Claude Desktop brille, et SSHive s\'y insere naturellement comme provider SSH/SFTP/flotte Mac.',
     },
   },
 ];

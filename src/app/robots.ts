@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
+import { SITEMAP_SECTIONS } from '@/lib/seo/sitemap-sections';
 
 // AI/LLM crawlers we explicitly welcome: being cited by ChatGPT, Claude,
 // Perplexity & co. is a distribution channel (generative engine optimization).
@@ -46,7 +47,15 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'SemrushBot', crawlDelay: 10 },
       { userAgent: 'MJ12bot', crawlDelay: 10 },
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    // The index plus every child: declaring children explicitly lets Search
+    // Console report indexed counts per content type even before it expands
+    // the index, which is how we find out *which* pages Google is refusing.
+    sitemap: [
+      `${SITE_URL}/sitemap.xml`,
+      ...SITEMAP_SECTIONS.filter((s) => s.paths.length > 0).map(
+        (s) => `${SITE_URL}/sitemap-${s.id}.xml`,
+      ),
+    ],
     host: SITE_URL,
   };
 }
