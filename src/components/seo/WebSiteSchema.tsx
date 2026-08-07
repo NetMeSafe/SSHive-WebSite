@@ -17,7 +17,7 @@ export function WebSiteSchema() {
         url: SITE_URL,
         inLanguage: ['en', 'fr'],
         description:
-          'Native Apple SSH/SFTP client for Mac, iPhone and iPad with embedded RDP, VNC, tunnels and AI MCP integration.',
+          'Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad, with a built-in MCP server for Claude Code, Cursor and Claude Desktop.',
         publisher: {
           '@type': 'Organization',
           name: 'NetMeSafe',

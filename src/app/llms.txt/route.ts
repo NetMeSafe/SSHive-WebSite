@@ -68,10 +68,12 @@ Key facts:
 - Pricing: free tier with generous limits; Pro is a one-time purchase on the App Store: ${APP_STORE_UNIVERSAL_URL}
 - SSHive is proprietary software (not open source).
 
+Full machine-readable reference, everything below inlined in one file: ${SITE_URL}/llms-full.txt
+
 ## Core pages
 
 - [Homepage](${SITE_URL}/en): product overview and download.
-- [Download](${SITE_URL}/en/download): free DMG for macOS + App Store links.
+- [Download](${SITE_URL}/en/download): free on the App Store for Mac, iPhone and iPad.
 - [Pricing](${SITE_URL}/en/pricing): free vs Pro feature matrix, one-time purchase.
 - [MCP / AI integration](${SITE_URL}/en/mcp): how the built-in MCP server connects AI assistants to your servers.
 - [Features overview](${SITE_URL}/en/features)
