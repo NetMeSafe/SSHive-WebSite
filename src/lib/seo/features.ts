@@ -30,7 +30,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   ssh: {
     intro: {
       en: 'SSHive is a modern SSH client built specifically for Apple devices, Mac, iPhone, and iPad, designed to replace the patchwork of Terminal, third-party emulators, and command-line tools many developers and sysadmins juggle every day. On macOS, the terminal runs on xterm.js with WebGL rendering, the same engine VS Code uses, which means scrolling stays smooth even when a verbose `tail -f` floods the screen, and Unicode glyphs render correctly without falling back to the system font. On iOS and iPadOS, the SSH terminal is fully native and shares the same profiles you set up on your Mac. Authentication works with passwords, OpenSSH-format private keys, or a forwarded ssh-agent socket on macOS.\n\nWhere SSHive really shines is in everything around the terminal. Connection profiles save host, port, user, key, environment variables, working directory, and a list of commands to run on connect, connecting to a server is one click, not a `ssh user@host -p 2222 -i ~/.ssh/id_ed25519`. Jump hosts (ProxyJump) are a first-class feature: declare a bastion in the profile and SSHive handles the multi-hop SSH tunnel transparently. Automatic reconnection kicks in when you suspend your Mac and wake up at a coffee shop, so you do not lose your tmux state. Credentials are stored in the macOS Keychain (or iOS Keychain on iPhone/iPad) via Apple\'s safeStorage API in Electron, never written to disk in plaintext, never sent anywhere. macOS itself decides when to prompt for Touch ID or your password to unlock that Keychain entry, so a stolen Mac without your fingerprint is not a stolen server.',
-      fr: 'SSHive est un client SSH moderne pense pour les appareils Apple, Mac, iPhone et iPad, concu pour remplacer le bric-a-brac de Terminal, d\'emulateurs tiers et d\'outils en ligne de commande que beaucoup de développeurs et sysadmins jonglent au quotidien. Sur macOS, le terminal tourne sur xterm.js avec rendu WebGL, le même moteur que VS Code, donc le defilement reste fluide même quand un `tail -f` verbeux inonde l\'écran, et les glyphes Unicode s\'affichent correctement sans retomber sur la police systeme. Sur iOS et iPadOS, le terminal SSH est entierement natif et partage les mêmes profils que vous configurez sur Mac. L\'authentification fonctionne par mot de passe, clé privee OpenSSH ou socket ssh-agent forwarded sur macOS.\n\nLa ou SSHive brille vraiment, c\'est tout ce qui entoure le terminal. Les profils de connexion sauvegardent host, port, user, clé, variables d\'environnement, repertoire de travail et la liste de commandes a exécuter a la connexion, se connecter devient un clic, plus un `ssh user@host -p 2222 -i ~/.ssh/id_ed25519`. Les jump hosts (ProxyJump) sont une fonctionnalité de premier ordre : declarez un bastion dans le profil et SSHive gère le tunnel SSH multi-saut de facon transparente. La reconnexion automatique prend le relais quand vous mettez votre Mac en veille et que vous le reveillez dans un cafe, vous ne perdez pas votre état tmux. Les identifiants sont stockes dans le Trousseau macOS (ou iOS Keychain sur iPhone/iPad) via l\'API safeStorage d\'Electron, jamais ecrits en clair, jamais envoyes nulle part. macOS lui-même decide quand demander Touch ID ou votre mot de passe pour deverrouiller cette entrée du Trousseau, donc un Mac vole sans votre empreinte n\'est pas un serveur vole.',
+      fr: 'SSHive est un client SSH moderne pense pour les appareils Apple, Mac, iPhone et iPad, concu pour remplacer le bric-a-brac de Terminal, d\'emulateurs tiers et d\'outils en ligne de commande que beaucoup de développeurs et sysadmins jonglent au quotidien. Sur macOS, le terminal tourne sur xterm.js avec rendu WebGL, le même moteur que VS Code, donc le defilement reste fluide même quand un `tail -f` verbeux inonde l\'écran, et les glyphes Unicode s\'affichent correctement sans retomber sur la police systeme. Sur iOS et iPadOS, le terminal SSH est entierement natif et partage les mêmes profils que vous configurez sur Mac. L\'authentification fonctionne par mot de passe, clé privée OpenSSH ou socket ssh-agent forwarded sur macOS.\n\nLa ou SSHive brille vraiment, c\'est tout ce qui entoure le terminal. Les profils de connexion sauvegardent host, port, user, clé, variables d\'environnement, répertoire de travail et la liste de commandes a exécuter a la connexion, se connecter devient un clic, plus un `ssh user@host -p 2222 -i ~/.ssh/id_ed25519`. Les jump hosts (ProxyJump) sont une fonctionnalité de premier ordre : declarez un bastion dans le profil et SSHive gère le tunnel SSH multi-saut de facon transparente. La reconnexion automatique prend le relais quand vous mettez votre Mac en veille et que vous le reveillez dans un cafe, vous ne perdez pas votre état tmux. Les identifiants sont stockés dans le Trousseau macOS (ou iOS Keychain sur iPhone/iPad) via l\'API safeStorage d\'Electron, jamais ecrits en clair, jamais envoyes nulle part. macOS lui-même decide quand demander Touch ID ou votre mot de passe pour deverrouiller cette entrée du Trousseau, donc un Mac vole sans votre empreinte n\'est pas un serveur vole.',
     },
     useCasesHeading: { en: 'Common SSH workflows', fr: 'Workflows SSH typiques' },
     useCases: [
@@ -45,7 +45,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         title: { en: 'Bastion / jump host workflows', fr: 'Workflows bastion / jump host' },
         description: {
           en: 'Connect through a jump host to private subnets without editing `~/.ssh/config`. Define the bastion once, reuse it across dozens of profiles. Agent forwarding is supported, so your private key never leaves your Mac.',
-          fr: 'Connectez-vous a travers un jump host vers des sous-réseaux prives sans editer `~/.ssh/config`. Definissez le bastion une fois, reutilisez-le sur des dizaines de profils. Agent forwarding supporte, donc votre clé privee ne quitte jamais votre Mac.',
+          fr: 'Connectez-vous a travers un jump host vers des sous-réseaux privés sans éditer `~/.ssh/config`. Definissez le bastion une fois, reutilisez-le sur des dizaines de profils. Agent forwarding supporte, donc votre clé privée ne quitte jamais votre Mac.',
         },
       },
       {
@@ -62,18 +62,18 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Does SSHive support OpenSSH config files?', fr: 'SSHive supporte-t-il les fichiers de config OpenSSH ?' },
         answer: {
           en: 'Yes. The connection dialog has an "Import from ~/.ssh/config" button that parses every Host entry and creates a SSHive profile for it, including ProxyJump, IdentityFile, Port, and User directives. You can re-import after editing your config, duplicates are detected by hostname.',
-          fr: 'Oui. Le dialogue de connexion a un bouton "Importer depuis ~/.ssh/config" qui parse chaque entrée Host et cree un profil SSHive correspondant, incluant les directives ProxyJump, IdentityFile, Port et User. Vous pouvez reimporter après edition, les doublons sont detectes par hostname.',
+          fr: 'Oui. Le dialogue de connexion a un bouton "Importer depuis ~/.ssh/config" qui parse chaque entrée Host et cree un profil SSHive correspondant, incluant les directives ProxyJump, IdentityFile, Port et User. Vous pouvez reimporter après édition, les doublons sont detectes par hostname.',
         },
       },
       {
-        question: { en: 'What SSH key formats are supported?', fr: 'Quels formats de clés SSH sont supportes ?' },
+        question: { en: 'What SSH key formats are supported?', fr: 'Quels formats de clés SSH sont supportés ?' },
         answer: {
           en: 'OpenSSH format (RSA, DSA, ECDSA, Ed25519). Encrypted keys are supported, the passphrase is requested once and cached in the macOS Keychain via Electron\'s safeStorage API.',
           fr: 'Format OpenSSH (RSA, DSA, ECDSA, Ed25519). Les clés chiffrées sont supportees, la passphrase est demandee une fois puis mise en cache dans le Trousseau macOS via l\'API safeStorage d\'Electron.',
         },
       },
       {
-        question: { en: 'Is SSHive faster than the built-in macOS Terminal?', fr: 'SSHive est-il plus rapide que le Terminal macOS integre ?' },
+        question: { en: 'Is SSHive faster than the built-in macOS Terminal?', fr: 'SSHive est-il plus rapide que le Terminal macOS intégré ?' },
         answer: {
           en: 'For raw terminal rendering, yes, xterm.js with WebGL outperforms macOS Terminal on long output (think building a kernel or running `find /`) because it pushes glyphs to the GPU. For interactive shell latency, both are network-bound, so the difference is unnoticeable. iTerm2 with Metal renderer is in the same ballpark.',
           fr: 'Pour le rendu pur du terminal, oui, xterm.js avec WebGL devance le Terminal macOS sur les sorties longues (genre compiler un noyau ou lancer `find /`) car il pousse les glyphes au GPU. Pour la latence shell interactive, les deux sont limites par le réseau, donc la difference est imperceptible. iTerm2 avec rendu Metal est du même ordre.',
@@ -90,14 +90,14 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Does SSHive support Touch ID for SSH connections?', fr: 'SSHive supporte-t-il Touch ID pour les connexions SSH ?' },
         answer: {
           en: 'Indirectly, yes. SSHive does not call Touch ID itself, credentials are stored in the macOS Keychain via Electron\'s safeStorage API, and macOS decides when to prompt for Touch ID (or your account password as a fallback) before unlocking that Keychain entry. SSHive never sees your fingerprint data. On iPhone/iPad, the equivalent path is iOS Keychain unlocked by Touch ID / Face ID / device passcode at the OS level.',
-          fr: 'Indirectement, oui. SSHive n\'appelle pas Touch ID lui-même, les identifiants sont stockes dans le Trousseau macOS via l\'API safeStorage d\'Electron, et c\'est macOS qui decide quand demander Touch ID (ou votre mot de passe de session en repli) avant de deverrouiller cette entrée du Trousseau. SSHive ne voit jamais vos données d\'empreinte. Sur iPhone/iPad, le chemin equivalent est l\'iOS Keychain deverrouille par Touch ID / Face ID / code d\'accès appareil au niveau de l\'OS.',
+          fr: 'Indirectement, oui. SSHive n\'appelle pas Touch ID lui-même, les identifiants sont stockés dans le Trousseau macOS via l\'API safeStorage d\'Electron, et c\'est macOS qui decide quand demander Touch ID (ou votre mot de passe de session en repli) avant de deverrouiller cette entrée du Trousseau. SSHive ne voit jamais vos données d\'empreinte. Sur iPhone/iPad, le chemin equivalent est l\'iOS Keychain deverrouille par Touch ID / Face ID / code d\'accès appareil au niveau de l\'OS.',
         },
       },
       {
         question: { en: 'Does SSHive run on iPhone and iPad?', fr: 'SSHive tourne-t-il sur iPhone et iPad ?' },
         answer: {
           en: 'Yes. SSHive ships an iPhone and iPad app on the App Store. The iOS version focuses on SSH terminal and SFTP file management, the Mac-specific features (RDP, VNC, SSH tunnels, broadcast, MCP server, snippet library) stay on macOS where they make sense. Profiles created on a Mac sync to your iOS devices, so a server you set up on your laptop is one tap away on your phone.',
-          fr: 'Oui. SSHive a une app iPhone et iPad sur l\'App Store. La version iOS se concentre sur le terminal SSH et la gestion SFTP, les fonctionnalités specifiques Mac (RDP, VNC, tunnels SSH, broadcast, serveur MCP, bibliotheque de snippets) restent sur macOS la ou elles ont du sens. Les profils crees sur Mac se synchronisent sur vos appareils iOS, donc un serveur configure sur votre laptop est a un tap pres sur votre telephone.',
+          fr: 'Oui. SSHive a une app iPhone et iPad sur l\'App Store. La version iOS se concentre sur le terminal SSH et la gestion SFTP, les fonctionnalités spécifiques Mac (RDP, VNC, tunnels SSH, broadcast, serveur MCP, bibliothèque de snippets) restent sur macOS la ou elles ont du sens. Les profils crees sur Mac se synchronisent sur vos appareils iOS, donc un serveur configure sur votre laptop est a un tap pres sur votre telephone.',
         },
       },
     ],
@@ -108,29 +108,29 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   sftp: {
     intro: {
       en: 'Managing files on remote servers from macOS has always been awkward. The Finder doesn\'t speak SFTP, command-line `scp` is slow for back-and-forth editing, and dedicated tools like Cyberduck or Transmit are great but live in their own window. SSHive\'s SFTP file manager is built into the same window as your terminal, so dragging a `.env` file from your Desktop to `/etc/myapp/` on production is a one-second action, and the upload progress is visible right next to the shell where you\'ll restart the service.\n\nThe interface is dual-pane: local Finder-style browser on the left, remote tree on the right, with breadcrumbs you can click to jump up the directory tree. Drag-and-drop works in both directions, and bulk operations (download, delete, chmod) operate on multi-selections. The integrated remote editor opens any text file in a CodeMirror 6 editor inside SSHive, `Cmd+S` writes back to the server. No more `vi` over a slow link to fix a typo. Bookmark frequently visited paths so `/var/log/nginx`, `/etc/letsencrypt/live`, and `~/.ssh` are one click away.',
-      fr: 'Gérer des fichiers sur des serveurs distants depuis macOS a toujours ete maladroit. Le Finder ne parle pas SFTP, le `scp` en ligne de commande est lent pour les allers-retours d\'edition, et les outils dedies comme Cyberduck ou Transmit sont bons mais vivent dans leur propre fenetre. Le gestionnaire SFTP de SSHive est integre dans la même fenêtre que votre terminal, donc faire glisser un `.env` du Bureau vers `/etc/myapp/` en production est une action d\'une seconde, et la progression d\'upload est visible juste a cote du shell ou vous redemarrez le service.\n\nL\'interface est en double panneau : navigateur local style Finder a gauche, arbre distant a droite, avec un fil d\'Ariane cliquable pour remonter. Le drag-and-drop fonctionne dans les deux sens, et les opérations en lot (téléchargement, suppression, chmod) agissent sur les multi-selections. L\'editeur distant integre ouvre n\'importe quel fichier texte dans un editeur CodeMirror 6 dans SSHive, `Cmd+S` ecrit sur le serveur. Plus de `vi` sur lien lent pour corriger une typo. Mettez en favori les chemins frequents : `/var/log/nginx`, `/etc/letsencrypt/live`, `~/.ssh` sont a un clic.',
+      fr: 'Gérer des fichiers sur des serveurs distants depuis macOS a toujours ete maladroit. Le Finder ne parle pas SFTP, le `scp` en ligne de commande est lent pour les allers-retours d\'édition, et les outils dédiés comme Cyberduck ou Transmit sont bons mais vivent dans leur propre fenetre. Le gestionnaire SFTP de SSHive est intégré dans la même fenêtre que votre terminal, donc faire glisser un `.env` du Bureau vers `/etc/myapp/` en production est une action d\'une seconde, et la progression d\'upload est visible juste a côté du shell ou vous redemarrez le service.\n\nL\'interface est en double panneau : navigateur local style Finder a gauche, arbre distant a droite, avec un fil d\'Ariane cliquable pour remonter. Le drag-and-drop fonctionne dans les deux sens, et les opérations en lot (téléchargement, suppression, chmod) agissent sur les multi-selections. L\'éditeur distant intégré ouvre n\'importe quel fichier texte dans un éditeur CodeMirror 6 dans SSHive, `Cmd+S` ecrit sur le serveur. Plus de `vi` sur lien lent pour corriger une typo. Mettez en favori les chemins frequents : `/var/log/nginx`, `/etc/letsencrypt/live`, `~/.ssh` sont a un clic.',
     },
     useCasesHeading: { en: 'When SFTP saves the day', fr: 'Quand SFTP sauve la mise' },
     useCases: [
       {
-        title: { en: 'Edit configs without re-deploying', fr: 'Editer des configs sans redeployer' },
+        title: { en: 'Edit configs without re-deploying', fr: 'Éditer des configs sans redeployer' },
         description: {
           en: 'Open `/etc/nginx/conf.d/site.conf` directly in SSHive, fix the typo, save. The next `nginx -s reload` runs in the same SSHive terminal session right next to the editor. No FTP roundtrip, no scp dance.',
-          fr: 'Ouvrez `/etc/nginx/conf.d/site.conf` directement dans SSHive, corrigez la typo, sauvegardez. Le `nginx -s reload` suivant tourne dans la même session SSHive a cote de l\'editeur. Pas d\'aller-retour FTP, pas de danse scp.',
+          fr: 'Ouvrez `/etc/nginx/conf.d/site.conf` directement dans SSHive, corrigez la typo, sauvegardez. Le `nginx -s reload` suivant tourne dans la même session SSHive a côté de l\'editeur. Pas d\'aller-retour FTP, pas de danse scp.',
         },
       },
       {
         title: { en: 'Backup remote logs locally', fr: 'Backup des logs distants en local' },
         description: {
           en: 'Select a date range of `/var/log/myapp/*.log`, drag to your `~/Downloads` folder. SSHive shows transfer speed, ETA, and total size, and respects the connection profile, so all transfers stay encrypted via SSH.',
-          fr: 'Selectionnez une plage de dates de `/var/log/myapp/*.log`, glissez vers `~/Downloads`. SSHive affiche vitesse, ETA et taille totale, et respecte le profil de connexion, donc tous les transferts restent chiffres via SSH.',
+          fr: 'Selectionnez une plage de dates de `/var/log/myapp/*.log`, glissez vers `~/Downloads`. SSHive affiche vitesse, ETA et taille totale, et respecte le profil de connexion, donc tous les transferts restent chiffrés via SSH.',
         },
       },
       {
         title: { en: 'Deploy artifacts from a build', fr: 'Deployer des artefacts depuis un build' },
         description: {
           en: 'Drop a `dist/` folder onto the remote tree, set permissions, run `systemctl restart` from the adjacent terminal, all in the same SSHive window, all encrypted, all logged in your transfer history.',
-          fr: 'Deposez un dossier `dist/` sur l\'arbre distant, ajustez les permissions, lancez `systemctl restart` depuis le terminal adjacent, le tout dans la même fenêtre SSHive, le tout chiffre, le tout journalise dans l\'historique de transfert.',
+          fr: 'Deposez un dossier `dist/` sur l\'arbre distant, ajustez les permissions, lancez `systemctl restart` depuis le terminal adjacent, le tout dans la même fenêtre SSHive, le tout chiffré, le tout journalise dans l\'historique de transfert.',
         },
       },
     ],
@@ -144,24 +144,24 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         },
       },
       {
-        question: { en: 'Can I edit binary files?', fr: 'Puis-je editer des fichiers binaires ?' },
+        question: { en: 'Can I edit binary files?', fr: 'Puis-je éditer des fichiers binaires ?' },
         answer: {
           en: 'Double-click on a binary opens it in the macOS default app via a temp file; SSHive watches the temp file and re-uploads on save. So opening a `.png` in Preview, annotating, and saving uploads back automatically.',
-          fr: 'Double-clic sur un binaire l\'ouvre dans l\'app macOS par defaut via un fichier temporaire ; SSHive surveille ce temp et reupload a la sauvegarde. Donc ouvrir un `.png` dans Preview, l\'annoter et sauvegarder reupload automatiquement.',
+          fr: 'Double-clic sur un binaire l\'ouvre dans l\'app macOS par défaut via un fichier temporaire ; SSHive surveille ce temp et reupload a la sauvegarde. Donc ouvrir un `.png` dans Preview, l\'annoter et sauvegarder reupload automatiquement.',
         },
       },
       {
         question: { en: 'How are SFTP transfers throttled?', fr: 'Comment les transferts SFTP sont-ils limites ?' },
         answer: {
           en: 'SFTP runs over the SSH connection, so throughput is bound by your SSH bandwidth and the remote disk speed. SSHive uses parallel chunked transfers (4 streams by default) to maximize throughput on high-latency links. You can adjust concurrency in profile settings.',
-          fr: 'SFTP passe par la connexion SSH, donc le debit est limite par votre bande passante SSH et la vitesse disque distante. SSHive utilise des transferts paralleles en chunks (4 streams par defaut) pour maximiser le debit sur les liens a forte latence. La concurrence est reglable dans les paramètres du profil.',
+          fr: 'SFTP passe par la connexion SSH, donc le debit est limite par votre bande passante SSH et la vitesse disque distante. SSHive utilise des transferts paralleles en chunks (4 streams par défaut) pour maximiser le debit sur les liens a forte latence. La concurrence est reglable dans les paramètres du profil.',
         },
       },
       {
         question: { en: 'Does SFTP work on the free tier?', fr: 'SFTP fonctionne-t-il en gratuit ?' },
         answer: {
           en: 'Yes, SFTP is included in the free tier. The free tier limits you to 2 concurrent SSH sessions and 5 saved profiles, but each session has full SFTP access alongside the terminal.',
-          fr: 'Oui, SFTP est inclus dans le tier gratuit. Le gratuit limite a 2 sessions SSH concurrentes et 5 profils sauvegardes, mais chaque session a un accès SFTP complet a cote du terminal.',
+          fr: 'Oui, SFTP est inclus dans le tier gratuit. Le gratuit limite a 2 sessions SSH concurrentes et 5 profils sauvegardes, mais chaque session a un accès SFTP complet a côté du terminal.',
         },
       },
     ],
@@ -172,7 +172,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   rdp: {
     intro: {
       en: 'Connecting from macOS to Windows desktops or servers usually means firing up Microsoft Remote Desktop or a third-party RDP client in a separate window. SSHive embeds a full RDP client directly in the same window as your SSH sessions, powered by IronRDP / freerdp-native, with full keyboard, mouse and clipboard handling. No external app, no window-juggling, no forgotten credentials in another keychain.\n\nKeyboard mapping handles the macOS-to-Windows quirks: `Cmd+C` and `Cmd+V` translate to `Ctrl+C`/`Ctrl+V` on the remote host, function keys work, and the AltGr layer is handled correctly for international keyboards. Clipboard syncs in both directions for text. Resolution adapts to your Retina display, including dynamic resize when you change SSHive\'s window size.',
-      fr: 'Se connecter depuis macOS a des bureaux ou serveurs Windows signifie généralement lancer Microsoft Remote Desktop ou un client RDP tiers dans une fenêtre separee. SSHive integre un client RDP complet directement dans la même fenêtre que vos sessions SSH, propulse par IronRDP / freerdp-native, avec gestion complète clavier, souris et presse-papiers. Pas d\'app externe, pas de jonglage de fenêtres, pas d\'identifiants oublies dans un autre trousseau.\n\nLe mapping clavier gère les bizarreries macOS-vers-Windows : `Cmd+C` et `Cmd+V` traduisent en `Ctrl+C`/`Ctrl+V` sur l\'hote distant, les touches de fonction marchent, et la couche AltGr est geree correctement pour les claviers internationaux. Le presse-papiers se synchronise dans les deux sens pour le texte. La résolution s\'adapte a votre écran Retina, y compris en cas de redimensionnement dynamique de la fenêtre SSHive.',
+      fr: 'Se connecter depuis macOS a des bureaux ou serveurs Windows signifie généralement lancer Microsoft Remote Desktop ou un client RDP tiers dans une fenêtre separee. SSHive intégré un client RDP complet directement dans la même fenêtre que vos sessions SSH, propulse par IronRDP / freerdp-native, avec gestion complète clavier, souris et presse-papiers. Pas d\'app externe, pas de jonglage de fenêtres, pas d\'identifiants oublies dans un autre trousseau.\n\nLe mapping clavier gère les bizarreries macOS-vers-Windows : `Cmd+C` et `Cmd+V` traduisent en `Ctrl+C`/`Ctrl+V` sur l\'hôte distant, les touches de fonction marchent, et la couche AltGr est geree correctement pour les claviers internationaux. Le presse-papiers se synchronise dans les deux sens pour le texte. La résolution s\'adapte a votre écran Retina, y compris en cas de redimensionnement dynamique de la fenêtre SSHive.',
     },
     useCasesHeading: { en: 'When RDP from a Mac matters', fr: 'Quand le RDP depuis Mac compte' },
     useCases: [
@@ -180,7 +180,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         title: { en: 'Manage Windows Server VMs', fr: 'Gérer des VMs Windows Server' },
         description: {
           en: 'Connect to Windows Server 2019/2022/2025 instances on Hyper-V, ESXi, or AWS EC2. Domain-joined and workgroup logins both work; NLA (Network Level Authentication) is supported for hardened hosts.',
-          fr: 'Connectez-vous a des instances Windows Server 2019/2022/2025 sur Hyper-V, ESXi ou AWS EC2. Logins joints au domaine et workgroup fonctionnent ; NLA (Network Level Authentication) supporte pour les hotes durcis.',
+          fr: 'Connectez-vous a des instances Windows Server 2019/2022/2025 sur Hyper-V, ESXi ou AWS EC2. Logins joints au domaine et workgroup fonctionnent ; NLA (Network Level Authentication) supporte pour les hôtes durcis.',
         },
       },
       {
@@ -194,7 +194,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         title: { en: 'Help desk / support', fr: 'Help desk / support' },
         description: {
           en: 'Connect to client machines via RDP through a VPN or SSH tunnel. Combine SSHive\'s tunnel feature with RDP to reach Windows machines on private networks without exposing port 3389 to the Internet.',
-          fr: 'Connectez-vous a des machines clientes via RDP a travers un VPN ou un tunnel SSH. Combinez la fonctionnalité tunnel de SSHive avec RDP pour atteindre des Windows sur réseaux prives sans exposer le port 3389 a Internet.',
+          fr: 'Connectez-vous a des machines clientes via RDP a travers un VPN ou un tunnel SSH. Combinez la fonctionnalité tunnel de SSHive avec RDP pour atteindre des Windows sur réseaux privés sans exposer le port 3389 a Internet.',
         },
       },
     ],
@@ -222,7 +222,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   vnc: {
     intro: {
       en: 'VNC is the lingua franca of remote desktops on Linux. From a Raspberry Pi running Pixel desktop to a Proxmox host\'s console to a Synology NAS\'s GUI, VNC servers are everywhere. SSHive\'s built-in VNC viewer uses noVNC under the hood with a WebSocket proxy embedded in the app, meaning you do not need an external WebSocket relay (like websockify) to connect to a plain TCP VNC server. Just enter host:port, password if any, and you\'re in.\n\nFull RFB protocol support means raw, RRE, Hextile, Tight (with JPEG), and ZRLE encodings all work. The viewer adapts the framebuffer scaling to your Retina display, and clipboard syncs both ways. SSHive supports TightVNC, RealVNC, x11vnc, vino, KVM/QEMU\'s built-in VNC console, and TigerVNC, basically any RFB-compliant server.',
-      fr: 'VNC est la lingua franca des bureaux distants sur Linux. D\'un Raspberry Pi sous Pixel desktop a la console d\'un hote Proxmox jusqu\'a l\'interface d\'un NAS Synology, les serveurs VNC sont partout. Le viewer VNC integre de SSHive utilise noVNC sous le capot avec un proxy WebSocket integre dans l\'app, vous n\'avez donc pas besoin d\'un relais WebSocket externe (genre websockify) pour vous connecter a un serveur VNC TCP. Entrez juste host:port, mot de passe le cas echeant, et vous etes dedans.\n\nLe support complet du protocole RFB couvre les encodages raw, RRE, Hextile, Tight (avec JPEG) et ZRLE. Le viewer adapte le scaling du framebuffer a votre écran Retina, et le presse-papiers se synchronise dans les deux sens. SSHive supporte TightVNC, RealVNC, x11vnc, vino, la console VNC intégrée de KVM/QEMU et TigerVNC, en gros n\'importe quel serveur conforme RFB.',
+      fr: 'VNC est la lingua franca des bureaux distants sur Linux. D\'un Raspberry Pi sous Pixel desktop a la console d\'un hôte Proxmox jusqu\'a l\'interface d\'un NAS Synology, les serveurs VNC sont partout. Le viewer VNC intégré de SSHive utilise noVNC sous le capot avec un proxy WebSocket intégré dans l\'app, vous n\'avez donc pas besoin d\'un relais WebSocket externe (genre websockify) pour vous connecter a un serveur VNC TCP. Entrez juste host:port, mot de passe le cas echeant, et vous êtes dedans.\n\nLe support complet du protocole RFB couvre les encodages raw, RRE, Hextile, Tight (avec JPEG) et ZRLE. Le viewer adapte le scaling du framebuffer a votre écran Retina, et le presse-papiers se synchronise dans les deux sens. SSHive supporte TightVNC, RealVNC, x11vnc, vino, la console VNC intégrée de KVM/QEMU et TigerVNC, en gros n\'importe quel serveur conforme RFB.',
     },
     useCasesHeading: { en: 'VNC on macOS, what you can do', fr: 'VNC sur macOS, ce que vous pouvez faire' },
     useCases: [
@@ -230,21 +230,21 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         title: { en: 'Headless Raspberry Pi GUI', fr: 'Interface graphique Raspberry Pi headless' },
         description: {
           en: 'Run RealVNC server on a Pi or use `vncserver` from x11vnc, then connect from your Mac to manage the desktop. No need for a separate monitor and keyboard on the Pi.',
-          fr: 'Lancez RealVNC server sur un Pi ou utilisez `vncserver` de x11vnc, puis connectez-vous depuis votre Mac pour gérer le bureau. Plus besoin d\'écran et clavier separes sur le Pi.',
+          fr: 'Lancez RealVNC server sur un Pi ou utilisez `vncserver` de x11vnc, puis connectez-vous depuis votre Mac pour gérer le bureau. Plus besoin d\'écran et clavier séparés sur le Pi.',
         },
       },
       {
         title: { en: 'Proxmox / KVM consoles', fr: 'Consoles Proxmox / KVM' },
         description: {
           en: 'Access the noVNC console of a Proxmox VM, ESXi guest, or QEMU instance directly from SSHive. Works alongside an SSH session to the host, manage hypervisor and VM in one window.',
-          fr: 'Accedez a la console noVNC d\'une VM Proxmox, d\'un guest ESXi ou d\'une instance QEMU directement depuis SSHive. Fonctionne en parallele d\'une session SSH a l\'hote, geree hyperviseur et VM dans une seule fenetre.',
+          fr: 'Accedez a la console noVNC d\'une VM Proxmox, d\'un guest ESXi ou d\'une instance QEMU directement depuis SSHive. Fonctionne en parallele d\'une session SSH a l\'hôte, geree hyperviseur et VM dans une seule fenetre.',
         },
       },
       {
         title: { en: 'Tunneled VNC for security', fr: 'VNC tunnele pour la sécurité' },
         description: {
           en: 'Combine SSHive\'s SSH tunnel feature with VNC: forward port 5900 over SSH, then connect to localhost. Your VNC traffic is encrypted end-to-end without exposing 5900 to the Internet.',
-          fr: 'Combinez la fonctionnalité tunnel SSH de SSHive avec VNC : forwardez le port 5900 via SSH, puis connectez-vous a localhost. Votre trafic VNC est chiffre de bout en bout sans exposer 5900 a Internet.',
+          fr: 'Combinez la fonctionnalité tunnel SSH de SSHive avec VNC : forwardez le port 5900 via SSH, puis connectez-vous a localhost. Votre trafic VNC est chiffré de bout en bout sans exposer 5900 a Internet.',
         },
       },
     ],
@@ -254,14 +254,14 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Does SSHive VNC work with Apple Screen Sharing?', fr: 'SSHive VNC fonctionne-t-il avec Partage d\'écran Apple ?' },
         answer: {
           en: 'Yes, Apple\'s vncserver speaks RFB and SSHive can connect to it (port 5900). For full Apple-Apple Screen Sharing features (audio, drag-drop), Apple\'s built-in client is still better. SSHive shines for cross-platform.',
-          fr: 'Oui, le vncserver d\'Apple parle RFB et SSHive peut s\'y connecter (port 5900). Pour les fonctionnalités complète de Partage d\'écran Apple-vers-Apple (audio, drag-drop), le client integre Apple reste meilleur. SSHive brille pour le cross-platform.',
+          fr: 'Oui, le vncserver d\'Apple parle RFB et SSHive peut s\'y connecter (port 5900). Pour les fonctionnalités complète de Partage d\'écran Apple-vers-Apple (audio, drag-drop), le client intégré Apple reste meilleur. SSHive brille pour le cross-platform.',
         },
       },
       {
         question: { en: 'How is the VNC password stored?', fr: 'Comment le mot de passe VNC est-il stocke ?' },
         answer: {
           en: 'Encrypted in the macOS Keychain via Electron\'s safeStorage. It\'s never written to profiles.json in plaintext. Each profile has its own credential entry.',
-          fr: 'Chiffre dans le Trousseau macOS via safeStorage d\'Electron. Jamais ecrit en clair dans profiles.json. Chaque profil a sa propre entrée d\'identifiant.',
+          fr: 'Chiffré dans le Trousseau macOS via safeStorage d\'Electron. Jamais ecrit en clair dans profiles.json. Chaque profil a sa propre entrée d\'identifiant.',
         },
       },
       {
@@ -286,29 +286,29 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   tunnels: {
     intro: {
       en: 'SSH tunnels are one of the most underrated tools in a sysadmin\'s toolkit, they let you reach internal services (a database, a Redis instance, an admin panel) without exposing them to the Internet. SSHive turns SSH tunneling from a memorized command-line incantation into a profile setting. Open a profile, click "Tunnels", add a forward, done. The tunnel starts automatically when the SSH connection comes up and tears down when it drops.\n\nAll three OpenSSH forwarding modes are supported: Local (`-L`) brings a remote port to your Mac, Remote (`-R`) exposes a local port on the remote server, and Dynamic SOCKS5 (`-D`) gives you a per-app proxy. Each profile can have up to 10 Local and 5 Remote tunnels active simultaneously. SOCKS5 supports IPv4, IPv6, and domain-name routing, so you can use SSHive as a private VPN-like proxy for browser sessions when traveling.',
-      fr: 'Les tunnels SSH sont l\'un des outils les plus sous-estimes du sysadmin, ils permettent d\'atteindre des services internes (une base, un Redis, un panel admin) sans les exposer a Internet. SSHive transforme le tunneling SSH d\'incantation ligne de commande memorisee en paramètre de profil. Ouvrez un profil, cliquez "Tunnels", ajoutez un forward, c\'est fait. Le tunnel demarre automatiquement quand la connexion SSH monte et tombe quand elle chute.\n\nLes trois modes de forwarding OpenSSH sont supportes : Local (`-L`) ramene un port distant sur votre Mac, Remote (`-R`) expose un port local sur le serveur distant, et Dynamic SOCKS5 (`-D`) donne un proxy par app. Chaque profil peut avoir jusqu\'a 10 tunnels Local et 5 Remote actifs simultanement. SOCKS5 supporte IPv4, IPv6 et le routing par nom de domaine, vous pouvez donc utiliser SSHive comme un proxy type VPN prive pour des sessions navigateur en deplacement.',
+      fr: 'Les tunnels SSH sont l\'un des outils les plus sous-estimes du sysadmin, ils permettent d\'atteindre des services internes (une base, un Redis, un panel admin) sans les exposer a Internet. SSHive transforme le tunneling SSH d\'incantation ligne de commande memorisee en paramètre de profil. Ouvrez un profil, cliquez "Tunnels", ajoutez un forward, c\'est fait. Le tunnel demarre automatiquement quand la connexion SSH monte et tombe quand elle chute.\n\nLes trois modes de forwarding OpenSSH sont supportés : Local (`-L`) ramene un port distant sur votre Mac, Remote (`-R`) expose un port local sur le serveur distant, et Dynamic SOCKS5 (`-D`) donne un proxy par app. Chaque profil peut avoir jusqu\'a 10 tunnels Local et 5 Remote actifs simultanement. SOCKS5 supporte IPv4, IPv6 et le routing par nom de domaine, vous pouvez donc utiliser SSHive comme un proxy type VPN privé pour des sessions navigateur en deplacement.',
     },
-    useCasesHeading: { en: 'Real-world tunnel scenarios', fr: 'Scenarios reels de tunnels' },
+    useCasesHeading: { en: 'Real-world tunnel scenarios', fr: 'Scenarios réels de tunnels' },
     useCases: [
       {
-        title: { en: 'Reach a private database', fr: 'Atteindre une base privee' },
+        title: { en: 'Reach a private database', fr: 'Atteindre une base privée' },
         description: {
           en: 'Forward 5432 from a private RDS instance through your bastion to localhost:5432. Connect TablePlus, DBeaver, or psql to localhost, they think the database is local, and your SSH key is the auth.',
-          fr: 'Forwardez 5432 d\'une instance RDS privee a travers votre bastion vers localhost:5432. Connectez TablePlus, DBeaver ou psql a localhost, ils pensent que la base est locale, et votre clé SSH fait l\'auth.',
+          fr: 'Forwardez 5432 d\'une instance RDS privée a travers votre bastion vers localhost:5432. Connectez TablePlus, DBeaver ou psql a localhost, ils pensent que la base est locale, et votre clé SSH fait l\'auth.',
         },
       },
       {
         title: { en: 'Expose a local dev server', fr: 'Exposer un serveur dev local' },
         description: {
           en: 'Use Remote forwarding to expose your local Vite dev server (port 5173) on a public host\'s port 8080. Quick demo to a stakeholder without ngrok or Cloudflare Tunnel.',
-          fr: 'Utilisez le Remote forwarding pour exposer votre serveur Vite dev local (port 5173) sur le port 8080 d\'un hote public. Demo rapide a un stakeholder sans ngrok ni Cloudflare Tunnel.',
+          fr: 'Utilisez le Remote forwarding pour exposer votre serveur Vite dev local (port 5173) sur le port 8080 d\'un hôte public. Demo rapide a un stakeholder sans ngrok ni Cloudflare Tunnel.',
         },
       },
       {
         title: { en: 'SOCKS5 proxy for safe browsing', fr: 'Proxy SOCKS5 pour navigation sure' },
         description: {
           en: 'On hotel Wi-Fi, start a SOCKS5 tunnel through your home server, set Firefox/Chrome to use localhost:1080. All your web traffic exits from your home IP, encrypted, untouchable by the hotel network.',
-          fr: 'Sur le Wi-Fi d\'hotel, demarrez un tunnel SOCKS5 via votre serveur perso, reglez Firefox/Chrome sur localhost:1080. Tout votre trafic web sort de votre IP perso, chiffre, intouchable par le réseau d\'hotel.',
+          fr: 'Sur le Wi-Fi d\'hotel, demarrez un tunnel SOCKS5 via votre serveur perso, reglez Firefox/Chrome sur localhost:1080. Tout votre trafic web sort de votre IP perso, chiffré, intouchable par le réseau d\'hotel.',
         },
       },
     ],
@@ -325,7 +325,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Can I use a tunnel without keeping the SSH terminal open?', fr: 'Puis-je utiliser un tunnel sans garder le terminal SSH ouvert ?' },
         answer: {
           en: 'Yes. SSHive separates "tunnel-only" profiles: connect with no shell, just the tunnels active. The connection stays alive in the background. Disconnect from the sessions panel when done.',
-          fr: 'Oui. SSHive separe les profils "tunnel only" : connexion sans shell, juste les tunnels actifs. La connexion reste vivante en arriere-plan. Deconnectez depuis le panneau de sessions quand fini.',
+          fr: 'Oui. SSHive séparé les profils "tunnel only" : connexion sans shell, juste les tunnels actifs. La connexion reste vivante en arriere-plan. Deconnectez depuis le panneau de sessions quand fini.',
         },
       },
       {
@@ -350,7 +350,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   mcp: {
     intro: {
       en: 'Model Context Protocol (MCP) is the standard Anthropic introduced in late 2024 for letting AI assistants talk to local tools. SSHive ships with a built-in MCP server, meaning Claude Code, Cursor, and Claude Desktop can read your SSH session list, execute commands on connected hosts, browse SFTP, and read/write remote files. Toggle one switch in SSHive Settings → MCP: the local HTTP server starts on port 49422, a Bearer token is generated, and SSHive auto-injects an `mcpServers.sshive` entry into the config files of every detected client (`~/.claude.json`, `~/.cursor/mcp.json`, plus a copyable stdio block for Claude Desktop via `npx mcp-remote`). For other MCP-compatible clients, a Copy button gives you a JSON snippet with the real token to paste anywhere.\n\nThe server exposes 11 tools: `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file` (1 MB max), `sftp_write_file` (in-memory), `sftp_write_file_chunk` (4 MB chunks for big files via base64 append), `sftp_write_from_local_path` and `sftp_download_to_local_path` (streamed transfers, zero base64 overhead, no size limit), plus `sftp_mkdir`, `sftp_rename` and `sftp_delete` for full remote file management. Authentication uses a UUID Bearer token persisted in `settings.json` and rotatable from the UI. The HTTP server binds to `127.0.0.1` only, it never accepts external connections, and every command passes through your existing SSH session auth, so the AI cannot do anything you can\'t already do. MCP is Pro-only.\n\nMCP is not the only AI in SSHive: the terminal also has a built-in AI assistant. Select some output and ask it to explain an error, or ask a free-form question, using your own API key (Anthropic Claude, OpenAI GPT or Google Gemini). The key is stored encrypted in the macOS Keychain and requests go directly from your Mac to the provider you chose, nothing transits through SSHive servers.',
-      fr: 'Model Context Protocol (MCP) est le standard introduit par Anthropic fin 2024 pour permettre aux assistants IA de parler aux outils locaux. SSHive embarque un serveur MCP integre, Claude Code, Cursor et Claude Desktop peuvent lire votre liste de sessions SSH, exécuter des commandes sur les hotes connectes, parcourir SFTP et lire/ecrire des fichiers distants. Basculez un interrupteur dans Paramètres → MCP : le serveur HTTP local demarre sur le port 49422, un Bearer token est genere, et SSHive auto-injecte une entrée `mcpServers.sshive` dans les fichiers de config de chaque client detecte (`~/.claude.json`, `~/.cursor/mcp.json`, plus un bloc stdio copiable pour Claude Desktop via `npx mcp-remote`). Pour les autres clients compatibles MCP, un bouton Copier vous donne un snippet JSON avec le vrai token pret a coller n\'importe ou.\n\nLe serveur expose 11 outils : `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file` (1 MB max), `sftp_write_file` (en memoire), `sftp_write_file_chunk` (chunks de 4 MB pour gros fichiers via append base64), `sftp_write_from_local_path` et `sftp_download_to_local_path` (transferts streames, zero overhead base64, sans limite de taille), plus `sftp_mkdir`, `sftp_rename` et `sftp_delete` pour une gestion complète des fichiers distants. L\'authentification utilise un Bearer token UUID persiste dans `settings.json` et rotatable depuis l\'UI. Le serveur HTTP bind uniquement sur `127.0.0.1`, il n\'accepte jamais de connexions externes, et chaque commande passe par l\'auth de votre session SSH existante, donc l\'IA ne peut rien faire que vous ne puissiez déjà faire. MCP est Pro uniquement.\n\nMCP n\'est pas la seule IA dans SSHive : le terminal a aussi un assistant IA integre. Selectionnez une sortie et demandez-lui d\'expliquer une erreur, ou posez une question libre, avec votre propre clé API (Anthropic Claude, OpenAI GPT ou Google Gemini). La clé est stockée chiffrée dans le Trousseau macOS et les requêtes partent directement de votre Mac vers le fournisseur choisi, rien ne transite par les serveurs SSHive.',
+      fr: 'Model Context Protocol (MCP) est le standard introduit par Anthropic fin 2024 pour permettre aux assistants IA de parler aux outils locaux. SSHive embarque un serveur MCP intégré, Claude Code, Cursor et Claude Desktop peuvent lire votre liste de sessions SSH, exécuter des commandes sur les hôtes connectés, parcourir SFTP et lire/ecrire des fichiers distants. Basculez un interrupteur dans Paramètres → MCP : le serveur HTTP local demarre sur le port 49422, un Bearer token est génère, et SSHive auto-injecte une entrée `mcpServers.sshive` dans les fichiers de config de chaque client detecte (`~/.claude.json`, `~/.cursor/mcp.json`, plus un bloc stdio copiable pour Claude Desktop via `npx mcp-remote`). Pour les autres clients compatibles MCP, un bouton Copier vous donne un snippet JSON avec le vrai token pret a coller n\'importe ou.\n\nLe serveur expose 11 outils : `ssh_list_sessions`, `ssh_execute`, `sftp_list`, `sftp_read_file` (1 MB max), `sftp_write_file` (en mémoire), `sftp_write_file_chunk` (chunks de 4 MB pour gros fichiers via append base64), `sftp_write_from_local_path` et `sftp_download_to_local_path` (transferts streames, zero overhead base64, sans limite de taille), plus `sftp_mkdir`, `sftp_rename` et `sftp_delete` pour une gestion complète des fichiers distants. L\'authentification utilise un Bearer token UUID persiste dans `settings.json` et rotatable depuis l\'UI. Le serveur HTTP bind uniquement sur `127.0.0.1`, il n\'accepte jamais de connexions externes, et chaque commande passe par l\'auth de votre session SSH existante, donc l\'IA ne peut rien faire que vous ne puissiez déjà faire. MCP est Pro uniquement.\n\nMCP n\'est pas la seule IA dans SSHive : le terminal a aussi un assistant IA integre. Selectionnez une sortie et demandez-lui d\'expliquer une erreur, ou posez une question libre, avec votre propre clé API (Anthropic Claude, OpenAI GPT ou Google Gemini). La clé est stockée chiffrée dans le Trousseau macOS et les requêtes partent directement de votre Mac vers le fournisseur choisi, rien ne transite par les serveurs SSHive.',
     },
     useCasesHeading: { en: 'AI + SSH workflows', fr: 'Workflows IA + SSH' },
     useCases: [
@@ -358,11 +358,11 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         title: { en: 'Production debugging with Claude', fr: 'Debug production avec Claude' },
         description: {
           en: '"Hey Claude, my prod app is slow, check disk, memory, and the last 100 lines of nginx error log." Claude calls `ssh_execute` against your prod session, returns a triage summary in seconds. You stay in your editor.',
-          fr: '"Hey Claude, mon app prod est lente, verifie disque, memoire et les 100 dernières lignes du log d\'erreur nginx." Claude appelle `ssh_execute` sur votre session prod, renvoie un resume de triage en quelques secondes. Vous restez dans votre editeur.',
+          fr: '"Hey Claude, mon app prod est lente, verifie disque, mémoire et les 100 dernières lignes du log d\'erreur nginx." Claude appelle `ssh_execute` sur votre session prod, renvoie un resume de triage en quelques secondes. Vous restez dans votre editeur.',
         },
       },
       {
-        title: { en: 'Server-side code review', fr: 'Code review cote serveur' },
+        title: { en: 'Server-side code review', fr: 'Code review côté serveur' },
         description: {
           en: 'Ask Cursor to read `/etc/myapp/config.yaml` on staging and compare to your local version. The MCP `sftp_read_file` tool returns the content; Cursor diffs it locally. No copy-paste, no "let me ssh in real quick".',
           fr: 'Demandez a Cursor de lire `/etc/myapp/config.yaml` sur staging et de comparer a votre version locale. Le tool `sftp_read_file` MCP renvoie le contenu ; Cursor le diffe en local. Pas de copier-coller, pas de "laisse-moi ssh rapidement".',
@@ -382,11 +382,11 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Is the MCP server safe? Can the AI mess up my servers?', fr: 'Le serveur MCP est-il sur ? L\'IA peut-elle abimer mes serveurs ?' },
         answer: {
           en: 'The AI can only do what you can do via the active SSH session, it has no extra privileges. SSHive shows a notification for every tool call so you see what the AI is doing in real time. You can disable specific tools (e.g., disable `sftp_write_file` for read-only sessions) per profile.',
-          fr: 'L\'IA ne peut faire que ce que vous pouvez faire via la session SSH active, pas de privileges supplementaires. SSHive affiche une notification pour chaque appel d\'outil, vous voyez en temps reel ce que l\'IA fait. Vous pouvez desactiver des outils specifiques (par ex. desactiver `sftp_write_file` pour les sessions read-only) par profil.',
+          fr: 'L\'IA ne peut faire que ce que vous pouvez faire via la session SSH active, pas de privileges supplementaires. SSHive affiche une notification pour chaque appel d\'outil, vous voyez en temps réel ce que l\'IA fait. Vous pouvez desactiver des outils spécifiques (par ex. desactiver `sftp_write_file` pour les sessions read-only) par profil.',
         },
       },
       {
-        question: { en: 'Which AI clients are supported?', fr: 'Quels clients IA sont supportes ?' },
+        question: { en: 'Which AI clients are supported?', fr: 'Quels clients IA sont supportés ?' },
         answer: {
           en: 'Claude Code (CLI + IDE) and Cursor get the MCP entry written into their config files automatically when you toggle the server ON. Claude Desktop has a copy-paste block (uses `npx mcp-remote` since Desktop is stdio-only). Any other MCP-compliant client works manually, copy the JSON config (which already includes your real Bearer token) from Settings → MCP and paste it into your client.',
           fr: 'Claude Code (CLI + extension IDE) et Cursor recoivent l\'entrée MCP ecrite dans leurs fichiers de config automatiquement quand vous basculez le serveur ON. Claude Desktop a un bloc copier-coller (utilise `npx mcp-remote` car Desktop est stdio-only). Tout autre client compatible MCP fonctionne manuellement, copiez la config JSON (qui inclut déjà votre vrai Bearer token) depuis Paramètres → MCP et collez-la dans votre client.',
@@ -396,7 +396,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Does the MCP server send my data to Anthropic?', fr: 'Le serveur MCP envoie-t-il mes données a Anthropic ?' },
         answer: {
           en: 'No, the MCP server runs entirely on your Mac. Whether your AI client (Claude Code, Cursor) sends data to a cloud LLM is up to that client\'s configuration, not SSHive. SSHive itself has zero telemetry and zero outbound calls beyond your SSH/SFTP connections.',
-          fr: 'Non, le serveur MCP tourne entierement sur votre Mac. Que votre client IA (Claude Code, Cursor) envoie des données a un LLM cloud depend de la configuration de ce client, pas de SSHive. SSHive lui-même a zero telemetrie et zero appel sortant au-dela de vos connexions SSH/SFTP.',
+          fr: 'Non, le serveur MCP tourne entierement sur votre Mac. Que votre client IA (Claude Code, Cursor) envoie des données a un LLM cloud depend de la configuration de ce client, pas de SSHive. SSHive lui-même a zero télémétrie et zero appel sortant au-dela de vos connexions SSH/SFTP.',
         },
       },
       {
@@ -414,7 +414,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   broadcast: {
     intro: {
       en: 'When you administer more than one server, you eventually face the "I need to run this on all of them" moment. Maybe it\'s `apt update`, maybe it\'s checking which version of OpenSSL is installed, maybe it\'s a config rollout. Tools like Ansible, Salt, and Puppet exist for this, but for a one-off command across 3 to 30 servers, they\'re heavy. Broadcast mode in SSHive solves the gap: open the sessions you care about, hit Cmd+Shift+B, type the command, watch it run on all of them simultaneously with each output in its own pane.\n\nThere\'s no agent, no inventory, no YAML. Broadcast just types the same keystrokes into every active SSH session. You see real-time output side-by-side, can spot the one box that errored out, and re-run targeted commands on just that one. It\'s the unsexiest, most useful feature SSHive has, and it\'s exactly what fleet operators have been asking for since the SecureCRT "command window" days.',
-      fr: 'Quand vous administrez plus d\'un serveur, vous finissez par tomber sur le moment "j\'ai besoin de lancer ca sur tous". Parfois c\'est `apt update`, parfois c\'est vérifier quelle version d\'OpenSSL est installee, parfois c\'est un deploiement de config. Des outils comme Ansible, Salt et Puppet existent pour ca, mais pour une commande one-off sur 3 a 30 serveurs, c\'est lourd. Le mode broadcast de SSHive comble le manque : ouvrez les sessions concernees, Cmd+Shift+B, tapez la commande, regardez-la s\'exécuter sur toutes simultanement, chaque sortie dans son panneau.\n\nPas d\'agent, pas d\'inventaire, pas de YAML. Le broadcast tape juste les mêmes touches dans chaque session SSH active. Vous voyez la sortie temps reel cote a cote, vous reperez la box qui a foire, vous relancez des commandes ciblees sur celle-la uniquement. C\'est la fonctionnalité la moins sexy et la plus utile de SSHive, et c\'est exactement ce que les fleet operators reclament depuis l\'epoque de la "command window" SecureCRT.',
+      fr: 'Quand vous administrez plus d\'un serveur, vous finissez par tomber sur le moment "j\'ai besoin de lancer ca sur tous". Parfois c\'est `apt update`, parfois c\'est vérifier quelle version d\'OpenSSL est installee, parfois c\'est un deploiement de config. Des outils comme Ansible, Salt et Puppet existent pour ca, mais pour une commande one-off sur 3 a 30 serveurs, c\'est lourd. Le mode broadcast de SSHive comble le manque : ouvrez les sessions concernees, Cmd+Shift+B, tapez la commande, regardez-la s\'exécuter sur toutes simultanement, chaque sortie dans son panneau.\n\nPas d\'agent, pas d\'inventaire, pas de YAML. Le broadcast tape juste les mêmes touches dans chaque session SSH active. Vous voyez la sortie temps réel côte à côte, vous reperez la box qui a foire, vous relancez des commandes ciblees sur celle-la uniquement. C\'est la fonctionnalité la moins sexy et la plus utile de SSHive, et c\'est exactement ce que les fleet operators reclament depuis l\'epoque de la "command window" SecureCRT.',
     },
     useCasesHeading: { en: 'When broadcast saves hours', fr: 'Quand le broadcast fait gagner des heures' },
     useCases: [
@@ -429,7 +429,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         title: { en: 'Audit configuration drift', fr: 'Auditer la derive de configuration' },
         description: {
           en: 'Broadcast `cat /etc/timezone` or `php -v` to see at a glance which boxes are out of sync. The side-by-side panes make divergent outputs jump out.',
-          fr: 'Broadcastez `cat /etc/timezone` ou `php -v` pour voir d\'un coup d\'oeil quelles boxes sont desynchronisees. Les panneaux cote a cote font ressortir les sorties divergentes.',
+          fr: 'Broadcastez `cat /etc/timezone` ou `php -v` pour voir d\'un coup d\'oeil quelles boxes sont desynchronisees. Les panneaux côte à côte font ressortir les sorties divergentes.',
         },
       },
       {
@@ -446,14 +446,14 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'How do I broadcast to a subset of sessions?', fr: 'Comment broadcaster a un sous-ensemble de sessions ?' },
         answer: {
           en: 'In the sessions panel, check the boxes next to the sessions you want to include. Cmd+Shift+B then targets only those. You can save broadcast groups (e.g., "all web", "all db") for one-click selection.',
-          fr: 'Dans le panneau de sessions, cochez les sessions a inclure. Cmd+Shift+B cible alors uniquement celles-la. Vous pouvez sauvegarder des groupes de broadcast ("tous web", "toutes db") pour selection en un clic.',
+          fr: 'Dans le panneau de sessions, cochez les sessions a inclure. Cmd+Shift+B cible alors uniquement celles-la. Vous pouvez sauvegarder des groupes de broadcast ("tous web", "toutes db") pour sélection en un clic.',
         },
       },
       {
         question: { en: 'Is broadcast different from a multiplexer like tmux?', fr: 'Le broadcast est-il différent d\'un multiplexeur comme tmux ?' },
         answer: {
           en: 'tmux\'s `setw synchronize-panes` is similar, but it requires having a tmux session on each host first. SSHive broadcast works at the SSH client level, so no setup on the remote side, no tmux required, and you get separate panes per host with auto-color-coding.',
-          fr: '`setw synchronize-panes` de tmux est similaire, mais demande une session tmux sur chaque hote d\'abord. Le broadcast SSHive marche au niveau du client SSH, donc pas de setup cote distant, pas besoin de tmux, et panneaux separes par hote avec code couleur auto.',
+          fr: '`setw synchronize-panes` de tmux est similaire, mais demande une session tmux sur chaque hôte d\'abord. Le broadcast SSHive marche au niveau du client SSH, donc pas de setup côté distant, pas besoin de tmux, et panneaux séparés par hôte avec code couleur auto.',
         },
       },
       {
@@ -478,7 +478,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
   snippets: {
     intro: {
       en: 'Every sysadmin has a `~/scripts/` folder full of one-liners they wrote 4 years ago and now copy-paste into every terminal. Quick Commands (snippets) in SSHive give those one-liners a permanent home with a searchable UI. Out of the box, SSHive ships with 14 presets covering system inspection (`uname -a`, `top -b -n 1 | head -20`), network (`ss -tulpn`, `dig +short`), disk (`df -h`, `du -sh /var/log/*`), Docker (`docker ps -a`, `docker logs --tail 100 -f`), and Git (`git log --oneline -20`, `git status -sb`).\n\nYou create your own snippets, organize them in folders, search by name or tag. One click inserts the snippet into the active terminal, or, with broadcast on, into all of them. Snippets support placeholders like `{{port}}` or `{{path}}` that prompt for values before insertion, so a generic "tail this log" snippet works on any path. Your snippet library is portable: export to a JSON file, import on another Mac.',
-      fr: 'Chaque sysadmin a un dossier `~/scripts/` rempli de one-liners ecrits il y a 4 ans et copies-colles dans chaque terminal. Quick Commands (snippets) dans SSHive donne a ces one-liners une maison permanente avec une UI cherchable. Out of the box, SSHive embarque 14 presets couvrant inspection système (`uname -a`, `top -b -n 1 | head -20`), réseau (`ss -tulpn`, `dig +short`), disque (`df -h`, `du -sh /var/log/*`), Docker (`docker ps -a`, `docker logs --tail 100 -f`), et Git (`git log --oneline -20`, `git status -sb`).\n\nVous créez vos snippets, les organisez en dossiers, cherchez par nom ou tag. Un clic insert le snippet dans le terminal actif, ou, broadcast active, dans tous. Les snippets supportent des placeholders genre `{{port}}` ou `{{path}}` qui demandent les valeurs avant insertion, donc un snippet generique "tail ce log" marche sur n\'importe quel chemin. Votre bibliotheque de snippets est portable : export en JSON, import sur un autre Mac.',
+      fr: 'Chaque sysadmin a un dossier `~/scripts/` rempli de one-liners ecrits il y a 4 ans et copies-colles dans chaque terminal. Quick Commands (snippets) dans SSHive donne a ces one-liners une maison permanente avec une UI cherchable. Out of the box, SSHive embarque 14 presets couvrant inspection système (`uname -a`, `top -b -n 1 | head -20`), réseau (`ss -tulpn`, `dig +short`), disque (`df -h`, `du -sh /var/log/*`), Docker (`docker ps -a`, `docker logs --tail 100 -f`), et Git (`git log --oneline -20`, `git status -sb`).\n\nVous créez vos snippets, les organisez en dossiers, cherchez par nom ou tag. Un clic insert le snippet dans le terminal actif, ou, broadcast active, dans tous. Les snippets supportent des placeholders genre `{{port}}` ou `{{path}}` qui demandent les valeurs avant insertion, donc un snippet generique "tail ce log" marche sur n\'importe quel chemin. Votre bibliothèque de snippets est portable : export en JSON, import sur un autre Mac.',
     },
     useCasesHeading: { en: 'Snippet workflows', fr: 'Workflows snippets' },
     useCases: [
@@ -486,7 +486,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         title: { en: 'Onboarding new hires', fr: 'Onboarding des nouveaux' },
         description: {
           en: 'Export your team\'s blessed snippet library, share the JSON, every new hire imports it. Common ops (deploy, restart, status) become discoverable through the search instead of tribal knowledge.',
-          fr: 'Exportez la bibliotheque de snippets benie de votre équipe, partagez le JSON, chaque nouveau l\'importe. Les opérations courantes (deploy, restart, status) deviennent decouvrables via la recherche au lieu d\'être du savoir tribal.',
+          fr: 'Exportez la bibliothèque de snippets benie de votre équipe, partagez le JSON, chaque nouveau l\'importe. Les opérations courantes (deploy, restart, status) deviennent decouvrables via la recherche au lieu d\'être du savoir tribal.',
         },
       },
       {
@@ -510,14 +510,14 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Can snippets contain multi-line commands?', fr: 'Les snippets peuvent-ils contenir des commandes multi-ligne ?' },
         answer: {
           en: 'Yes. Multi-line snippets paste as-is into the terminal. For very long scripts, consider committing them to a Git repo on your servers and using a snippet to invoke them, keeps the snippet library lean.',
-          fr: 'Oui. Les snippets multi-ligne se collent tels quels dans le terminal. Pour des scripts très longs, commit-les dans un repo Git sur vos serveurs et utilisez un snippet pour les invoquer, la bibliotheque reste legere.',
+          fr: 'Oui. Les snippets multi-ligne se collent tels quels dans le terminal. Pour des scripts très longs, commit-les dans un repo Git sur vos serveurs et utilisez un snippet pour les invoquer, la bibliothèque reste legere.',
         },
       },
       {
         question: { en: 'Can I share snippets between Macs?', fr: 'Puis-je partager des snippets entre Macs ?' },
         answer: {
           en: 'Yes. Custom snippets live in `snippets.json` inside SSHive\'s data directory: copy that file to the other Mac, or keep it in iCloud Drive / Dropbox and symlink it into the data directory. The encrypted `.sshive` profile export covers profiles and credentials, not snippets.',
-          fr: 'Oui. Les snippets personnalises vivent dans `snippets.json` dans le repertoire de données de SSHive : copiez ce fichier sur l\'autre Mac, ou gardez-le dans iCloud Drive / Dropbox et symlinkez-le dans le repertoire de donnees. L\'export chiffre `.sshive` couvre profils et credentials, pas les snippets.',
+          fr: 'Oui. Les snippets personnalises vivent dans `snippets.json` dans le répertoire de données de SSHive : copiez ce fichier sur l\'autre Mac, ou gardez-le dans iCloud Drive / Dropbox et symlinkez-le dans le répertoire de donnees. L\'export chiffré `.sshive` couvre profils et credentials, pas les snippets.',
         },
       },
       {
@@ -531,7 +531,7 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
         question: { en: 'Can I share a snippet with a teammate via a link?', fr: 'Puis-je partager un snippet avec un collegue via un lien ?' },
         answer: {
           en: 'Right-click any snippet, "Copy as URI", generates `sshive://snippet?...` that another SSHive install on macOS opens with a confirm dialog. Useful for one-off shares without exporting the whole library.',
-          fr: 'Clic droit sur un snippet, "Copy as URI", genere `sshive://snippet?...` qu\'un autre SSHive sur macOS ouvre avec un dialogue de confirmation. Utile pour partage one-off sans exporter toute la bibliotheque.',
+          fr: 'Clic droit sur un snippet, "Copy as URI", génère `sshive://snippet?...` qu\'un autre SSHive sur macOS ouvre avec un dialogue de confirmation. Utile pour partage one-off sans exporter toute la bibliotheque.',
         },
       },
     ],

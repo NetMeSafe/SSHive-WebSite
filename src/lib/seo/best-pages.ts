@@ -52,7 +52,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
       en: 'SSHive is the only client on this list that bundles SSH terminal, SFTP file manager, embedded RDP, embedded VNC, SSH tunnels (-L, -R, -D), multi-host broadcast, snippet library, network tools, and a built-in MCP server for Claude Code, Cursor and Claude Desktop, all in one Apple-native window, on Mac as well as iPhone and iPad. Credentials live in the macOS Keychain, gated by Touch ID. Free for SSH and SFTP; Pro is a one-time $9.99 on the Mac App Store with no recurring fees and lifetime updates. If you do anything beyond a terminal, this is what we use ourselves.',
-      fr: 'SSHive est le seul client de cette liste qui regroupe terminal SSH, gestionnaire SFTP, RDP integre, VNC integre, tunnels SSH (-L, -R, -D), broadcast multi-hote, bibliotheque de snippets, outils réseau et un serveur MCP integre pour Claude Code, Cursor et Claude Desktop, le tout dans une fenêtre Apple native, sur Mac comme sur iPhone et iPad. Les identifiants sont dans le Trousseau macOS, proteges par Touch ID. Gratuit pour SSH et SFTP ; Pro a 9,99 € achat unique sur le Mac App Store, sans frais recurrents, mises a jour a vie. Si vous faites quoi que ce soit au-dela d\'un terminal, c\'est ce qu\'on utilise nous-memes.',
+      fr: 'SSHive est le seul client de cette liste qui regroupe terminal SSH, gestionnaire SFTP, RDP intégré, VNC intégré, tunnels SSH (-L, -R, -D), broadcast multi-hôte, bibliothèque de snippets, outils réseau et un serveur MCP intégré pour Claude Code, Cursor et Claude Desktop, le tout dans une fenêtre Apple native, sur Mac comme sur iPhone et iPad. Les identifiants sont dans le Trousseau macOS, proteges par Touch ID. Gratuit pour SSH et SFTP ; Pro a 9,99 € achat unique sur le Mac App Store, sans frais recurrents, mises a jour a vie. Si vous faites quoi que ce soit au-dela d\'un terminal, c\'est ce qu\'on utilise nous-memes.',
     },
     shortlistHeading: {
       en: 'The other clients we considered',
@@ -140,7 +140,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
       },
       {
-        title: { en: 'AI-ready by default', fr: 'Pret pour l\'IA par defaut' },
+        title: { en: 'AI-ready by default', fr: 'Pret pour l\'IA par défaut' },
         body: {
           en: 'SSHive ships an MCP server out of the box. One toggle in settings and Claude Code, Cursor, or Claude Desktop can run commands on your servers. None of the alternatives have this, the closest equivalents require gluing together OpenAI Codex CLI plus shell scripts plus a custom MCP server.',
           fr: 'SSHive embarque un serveur MCP par defaut. Un interrupteur dans les paramètres et Claude Code, Cursor ou Claude Desktop peuvent lancer des commandes sur vos serveurs. Aucune des alternatives n\'a ca, l\'equivalent le plus proche demande de coller OpenAI Codex CLI plus des shell scripts plus un serveur MCP custom.',
@@ -150,7 +150,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         title: { en: 'One-time price, no subscription', fr: 'Prix unique, sans abonnement' },
         body: {
           en: 'SSHive Pro is $9.99 once on the Mac App Store. Lifetime updates included. Termius costs ~$10/month for advanced features. SecureCRT is per-seat enterprise pricing. Royal TSX has its own license model. Over a year, SSHive comes out cheapest by a large margin.',
-          fr: 'SSHive Pro coute 9,99 $ une fois sur le Mac App Store. Mises a jour a vie incluses. Termius coute ~10 $/mois pour les fonctionnalités avancees. SecureCRT est en tarification entreprise par siege. Royal TSX a son propre modèle de licence. Sur un an, SSHive sort gagnant largement.',
+          fr: 'SSHive Pro coûte 9,99 $ une fois sur le Mac App Store. Mises a jour a vie incluses. Termius coûte ~10 $/mois pour les fonctionnalités avancees. SecureCRT est en tarification entreprise par siege. Royal TSX a son propre modèle de licence. Sur un an, SSHive sort gagnant largement.',
         },
       },
     ],
@@ -159,18 +159,18 @@ export const BEST_PAGES: BestPageSEO[] = [
         question: { en: 'Is SSHive really free?', fr: 'SSHive est-il vraiment gratuit ?' },
         answer: {
           en: 'The free tier is real and unrestricted in time. It covers SSH terminal, SFTP file manager, snippets, profiles and Keychain credential storage with a small concurrent-session limit. Pro adds RDP, VNC, tunnels, broadcast, MCP and unlimited sessions for $9.99 one-time on the Mac App Store.',
-          fr: 'Le tier gratuit est reel et sans limite dans le temps. Il couvre terminal SSH, gestionnaire SFTP, snippets, profils et stockage Trousseau, avec une petite limite de sessions concurrentes. Pro ajoute RDP, VNC, tunnels, broadcast, MCP et sessions illimitees pour 9,99 $ achat unique sur le Mac App Store.',
+          fr: 'Le tier gratuit est réel et sans limite dans le temps. Il couvre terminal SSH, gestionnaire SFTP, snippets, profils et stockage Trousseau, avec une petite limite de sessions concurrentes. Pro ajoute RDP, VNC, tunnels, broadcast, MCP et sessions illimitees pour 9,99 $ achat unique sur le Mac App Store.',
         },
       },
       {
         question: { en: 'Can I import my existing SSH config or sessions from another tool?', fr: 'Puis-je importer ma config SSH ou mes sessions d\'un autre outil ?' },
         answer: {
           en: 'Yes. SSHive imports `~/.ssh/config`, PuTTY registry exports, Royal TSX `.rtsz`, and cleartext MobaXterm.ini files. Profiles created on Mac can also be exported as an encrypted `.sshive` file (scrypt + AES-256-GCM, passphrase required) and imported on iPhone or iPad.',
-          fr: 'Oui. SSHive importe `~/.ssh/config`, les exports registry PuTTY, les fichiers Royal TSX `.rtsz` et les fichiers MobaXterm.ini en clair. Les profils crees sur Mac peuvent aussi être exportes en fichier `.sshive` chiffre (scrypt + AES-256-GCM, passphrase requise) et importes sur iPhone ou iPad.',
+          fr: 'Oui. SSHive importe `~/.ssh/config`, les exports registry PuTTY, les fichiers Royal TSX `.rtsz` et les fichiers MobaXterm.ini en clair. Les profils crees sur Mac peuvent aussi être exportes en fichier `.sshive` chiffré (scrypt + AES-256-GCM, passphrase requise) et importes sur iPhone ou iPad.',
         },
       },
       {
-        question: { en: 'What about the macOS built-in Terminal.app?', fr: 'Et le Terminal.app integre a macOS ?' },
+        question: { en: 'What about the macOS built-in Terminal.app?', fr: 'Et le Terminal.app intégré a macOS ?' },
         answer: {
           en: 'Terminal.app is fine for occasional `ssh user@host` and that\'s it, no profile manager, no SFTP, no tunnels UI, no Keychain integration for SSH passphrases beyond what `ssh-add --apple-use-keychain` provides. For anything beyond a single command, you outgrow it within a week.',
           fr: 'Terminal.app convient pour un `ssh user@host` occasionnel et c\'est tout, pas de gestionnaire de profils, pas de SFTP, pas d\'UI tunnels, pas d\'intégration Trousseau pour les passphrases SSH au-dela de ce que fournit `ssh-add --apple-use-keychain`. Pour tout ce qui depasse une commande unique, vous le depassez en une semaine.',
@@ -186,7 +186,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     metaDescription: {
       en: 'A curated guide to the best SFTP clients for macOS in 2026: SSHive, Cyberduck, Transmit, FileZilla, ForkLift. Drag-and-drop transfers, remote editing, free vs paid.',
-      fr: 'Guide cure des meilleurs clients SFTP pour macOS en 2026 : SSHive, Cyberduck, Transmit, FileZilla, ForkLift. Transferts drag-and-drop, edition distante, gratuit vs payant.',
+      fr: 'Guide cure des meilleurs clients SFTP pour macOS en 2026 : SSHive, Cyberduck, Transmit, FileZilla, ForkLift. Transferts drag-and-drop, édition distante, gratuit vs payant.',
     },
     h1: {
       en: 'The best SFTP client for Mac in 2026',
@@ -194,11 +194,11 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     hero: {
       en: 'Five SFTP clients tested on macOS, drag-and-drop, remote editing, multi-protocol, native feel. Which one to pick for your workflow.',
-      fr: 'Cinq clients SFTP testes sur macOS, drag-and-drop, edition distante, multi-protocole, look natif. Lequel choisir selon votre workflow.',
+      fr: 'Cinq clients SFTP testes sur macOS, drag-and-drop, édition distante, multi-protocole, look natif. Lequel choisir selon votre workflow.',
     },
     intro: {
       en: 'macOS does not include a built-in graphical SFTP client. The Finder does not natively connect to SFTP servers, and `scp` from Terminal is fine for one-off transfers but slow for the back-and-forth file editing many sysadmins do daily. So you need a third-party tool. The market splits in two: dedicated multi-protocol file transfer apps (Cyberduck, Transmit, FileZilla, ForkLift) and SSH-suite tools that bundle SFTP next to a terminal (SSHive). The right pick depends on whether you also need SSH/RDP/VNC in the same window.',
-      fr: 'macOS n\'inclut pas de client SFTP graphique integre. Le Finder ne se connecte pas nativement aux serveurs SFTP, et `scp` depuis le Terminal convient aux transferts one-off mais est lent pour les allers-retours d\'edition que beaucoup de sysadmins font au quotidien. Il faut donc un outil tiers. Le marche se divise en deux : apps de transfert multi-protocole dédiées (Cyberduck, Transmit, FileZilla, ForkLift) et outils suite SSH qui regroupent SFTP a cote d\'un terminal (SSHive). Le bon choix depend de si vous avez aussi besoin de SSH/RDP/VNC dans la même fenetre.',
+      fr: 'macOS n\'inclut pas de client SFTP graphique integre. Le Finder ne se connecté pas nativement aux serveurs SFTP, et `scp` depuis le Terminal convient aux transferts one-off mais est lent pour les allers-retours d\'édition que beaucoup de sysadmins font au quotidien. Il faut donc un outil tiers. Le marche se divise en deux : apps de transfert multi-protocole dédiées (Cyberduck, Transmit, FileZilla, ForkLift) et outils suite SSH qui regroupent SFTP a côté d\'un terminal (SSHive). Le bon choix depend de si vous avez aussi besoin de SSH/RDP/VNC dans la même fenetre.',
     },
     ourPickHeading: {
       en: 'Our pick if you also do SSH: SSHive',
@@ -206,7 +206,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     ourPickBody: {
       en: 'SSHive\'s SFTP file manager lives in the same window as the SSH terminal: dual-pane local-vs-remote browser, drag-and-drop from Finder, built-in remote text editor (CodeMirror), bulk operations, transfer progress with speed. The killer feature is workflow integration, fix a config in the SSHive editor, restart the service in the SSHive terminal next to it, in the same session. If you only need pure SFTP and never touch SSH, dedicated apps below may be a better fit.',
-      fr: 'Le gestionnaire SFTP de SSHive vit dans la même fenêtre que le terminal SSH : navigateur double panneau local-vs-distant, drag-and-drop depuis le Finder, editeur de texte distant integre (CodeMirror), opérations en lot, progression des transferts avec vitesse. La fonctionnalité phare est l\'intégration workflow, corrigez une config dans l\'editeur SSHive, redemarrez le service dans le terminal SSHive a cote, dans la même session. Si vous voulez du SFTP pur sans toucher au SSH, les apps dédiées ci-dessous sont peut-être plus adaptees.',
+      fr: 'Le gestionnaire SFTP de SSHive vit dans la même fenêtre que le terminal SSH : navigateur double panneau local-vs-distant, drag-and-drop depuis le Finder, éditeur de texte distant intégré (CodeMirror), opérations en lot, progression des transferts avec vitesse. La fonctionnalité phare est l\'intégration workflow, corrigez une config dans l\'éditeur SSHive, redemarrez le service dans le terminal SSHive a côté, dans la même session. Si vous voulez du SFTP pur sans toucher au SSH, les apps dédiées ci-dessous sont peut-être plus adaptees.',
     },
     shortlistHeading: {
       en: 'The pure SFTP / file-transfer alternatives',
@@ -259,21 +259,21 @@ export const BEST_PAGES: BestPageSEO[] = [
         title: { en: 'No more app-juggling', fr: 'Plus de jonglage entre apps' },
         body: {
           en: 'Editing a config and restarting a service is a single workflow. With Cyberduck + Terminal, that is two apps and a constant Cmd+Tab. With SSHive\'s integrated panes, both are one click apart.',
-          fr: 'Editer une config et redemarrer un service est un seul workflow. Avec Cyberduck + Terminal, c\'est deux apps et un Cmd+Tab permanent. Avec les panneaux integres de SSHive, les deux sont a un clic.',
+          fr: 'Éditer une config et redemarrer un service est un seul workflow. Avec Cyberduck + Terminal, c\'est deux apps et un Cmd+Tab permanent. Avec les panneaux intégrés de SSHive, les deux sont a un clic.',
         },
       },
       {
         title: { en: 'Same auth, same Keychain', fr: 'Même auth, même Trousseau' },
         body: {
           en: 'SFTP runs over the SSH connection. SSHive stores SSH credentials in the macOS Keychain via Touch ID, the SFTP pane uses the same auth automatically. No re-typing passwords, no separate credentials per protocol.',
-          fr: 'SFTP tourne sur la connexion SSH. SSHive stocke les identifiants SSH dans le Trousseau macOS via Touch ID, le panneau SFTP utilise la même auth automatiquement. Pas besoin de retaper les mots de passe, pas d\'identifiants separes par protocole.',
+          fr: 'SFTP tourne sur la connexion SSH. SSHive stocke les identifiants SSH dans le Trousseau macOS via Touch ID, le panneau SFTP utilise la même auth automatiquement. Pas besoin de retaper les mots de passe, pas d\'identifiants séparés par protocole.',
         },
       },
       {
         title: { en: 'Native to Mac, iPhone, iPad', fr: 'Natif Mac, iPhone, iPad' },
         body: {
           en: 'SSHive\'s SFTP works on iPhone and iPad too, with profiles synced from Mac. Cyberduck and Transmit are Mac-only on the Apple side; FileZilla has a separate Android version.',
-          fr: 'Le SFTP de SSHive fonctionne aussi sur iPhone et iPad, avec profils synchronises depuis Mac. Cyberduck et Transmit sont Mac-only cote Apple ; FileZilla a une version Android separee.',
+          fr: 'Le SFTP de SSHive fonctionne aussi sur iPhone et iPad, avec profils synchronises depuis Mac. Cyberduck et Transmit sont Mac-only côté Apple ; FileZilla a une version Android separee.',
         },
       },
     ],
@@ -285,17 +285,17 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'No, SSHive is SFTP-only on the file-transfer side. For FTP, FTPS, WebDAV, S3, Azure Blob, Google Cloud Storage, use Cyberduck or Transmit instead. If 95% of your transfers are SFTP, SSHive is the right tool.',
-          fr: 'Non, SSHive est SFTP-only cote transfert. Pour FTP, FTPS, WebDAV, S3, Azure Blob, Google Cloud Storage, utilisez Cyberduck ou Transmit. Si 95% de vos transferts sont SFTP, SSHive est le bon outil.',
+          fr: 'Non, SSHive est SFTP-only côté transfert. Pour FTP, FTPS, WebDAV, S3, Azure Blob, Google Cloud Storage, utilisez Cyberduck ou Transmit. Si 95% de vos transferts sont SFTP, SSHive est le bon outil.',
         },
       },
       {
         question: {
           en: 'Can I edit remote files in place with SSHive?',
-          fr: 'Puis-je editer des fichiers distants en place avec SSHive ?',
+          fr: 'Puis-je éditer des fichiers distants en place avec SSHive ?',
         },
         answer: {
           en: 'Yes. Double-click any text file in the SFTP pane and it opens in SSHive\'s built-in CodeMirror editor. Cmd+S writes back to the server. Binary files open in the macOS default app via a temp file SSHive watches; saving uploads back automatically.',
-          fr: 'Oui. Double-clic sur un fichier texte dans le panneau SFTP, il s\'ouvre dans l\'editeur CodeMirror integre de SSHive. Cmd+S sauvegarde sur le serveur. Les fichiers binaires s\'ouvrent dans l\'app macOS par defaut via un temp file que SSHive surveille ; la sauvegarde reupload automatiquement.',
+          fr: 'Oui. Double-clic sur un fichier texte dans le panneau SFTP, il s\'ouvre dans l\'éditeur CodeMirror intégré de SSHive. Cmd+S sauvegarde sur le serveur. Les fichiers binaires s\'ouvrent dans l\'app macOS par défaut via un temp file que SSHive surveille ; la sauvegarde reupload automatiquement.',
         },
       },
       {
@@ -305,7 +305,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'On gigabit Ethernet, SFTP saturates the link (110-120 MB/s) given a fast remote disk and AES-NI-capable cipher. Bottlenecks are usually the remote storage IOPS and CPU for SSH encryption, not the client. SSHive uses parallel chunked transfers (4 streams by default) to maximize throughput on high-latency links.',
-          fr: 'Sur Ethernet gigabit, le SFTP sature le lien (110-120 Mo/s) avec un disque distant rapide et un cipher compatible AES-NI. Les goulots sont généralement les IOPS du stockage distant et le CPU pour le chiffrement SSH, pas le client. SSHive utilise des transferts paralleles en chunks (4 streams par defaut) pour maximiser le debit sur les liens a forte latence.',
+          fr: 'Sur Ethernet gigabit, le SFTP sature le lien (110-120 Mo/s) avec un disque distant rapide et un cipher compatible AES-NI. Les goulots sont généralement les IOPS du stockage distant et le CPU pour le chiffrement SSH, pas le client. SSHive utilise des transferts paralleles en chunks (4 streams par défaut) pour maximiser le debit sur les liens a forte latence.',
         },
       },
     ],
@@ -318,7 +318,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     metaDescription: {
       en: 'A curated guide to the best RDP clients on macOS in 2026: SSHive (embedded), Microsoft Remote Desktop, Royal TSX, Jump Desktop, Parallels Client, features, AD support and price.',
-      fr: 'Guide cure des meilleurs clients RDP sur macOS en 2026 : SSHive (integre), Microsoft Remote Desktop, Royal TSX, Jump Desktop, Parallels Client, fonctionnalités, support AD et prix.',
+      fr: 'Guide cure des meilleurs clients RDP sur macOS en 2026 : SSHive (intégré), Microsoft Remote Desktop, Royal TSX, Jump Desktop, Parallels Client, fonctionnalités, support AD et prix.',
     },
     h1: {
       en: 'The best RDP client for Mac in 2026',
@@ -326,16 +326,16 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     hero: {
       en: 'Five RDP clients tested on macOS, Active Directory, NLA, performance and which one fits a real SSH/SFTP workflow.',
-      fr: 'Cinq clients RDP testes sur macOS, Active Directory, NLA, performances et lequel s\'integre a un vrai workflow SSH/SFTP.',
+      fr: 'Cinq clients RDP testes sur macOS, Active Directory, NLA, performances et lequel s\'intégré a un vrai workflow SSH/SFTP.',
     },
     intro: {
       en: 'macOS has a healthy choice of RDP clients in 2026, Apple does not ship one, but Microsoft offers a free official client on the Mac App Store, and several strong third-party tools cover the multi-protocol and team scenarios. This guide ranks five RDP clients that work well on macOS Sonoma/Sequoia, with notes on Active Directory, NLA, gateway configurations and what happens when you also need SSH and SFTP to the same fleet.\n\nWe ranked by real-world ergonomics: how fast you can open a saved connection, whether it remembers domain/username/password securely, how it handles Ctrl+Alt+Del and the Windows key, and whether you have to leave the app to do SSH or SFTP on the same machine. Order is not about screen-redraw FPS, they are all fine on Apple Silicon.',
-      fr: 'macOS a un bon choix de clients RDP en 2026, Apple n\'en fournit pas, mais Microsoft propose un client officiel gratuit sur le Mac App Store, et plusieurs outils tiers solides couvrent les scenarios multi-protocoles et equipe. Ce guide classe cinq clients RDP qui marchent bien sur macOS Sonoma/Sequoia, avec notes sur Active Directory, NLA, gateways et ce qui se passe quand vous avez aussi besoin de SSH et SFTP sur la même flotte.\n\nClassement par ergonomie reelle : a quelle vitesse on ouvre une connexion sauvegardee, est-ce que les credentials domain/username/password sont retenus en sécurité, comment Ctrl+Alt+Suppr et la touche Windows sont gerees, et si on doit quitter l\'app pour faire SSH ou SFTP sur la même machine. L\'ordre ne porte pas sur le FPS de redraw, tous bons sur Apple Silicon.',
+      fr: 'macOS a un bon choix de clients RDP en 2026, Apple n\'en fournit pas, mais Microsoft propose un client officiel gratuit sur le Mac App Store, et plusieurs outils tiers solides couvrent les scenarios multi-protocoles et equipe. Ce guide classe cinq clients RDP qui marchent bien sur macOS Sonoma/Sequoia, avec notes sur Active Directory, NLA, gateways et ce qui se passe quand vous avez aussi besoin de SSH et SFTP sur la même flotte.\n\nClassement par ergonomie réelle : a quelle vitesse on ouvre une connexion sauvegardee, est-ce que les credentials domain/username/password sont retenus en sécurité, comment Ctrl+Alt+Suppr et la touche Windows sont gerees, et si on doit quitter l\'app pour faire SSH ou SFTP sur la même machine. L\'ordre ne porte pas sur le FPS de redraw, tous bons sur Apple Silicon.',
     },
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
       en: 'SSHive embeds a real RDP client (FreeRDP 3 on iOS/iPadOS, IronRDP on macOS) inside the same window as your SSH terminal and SFTP file manager. CredSSP, NLA, NTLMv2, Active Directory (NetBIOS and FQDN), Ctrl+Alt+Del, configurable resolution, clipboard, all there. When the Windows admin pages you at 2am to check a service behind a jump host, you do not open three apps: SSH-tunnel to the bastion, SFTP-edit a config, RDP into the Windows VM, all in one window. Credentials live in the macOS Keychain, gated by Touch ID. Pro is $9.99 one-time on the Mac App Store. The RDP feature is also free up to 2 concurrent sessions.',
-      fr: 'SSHive embarque un vrai client RDP (FreeRDP 3 sur iOS/iPadOS, IronRDP sur macOS) dans la même fenêtre que votre terminal SSH et gestionnaire SFTP. CredSSP, NLA, NTLMv2, Active Directory (NetBIOS et FQDN), Ctrl+Alt+Suppr, résolution configurable, presse-papiers, tout est la. Quand l\'admin Windows bipe a 2h pour vérifier un service derriere un jump host, vous n\'ouvrez pas trois apps : SSH-tunnel vers bastion, SFTP-edit une config, RDP sur la VM Windows, tout dans une fenetre. Les identifiants vont dans le Trousseau macOS, proteges par Touch ID. Pro a 9,99 € unique sur le Mac App Store. La feature RDP est aussi gratuite jusqu\'a 2 sessions simultanees.',
+      fr: 'SSHive embarque un vrai client RDP (FreeRDP 3 sur iOS/iPadOS, IronRDP sur macOS) dans la même fenêtre que votre terminal SSH et gestionnaire SFTP. CredSSP, NLA, NTLMv2, Active Directory (NetBIOS et FQDN), Ctrl+Alt+Suppr, résolution configurable, presse-papiers, tout est la. Quand l\'admin Windows bipe a 2h pour vérifier un service derrière un jump host, vous n\'ouvrez pas trois apps : SSH-tunnel vers bastion, SFTP-edit une config, RDP sur la VM Windows, tout dans une fenetre. Les identifiants vont dans le Trousseau macOS, proteges par Touch ID. Pro a 9,99 € unique sur le Mac App Store. La feature RDP est aussi gratuite jusqu\'a 2 sessions simultanees.',
     },
     shortlistHeading: { en: 'The other RDP clients we considered', fr: 'Les autres clients RDP evalues' },
     shortlist: [
@@ -383,14 +383,14 @@ export const BEST_PAGES: BestPageSEO[] = [
         title: { en: 'Active Directory the way Windows does it', fr: 'Active Directory comme sur Windows' },
         body: {
           en: 'A dedicated Domain field, separate from the username, accepting both NetBIOS (`CORP`) and FQDN (`corp.example.com`). NLA + NTLMv2 are negotiated by default. Same input model that AD admins already use on Windows itself.',
-          fr: 'Un champ Domaine dedie, separe du username, qui accepte NetBIOS (`CORP`) et FQDN (`corp.example.com`). NLA + NTLMv2 negocies par defaut. Même modèle d\'entrée que les admins AD utilisent déjà sur Windows.',
+          fr: 'Un champ Domaine dédié, séparé du username, qui accepte NetBIOS (`CORP`) et FQDN (`corp.example.com`). NLA + NTLMv2 negocies par defaut. Même modèle d\'entrée que les admins AD utilisent déjà sur Windows.',
         },
       },
       {
-        title: { en: 'RDP next to SSH and SFTP', fr: 'RDP a cote du SSH et SFTP' },
+        title: { en: 'RDP next to SSH and SFTP', fr: 'RDP a côté du SSH et SFTP' },
         body: {
           en: 'You rarely RDP without also needing SSH or SFTP nearby, a tunnel to the bastion, a config file to inspect. SSHive keeps all three in one window with tabs, so context-switching is one click instead of three app switches.',
-          fr: 'On a rarement besoin de RDP sans aussi du SSH ou SFTP a cote, un tunnel vers le bastion, un fichier de config. SSHive garde les trois dans une fenêtre avec onglets, le context-switch est un clic au lieu de trois app switches.',
+          fr: 'On a rarement besoin de RDP sans aussi du SSH ou SFTP a côté, un tunnel vers le bastion, un fichier de config. SSHive garde les trois dans une fenêtre avec onglets, le context-switch est un clic au lieu de trois app switches.',
         },
       },
       {
@@ -411,7 +411,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         title: { en: 'Free for 2 RDP sessions', fr: 'Gratuit jusqu\'a 2 sessions RDP' },
         body: {
           en: 'You can try RDP without paying. Free covers 2 concurrent RDP sessions; Pro removes the cap and unlocks unlimited SFTP transfer size, all tunnel types and snippets. $9.99 one-time, no subscription.',
-          fr: 'Vous pouvez essayer le RDP sans payer. Gratuit couvre 2 sessions RDP simultanees ; Pro retire la limite et debloque transferts SFTP illimites, tous les tunnels et snippets. 9,99 € unique, sans abonnement.',
+          fr: 'Vous pouvez essayer le RDP sans payer. Gratuit couvre 2 sessions RDP simultanées ; Pro retire la limite et debloque transferts SFTP illimités, tous les tunnels et snippets. 9,99 € unique, sans abonnement.',
         },
       },
       {
@@ -440,7 +440,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'Yes, a per-profile checkbox disables NLA. Useful for old Windows Server 2008 R2 boxes or servers where NLA is misconfigured. Default is NLA enabled, which is what you want for modern systems.',
-          fr: 'Oui, une case par profil desactive NLA. Utile pour les vieux Windows Server 2008 R2 ou les serveurs ou NLA est mal configure. Par defaut NLA est active, ce qui est ce qu\'on veut sur les systèmes modernes.',
+          fr: 'Oui, une case par profil desactive NLA. Utile pour les vieux Windows Server 2008 R2 ou les serveurs ou NLA est mal configure. Par défaut NLA est active, ce qui est ce qu\'on veut sur les systèmes modernes.',
         },
       },
       {
@@ -450,7 +450,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'A dedicated "Send Ctrl+Alt+Del" button is in the RDP toolbar. The Mac Command key maps to the Windows key by default; you can flip this per profile if you prefer.',
-          fr: 'Un bouton dedie "Envoyer Ctrl+Alt+Suppr" dans la barre RDP. La touche Command du Mac est mappee a la touche Windows par defaut ; inversable par profil.',
+          fr: 'Un bouton dédié "Envoyer Ctrl+Alt+Suppr" dans la barre RDP. La touche Command du Mac est mappee a la touche Windows par défaut ; inversable par profil.',
         },
       },
       {
@@ -460,7 +460,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'Yes. Open an SSH session to the bastion with a local tunnel forwarding port 3389 from a Windows host inside the network, then point an SSHive RDP profile at 127.0.0.1:<chosen-port>. The Tunnels UI makes this two clicks. Save the combo as a profile pair for one-click access later.',
-          fr: 'Oui. Ouvrez une session SSH vers le bastion avec un tunnel local forwardant le port 3389 depuis un hote Windows interne, puis pointez un profil RDP SSHive sur 127.0.0.1:<port-choisi>. L\'UI Tunnels rend ca en deux clics. Sauvegardez en paire de profils pour accès en un clic apres.',
+          fr: 'Oui. Ouvrez une session SSH vers le bastion avec un tunnel local forwardant le port 3389 depuis un hôte Windows interne, puis pointez un profil RDP SSHive sur 127.0.0.1:<port-choisi>. L\'UI Tunnels rend ca en deux clics. Sauvegardez en paire de profils pour accès en un clic apres.',
         },
       },
       {
@@ -470,7 +470,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'Yes. Bidirectional clipboard is enabled by default, copy in macOS, paste in the Windows RDP session, and vice versa. Disable per profile if your security policy forbids it.',
-          fr: 'Oui. Presse-papiers bidirectionnel active par defaut, copier sur macOS, coller dans la session Windows RDP, et inversement. Desactivable par profil si la sécurité l\'interdit.',
+          fr: 'Oui. Presse-papiers bidirectionnel active par défaut, copier sur macOS, coller dans la session Windows RDP, et inversement. Desactivable par profil si la sécurité l\'interdit.',
         },
       },
     ],
@@ -483,7 +483,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     metaDescription: {
       en: 'A short guide to the best VNC clients on macOS in 2026: SSHive (embedded), RealVNC Viewer, TigerVNC, Apple Screen Sharing, encryption, performance, which to pick.',
-      fr: 'Guide court des meilleurs clients VNC sur macOS en 2026 : SSHive (integre), RealVNC Viewer, TigerVNC, Partage d\'écran Apple, chiffrement, performances, lequel choisir.',
+      fr: 'Guide court des meilleurs clients VNC sur macOS en 2026 : SSHive (intégré), RealVNC Viewer, TigerVNC, Partage d\'écran Apple, chiffrement, performances, lequel choisir.',
     },
     h1: {
       en: 'The best VNC client for Mac in 2026',
@@ -491,16 +491,16 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     hero: {
       en: 'Four VNC viewers compared on macOS, TLS support, ARD compatibility, performance over an SSH tunnel, and which one fits a real ops workflow.',
-      fr: 'Quatre viewers VNC compares sur macOS, support TLS, compatibilite ARD, performances en tunnel SSH, lequel s\'integre a un vrai workflow ops.',
+      fr: 'Quatre viewers VNC compares sur macOS, support TLS, compatibilite ARD, performances en tunnel SSH, lequel s\'intégré a un vrai workflow ops.',
     },
     intro: {
       en: 'VNC is the universal "see what is on the screen" protocol for everything RDP does not cover, Linux desktops, Raspberry Pi, headless Mac minis, ESXi consoles. macOS has Screen Sharing in the base system (ARD-flavored VNC), but it lacks encryption negotiation against most non-Apple servers, has no saved-profile UI, and cannot reach a VNC server through an SSH tunnel without manual `ssh -L 5900:host:5900` plumbing.\n\nThis page compares the four VNC clients that actually work well on macOS Sonoma/Sequoia: SSHive (embedded, VeNCrypt + ARD + RFB), RealVNC Viewer (the commercial standard), TigerVNC (open-source), and Apple Screen Sharing (for Mac-to-Mac only). We weigh encryption, gestures, saved profiles and what happens when the VNC server lives behind an SSH bastion.',
-      fr: 'VNC est le protocole universel "voir ce qui est a l\'écran" pour tout ce que RDP ne couvre pas, bureaux Linux, Raspberry Pi, Mac minis headless, consoles ESXi. macOS a Partage d\'écran dans la base (VNC saveur ARD), mais il manque la negociation de chiffrement contre la plupart des serveurs non-Apple, n\'a pas d\'UI de profils sauvegardes, et ne peut pas atteindre un serveur VNC via un tunnel SSH sans plumbing manuel `ssh -L 5900:host:5900`.\n\nCette page compare les quatre clients VNC qui marchent vraiment sur macOS Sonoma/Sequoia : SSHive (integre, VeNCrypt + ARD + RFB), RealVNC Viewer (le standard commercial), TigerVNC (open source), et Partage d\'écran Apple (Mac-vers-Mac uniquement). Pesons chiffrement, gestes, profils sauvegardes et ce qui se passe quand le serveur VNC est derriere un bastion SSH.',
+      fr: 'VNC est le protocole universel "voir ce qui est a l\'écran" pour tout ce que RDP ne couvre pas, bureaux Linux, Raspberry Pi, Mac minis headless, consoles ESXi. macOS a Partage d\'écran dans la base (VNC saveur ARD), mais il manque la negociation de chiffrement contre la plupart des serveurs non-Apple, n\'a pas d\'UI de profils sauvegardes, et ne peut pas atteindre un serveur VNC via un tunnel SSH sans plumbing manuel `ssh -L 5900:host:5900`.\n\nCette page compare les quatre clients VNC qui marchent vraiment sur macOS Sonoma/Sequoia : SSHive (intégré, VeNCrypt + ARD + RFB), RealVNC Viewer (le standard commercial), TigerVNC (open source), et Partage d\'écran Apple (Mac-vers-Mac uniquement). Pesons chiffrement, gestes, profils sauvegardes et ce qui se passe quand le serveur VNC est derrière un bastion SSH.',
     },
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
       en: 'SSHive embeds RoyalVNC under the hood, the same VNC engine used in Royal TSX, with full TLS, VeNCrypt, ARD and standard RFB support. You get saved profiles with Touch ID-gated credentials, native macOS rendering and, critically, RDP, SSH and SFTP in the same window. Need to VNC into a headless Ubuntu through a bastion? Open an SSH tunnel in the Tunnels UI (two clicks), point a VNC profile at 127.0.0.1, save the combo. Future you opens it with one click. Free for two concurrent VNC sessions; Pro is $9.99 one-time on the Mac App Store. The same VNC engine ships on iOS and iPadOS too.',
-      fr: 'SSHive embarque RoyalVNC sous le capot, le même moteur VNC utilise dans Royal TSX, avec support complet TLS, VeNCrypt, ARD et RFB standard. Vous avez des profils sauvegardes avec credentials Touch ID, rendu macOS natif, et, critique, RDP, SSH et SFTP dans la même fenetre. Besoin de VNC sur un Ubuntu headless via un bastion ? Ouvrez un tunnel SSH dans l\'UI Tunnels (deux clics), pointez un profil VNC sur 127.0.0.1, sauvegardez la combinaison. Future-vous l\'ouvre en un clic. Gratuit jusqu\'a deux sessions VNC simultanees ; Pro a 9,99 € unique sur le Mac App Store. Le même moteur VNC est aussi sur iOS et iPadOS.',
+      fr: 'SSHive embarque RoyalVNC sous le capot, le même moteur VNC utilise dans Royal TSX, avec support complet TLS, VeNCrypt, ARD et RFB standard. Vous avez des profils sauvegardes avec credentials Touch ID, rendu macOS natif, et, critique, RDP, SSH et SFTP dans la même fenetre. Besoin de VNC sur un Ubuntu headless via un bastion ? Ouvrez un tunnel SSH dans l\'UI Tunnels (deux clics), pointez un profil VNC sur 127.0.0.1, sauvegardez la combinaison. Future-vous l\'ouvre en un clic. Gratuit jusqu\'a deux sessions VNC simultanées ; Pro a 9,99 € unique sur le Mac App Store. Le même moteur VNC est aussi sur iOS et iPadOS.',
     },
     shortlistHeading: { en: 'The other VNC clients we considered', fr: 'Les autres clients VNC evalues' },
     shortlist: [
@@ -509,7 +509,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         name: 'RealVNC Viewer',
         bestFor: {
           en: 'The reference VNC client. Solid encryption, multi-platform sync via RealVNC Connect. Best if you also pay for RealVNC Connect on the server.',
-          fr: 'Le client VNC de reference. Chiffrement solide, sync multi-plateforme via RealVNC Connect. Meilleur si vous payez aussi RealVNC Connect cote serveur.',
+          fr: 'Le client VNC de reference. Chiffrement solide, sync multi-plateforme via RealVNC Connect. Meilleur si vous payez aussi RealVNC Connect côté serveur.',
         },
         pricing: { en: 'Free for personal; paid tiers for teams', fr: 'Gratuit en usage personnel ; tiers payants en équipe' },
       },
@@ -527,7 +527,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         name: 'Apple Screen Sharing',
         bestFor: {
           en: 'Built into macOS, perfect for Mac-to-Mac. ARD-flavored VNC only; cannot reliably connect to RealVNC, TigerVNC, libvncserver or X11 vncserver with encryption.',
-          fr: 'Inclus dans macOS, parfait pour Mac-vers-Mac. VNC saveur ARD uniquement ; ne se connecte pas de facon fiable a RealVNC, TigerVNC, libvncserver ou X11 vncserver avec chiffrement.',
+          fr: 'Inclus dans macOS, parfait pour Mac-vers-Mac. VNC saveur ARD uniquement ; ne se connecté pas de facon fiable a RealVNC, TigerVNC, libvncserver ou X11 vncserver avec chiffrement.',
         },
         pricing: { en: 'Free, included in macOS', fr: 'Gratuit, inclus dans macOS' },
       },
@@ -571,7 +571,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'Yes. ARD authentication is one of the modes RoyalVNC supports. Connecting to another Mac with Screen Sharing enabled works without extra setup.',
-          fr: 'Oui. L\'auth ARD est un des modes supportes par RoyalVNC. Se connecter a un autre Mac avec Partage d\'écran active fonctionne sans config supplementaire.',
+          fr: 'Oui. L\'auth ARD est un des modes supportés par RoyalVNC. Se connecter a un autre Mac avec Partage d\'écran active fonctionne sans config supplementaire.',
         },
       },
       {
@@ -601,7 +601,7 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
         answer: {
           en: 'Yes. The iOS app ships the same RoyalVNC engine. Tap to click, pinch to zoom, the integrated VNC keyboard exposes keys a touch screen normally cannot send.',
-          fr: 'Oui. L\'app iOS embarque le même moteur RoyalVNC. Tap pour cliquer, pinch pour zoomer, le clavier VNC integre expose les touches qu\'un écran tactile ne peut pas envoyer normalement.',
+          fr: 'Oui. L\'app iOS embarque le même moteur RoyalVNC. Tap pour cliquer, pinch pour zoomer, le clavier VNC intégré expose les touches qu\'un écran tactile ne peut pas envoyer normalement.',
         },
       },
     ],

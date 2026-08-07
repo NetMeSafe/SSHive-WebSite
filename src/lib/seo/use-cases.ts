@@ -41,28 +41,28 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     intro: {
       en: 'Sometimes the production alert hits at the worst moment, you are away from your laptop, the train is moving, and you need to SSH into a box right now to check a service. The default Apple stack does not give you that: there is no first-party SSH terminal on iOS, and command-line workflows assume you have a desktop in front of you. SSHive ships a native iPhone and iPad app on the App Store with a real SSH terminal and SFTP file manager. Your saved profiles, your keys, your jump hosts, they are right there in your pocket.\n\nThe iOS app is intentionally focused: SSH terminal and SFTP file manager, with the same connection profiles, jump host support, and key-based auth you set up on your Mac. The features that demand a larger workspace, embedded RDP, embedded VNC, multi-host broadcast, the MCP server for Claude/Cursor, the visual SSH tunnel UI, stay on macOS where they make sense ergonomically. The result is a coherent split: heavy ops on Mac, on-call ops on iPhone, the same source of truth in between.',
-      fr: 'Parfois l\'alerte prod tombe au pire moment, vous etes loin du laptop, le train roule, et vous devez SSH-er sur une box maintenant pour vérifier un service. La pile Apple par defaut ne donne pas ca : pas de terminal SSH first-party sur iOS, et les workflows ligne de commande supposent un bureau devant vous. SSHive embarque une app iPhone et iPad native sur l\'App Store avec un vrai terminal SSH et un gestionnaire SFTP. Vos profils sauvegardes, vos clés, vos jump hosts, ils sont dans votre poche.\n\nL\'app iOS est volontairement focalisee : terminal SSH et gestionnaire SFTP, avec les mêmes profils de connexion, le support jump host et l\'auth par clé que vous configurez sur Mac. Les fonctionnalités qui demandent un workspace plus grand, RDP integre, VNC integre, broadcast multi-hote, serveur MCP pour Claude/Cursor, UI visuelle des tunnels SSH, restent sur macOS la ou elles ont du sens ergonomiquement. Résultat : un split coherent, ops lourdes sur Mac, ops on-call sur iPhone, même source de verite entre les deux.',
+      fr: 'Parfois l\'alerte prod tombe au pire moment, vous êtes loin du laptop, le train roule, et vous devez SSH-er sur une box maintenant pour vérifier un service. La pile Apple par défaut ne donne pas ca : pas de terminal SSH first-party sur iOS, et les workflows ligne de commande supposent un bureau devant vous. SSHive embarque une app iPhone et iPad native sur l\'App Store avec un vrai terminal SSH et un gestionnaire SFTP. Vos profils sauvegardes, vos clés, vos jump hosts, ils sont dans votre poche.\n\nL\'app iOS est volontairement focalisee : terminal SSH et gestionnaire SFTP, avec les mêmes profils de connexion, le support jump host et l\'auth par clé que vous configurez sur Mac. Les fonctionnalités qui demandent un workspace plus grand, RDP intégré, VNC intégré, broadcast multi-hôte, serveur MCP pour Claude/Cursor, UI visuelle des tunnels SSH, restent sur macOS la ou elles ont du sens ergonomiquement. Résultat : un split coherent, ops lourdes sur Mac, ops on-call sur iPhone, même source de verite entre les deux.',
     },
     sections: [
       {
         heading: { en: 'On-call from your phone', fr: 'On-call depuis le telephone' },
         body: {
           en: 'PagerDuty alert at 2am? Open SSHive on your iPhone, tap the saved prod profile, you are in. The iOS terminal handles common keys via on-screen modifier strips (Ctrl, Esc, Tab, arrow keys) so `Ctrl+C`, `Ctrl+D`, navigating less, scrolling logs, all work without an external keyboard. With an iPad and a Magic Keyboard or Bluetooth keyboard, the experience approaches a laptop, well-suited to longer sessions.',
-          fr: 'Alerte PagerDuty a 2h du matin ? Ouvrez SSHive sur iPhone, tap sur le profil prod sauvegarde, vous etes connecte. Le terminal iOS gère les touches courantes via des bandeaux de modificateurs a l\'écran (Ctrl, Esc, Tab, fleches), donc `Ctrl+C`, `Ctrl+D`, naviguer dans less, scroller les logs, tout fonctionne sans clavier externe. Avec un iPad et un Magic Keyboard ou clavier Bluetooth, l\'experience se rapproche du laptop, bien adaptee aux sessions longues.',
+          fr: 'Alerte PagerDuty a 2h du matin ? Ouvrez SSHive sur iPhone, tap sur le profil prod sauvegarde, vous êtes connecte. Le terminal iOS gère les touches courantes via des bandeaux de modificateurs a l\'écran (Ctrl, Esc, Tab, fleches), donc `Ctrl+C`, `Ctrl+D`, naviguer dans less, scroller les logs, tout fonctionne sans clavier externe. Avec un iPad et un Magic Keyboard ou clavier Bluetooth, l\'experience se rapproche du laptop, bien adaptee aux sessions longues.',
         },
       },
       {
         heading: { en: 'SFTP file management on iPad', fr: 'Gestion de fichiers SFTP sur iPad' },
         body: {
           en: 'iPadOS Files-style integration: browse remote SFTP folders, view text files, upload from your iPad photo library or Files app. Useful for quick edits to a config or pulling a log onto the iPad to email it. The iOS SFTP shares the same profile system as the SSH terminal, one credential, both flows.',
-          fr: 'Intégration style Files iPadOS : parcourez les dossiers SFTP distants, visualisez les fichiers texte, uploadez depuis la bibliotheque photo iPad ou l\'app Fichiers. Utile pour des edits rapides sur une config ou récupérer un log sur l\'iPad pour l\'envoyer par mail. Le SFTP iOS partage le même système de profil que le terminal SSH, un identifiant, les deux flux.',
+          fr: 'Intégration style Files iPadOS : parcourez les dossiers SFTP distants, visualisez les fichiers texte, uploadez depuis la bibliothèque photo iPad ou l\'app Fichiers. Utile pour des edits rapides sur une config ou récupérer un log sur l\'iPad pour l\'envoyer par mail. Le SFTP iOS partage le même système de profil que le terminal SSH, un identifiant, les deux flux.',
         },
       },
       {
         heading: { en: 'Touch ID / Face ID and the Keychain', fr: 'Touch ID / Face ID et le Trousseau' },
         body: {
           en: 'iOS credentials are stored in the iOS Keychain, gated by Touch ID or Face ID. When you tap a profile to connect, biometrics unlock the saved password or key passphrase, never typed manually, never visible. If your iPhone gets stolen and the thief cannot pass biometrics, your servers stay safe. Same model on macOS where Touch ID gates the Mac Keychain.',
-          fr: 'Les identifiants iOS sont stockes dans le Trousseau iOS, proteges par Touch ID ou Face ID. Quand vous tappez un profil pour vous connecter, la biometrie deverrouille le mot de passe ou la passphrase de clé sauvegardee, jamais tapee manuellement, jamais visible. Si votre iPhone est vole et que le voleur ne passe pas la biometrie, vos serveurs restent surs. Même modèle sur macOS ou Touch ID protège le Trousseau Mac.',
+          fr: 'Les identifiants iOS sont stockés dans le Trousseau iOS, proteges par Touch ID ou Face ID. Quand vous tappez un profil pour vous connecter, la biometrie deverrouille le mot de passe ou la passphrase de clé sauvegardee, jamais tapee manuellement, jamais visible. Si votre iPhone est vole et que le voleur ne passe pas la biometrie, vos serveurs restent surs. Même modèle sur macOS ou Touch ID protège le Trousseau Mac.',
         },
       },
     ],
@@ -78,14 +78,14 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'Can I import my Mac SSHive profiles into the iPhone app?', fr: 'Puis-je importer mes profils SSHive Mac dans l\'app iPhone ?' },
         answer: {
           en: 'Yes, profiles can be exported from Mac and imported on iPhone/iPad via the encrypted `.sshive` format with passphrase. Cross-device profile management is part of the design: configure once on Mac, use anywhere.',
-          fr: 'Oui, les profils peuvent être exportes depuis le Mac et importes sur iPhone/iPad via le format `.sshive` chiffre avec passphrase. La gestion cross-device des profils fait partie du design : configurez une fois sur Mac, utilisez partout.',
+          fr: 'Oui, les profils peuvent être exportes depuis le Mac et importes sur iPhone/iPad via le format `.sshive` chiffré avec passphrase. La gestion cross-device des profils fait partie du design : configurez une fois sur Mac, utilisez partout.',
         },
       },
       {
         question: { en: 'Does the iPhone app support SSH tunnels and RDP?', fr: 'L\'app iPhone supporte-t-elle les tunnels SSH et RDP ?' },
         answer: {
           en: 'Not on iOS, those features (SSH tunnels, embedded RDP, embedded VNC, multi-host broadcast, MCP server) live on macOS where the screen real estate and OS APIs make them ergonomic. iOS focuses on SSH terminal and SFTP for fast on-call access.',
-          fr: 'Pas sur iOS, ces fonctionnalités (tunnels SSH, RDP integre, VNC integre, broadcast multi-hote, serveur MCP) vivent sur macOS la ou la place écran et les APIs OS les rendent ergonomiques. iOS se concentre sur terminal SSH et SFTP pour l\'accès on-call rapide.',
+          fr: 'Pas sur iOS, ces fonctionnalités (tunnels SSH, RDP intégré, VNC intégré, broadcast multi-hôte, serveur MCP) vivent sur macOS la ou la place écran et les APIs OS les rendent ergonomiques. iOS se concentre sur terminal SSH et SFTP pour l\'accès on-call rapide.',
         },
       },
       {
@@ -120,28 +120,28 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     intro: {
       en: 'A Raspberry Pi is the gateway drug to home labs, IoT projects, and self-hosted services. Whether yours runs Pi-hole, Home Assistant, a Plex server, or a custom Python project, the workflow is the same: SSH in for command-line work, copy files back and forth, occasionally fire up a desktop view, and tunnel a service to reach it from your laptop. SSHive bundles all four into one window, so managing a Pi from your Mac stops feeling like assembling a workflow from five different apps.\n\nThe free tier of SSHive, SSH terminal + SFTP file manager, already covers 80% of what you do with a Pi: run `apt update`, edit configs, copy a script over, tail a log. Pro adds VNC (for the headless Pi GUI), tunnels (to reach Home Assistant\'s 8123 from your Mac browser without exposing it), broadcast (handy if you have multiple Pis), and the MCP integration so Claude can debug your Pi setup.',
-      fr: 'Un Raspberry Pi est la drogue d\'entrée vers le home lab, les projets IoT et les services self-hosted. Que le votre fasse tourner Pi-hole, Home Assistant, un serveur Plex ou un projet Python custom, le workflow est le même : SSH pour la ligne de commande, transferer des fichiers, lancer occasionnellement une vue bureau, tunneler un service pour l\'atteindre depuis le laptop. SSHive embarque les quatre dans une seule fenêtre, donc gérer un Pi depuis Mac arrete d\'être l\'assemblage d\'un workflow depuis cinq apps differentes.\n\nLe tier gratuit de SSHive, terminal SSH + gestionnaire SFTP, couvre déjà 80% de ce qu\'on fait avec un Pi : lancer `apt update`, editer des configs, copier un script, tail un log. Le Pro ajoute VNC (pour l\'interface graphique du Pi headless), les tunnels (pour atteindre le 8123 de Home Assistant depuis le navigateur Mac sans l\'exposer), broadcast (utile si plusieurs Pis), et l\'intégration MCP pour que Claude debug votre setup Pi.',
+      fr: 'Un Raspberry Pi est la drogue d\'entrée vers le home lab, les projets IoT et les services self-hosted. Que le votre fasse tourner Pi-hole, Home Assistant, un serveur Plex ou un projet Python custom, le workflow est le même : SSH pour la ligne de commande, transférer des fichiers, lancer occasionnellement une vue bureau, tunneler un service pour l\'atteindre depuis le laptop. SSHive embarque les quatre dans une seule fenêtre, donc gérer un Pi depuis Mac arrete d\'être l\'assemblage d\'un workflow depuis cinq apps differentes.\n\nLe tier gratuit de SSHive, terminal SSH + gestionnaire SFTP, couvre déjà 80% de ce qu\'on fait avec un Pi : lancer `apt update`, éditer des configs, copier un script, tail un log. Le Pro ajoute VNC (pour l\'interface graphique du Pi headless), les tunnels (pour atteindre le 8123 de Home Assistant depuis le navigateur Mac sans l\'exposer), broadcast (utile si plusieurs Pis), et l\'intégration MCP pour que Claude debug votre setup Pi.',
     },
     sections: [
       {
         heading: { en: 'First connection: enable SSH on the Pi', fr: 'Première connexion : activer SSH sur le Pi' },
         body: {
           en: 'On Raspberry Pi OS, SSH is disabled by default. Either flash an SD card with Raspberry Pi Imager and use the gear icon to pre-set SSH + Wi-Fi + hostname, or after first boot run `sudo raspi-config` → Interface Options → SSH → Enable. The default username is `pi` (older releases) or whatever you set in the imager. Once SSH is up, find the Pi\'s IP with `arp -a | grep "raspberrypi"` from your Mac, or check your router. In SSHive, click "New connection", enter `raspberrypi.local` (or the IP), user `pi`, password method first time. SSHive offers to import the connection into a profile, say yes, give it a name like "Pi 4 - Living Room", and from now on it\'s a one-click connection.',
-          fr: 'Sur Raspberry Pi OS, SSH est desactive par defaut. Soit vous flashez une carte SD avec Raspberry Pi Imager et utilisez l\'icone d\'engrenage pour pre-regler SSH + Wi-Fi + hostname, soit après le premier boot vous lancez `sudo raspi-config` → Interface Options → SSH → Enable. L\'username par defaut est `pi` (anciennes versions) ou ce que vous avez mis dans l\'imager. Une fois SSH actif, trouvez l\'IP du Pi avec `arp -a | grep "raspberrypi"` depuis votre Mac, ou regardez sur le routeur. Dans SSHive, cliquez "Nouvelle connexion", entrez `raspberrypi.local` (ou l\'IP), user `pi`, methode mot de passe la première fois. SSHive propose d\'importer la connexion en profil, dites oui, donnez-lui un nom genre "Pi 4 - Salon", et desormais c\'est une connexion en un clic.',
+          fr: 'Sur Raspberry Pi OS, SSH est desactive par defaut. Soit vous flashez une carte SD avec Raspberry Pi Imager et utilisez l\'icone d\'engrenage pour pre-regler SSH + Wi-Fi + hostname, soit après le premier boot vous lancez `sudo raspi-config` → Interface Options → SSH → Enable. L\'username par défaut est `pi` (anciennes versions) ou ce que vous avez mis dans l\'imager. Une fois SSH actif, trouvez l\'IP du Pi avec `arp -a | grep "raspberrypi"` depuis votre Mac, ou regardez sur le routeur. Dans SSHive, cliquez "Nouvelle connexion", entrez `raspberrypi.local` (ou l\'IP), user `pi`, methode mot de passe la première fois. SSHive propose d\'importer la connexion en profil, dites oui, donnez-lui un nom genre "Pi 4 - Salon", et desormais c\'est une connexion en un clic.',
         },
       },
       {
         heading: { en: 'Switch to SSH key auth', fr: 'Passer a l\'auth par clé SSH' },
         body: {
           en: 'Password auth is fine for first contact, but you should switch to keys. From SSHive\'s terminal: `ssh-copy-id pi@raspberrypi.local` if you have a key already; otherwise generate one with `ssh-keygen -t ed25519`. Edit the SSHive profile, switch auth from "Password" to "Private Key", point to `~/.ssh/id_ed25519`. Disable password auth on the Pi (`sudo sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/" /etc/ssh/sshd_config && sudo systemctl restart ssh`) and you\'re hardened against brute-force.',
-          fr: 'L\'auth mot de passe convient au premier contact, mais passez aux cles. Depuis le terminal SSHive : `ssh-copy-id pi@raspberrypi.local` si vous avez déjà une clé ; sinon generez-en une avec `ssh-keygen -t ed25519`. Editez le profil SSHive, passez l\'auth de "Mot de passe" a "Clé privee", pointez vers `~/.ssh/id_ed25519`. Desactivez l\'auth mot de passe sur le Pi (`sudo sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/" /etc/ssh/sshd_config && sudo systemctl restart ssh`) et vous etes durci contre le brute-force.',
+          fr: 'L\'auth mot de passe convient au premier contact, mais passez aux cles. Depuis le terminal SSHive : `ssh-copy-id pi@raspberrypi.local` si vous avez déjà une clé ; sinon generez-en une avec `ssh-keygen -t ed25519`. Editez le profil SSHive, passez l\'auth de "Mot de passe" a "Clé privée", pointez vers `~/.ssh/id_ed25519`. Desactivez l\'auth mot de passe sur le Pi (`sudo sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/" /etc/ssh/sshd_config && sudo systemctl restart ssh`) et vous êtes durci contre le brute-force.',
         },
       },
       {
         heading: { en: 'Reach Pi-hosted web UIs through tunnels', fr: 'Atteindre les UIs web hebergees sur le Pi via tunnels' },
         body: {
           en: 'Many Pi services expose a web UI on a non-standard port: Home Assistant on 8123, Pi-hole admin on 80, Portainer on 9000. Instead of opening these on your home network (let alone Internet), use SSHive\'s tunnel feature. Edit your Pi profile, add a Local forward, Local port 8123, Remote host `localhost`, Remote port 8123. Reconnect. Open `http://localhost:8123` on your Mac, you reach Home Assistant through the SSH tunnel, encrypted, with no port forwarding on your router.',
-          fr: 'Beaucoup de services Pi exposent une UI web sur un port non standard : Home Assistant sur 8123, Pi-hole admin sur 80, Portainer sur 9000. Au lieu d\'ouvrir ces ports sur votre réseau (ou pire, Internet), utilisez la fonctionnalité tunnel de SSHive. Editez le profil Pi, ajoutez un forward Local, port local 8123, hote distant `localhost`, port distant 8123. Reconnectez. Ouvrez `http://localhost:8123` sur Mac, vous atteignez Home Assistant via le tunnel SSH, chiffre, sans port forwarding sur le routeur.',
+          fr: 'Beaucoup de services Pi exposent une UI web sur un port non standard : Home Assistant sur 8123, Pi-hole admin sur 80, Portainer sur 9000. Au lieu d\'ouvrir ces ports sur votre réseau (ou pire, Internet), utilisez la fonctionnalité tunnel de SSHive. Editez le profil Pi, ajoutez un forward Local, port local 8123, hôte distant `localhost`, port distant 8123. Reconnectez. Ouvrez `http://localhost:8123` sur Mac, vous atteignez Home Assistant via le tunnel SSH, chiffré, sans port forwarding sur le routeur.',
         },
       },
     ],
@@ -150,14 +150,14 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'My Pi is not reachable as raspberrypi.local from my Mac', fr: 'Mon Pi n\'est pas joignable en raspberrypi.local depuis Mac' },
         answer: {
           en: 'macOS uses Bonjour for `.local` resolution, which the Pi advertises via avahi-daemon. If it\'s not working, check `systemctl status avahi-daemon` on the Pi (should be active). On your Mac, run `dns-sd -B _ssh._tcp` and look for an entry. As a fallback, find the IP via your router\'s DHCP table or `ifconfig` on the Pi.',
-          fr: 'macOS utilise Bonjour pour la résolution `.local`, que le Pi diffuse via avahi-daemon. Si ca ne marche pas, verifiez `systemctl status avahi-daemon` sur le Pi (doit être actif). Sur Mac, lancez `dns-sd -B _ssh._tcp` et cherchez une entree. En secours, trouvez l\'IP via la table DHCP du routeur ou `ifconfig` sur le Pi.',
+          fr: 'macOS utilise Bonjour pour la résolution `.local`, que le Pi diffuse via avahi-daemon. Si ca ne marche pas, vérifiez `systemctl status avahi-daemon` sur le Pi (doit être actif). Sur Mac, lancez `dns-sd -B _ssh._tcp` et cherchez une entree. En secours, trouvez l\'IP via la table DHCP du routeur ou `ifconfig` sur le Pi.',
         },
       },
       {
         question: { en: 'Can I run a desktop session via VNC on a headless Pi?', fr: 'Puis-je faire une session bureau VNC sur un Pi headless ?' },
         answer: {
           en: 'Yes. Install RealVNC or x11vnc on the Pi, enable it via `raspi-config` → Interface Options → VNC. Note the port (5900 by default) and password. In SSHive create a VNC profile pointing at the Pi\'s IP. For security, tunnel it: forward 5900 over SSH and connect VNC to `localhost:5900`.',
-          fr: 'Oui. Installez RealVNC ou x11vnc sur le Pi, activez via `raspi-config` → Interface Options → VNC. Notez le port (5900 par defaut) et le mot de passe. Dans SSHive créez un profil VNC pointant sur l\'IP du Pi. Pour la sécurité, tunnelisez : forward 5900 via SSH et connectez VNC a `localhost:5900`.',
+          fr: 'Oui. Installez RealVNC ou x11vnc sur le Pi, activez via `raspi-config` → Interface Options → VNC. Notez le port (5900 par défaut) et le mot de passe. Dans SSHive créez un profil VNC pointant sur l\'IP du Pi. Pour la sécurité, tunnelisez : forward 5900 via SSH et connectez VNC a `localhost:5900`.',
         },
       },
       {
@@ -180,7 +180,7 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     metaDescription: {
       en: 'Connect to EC2 instances from macOS with SSHive: PEM keys, jump hosts (bastions), private subnets via tunnels, and SFTP. Better than Termius for AWS workflows.',
-      fr: 'Connectez-vous aux instances EC2 depuis macOS avec SSHive : clés PEM, jump hosts (bastions), sous-réseaux prives via tunnels, et SFTP. Mieux que Termius pour les workflows AWS.',
+      fr: 'Connectez-vous aux instances EC2 depuis macOS avec SSHive : clés PEM, jump hosts (bastions), sous-réseaux privés via tunnels, et SFTP. Mieux que Termius pour les workflows AWS.',
     },
     h1: {
       en: 'Manage AWS EC2 instances from your Mac',
@@ -188,32 +188,32 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     hero: {
       en: 'Connect to public and private EC2 instances with PEM keys, jump hosts, and tunnels, all from one native macOS app.',
-      fr: 'Connectez-vous a des instances EC2 publiques et privees avec clés PEM, jump hosts et tunnels, depuis une seule app macOS native.',
+      fr: 'Connectez-vous a des instances EC2 publiques et privées avec clés PEM, jump hosts et tunnels, depuis une seule app macOS native.',
     },
     intro: {
       en: 'AWS gives you EC2 instances in two flavors: public-facing in the default VPC subnets (open to SSH from your laptop) and private in custom VPCs (reachable only via a bastion or VPN). Either way, the daily ergonomics depend on your SSH client. SSHive handles both natively: PEM file authentication out of the box, ProxyJump for bastion-mediated access, and tunnels for reaching RDS/ElastiCache/internal load balancers from your Mac. No more `ssh -i ~/keys/mykey.pem -J ec2-user@bastion ec2-user@10.0.1.42` muscle memory, every connection is a profile.',
-      fr: 'AWS donne des instances EC2 dans deux saveurs : public-facing dans les sous-réseaux VPC par defaut (ouvert au SSH depuis votre laptop) et privees dans des VPC custom (atteignables seulement via bastion ou VPN). Dans les deux cas, l\'ergonomie au quotidien depend de votre client SSH. SSHive gère les deux nativement : authentification par fichier PEM out of the box, ProxyJump pour accès via bastion, et tunnels pour atteindre RDS/ElastiCache/load balancers internes depuis le Mac. Plus de memoire musculaire `ssh -i ~/keys/mykey.pem -J ec2-user@bastion ec2-user@10.0.1.42`, chaque connexion est un profil.',
+      fr: 'AWS donne des instances EC2 dans deux saveurs : public-facing dans les sous-réseaux VPC par défaut (ouvert au SSH depuis votre laptop) et privées dans des VPC custom (atteignables seulement via bastion ou VPN). Dans les deux cas, l\'ergonomie au quotidien depend de votre client SSH. SSHive gère les deux nativement : authentification par fichier PEM out of the box, ProxyJump pour accès via bastion, et tunnels pour atteindre RDS/ElastiCache/load balancers internes depuis le Mac. Plus de mémoire musculaire `ssh -i ~/keys/mykey.pem -J ec2-user@bastion ec2-user@10.0.1.42`, chaque connexion est un profil.',
     },
     sections: [
       {
         heading: { en: 'Connect to a public EC2 instance with a PEM key', fr: 'Se connecter a une EC2 publique avec une clé PEM' },
         body: {
           en: 'When you create an EC2 instance, AWS gives you a `.pem` file. Download it, set permissions: `chmod 400 ~/Downloads/mykey.pem`. In SSHive, New Connection → enter the public DNS or IP, user (`ec2-user` for Amazon Linux, `ubuntu` for Ubuntu AMI, `admin` for Debian), auth method "Private Key", browse to your PEM. Save as profile. SSHive caches the key path, moving the PEM file later requires re-pointing the profile.',
-          fr: 'Quand vous créez une instance EC2, AWS donne un fichier `.pem`. Téléchargez-le, reglez les permissions : `chmod 400 ~/Downloads/mykey.pem`. Dans SSHive, Nouvelle Connexion → DNS public ou IP, user (`ec2-user` pour Amazon Linux, `ubuntu` pour Ubuntu AMI, `admin` pour Debian), methode auth "Clé privee", browsez vers le PEM. Sauvez en profil. SSHive cache le chemin de clé, deplacer le PEM plus tard demande de re-pointer le profil.',
+          fr: 'Quand vous créez une instance EC2, AWS donne un fichier `.pem`. Téléchargez-le, reglez les permissions : `chmod 400 ~/Downloads/mykey.pem`. Dans SSHive, Nouvelle Connexion → DNS public ou IP, user (`ec2-user` pour Amazon Linux, `ubuntu` pour Ubuntu AMI, `admin` pour Debian), methode auth "Clé privée", browsez vers le PEM. Sauvez en profil. SSHive cache le chemin de clé, deplacer le PEM plus tard demande de re-pointer le profil.',
         },
       },
       {
-        heading: { en: 'Reach private subnets via a bastion host', fr: 'Atteindre des sous-réseaux prives via un bastion' },
+        heading: { en: 'Reach private subnets via a bastion host', fr: 'Atteindre des sous-réseaux privés via un bastion' },
         body: {
           en: 'Best practice on AWS is to put application servers in private subnets and access them via a bastion in the public subnet. In SSHive, create a profile for the bastion first (public IP, ec2-user, your PEM). Then create a profile for the private instance: enter the private IP, user, key, and in the "Jump Host" section, select your bastion profile. SSHive handles the multi-hop SSH connection transparently, agent forwarding optional. No more SSH config-file editing every time AWS rotates an IP.',
-          fr: 'Bonne pratique sur AWS : mettre les serveurs applicatifs en sous-réseau prive et y acceder via un bastion en sous-réseau public. Dans SSHive, créez d\'abord un profil pour le bastion (IP publique, ec2-user, votre PEM). Puis un profil pour l\'instance privee : IP privee, user, clé, et dans la section "Jump Host", selectionnez votre profil bastion. SSHive gère la connexion SSH multi-saut de facon transparente, agent forwarding optionnel. Plus d\'edition de fichier SSH config a chaque rotation d\'IP par AWS.',
+          fr: 'Bonne pratique sur AWS : mettre les serveurs applicatifs en sous-réseau privé et y acceder via un bastion en sous-réseau public. Dans SSHive, créez d\'abord un profil pour le bastion (IP publique, ec2-user, votre PEM). Puis un profil pour l\'instance privée : IP privée, user, clé, et dans la section "Jump Host", selectionnez votre profil bastion. SSHive gère la connexion SSH multi-saut de facon transparente, agent forwarding optionnel. Plus d\'édition de fichier SSH config a chaque rotation d\'IP par AWS.',
         },
       },
       {
-        heading: { en: 'Connect TablePlus / DBeaver to private RDS via tunnel', fr: 'Connecter TablePlus / DBeaver a un RDS prive via tunnel' },
+        heading: { en: 'Connect TablePlus / DBeaver to private RDS via tunnel', fr: 'Connecter TablePlus / DBeaver a un RDS privé via tunnel' },
         body: {
           en: 'RDS instances live in private subnets, TablePlus on your Mac cannot reach them directly. The trick: SSH-tunnel through your bastion. In SSHive\'s bastion profile, add a Local forward: local port 5432 → remote host `mydb.xxx.us-east-1.rds.amazonaws.com` → remote port 5432. Connect. Open TablePlus, point it at `localhost:5432` with your DB credentials. SSHive\'s SSH connection now proxies your DB queries securely.',
-          fr: 'Les instances RDS vivent en sous-réseau prive, TablePlus sur Mac ne peut pas les atteindre directement. L\'astuce : tunnel SSH a travers votre bastion. Dans le profil bastion de SSHive, ajoutez un forward Local : port local 5432 → hote distant `mydb.xxx.us-east-1.rds.amazonaws.com` → port distant 5432. Connectez. Ouvrez TablePlus, pointez sur `localhost:5432` avec vos identifiants DB. La connexion SSH SSHive proxie vos requêtes DB en securite.',
+          fr: 'Les instances RDS vivent en sous-réseau privé, TablePlus sur Mac ne peut pas les atteindre directement. L\'astuce : tunnel SSH a travers votre bastion. Dans le profil bastion de SSHive, ajoutez un forward Local : port local 5432 → hôte distant `mydb.xxx.us-east-1.rds.amazonaws.com` → port distant 5432. Connectez. Ouvrez TablePlus, pointez sur `localhost:5432` avec vos identifiants DB. La connexion SSH SSHive proxie vos requêtes DB en securite.',
         },
       },
     ],
@@ -264,14 +264,14 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     intro: {
       en: 'A home server today is rarely just one box. There\'s the Plex/Jellyfin host (often a NAS or a refurbished mini-PC), maybe a Raspberry Pi running Home Assistant, possibly an Intel NUC running Proxmox with a stack of LXC containers, and an Unraid box for storage. Each has its own SSH endpoint, its own admin web UI on a different port, and occasionally needs a desktop session for tinkering. SSHive handles them all from one window: SSH and SFTP for terminal/file work, VNC for the rare desktop session, tunnels for secure access to web UIs without exposing them on your home network.\n\nThe profile system encourages tidy organization, group your home lab boxes in a "Home Lab" folder, set a different color tag per host so production and home-tinkering are visually distinct, save snippets like "system update" or "check container status" once and reuse on every box.',
-      fr: 'Un serveur perso aujourd\'hui c\'est rarement une seule box. Il y a l\'hote Plex/Jellyfin (souvent un NAS ou un mini-PC reconditionne), peut-être un Raspberry Pi Home Assistant, possiblement un Intel NUC sous Proxmox avec un stack de containers LXC, et une box Unraid pour le stockage. Chacun a son endpoint SSH, sa propre UI web admin sur un port différent, et a occasionnellement besoin d\'une session bureau pour bricoler. SSHive les gère tous depuis une fenêtre : SSH et SFTP pour le terminal/fichiers, VNC pour la rare session bureau, tunnels pour accès sur aux UIs web sans les exposer sur le réseau perso.\n\nLe système de profils encourage une organisation propre, groupez vos boxes home lab dans un dossier "Home Lab", mettez une couleur différente par hote pour distinguer visuellement prod et bricolage, sauvegardez des snippets type "mise a jour système" ou "état des containers" une fois et reutilisez sur chaque box.',
+      fr: 'Un serveur perso aujourd\'hui c\'est rarement une seule box. Il y a l\'hôte Plex/Jellyfin (souvent un NAS ou un mini-PC reconditionne), peut-être un Raspberry Pi Home Assistant, possiblement un Intel NUC sous Proxmox avec un stack de containers LXC, et une box Unraid pour le stockage. Chacun a son endpoint SSH, sa propre UI web admin sur un port différent, et a occasionnellement besoin d\'une session bureau pour bricoler. SSHive les gère tous depuis une fenêtre : SSH et SFTP pour le terminal/fichiers, VNC pour la rare session bureau, tunnels pour accès sur aux UIs web sans les exposer sur le réseau perso.\n\nLe système de profils encourage une organisation propre, groupez vos boxes home lab dans un dossier "Home Lab", mettez une couleur différente par hôte pour distinguer visuellement prod et bricolage, sauvegardez des snippets type "mise a jour système" ou "état des containers" une fois et reutilisez sur chaque box.',
     },
     sections: [
       {
         heading: { en: 'Tunnel admin UIs without port forwarding', fr: 'Tunneliser les UIs admin sans port forwarding' },
         body: {
           en: 'Plex on 32400, Jellyfin on 8096, Home Assistant on 8123, Nextcloud on 80/443, Sonarr on 8989, every self-hosted service has its own port. Don\'t expose them on your router\'s NAT (script kiddies scan home IPs daily). Instead, in each SSHive profile, add Local forwards mapping the service port to localhost on your Mac. Connect to your home server, and `http://localhost:8123` reaches Home Assistant, `http://localhost:32400/web` reaches Plex, encrypted via SSH, no Internet exposure.',
-          fr: 'Plex sur 32400, Jellyfin sur 8096, Home Assistant sur 8123, Nextcloud sur 80/443, Sonarr sur 8989, chaque service self-hosted a son port. Ne les exposez pas sur le NAT du routeur (les script kiddies scannent les IPs perso quotidiennement). A la place, dans chaque profil SSHive, ajoutez des forwards Local mappant le port service vers localhost. Connectez-vous au serveur perso, et `http://localhost:8123` atteint Home Assistant, `http://localhost:32400/web` atteint Plex, chiffre via SSH, aucune exposition Internet.',
+          fr: 'Plex sur 32400, Jellyfin sur 8096, Home Assistant sur 8123, Nextcloud sur 80/443, Sonarr sur 8989, chaque service self-hosted a son port. Ne les exposez pas sur le NAT du routeur (les script kiddies scannent les IPs perso quotidiennement). A la place, dans chaque profil SSHive, ajoutez des forwards Local mappant le port service vers localhost. Connectez-vous au serveur perso, et `http://localhost:8123` atteint Home Assistant, `http://localhost:32400/web` atteint Plex, chiffré via SSH, aucune exposition Internet.',
         },
       },
       {
@@ -285,7 +285,7 @@ export const USE_CASES: UseCaseSEO[] = [
         heading: { en: 'Multi-server management with broadcast', fr: 'Gestion multi-serveur avec broadcast' },
         body: {
           en: 'Three home boxes? Use broadcast for fleet-wide updates: open SSH to all three, hit Cmd+Shift+B, type `sudo apt update && sudo apt upgrade -y`. Three updates in parallel, three live outputs side-by-side. Reboot in sequence with another broadcast (or skip it on the box running your VPN).',
-          fr: 'Trois boxes perso ? Utilisez le broadcast pour les updates globales : ouvrez SSH sur les trois, Cmd+Shift+B, tapez `sudo apt update && sudo apt upgrade -y`. Trois updates en parallele, trois sorties live cote a cote. Reboot en sequence avec un autre broadcast (ou sautez la box qui fait tourner le VPN).',
+          fr: 'Trois boxes perso ? Utilisez le broadcast pour les updates globales : ouvrez SSH sur les trois, Cmd+Shift+B, tapez `sudo apt update && sudo apt upgrade -y`. Trois updates en parallele, trois sorties live côté a cote. Reboot en sequence avec un autre broadcast (ou sautez la box qui fait tourner le VPN).',
         },
       },
     ],
@@ -294,14 +294,14 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'How do I find my home server\'s IP from my Mac?', fr: 'Comment trouver l\'IP de mon serveur perso depuis Mac ?' },
         answer: {
           en: 'On a local network, use your hostname (e.g., `unraid.local`, `pi.local`), most Linux distros run avahi/Bonjour. If the hostname is unreliable, check your router\'s DHCP leases (most home routers expose this in their admin UI at 192.168.1.1).',
-          fr: 'Sur réseau local, utilisez le hostname (ex. `unraid.local`, `pi.local`), la plupart des distros Linux tournent avahi/Bonjour. Si le hostname est peu fiable, verifiez les leases DHCP du routeur (la plupart des routeurs perso l\'exposent dans leur UI admin sur 192.168.1.1).',
+          fr: 'Sur réseau local, utilisez le hostname (ex. `unraid.local`, `pi.local`), la plupart des distros Linux tournent avahi/Bonjour. Si le hostname est peu fiable, vérifiez les leases DHCP du routeur (la plupart des routeurs perso l\'exposent dans leur UI admin sur 192.168.1.1).',
         },
       },
       {
         question: { en: 'Can I access my home server when I\'m traveling?', fr: 'Puis-je acceder a mon serveur perso en deplacement ?' },
         answer: {
           en: 'Two options: (1) Set up Tailscale or WireGuard on your home server and your Mac, then your home server is reachable as if you were home. (2) Forward port 22 from your router to the home server (use a non-standard external port like 2222), use SSH key auth only, fail2ban on the server. Then SSHive connects to `your-home-ip:2222`. Tailscale is the safer option.',
-          fr: 'Deux options : (1) Tailscale ou WireGuard sur le serveur perso et le Mac, puis le serveur est joignable comme si vous etiez chez vous. (2) Forwardez le port 22 du routeur vers le serveur perso (utilisez un port externe non standard genre 2222), auth par clé SSH uniquement, fail2ban sur le serveur. Puis SSHive se connecte a `votre-ip-perso:2222`. Tailscale est l\'option la plus sure.',
+          fr: 'Deux options : (1) Tailscale ou WireGuard sur le serveur perso et le Mac, puis le serveur est joignable comme si vous etiez chez vous. (2) Forwardez le port 22 du routeur vers le serveur perso (utilisez un port externe non standard genre 2222), auth par clé SSH uniquement, fail2ban sur le serveur. Puis SSHive se connecté a `votre-ip-perso:2222`. Tailscale est l\'option la plus sure.',
         },
       },
       {
@@ -324,7 +324,7 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     metaDescription: {
       en: 'Connect to Proxmox VE hosts and VMs from macOS: SSH to PVE nodes, noVNC console for guest VMs, SFTP for ISO uploads, broadcast for cluster ops.',
-      fr: 'Connectez-vous aux hotes Proxmox VE et aux VMs depuis macOS : SSH aux noeuds PVE, console noVNC pour les VMs, SFTP pour ISOs, broadcast pour les ops cluster.',
+      fr: 'Connectez-vous aux hôtes Proxmox VE et aux VMs depuis macOS : SSH aux noeuds PVE, console noVNC pour les VMs, SFTP pour ISOs, broadcast pour les ops cluster.',
     },
     h1: { en: 'Proxmox VE management from your Mac', fr: 'Gestion Proxmox VE depuis votre Mac' },
     hero: {
@@ -333,14 +333,14 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     intro: {
       en: 'Proxmox VE is a Debian-based hypervisor that combines KVM virtualization with LXC containers and a clean web UI. Day-to-day, you\'ll SSH into the PVE nodes (the host OS) for system maintenance, use the noVNC console embedded in the web UI for guest VMs that don\'t have SSH yet (think Windows installs or rescue boots), upload ISOs via SFTP to `/var/lib/vz/template/iso/`, and run cluster-wide commands across nodes. SSHive handles every piece: SSH/SFTP/VNC out of the box, broadcast for cluster operations, and tunnels to reach the PVE web UI on port 8006 securely.',
-      fr: 'Proxmox VE est un hyperviseur Debian-based qui combine virtualisation KVM, containers LXC et une UI web propre. Au quotidien, vous SSH-ez sur les noeuds PVE (l\'OS hote) pour la maintenance, utilisez la console noVNC intégrée dans l\'UI web pour les VMs invitees qui n\'ont pas encore SSH (installs Windows, boots rescue), uploadez des ISOs en SFTP vers `/var/lib/vz/template/iso/`, et lancez des commandes cluster-wide sur les noeuds. SSHive gère chaque piece : SSH/SFTP/VNC out of the box, broadcast pour les ops cluster, et tunnels pour atteindre l\'UI web PVE sur 8006 en securite.',
+      fr: 'Proxmox VE est un hyperviseur Debian-based qui combine virtualisation KVM, containers LXC et une UI web propre. Au quotidien, vous SSH-ez sur les noeuds PVE (l\'OS hôte) pour la maintenance, utilisez la console noVNC intégrée dans l\'UI web pour les VMs invitees qui n\'ont pas encore SSH (installs Windows, boots rescue), uploadez des ISOs en SFTP vers `/var/lib/vz/template/iso/`, et lancez des commandes cluster-wide sur les noeuds. SSHive gère chaque piece : SSH/SFTP/VNC out of the box, broadcast pour les ops cluster, et tunnels pour atteindre l\'UI web PVE sur 8006 en securite.',
     },
     sections: [
       {
         heading: { en: 'SSH to PVE nodes', fr: 'SSH vers les noeuds PVE' },
         body: {
           en: 'PVE\'s default user is `root` over SSH (yes, you should add a sudo user). Disable password auth, copy your SSH key. Create a SSHive profile for each node, pve1, pve2, pve3. Group them in a folder. For cluster commands, broadcast to all three: `pveversion`, `qm list`, `pvecm status`. Output side-by-side reveals immediately if a node has fallen out of cluster quorum.',
-          fr: 'L\'user par defaut de PVE est `root` en SSH (oui, vous devriez ajouter un user sudo). Desactivez l\'auth mot de passe, copiez votre clé SSH. Créez un profil SSHive par noeud, pve1, pve2, pve3. Groupez-les en dossier. Pour les commandes cluster, broadcast vers les trois : `pveversion`, `qm list`, `pvecm status`. Sortie cote a cote revele immédiatement si un noeud est sorti du quorum.',
+          fr: 'L\'user par défaut de PVE est `root` en SSH (oui, vous devriez ajouter un user sudo). Desactivez l\'auth mot de passe, copiez votre clé SSH. Créez un profil SSHive par noeud, pve1, pve2, pve3. Groupez-les en dossier. Pour les commandes cluster, broadcast vers les trois : `pveversion`, `qm list`, `pvecm status`. Sortie côte à côte revele immédiatement si un noeud est sorti du quorum.',
         },
       },
       {
@@ -363,7 +363,7 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'Can SSHive replace the Proxmox web UI?', fr: 'SSHive peut-il remplacer l\'UI web Proxmox ?' },
         answer: {
           en: 'No, the PVE web UI is the cleanest way to create/configure VMs. SSHive complements it: SSH for the host OS, VNC console for guest sessions, SFTP for file uploads. Use the web UI for VM lifecycle management, SSHive for everything else.',
-          fr: 'Non, l\'UI web PVE est la facon la plus propre de creer/configurer des VMs. SSHive la complète : SSH pour l\'OS hote, console VNC pour les sessions invitees, SFTP pour les uploads. Utilisez l\'UI web pour le cycle de vie VM, SSHive pour le reste.',
+          fr: 'Non, l\'UI web PVE est la facon la plus propre de creer/configurer des VMs. SSHive la complète : SSH pour l\'OS hôte, console VNC pour les sessions invitees, SFTP pour les uploads. Utilisez l\'UI web pour le cycle de vie VM, SSHive pour le reste.',
         },
       },
       {
@@ -382,34 +382,34 @@ export const USE_CASES: UseCaseSEO[] = [
     slug: 'docker',
     metaTitle: {
       en: 'Manage Docker Hosts from a Mac, SSH, Tunnels, Logs',
-      fr: 'Gérer les hotes Docker depuis Mac, SSH, tunnels, logs',
+      fr: 'Gérer les hôtes Docker depuis Mac, SSH, tunnels, logs',
     },
     metaDescription: {
       en: 'Connect to remote Docker hosts from macOS: SSH for `docker ps`/`docker logs`, tunnels for exposed ports, broadcast for swarm ops, MCP for AI-assisted ops.',
-      fr: 'Connectez-vous aux hotes Docker distants depuis macOS : SSH pour `docker ps`/`docker logs`, tunnels pour ports exposes, broadcast pour ops swarm, MCP pour ops assistees IA.',
+      fr: 'Connectez-vous aux hôtes Docker distants depuis macOS : SSH pour `docker ps`/`docker logs`, tunnels pour ports exposes, broadcast pour ops swarm, MCP pour ops assistees IA.',
     },
-    h1: { en: 'Docker host management from your Mac', fr: 'Gestion des hotes Docker depuis votre Mac' },
+    h1: { en: 'Docker host management from your Mac', fr: 'Gestion des hôtes Docker depuis votre Mac' },
     hero: {
       en: 'SSH to Docker hosts, tunnel exposed ports, broadcast across swarm nodes, all from one native macOS app.',
-      fr: 'SSH vers les hotes Docker, tunnel des ports exposes, broadcast a travers les noeuds swarm, tout depuis une app macOS native.',
+      fr: 'SSH vers les hôtes Docker, tunnel des ports exposes, broadcast a travers les noeuds swarm, tout depuis une app macOS native.',
     },
     intro: {
       en: 'Docker shines when it runs on a real Linux host instead of Docker Desktop\'s VM. Maybe that\'s a $5 VPS for side projects, a mini-PC running 30 self-hosted services, or a 3-node Swarm. From a Mac, SSH is the daily driver: `docker ps`, `docker logs -f myapp`, `docker exec -it myapp bash`. SSHive makes this fast, saved profiles, snippet library with the Docker presets pre-loaded (`docker ps -a`, `docker compose logs --tail 100 -f`, `docker system prune -f`), and tunnels to reach exposed app ports without firewall changes.',
-      fr: 'Docker brille quand il tourne sur un vrai hote Linux plutot que la VM de Docker Desktop. Que ce soit un VPS a 5 $ pour les side projects, un mini-PC tournant 30 services self-hosted, ou un Swarm 3 noeuds. Depuis Mac, SSH est l\'outil quotidien : `docker ps`, `docker logs -f myapp`, `docker exec -it myapp bash`. SSHive rend ca rapide, profils sauvegardes, bibliotheque de snippets avec les presets Docker pre-charges (`docker ps -a`, `docker compose logs --tail 100 -f`, `docker system prune -f`), et tunnels pour atteindre les ports d\'app exposes sans changements firewall.',
+      fr: 'Docker brille quand il tourne sur un vrai hôte Linux plutot que la VM de Docker Desktop. Que ce soit un VPS a 5 $ pour les side projects, un mini-PC tournant 30 services self-hosted, ou un Swarm 3 noeuds. Depuis Mac, SSH est l\'outil quotidien : `docker ps`, `docker logs -f myapp`, `docker exec -it myapp bash`. SSHive rend ca rapide, profils sauvegardes, bibliothèque de snippets avec les presets Docker pre-charges (`docker ps -a`, `docker compose logs --tail 100 -f`, `docker system prune -f`), et tunnels pour atteindre les ports d\'app exposes sans changements firewall.',
     },
     sections: [
       {
         heading: { en: 'Reach a containerized app via tunnel', fr: 'Atteindre une app containerisee via tunnel' },
         body: {
           en: 'You run a dev app on `docker run -p 3000:3000 myapp` on a remote host. Don\'t expose 3000 publicly. In SSHive, add a Local forward: 3000 → localhost:3000 in the host profile. Open `http://localhost:3000` on your Mac, your remote container is reachable through the SSH tunnel.',
-          fr: 'Vous lancez une app dev sur `docker run -p 3000:3000 myapp` sur un hote distant. N\'exposez pas 3000 publiquement. Dans SSHive, ajoutez un forward Local : 3000 → localhost:3000 dans le profil de l\'hote. Ouvrez `http://localhost:3000` sur Mac, votre container distant est joignable via le tunnel SSH.',
+          fr: 'Vous lancez une app dev sur `docker run -p 3000:3000 myapp` sur un hôte distant. N\'exposez pas 3000 publiquement. Dans SSHive, ajoutez un forward Local : 3000 → localhost:3000 dans le profil de l\'hote. Ouvrez `http://localhost:3000` sur Mac, votre container distant est joignable via le tunnel SSH.',
         },
       },
       {
         heading: { en: 'Cluster operations with broadcast', fr: 'Opérations cluster avec broadcast' },
         body: {
           en: 'Running Docker Swarm or just identical Docker hosts? Broadcast `docker system prune -af && docker volume prune -f` to clean disk space across the fleet. Or `docker compose pull && docker compose up -d` to roll out a new release. Output panes side-by-side make it obvious if one node failed.',
-          fr: 'Vous tournez Docker Swarm ou juste des hotes Docker identiques ? Broadcast `docker system prune -af && docker volume prune -f` pour nettoyer l\'espace disque sur toute la flotte. Ou `docker compose pull && docker compose up -d` pour deployer une nouvelle release. Panneaux de sortie cote a cote rendent evident si un noeud a echoue.',
+          fr: 'Vous tournez Docker Swarm ou juste des hôtes Docker identiques ? Broadcast `docker system prune -af && docker volume prune -f` pour nettoyer l\'espace disque sur toute la flotte. Ou `docker compose pull && docker compose up -d` pour deployer une nouvelle release. Panneaux de sortie côte à côte rendent evident si un noeud a echoue.',
         },
       },
     ],
@@ -418,7 +418,7 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'Can SSHive replace Portainer?', fr: 'SSHive peut-il remplacer Portainer ?' },
         answer: {
           en: 'For day-to-day CLI tasks, yes, most Docker work is `ps`, `logs`, `exec`, `compose up/down`. Portainer\'s graphical container management has no SSHive equivalent (we don\'t parse `docker ps` output or render container UIs). If you live in `docker logs` and `docker compose`, SSHive is enough. If you want graphical container browsing, run Portainer behind an SSHive tunnel.',
-          fr: 'Pour les taches CLI quotidiennes, oui, la majorite du travail Docker est `ps`, `logs`, `exec`, `compose up/down`. La gestion graphique de containers de Portainer n\'a pas d\'equivalent SSHive (on ne parse pas `docker ps` ni ne rend des UIs de containers). Si vous vivez dans `docker logs` et `docker compose`, SSHive suffit. Si vous voulez du browsing graphique, faites tourner Portainer derriere un tunnel SSHive.',
+          fr: 'Pour les taches CLI quotidiennes, oui, la majorite du travail Docker est `ps`, `logs`, `exec`, `compose up/down`. La gestion graphique de containers de Portainer n\'a pas d\'equivalent SSHive (on ne parse pas `docker ps` ni ne rend des UIs de containers). Si vous vivez dans `docker logs` et `docker compose`, SSHive suffit. Si vous voulez du browsing graphique, faites tourner Portainer derrière un tunnel SSHive.',
         },
       },
       {
@@ -480,7 +480,7 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'Can MCP run kubectl commands via Claude?', fr: 'MCP peut-il lancer des commandes kubectl via Claude ?' },
         answer: {
           en: 'Yes if Claude is connected to a node\'s SSH session through SSHive\'s MCP. Claude calls `ssh_execute` with `kubectl get pods -n myns`, gets the result, and can chain commands. Make sure your kubeconfig is valid on the node.',
-          fr: 'Oui si Claude est connecte a une session SSH d\'un noeud via le MCP de SSHive. Claude appelle `ssh_execute` avec `kubectl get pods -n myns`, recoit le résultat, et peut chainer les commandes. Assurez-vous que le kubeconfig est valide sur le noeud.',
+          fr: 'Oui si Claude est connecté a une session SSH d\'un noeud via le MCP de SSHive. Claude appelle `ssh_execute` avec `kubectl get pods -n myns`, recoit le résultat, et peut chainer les commandes. Assurez-vous que le kubeconfig est valide sur le noeud.',
         },
       },
     ],
@@ -496,16 +496,16 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     metaDescription: {
       en: 'Configure ProxyJump bastions visually in SSHive: set up a jump host once, reuse across profiles, agent forwarding, no ~/.ssh/config editing required.',
-      fr: 'Configurez les bastions ProxyJump visuellement dans SSHive : setup un jump host une fois, reutilisez sur les profils, agent forwarding, sans editer ~/.ssh/config.',
+      fr: 'Configurez les bastions ProxyJump visuellement dans SSHive : setup un jump host une fois, reutilisez sur les profils, agent forwarding, sans éditer ~/.ssh/config.',
     },
     h1: { en: 'SSH jump host workflows on Mac', fr: 'Workflows SSH jump host sur Mac' },
     hero: {
       en: 'Set up bastions visually, reuse across profiles, agent-forward to private networks, without `~/.ssh/config` mass-editing.',
-      fr: 'Setup visuel des bastions, reutilisation sur profils, agent forwarding vers réseaux prives, sans edition massive de `~/.ssh/config`.',
+      fr: 'Setup visuel des bastions, reutilisation sur profils, agent forwarding vers réseaux privés, sans édition massive de `~/.ssh/config`.',
     },
     intro: {
       en: 'Anyone who works with cloud infrastructure or hardened on-prem networks knows the bastion (jump host) pattern: one Internet-exposed SSH server with strong logging and 2FA, every other host reachable only through it. The OpenSSH `ProxyJump` directive (or older `ProxyCommand` with `nc`) handles the multi-hop SSH connection. SSHive makes this a UI, set up the bastion as a profile once, and every other profile just selects "Jump Host: bastion" from a dropdown. Change the bastion\'s IP later? Edit one profile, every dependent connection adapts.',
-      fr: 'Quiconque bosse avec de l\'infra cloud ou des réseaux on-prem durcis connait le pattern bastion (jump host) : un serveur SSH expose a Internet avec logging fort et 2FA, tous les autres hotes joignables seulement a travers lui. La directive `ProxyJump` d\'OpenSSH (ou l\'ancienne `ProxyCommand` avec `nc`) gère la connexion SSH multi-saut. SSHive en fait une UI, setup le bastion en profil une fois, et chaque autre profil selectionne "Jump Host : bastion" dans un dropdown. Changement d\'IP du bastion plus tard ? Editez un profil, chaque connexion dependante s\'adapte.',
+      fr: 'Quiconque bosse avec de l\'infra cloud ou des réseaux on-prem durcis connait le pattern bastion (jump host) : un serveur SSH expose a Internet avec logging fort et 2FA, tous les autres hôtes joignables seulement a travers lui. La directive `ProxyJump` d\'OpenSSH (ou l\'ancienne `ProxyCommand` avec `nc`) gère la connexion SSH multi-saut. SSHive en fait une UI, setup le bastion en profil une fois, et chaque autre profil selectionne "Jump Host : bastion" dans un dropdown. Changement d\'IP du bastion plus tard ? Editez un profil, chaque connexion dependante s\'adapte.',
     },
     sections: [
       {
@@ -519,7 +519,7 @@ export const USE_CASES: UseCaseSEO[] = [
         heading: { en: 'Use the bastion in downstream profiles', fr: 'Utiliser le bastion dans les profils en aval' },
         body: {
           en: 'Create a profile for the private host: enter its private IP, user, key. Find "Jump Host" section, select your bastion. Save. Click connect, SSHive establishes the SSH tunnel to the bastion, then opens a second SSH session through it to the private host. From your perspective, it\'s one click; under the hood, it\'s OpenSSH ProxyJump.',
-          fr: 'Créez un profil pour l\'hote prive : IP privee, user, cle. Trouvez la section "Jump Host", selectionnez votre bastion. Sauvegardez. Cliquez Connecter, SSHive etablit le tunnel SSH au bastion, puis ouvre une deuxieme session SSH a travers lui vers l\'hote prive. Pour vous, c\'est un clic ; sous le capot, c\'est ProxyJump d\'OpenSSH.',
+          fr: 'Créez un profil pour l\'hôte privé : IP privée, user, cle. Trouvez la section "Jump Host", selectionnez votre bastion. Sauvegardez. Cliquez Connecter, SSHive etablit le tunnel SSH au bastion, puis ouvre une deuxième session SSH a travers lui vers l\'hôte prive. Pour vous, c\'est un clic ; sous le capot, c\'est ProxyJump d\'OpenSSH.',
         },
       },
     ],
@@ -528,14 +528,14 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'Can I chain multiple jump hosts?', fr: 'Puis-je chainer plusieurs jump hosts ?' },
         answer: {
           en: 'Yes, each profile can specify a Jump Host, including a profile that itself uses a Jump Host. So host C jumps through B, which jumps through A. SSHive resolves the chain automatically.',
-          fr: 'Oui, chaque profil peut specifier un Jump Host, y compris un profil qui utilise lui-même un Jump Host. Donc l\'hote C saute via B, qui saute via A. SSHive resout la chaine automatiquement.',
+          fr: 'Oui, chaque profil peut spécifier un Jump Host, y compris un profil qui utilise lui-même un Jump Host. Donc l\'hôte C saute via B, qui saute via A. SSHive resout la chaine automatiquement.',
         },
       },
       {
         question: { en: 'Does agent forwarding work through SSHive?', fr: 'L\'agent forwarding marche-t-il via SSHive ?' },
         answer: {
           en: 'Yes, enable "Forward agent" in the bastion profile. Your local ssh-agent (or 1Password\'s SSH agent) is forwarded to the bastion, and the second-hop SSH connection uses your local key without your private key ever touching the bastion.',
-          fr: 'Oui, activez "Forward agent" dans le profil bastion. Votre ssh-agent local (ou l\'agent SSH 1Password) est forwarded vers le bastion, et la connexion SSH du deuxieme saut utilise votre clé locale sans que la clé privee touche jamais le bastion.',
+          fr: 'Oui, activez "Forward agent" dans le profil bastion. Votre ssh-agent local (ou l\'agent SSH 1Password) est forwarded vers le bastion, et la connexion SSH du deuxième saut utilise votre clé locale sans que la clé privée touche jamais le bastion.',
         },
       },
     ],
@@ -551,7 +551,7 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     metaDescription: {
       en: 'RDP into Windows Server 2019/2022/2025 from macOS plus OpenSSH for command-line. Embedded RDP client, no Microsoft Remote Desktop window-juggling.',
-      fr: 'RDP vers Windows Server 2019/2022/2025 depuis macOS plus OpenSSH pour la ligne de commande. Client RDP integre, pas de jonglage de fenêtres avec Microsoft Remote Desktop.',
+      fr: 'RDP vers Windows Server 2019/2022/2025 depuis macOS plus OpenSSH pour la ligne de commande. Client RDP intégré, pas de jonglage de fenêtres avec Microsoft Remote Desktop.',
     },
     h1: { en: 'Windows Server administration from a Mac', fr: 'Administration Windows Server depuis Mac' },
     hero: {
@@ -567,30 +567,30 @@ export const USE_CASES: UseCaseSEO[] = [
         heading: { en: 'Enable OpenSSH on Windows Server', fr: 'Activer OpenSSH sur Windows Server' },
         body: {
           en: 'On Windows Server 2019/2022/2025, install the OpenSSH server feature: `Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0`. Enable the service: `Start-Service sshd; Set-Service -Name sshd -StartupType Automatic`. Add a firewall rule for port 22 if needed. Now you can SSH into the box; the default shell is `cmd`. To get PowerShell as default: `New-ItemProperty -Path "HKLM:\\SOFTWARE\\OpenSSH" -Name DefaultShell -Value "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -PropertyType String -Force`.',
-          fr: 'Sur Windows Server 2019/2022/2025, installez la feature OpenSSH server : `Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0`. Activez le service : `Start-Service sshd; Set-Service -Name sshd -StartupType Automatic`. Ajoutez une règle firewall pour le port 22 si besoin. Vous pouvez maintenant SSH-er ; le shell par defaut est `cmd`. Pour avoir PowerShell par defaut : `New-ItemProperty -Path "HKLM:\\SOFTWARE\\OpenSSH" -Name DefaultShell -Value "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -PropertyType String -Force`.',
+          fr: 'Sur Windows Server 2019/2022/2025, installez la feature OpenSSH server : `Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0`. Activez le service : `Start-Service sshd; Set-Service -Name sshd -StartupType Automatic`. Ajoutez une règle firewall pour le port 22 si besoin. Vous pouvez maintenant SSH-er ; le shell par défaut est `cmd`. Pour avoir PowerShell par défaut : `New-ItemProperty -Path "HKLM:\\SOFTWARE\\OpenSSH" -Name DefaultShell -Value "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -PropertyType String -Force`.',
         },
       },
       {
         heading: { en: 'RDP into the desktop session', fr: 'RDP dans la session bureau' },
         body: {
           en: 'Create an RDP profile in SSHive: hostname, user (in `DOMAIN\\username` form for AD-joined hosts, or just `username` for local), password. Connect, the embedded RDP client opens in a tab inside SSHive. NLA is supported, clipboard syncs, keyboard shortcuts translate. For sessions across the public Internet, tunnel RDP through SSH first (Local forward 3389 → localhost:3389) and connect RDP to localhost.',
-          fr: 'Créez un profil RDP dans SSHive : hostname, user (en `DOMAINE\\username` pour les hotes joints AD, ou juste `username` pour local), mot de passe. Connectez, le client RDP integre s\'ouvre dans un onglet dans SSHive. NLA supporte, le presse-papiers se synchronise, les raccourcis se traduisent. Pour les sessions sur Internet public, tunnelisez le RDP via SSH d\'abord (forward Local 3389 → localhost:3389) et connectez le RDP a localhost.',
+          fr: 'Créez un profil RDP dans SSHive : hostname, user (en `DOMAINE\\username` pour les hôtes joints AD, ou juste `username` pour local), mot de passe. Connectez, le client RDP intégré s\'ouvre dans un onglet dans SSHive. NLA supporte, le presse-papiers se synchronise, les raccourcis se traduisent. Pour les sessions sur Internet public, tunnelisez le RDP via SSH d\'abord (forward Local 3389 → localhost:3389) et connectez le RDP a localhost.',
         },
       },
     ],
     faq: [
       {
-        question: { en: 'Does the embedded RDP client work with Azure AD-joined hosts?', fr: 'Le client RDP integre marche-t-il avec les hotes joints Azure AD ?' },
+        question: { en: 'Does the embedded RDP client work with Azure AD-joined hosts?', fr: 'Le client RDP intégré marche-t-il avec les hôtes joints Azure AD ?' },
         answer: {
           en: 'For Azure-AD-only joined hosts that require web-based authentication, no, use the official Microsoft Remote Desktop client. For traditional AD or local accounts (still 95% of Windows Server installs), SSHive\'s RDP works fine.',
-          fr: 'Pour les hotes joints Azure AD only qui demandent une auth web-based, non, utilisez le client Microsoft Remote Desktop officiel. Pour AD traditionnel ou comptes locaux (encore 95% des installs Windows Server), le RDP de SSHive marche bien.',
+          fr: 'Pour les hôtes joints Azure AD only qui demandent une auth web-based, non, utilisez le client Microsoft Remote Desktop officiel. Pour AD traditionnel ou comptes locaux (encore 95% des installs Windows Server), le RDP de SSHive marche bien.',
         },
       },
       {
         question: { en: 'Does SSHive RDP support NLA (Network Level Authentication)?', fr: 'Le RDP de SSHive supporte-t-il NLA (Network Level Authentication) ?' },
         answer: {
           en: 'Yes, NLA-protected hosts work via the embedded freerdp-native engine. Domain-joined logins (DOMAIN\\user) and local accounts both authenticate fine. For sessions across the public Internet, tunnel RDP through SSH first using SSHive\'s tunnel feature.',
-          fr: 'Oui, les hotes proteges NLA fonctionnent via le moteur freerdp-native integre. Les logins joints au domaine (DOMAINE\\user) et les comptes locaux s\'authentifient correctement. Pour les sessions sur Internet public, tunnelisez le RDP via SSH avec la fonctionnalité tunnel de SSHive.',
+          fr: 'Oui, les hôtes proteges NLA fonctionnent via le moteur freerdp-native integre. Les logins joints au domaine (DOMAINE\\user) et les comptes locaux s\'authentifient correctement. Pour les sessions sur Internet public, tunnelisez le RDP via SSH avec la fonctionnalité tunnel de SSHive.',
         },
       },
     ],
@@ -615,21 +615,21 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     intro: {
       en: 'NAS appliances run a stripped-down Linux (Synology\'s DSM, QNAP\'s QTS, TrueNAS\'s FreeBSD/Linux mix, Unraid\'s Slackware) and expose SSH for power-user management. From a Mac, daily tasks are: drop files via SFTP, edit Docker / shell scripts, check `df -h` and SMART status, occasionally restart a service. SSHive makes this fast, saved profile per NAS, snippets for the common tasks, and tunnels for accessing DSM/QTS web UIs over an encrypted channel.',
-      fr: 'Les NAS tournent un Linux allege (DSM de Synology, QTS de QNAP, mix FreeBSD/Linux de TrueNAS, Slackware d\'Unraid) et exposent SSH pour la gestion power-user. Depuis Mac, les taches quotidiennes : balancer des fichiers en SFTP, editer Docker / scripts shell, vérifier `df -h` et le SMART, occasionnellement redemarrer un service. SSHive rend ca rapide, profil par NAS, snippets pour les taches communes, et tunnels pour acceder aux UIs web DSM/QTS sur canal chiffre.',
+      fr: 'Les NAS tournent un Linux allege (DSM de Synology, QTS de QNAP, mix FreeBSD/Linux de TrueNAS, Slackware d\'Unraid) et exposent SSH pour la gestion power-user. Depuis Mac, les taches quotidiennes : balancer des fichiers en SFTP, éditer Docker / scripts shell, vérifier `df -h` et le SMART, occasionnellement redemarrer un service. SSHive rend ca rapide, profil par NAS, snippets pour les taches communes, et tunnels pour acceder aux UIs web DSM/QTS sur canal chiffre.',
     },
     sections: [
       {
         heading: { en: 'Enable SSH on Synology DSM', fr: 'Activer SSH sur Synology DSM' },
         body: {
           en: 'In DSM web UI: Control Panel → Terminal & SNMP → check "Enable SSH service". Default port is 22. Use your DSM admin user. Best practice: create a dedicated admin user, disable root SSH, enable key-based auth. SSHive works the same way as for any Linux SSH host.',
-          fr: 'Dans l\'UI web DSM : Panneau de configuration → Terminal et SNMP → cocher "Activer le service SSH". Port par defaut 22. Utilisez votre user admin DSM. Bonne pratique : créez un user admin dedie, desactivez le SSH root, activez l\'auth par cle. SSHive marche pareil que pour n\'importe quel hote SSH Linux.',
+          fr: 'Dans l\'UI web DSM : Panneau de configuration → Terminal et SNMP → cocher "Activer le service SSH". Port par défaut 22. Utilisez votre user admin DSM. Bonne pratique : créez un user admin dédié, desactivez le SSH root, activez l\'auth par cle. SSHive marche pareil que pour n\'importe quel hôte SSH Linux.',
         },
       },
       {
         heading: { en: 'Tunnel DSM web UI for safe remote access', fr: 'Tunnel de l\'UI web DSM pour accès distant sur' },
         body: {
           en: 'Synology DSM is on port 5000 (HTTP) or 5001 (HTTPS). Don\'t expose these on your router. In SSHive, in the NAS profile, add Local forward: 5001 → localhost:5001. Connect via SSH, then open `https://localhost:5001` in your browser. DSM is reachable encrypted via SSH. Same trick for QNAP QTS (port 8080), TrueNAS (port 80/443), Unraid (port 80).',
-          fr: 'Synology DSM est sur le port 5000 (HTTP) ou 5001 (HTTPS). Ne les exposez pas sur le routeur. Dans SSHive, dans le profil NAS, ajoutez forward Local : 5001 → localhost:5001. Connectez via SSH, puis ouvrez `https://localhost:5001` dans le navigateur. DSM est joignable chiffre via SSH. Même astuce pour QNAP QTS (port 8080), TrueNAS (port 80/443), Unraid (port 80).',
+          fr: 'Synology DSM est sur le port 5000 (HTTP) ou 5001 (HTTPS). Ne les exposez pas sur le routeur. Dans SSHive, dans le profil NAS, ajoutez forward Local : 5001 → localhost:5001. Connectez via SSH, puis ouvrez `https://localhost:5001` dans le navigateur. DSM est joignable chiffré via SSH. Même astuce pour QNAP QTS (port 8080), TrueNAS (port 80/443), Unraid (port 80).',
         },
       },
     ],
@@ -669,25 +669,25 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     hero: {
       en: 'SSH, SFTP, RDP, VNC, tunnels, broadcast and built-in MCP for AI, in a single native macOS window.',
-      fr: 'SSH, SFTP, RDP, VNC, tunnels, broadcast et MCP integre pour l\'IA, dans une seule fenêtre macOS native.',
+      fr: 'SSH, SFTP, RDP, VNC, tunnels, broadcast et MCP intégré pour l\'IA, dans une seule fenêtre macOS native.',
     },
     intro: {
       en: 'Many developers and sysadmins arriving on macOS from Windows miss having a single terminal app that bundles every remote protocol they need. The standard Mac stack ends up being iTerm2 plus Cyberduck plus Microsoft Remote Desktop plus a VNC viewer plus an authenticator, five apps to manage what was historically one tool. SSHive is built around the all-in-one philosophy: SSH terminal, SFTP file manager, embedded RDP, embedded VNC, SSH tunnels (-L, -R, -D), multi-host broadcast, snippet library, network tools, all in the same window, with the macOS Keychain handling credentials.\n\nIf you have a `MobaXterm.ini` session list saved in cleartext from your previous Windows setup, SSHive can import it directly: every Host entry becomes a SSHive profile in seconds. Encrypted MobaXterm backups are not supported, you need the cleartext export from MobaXterm itself. Same for `~/.ssh/config`, PuTTY and Royal TSX exports: SSHive parses them and creates the equivalent profiles, preserving folder hierarchy.',
-      fr: 'Beaucoup de développeurs et sysadmins arrivant sur macOS depuis Windows regrettent l\'app terminal unique qui regroupait tous les protocoles distants. La pile Mac standard finit en iTerm2 plus Cyberduck plus Microsoft Remote Desktop plus un viewer VNC plus un authenticator, cinq apps pour ce qui etait historiquement un seul outil. SSHive est concu autour de la philosophie tout-en-un : terminal SSH, gestionnaire SFTP, RDP integre, VNC integre, tunnels SSH (-L, -R, -D), broadcast multi-hote, bibliotheque de snippets, outils réseau, dans la même fenêtre, avec le Trousseau macOS qui gère les identifiants.\n\nSi vous avez un fichier `MobaXterm.ini` exporte en clair depuis votre setup Windows precedent, SSHive peut l\'importer directement : chaque entrée Host devient un profil SSHive en quelques secondes. Les backups MobaXterm chiffres ne sont pas supportes, il faut l\'export en clair depuis MobaXterm. Idem pour `~/.ssh/config`, les exports PuTTY et Royal TSX : SSHive les parse et cree les profils equivalents, en preservant la hierarchie de dossiers.',
+      fr: 'Beaucoup de développeurs et sysadmins arrivant sur macOS depuis Windows regrettent l\'app terminal unique qui regroupait tous les protocoles distants. La pile Mac standard finit en iTerm2 plus Cyberduck plus Microsoft Remote Desktop plus un viewer VNC plus un authenticator, cinq apps pour ce qui etait historiquement un seul outil. SSHive est concu autour de la philosophie tout-en-un : terminal SSH, gestionnaire SFTP, RDP intégré, VNC intégré, tunnels SSH (-L, -R, -D), broadcast multi-hôte, bibliothèque de snippets, outils réseau, dans la même fenêtre, avec le Trousseau macOS qui gère les identifiants.\n\nSi vous avez un fichier `MobaXterm.ini` exporte en clair depuis votre setup Windows précédent, SSHive peut l\'importer directement : chaque entrée Host devient un profil SSHive en quelques secondes. Les backups MobaXterm chiffrés ne sont pas supportés, il faut l\'export en clair depuis MobaXterm. Idem pour `~/.ssh/config`, les exports PuTTY et Royal TSX : SSHive les parse et cree les profils equivalents, en preservant la hierarchie de dossiers.',
     },
     sections: [
       {
         heading: { en: 'What SSHive bundles in one window', fr: 'Ce que SSHive regroupe dans une fenêtre' },
         body: {
           en: 'SSH terminal powered by xterm.js with WebGL rendering. Dual-pane SFTP file manager with drag-and-drop and a built-in remote editor (CodeMirror, Cmd+S to save). Embedded RDP via IronRDP / freerdp-native, no external Microsoft Remote Desktop window. Embedded VNC viewer via noVNC with a built-in WebSocket-to-TCP proxy. SSH tunnels with a visual UI (Local, Remote, SOCKS5). Multi-host broadcast (Cmd+Shift+B). Snippet library with 14 presets and custom commands. Network tools: DNS lookup, ping, traceroute, whois, DNSBL, MX, interfaces. Built-in TOTP/HOTP authenticator with encrypted vault.',
-          fr: 'Terminal SSH propulse par xterm.js avec rendu WebGL. Gestionnaire SFTP double panneau avec drag-and-drop et editeur distant integre (CodeMirror, Cmd+S pour sauvegarder). RDP integre via IronRDP / freerdp-native, pas de fenêtre Microsoft Remote Desktop externe. Viewer VNC integre via noVNC avec proxy WebSocket-vers-TCP integre. Tunnels SSH avec UI visuelle (Local, Remote, SOCKS5). Broadcast multi-hote (Cmd+Shift+B). Bibliotheque de snippets avec 14 presets et commandes custom. Outils réseau : DNS lookup, ping, traceroute, whois, DNSBL, MX, interfaces. Authenticator TOTP/HOTP integre avec vault chiffre.',
+          fr: 'Terminal SSH propulse par xterm.js avec rendu WebGL. Gestionnaire SFTP double panneau avec drag-and-drop et éditeur distant intégré (CodeMirror, Cmd+S pour sauvegarder). RDP intégré via IronRDP / freerdp-native, pas de fenêtre Microsoft Remote Desktop externe. Viewer VNC intégré via noVNC avec proxy WebSocket-vers-TCP integre. Tunnels SSH avec UI visuelle (Local, Remote, SOCKS5). Broadcast multi-hôte (Cmd+Shift+B). Bibliothèque de snippets avec 14 presets et commandes custom. Outils réseau : DNS lookup, ping, traceroute, whois, DNSBL, MX, interfaces. Authenticator TOTP/HOTP intégré avec vault chiffre.',
         },
       },
       {
         heading: { en: 'Importing sessions from Windows tools', fr: 'Importer des sessions depuis des outils Windows' },
         body: {
           en: 'Click "+ → Import" and SSHive accepts: cleartext `MobaXterm.ini`, PuTTY registry exports, Royal TSX `.rtsz`, and OpenSSH `~/.ssh/config`. The importer parses hostnames, ports, users, key paths, jump hosts and folder hierarchy. Credentials get stored in the macOS Keychain on first connect, your `.ini` file does not stay in cleartext on disk after import.',
-          fr: 'Cliquez "+ → Importer" et SSHive accepte : `MobaXterm.ini` en clair, exports registry PuTTY, fichiers Royal TSX `.rtsz`, et `~/.ssh/config` OpenSSH. L\'importeur parse hostnames, ports, users, chemins de clé, jump hosts et hierarchie de dossiers. Les identifiants sont stockes dans le Trousseau macOS a la première connexion, votre fichier `.ini` ne reste pas en clair sur disque après l\'import.',
+          fr: 'Cliquez "+ → Importer" et SSHive accepte : `MobaXterm.ini` en clair, exports registry PuTTY, fichiers Royal TSX `.rtsz`, et `~/.ssh/config` OpenSSH. L\'importeur parse hostnames, ports, users, chemins de clé, jump hosts et hierarchie de dossiers. Les identifiants sont stockés dans le Trousseau macOS a la première connexion, votre fichier `.ini` ne reste pas en clair sur disque après l\'import.',
         },
       },
       {
@@ -703,21 +703,21 @@ export const USE_CASES: UseCaseSEO[] = [
         question: { en: 'Can I import a MobaXterm.ini file into SSHive?', fr: 'Puis-je importer un fichier MobaXterm.ini dans SSHive ?' },
         answer: {
           en: 'Yes, if the file is exported in cleartext (not encrypted). In MobaXterm, use the cleartext sessions export, copy the resulting `.ini` to your Mac, then in SSHive click "+ → Import → MobaXterm.ini" and select the file. Encrypted MobaXterm backups cannot be parsed, that is intentional, since SSHive does not have your MobaXterm master password.',
-          fr: 'Oui, si le fichier est exporte en clair (non chiffre). Dans MobaXterm, utilisez l\'export sessions en clair, copiez le `.ini` sur votre Mac, puis dans SSHive cliquez "+ → Importer → MobaXterm.ini" et selectionnez le fichier. Les backups MobaXterm chiffres ne peuvent pas être parses, c\'est voulu, SSHive n\'a pas votre mot de passe maitre MobaXterm.',
+          fr: 'Oui, si le fichier est exporte en clair (non chiffré). Dans MobaXterm, utilisez l\'export sessions en clair, copiez le `.ini` sur votre Mac, puis dans SSHive cliquez "+ → Importer → MobaXterm.ini" et selectionnez le fichier. Les backups MobaXterm chiffrés ne peuvent pas être parses, c\'est voulu, SSHive n\'a pas votre mot de passe maitre MobaXterm.',
         },
       },
       {
         question: { en: 'Does SSHive include an X11 server like Windows all-in-one terminals do?', fr: 'SSHive inclut-il un serveur X11 comme certains terminaux Windows tout-en-un ?' },
         answer: {
           en: 'No, SSHive does not bundle an Xorg server. On macOS, install XQuartz (the free X11 server maintained by the XQuartz community for macOS) and SSHive will route X11 traffic via standard `ssh -X` forwarding. For most modern workflows where X11 has been replaced by web UIs and embedded RDP/VNC, this is rarely a blocker.',
-          fr: 'Non, SSHive n\'embarque pas de serveur Xorg. Sur macOS, installez XQuartz (le serveur X11 gratuit maintenu par la communaute XQuartz pour macOS) et SSHive routera le trafic X11 via le forwarding `ssh -X` standard. Pour la plupart des workflows modernes ou X11 a ete remplace par des UIs web et du RDP/VNC integres, c\'est rarement bloquant.',
+          fr: 'Non, SSHive n\'embarque pas de serveur Xorg. Sur macOS, installez XQuartz (le serveur X11 gratuit maintenu par la communaute XQuartz pour macOS) et SSHive routera le trafic X11 via le forwarding `ssh -X` standard. Pour la plupart des workflows modernes ou X11 a ete remplace par des UIs web et du RDP/VNC intégrés, c\'est rarement bloquant.',
         },
       },
       {
         question: { en: 'What about running a Windows terminal app via Wine or a VM?', fr: 'Et faire tourner une app terminal Windows via Wine ou une VM ?' },
         answer: {
           en: 'It is technically possible but trades the native macOS experience: no Keychain integration, separate window, performance overhead, and a Windows VM costs money or memory. SSHive is built natively for macOS so the integration with Apple Silicon, Keychain, system shortcuts and the Mac App Store comes by default.',
-          fr: 'C\'est techniquement possible mais cela sacrifie l\'experience macOS native : pas d\'intégration Trousseau, fenêtre séparée, overhead de performance, et une VM Windows coute de l\'argent ou de la memoire. SSHive est concu nativement pour macOS donc l\'intégration avec Apple Silicon, Trousseau, raccourcis système et Mac App Store est par defaut.',
+          fr: 'C\'est techniquement possible mais cela sacrifie l\'experience macOS native : pas d\'intégration Trousseau, fenêtre séparée, overhead de performance, et une VM Windows coûte de l\'argent ou de la memoire. SSHive est concu nativement pour macOS donc l\'intégration avec Apple Silicon, Trousseau, raccourcis système et Mac App Store est par defaut.',
         },
       },
       {
@@ -749,7 +749,7 @@ export const USE_CASES: UseCaseSEO[] = [
     },
     intro: {
       en: 'A typical developer\'s SSH life on macOS is messy: connection strings in shell history, the wrong key used on the wrong host, copy-pasting `ssh user@host` from a Notion doc, juggling iTerm2 / Cyberduck / Microsoft Remote Desktop / TablePlus tunneled through `ssh -L`. SSHive trims this into one workspace: profiles per project (one folder = one project, with all its servers grouped), snippets for the deploy commands you run weekly, tunnels for dev databases, broadcast when you need to roll something across multiple staging servers, MCP for letting Claude in your IDE actually do the SSH work for you.',
-      fr: 'La vie SSH typique d\'un dev macOS est en bordel : strings de connexion dans l\'historique shell, mauvaise clé sur mauvais hote, copier-coller `ssh user@host` depuis un Notion, jonglage iTerm2 / Cyberduck / Microsoft Remote Desktop / TablePlus tunnele via `ssh -L`. SSHive ramene ca dans un workspace : profils par projet (un dossier = un projet, avec tous ses serveurs groupes), snippets pour les commandes de deploy hebdo, tunnels pour les bases dev, broadcast quand il faut deployer sur plusieurs staging, MCP pour laisser Claude dans votre IDE faire reellement le travail SSH.',
+      fr: 'La vie SSH typique d\'un dev macOS est en bordel : strings de connexion dans l\'historique shell, mauvaise clé sur mauvais hôte, copier-coller `ssh user@host` depuis un Notion, jonglage iTerm2 / Cyberduck / Microsoft Remote Desktop / TablePlus tunnele via `ssh -L`. SSHive ramene ca dans un workspace : profils par projet (un dossier = un projet, avec tous ses serveurs groupes), snippets pour les commandes de deploy hebdo, tunnels pour les bases dev, broadcast quand il faut deployer sur plusieurs staging, MCP pour laisser Claude dans votre IDE faire reellement le travail SSH.',
     },
     sections: [
       {
@@ -783,10 +783,10 @@ export const USE_CASES: UseCaseSEO[] = [
         },
       },
       {
-        question: { en: 'Does SSHive integrate with VS Code Remote SSH?', fr: 'SSHive s\'integre-t-il avec VS Code Remote SSH ?' },
+        question: { en: 'Does SSHive integrate with VS Code Remote SSH?', fr: 'SSHive s\'intégré-t-il avec VS Code Remote SSH ?' },
         answer: {
           en: 'No direct integration, VS Code Remote SSH uses its own SSH client. They co-exist: edit code in VS Code Remote-SSH, do terminal/SFTP/admin work in SSHive. Some users prefer SSHive\'s integrated terminal-and-SFTP for non-coding work, leaving VS Code for code.',
-          fr: 'Pas d\'intégration directe, VS Code Remote SSH utilise son propre client SSH. Ils coexistent : editez le code dans VS Code Remote-SSH, faites le travail terminal/SFTP/admin dans SSHive. Certains utilisateurs preferent le terminal-et-SFTP integre de SSHive pour le travail non-coding, en laissant VS Code pour le code.',
+          fr: 'Pas d\'intégration directe, VS Code Remote SSH utilise son propre client SSH. Ils coexistent : editez le code dans VS Code Remote-SSH, faites le travail terminal/SFTP/admin dans SSHive. Certains utilisateurs preferent le terminal-et-SFTP intégré de SSHive pour le travail non-coding, en laissant VS Code pour le code.',
         },
       },
     ],
