@@ -16,4 +16,12 @@ export const routing = defineRouting({
   // Per-visitor language negotiation still happens on the homepage `/`
   // (handled by src/app/page.tsx via cookie + Accept-Language).
   localeDetection: false,
+  // next-intl otherwise emits an HTTP `Link:` hreflang header whose x-default
+  // points at the locale-LESS URL, which 308-redirects. An hreflang cluster
+  // that points at a redirect is self-contradicting, and it disagreed with the
+  // <link rel="alternate"> tags the pages already render correctly. The HTML
+  // tags are the single source of truth.
+  alternateLinks: false,
+  // No Set-Cookie on responses that carry a long s-maxage without Vary: Cookie.
+  localeCookie: false,
 });

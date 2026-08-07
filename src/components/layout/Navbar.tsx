@@ -4,14 +4,12 @@ import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { Menu, X, Download, Globe } from 'lucide-react';
-import { useRouter } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
 
 export function Navbar() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -33,10 +31,11 @@ export function Navbar() {
     };
   }, [menuOpen]);
 
-  const switchLocale = () => {
-    const next = locale === 'en' ? 'fr' : 'en';
-    router.replace(pathname, { locale: next });
-  };
+  // Rendered as an anchor, not a button: this is the only link between the EN
+  // and FR halves of the site. As a <button onClick> it emitted no href, so
+  // Googlebot could reach /fr only through the sitemap and the French pages
+  // received no internal link equity at all.
+  const otherLocale = locale === 'en' ? 'fr' : 'en';
 
   const navLinks = [
     { href: '/features' as const, label: t('features') },
@@ -96,14 +95,16 @@ export function Navbar() {
 
         {/* Right side */}
         <div className="hidden md:flex items-center gap-2">
-          <button
-            onClick={switchLocale}
+          <Link
+            href={pathname as never}
+            locale={otherLocale}
+            hrefLang={otherLocale}
             className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-white/5"
-            aria-label="Switch language"
+            aria-label={otherLocale === 'fr' ? 'Passer en francais' : 'Switch to English'}
           >
             <Globe className="w-3.5 h-3.5" />
-            {locale.toUpperCase()}
-          </button>
+            {otherLocale.toUpperCase()}
+          </Link>
           <Link
             href="/download"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:shadow-[0_0_20px_rgba(122,162,247,0.3)] transition-all duration-300 hover:-translate-y-px"
@@ -141,13 +142,16 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-6 border-t border-border mt-6 space-y-4">
-              <button
-                onClick={() => { switchLocale(); setMenuOpen(false); }}
+              <Link
+                href={pathname as never}
+                locale={otherLocale}
+                hrefLang={otherLocale}
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground py-2 w-full transition-colors"
               >
                 <Globe className="w-4 h-4" />
-                {locale === 'en' ? 'Francais' : 'English'}
-              </button>
+                {locale === 'en' ? 'Français' : 'English'}
+              </Link>
               <Link
                 href="/download"
                 onClick={() => setMenuOpen(false)}

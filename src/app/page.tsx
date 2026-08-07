@@ -1,32 +1,19 @@
 import { permanentRedirect } from 'next/navigation';
-import { headers } from 'next/headers';
 import { routing } from '@/i18n/routing';
 
-function pickLocale(acceptLanguage: string): 'en' | 'fr' {
-  const ordered = acceptLanguage
-    .split(',')
-    .map((part) => {
-      const [tag, qStr] = part.trim().split(';q=');
-      const q = qStr ? Number.parseFloat(qStr) : 1;
-      return { tag: tag.toLowerCase(), q: Number.isFinite(q) ? q : 1 };
-    })
-    .sort((a, b) => b.q - a.q);
-
-  for (const { tag } of ordered) {
-    const base = tag.split('-')[0];
-    if (routing.locales.includes(base as 'en' | 'fr')) {
-      return base as 'en' | 'fr';
-    }
-  }
-  return routing.defaultLocale;
-}
-
-export default async function RootRedirect() {
-  const h = await headers();
-  const cookieLocale = h.get('cookie')?.match(/NEXT_LOCALE=([^;]+)/)?.[1];
-  if (cookieLocale && routing.locales.includes(cookieLocale as 'en' | 'fr')) {
-    permanentRedirect(`/${cookieLocale}`);
-  }
-  const accept = h.get('accept-language') ?? '';
-  permanentRedirect(`/${pickLocale(accept)}`);
+/**
+ * The bare root always sends to the default locale, never to a
+ * header-negotiated one.
+ *
+ * A 308 is permanent and cacheable: making its target depend on
+ * Accept-Language or on a cookie without advertising that in `Vary` lets any
+ * shared cache serve one visitor's language to the next, and tells Google
+ * (which sends no Accept-Language) that `/` permanently *is* `/en` while
+ * telling a French browser it permanently *is* `/fr`. Deterministic here also
+ * matches hreflang x-default, and matches how the middleware already resolves
+ * every other locale-less URL. Visitors switch language from the navbar, and
+ * that choice is preserved by in-app links.
+ */
+export default function RootRedirect() {
+  permanentRedirect(`/${routing.defaultLocale}`);
 }
