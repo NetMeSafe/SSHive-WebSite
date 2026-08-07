@@ -45,8 +45,8 @@ const CORE_PATHS = [
   '/changelog',
   '/docs',
   '/about',
-  '/contact',
-  '/privacy',
+  // '/contact' and '/privacy' are intentionally absent: both are noindexed
+  // utility pages. They stay linked in the footer and keep passing equity.
 ];
 
 export const SITEMAP_SECTIONS: SitemapSection[] = [

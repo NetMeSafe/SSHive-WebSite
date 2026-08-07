@@ -13,12 +13,19 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'contact' });
 
-  return getPageMetadata({
-    locale,
-    path: '/contact',
-    title: t('title'),
-    description: t('metaDescription'),
-  });
+  return {
+    ...getPageMetadata({
+      locale,
+      path: '/contact',
+      title: t('title'),
+      description: t('metaDescription'),
+    }),
+  // Utility page: zero search demand, and on a site where Google is already
+  // declining to index 113 pages, every thin URL competing for the same
+  // quality verdict is a liability. `follow` keeps the trust signal and the
+  // link equity; only the indexable surface shrinks.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function ContactPage({
