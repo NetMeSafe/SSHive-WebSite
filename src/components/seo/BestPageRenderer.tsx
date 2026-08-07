@@ -139,9 +139,56 @@ export function BestPageRenderer({
       {/* Shortlist */}
       <section className="py-12 md:py-16 border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
             {data.shortlistHeading[loc]}
           </h2>
+
+          {/*
+            A real <table>, not a grid of divs. It looks the same to a reader,
+            but only the table carries row/column relationships an extractor
+            can follow — which is what makes the comparison quotable rather
+            than a wall of text. Controlled studies (Table Meets LLM, WSDM'24)
+            found HTML table structure survives extraction better than the
+            markdown or plain-text alternatives.
+          */}
+          <div className="overflow-x-auto rounded-xl border border-border mb-10">
+            <table className="w-full border-collapse text-sm">
+              <caption className="sr-only">{data.shortlistHeading[loc]}</caption>
+              <thead>
+                <tr>
+                  <th scope="col" className="text-left font-medium text-muted-foreground py-3 px-4 border-b border-border bg-card w-12">
+                    #
+                  </th>
+                  <th scope="col" className="text-left font-medium text-muted-foreground py-3 px-4 border-b border-border bg-card">
+                    {loc === 'fr' ? 'Outil' : 'Tool'}
+                  </th>
+                  <th scope="col" className="text-left font-medium text-muted-foreground py-3 px-4 border-b border-border bg-card">
+                    {loc === 'fr' ? 'Recommandé pour' : 'Best for'}
+                  </th>
+                  <th scope="col" className="text-left font-medium text-muted-foreground py-3 px-4 border-b border-border bg-card whitespace-nowrap">
+                    {loc === 'fr' ? 'Tarif' : 'Pricing'}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.shortlist.map((entry) => (
+                  <tr key={entry.rank} className="border-b border-border/50 last:border-0">
+                    <td className="py-3 px-4 text-muted-foreground font-mono">{entry.rank}</td>
+                    <th scope="row" className="py-3 px-4 text-left font-semibold text-foreground whitespace-nowrap">
+                      {entry.name}
+                    </th>
+                    <td className="py-3 px-4 text-muted-foreground leading-relaxed">
+                      {entry.bestFor[loc]}
+                    </td>
+                    <td className="py-3 px-4 text-muted-foreground font-mono whitespace-nowrap">
+                      {entry.pricing[loc]}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
           <div className="space-y-6">
             {data.shortlist.map((entry) => (
               <article
