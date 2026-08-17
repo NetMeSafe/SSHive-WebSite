@@ -54,22 +54,23 @@ https://sshive.app
 ```
 SSHive is a native remote-access client for Apple platforms. It brings the SSH terminal, an SFTP file manager, RDP remote desktop and a VNC viewer into one app on macOS, iPhone and iPadOS, so managing a server, editing a config file and taking over a Windows desktop no longer means juggling four separate tools.
 
-The SSH terminal is a real xterm-256color emulator with password, private-key and agent authentication, on-device key generation and import, known-host verification, connection profiles organised into folders, reusable snippets and command history. The SFTP browser handles uploads, downloads, renames and permissions, with a built-in editor for remote text files. RDP connects to Windows machines with NLA and Active Directory support, and VNC covers macOS and Linux desktops. On iPhone and iPad, a touch-optimised pointer and modifier bar make both usable without a keyboard.
+The terminal is a real xterm-256color emulator with password, private-key and agent authentication, on-device key generation, known-host verification, profiles organised into folders, reusable snippets and command history. The SFTP browser handles uploads, downloads, renames and permissions, with a built-in editor that syntax-highlights remote files. RDP reaches Windows machines with NLA and Active Directory support; VNC covers macOS and Linux desktops. On iPhone and iPad a touch-optimised pointer and modifier bar make both usable without a keyboard.
 
-What sets SSHive apart from other Mac SSH clients is a built-in MCP server. Enable it and Claude Code, Cursor or Claude Desktop can run commands and manage files on servers you are already connected to, through eleven tools covering SSH execution and full SFTP file management. It binds to 127.0.0.1 only, authenticates with a Bearer token, and exposes sessions rather than credentials: an assistant can act on a session you opened, but cannot read your private keys or passphrases. macOS also includes an in-terminal AI assistant that runs on your own Anthropic, OpenAI or Google API key.
+What sets SSHive apart from other Mac SSH clients is a built-in MCP server. Enable it and Claude Code, Cursor or Claude Desktop can run commands and manage files on servers you are already connected to, through eleven tools covering SSH execution and full SFTP file management. It binds to 127.0.0.1 only, authenticates with a Bearer token, and exposes sessions rather than credentials: an assistant acts on a session you opened, but never sees your private keys. macOS also has an in-terminal AI assistant running on your own Anthropic, OpenAI or Google API key.
 
-Network diagnostics are built in rather than bolted on: ping, DNS lookup, whois, MX lookup, DNSBL blacklist checks and local interface details, with full traceroute on the macOS direct-download build. Useful when a deployment fails and the question is whether the problem is the server, the route or the DNS.
+Network diagnostics are built in: ping, DNS lookup, whois, MX lookup, DNSBL blacklist checks and local interface details, with full traceroute on the macOS direct-download build.
 
-Some capabilities are platform-specific. The MCP server, broadcast mode, remote and SOCKS5 tunnels, jump hosts and the built-in TOTP authenticator are macOS features. The VPN client, covering IKEv2, IPSec and OpenVPN, is on iPhone and iPad. SSH, SFTP, RDP, VNC, local tunnels, snippets and the network tools work everywhere.
+Some capabilities are platform-specific. The MCP server, broadcast mode, remote and SOCKS5 tunnels, jump hosts and the TOTP authenticator are macOS features. The VPN client (IKEv2, IPSec, OpenVPN) is on iPhone and iPad. SSH, SFTP, RDP, VNC, local tunnels, snippets and network tools work everywhere.
 
-There is no account and no sign-up. Passwords, passphrases and private keys live in the macOS or iOS Keychain behind Touch ID or Face ID, there is no telemetry or analytics, and no traffic leaves the device beyond the connections you open yourself. Optional iCloud sync keeps profiles aligned across devices through your own private CloudKit database, and encrypted export lets you move them by hand instead.
+There is no account and no sign-up. Passwords, passphrases and private keys live in the macOS or iOS Keychain behind Touch ID or Face ID, there is no telemetry or analytics, and no traffic leaves the device beyond the connections you open. Optional iCloud sync keeps profiles aligned through your own private CloudKit database, with secrets end-to-end encrypted; encrypted export moves them by hand instead.
 
-The free tier is permanent, with no trial and no expiry: SSH terminal, SFTP with uploads up to 10 MB per file, two simultaneous sessions, five saved profiles, one local tunnel and three custom snippets. Pro is a one-time purchase rather than a subscription, and a Universal Purchase covering Mac, iPhone and iPad. It unlocks unlimited sessions and profiles, RDP, VNC, remote and SOCKS5 tunnels, broadcast mode, the MCP server, jump hosts, shared accounts, session logging and encrypted profile export.
+The free tier is permanent, with no trial and no expiry: SSH terminal, SFTP with uploads up to 10 MB per file, two simultaneous sessions, five saved profiles, one local tunnel and three custom snippets. Pro is a one-time purchase rather than a subscription, and a Universal Purchase covering Mac, iPhone and iPad. It unlocks unlimited sessions and profiles, RDP, VNC, remote and SOCKS5 tunnels, broadcast, the MCP server, jump hosts, shared accounts and encrypted export.
 
-Requires macOS 13 Ventura or later, iOS 17 or later, or iPadOS 17 or later. Existing connections import from ~/.ssh/config, PuTTY, Royal TSX and MobaXterm.
+Requires macOS 13 or later, iOS 17 or later, or iPadOS 17 or later. Connections import from ~/.ssh/config, PuTTY, Royal TSX and MobaXterm.
 ```
 
-Ne pas mettre de lien dans la description : c'est l'un de leurs motifs de refus.
+2 970 caracteres, sous la limite de 3 000. Ne pas y mettre de lien : c'est l'un de leurs
+motifs de refus, et toute rallonge doit etre compensee ailleurs.
 
 ### Supported Languages
 
@@ -79,7 +80,14 @@ English, French, Spanish
 
 ### Pricing
 
-`Freemium` — et **ne pas cocher** *Is Opensource*.
+`Freemium`, Model `Purchase` (surtout pas *Subscription*), et **ne pas cocher**
+*Is Opensource*.
+
+**Min Purchase Price** et **Max Purchase Price** : `8.99` dans les deux.
+
+Le champ est en dollars et le prix App Store aux États-Unis est **8,99 $**, pas 9,99 $.
+Le même montant des deux côtés parce qu'il n'y a qu'un seul achat Pro, pas une gamme de
+paliers : une fourchette laisserait croire à plusieurs éditions.
 
 ### Tags
 
@@ -139,6 +147,20 @@ SSHive is a native remote-access client for Apple platforms: SSH terminal, SFTP 
 
 **Identité** — SSHive, éditeur NetMeSafe, contact@netmesafe.com, App Store id6760705487,
 site <https://sshive.app>. Logiciel propriétaire, **pas open source, aucun dépôt public**.
+Nom exact sur l'App Store : « SSHive: SSH, SFTP & Terminal », sous-titre « RDP, VNC, VPN
+& remote access », catégorie Developer Tools.
+
+**Universal Purchase, un seul identifiant pour trois plateformes.** L'app Mac est un vrai
+binaire natif (270 Mo, interface desktop), pas une app iPad tournant sur Mac. Piège de
+vérification à connaître : l'API `itunes.apple.com/lookup?id=6760705487` ne renvoie **que**
+la variante iOS (`kind: software`, `minimumOsVersion: 17.0`, captures iPhone/iPad
+uniquement), la recherche `entity=macSoftware` ne la remonte pas, et la page web
+`apps.apple.com` sert elle aussi la variante iOS. Les captures macOS n'apparaissent que
+dans l'app Mac App Store. **Ne pas conclure de ces absences que la version Mac n'existe
+pas** — elle existe.
+
+Liens : Mac `https://apps.apple.com/app/sshive/id6760705487?mt=12`,
+iPhone/iPad `https://apps.apple.com/app/sshive/id6760705487`.
 
 **Plateformes** — macOS 13 Ventura ou ultérieur (binaire universel Apple Silicon + Intel),
 iOS 17+, iPadOS 17+.
@@ -164,8 +186,11 @@ Cursor, bloc à copier pour Claude Desktop. Fonctionnalité Pro.
 2 sessions simultanées, 5 profils, 1 tunnel local, bibliothèque de snippets + 3 snippets
 personnalisés, 3 jetons OTP, thème sombre.
 
-**Pro** — achat unique 9,99 $ (9,99 €), pas d'abonnement, Universal Purchase sur les trois
-plateformes.
+**Pro** — achat unique, pas d'abonnement, Universal Purchase sur les trois plateformes.
+Prix réels relevés dans App Store Connect : **8,99 $ aux États-Unis**, **9,99 € en zone
+euro** (France, Allemagne, Italie, Espagne…), 8,99 £ au Royaume-Uni, 14,99 $ en Australie.
+Certains pays facturés en USD sont à 9,99 $. **Ne jamais écrire « 9,99 $ » pour le marché
+américain.**
 
 **Confidentialité** — aucun compte, aucune inscription, aucune télémétrie. Identifiants
 dans le Trousseau macOS/iOS derrière Touch ID ou Face ID. Sync iCloud optionnelle,
@@ -199,6 +224,11 @@ un refus de modération.
 - **Note ou nombre d'avis.** Apple signale un nombre d'évaluations insuffisant : tout
   chiffre serait inventé.
 - **Tarifs des concurrents.** Ne jamais les citer, ils changent et engagent.
+- **« 9,99 $ » pour les États-Unis.** Le prix américain est 8,99 $. Les 9,99 concernent
+  l'euro. Vérifier dans App Store Connect avant d'écrire un montant.
+- **Un prix barré (« au lieu de 19,99 $ »)** tant que ce tarif n'a pas réellement été
+  pratiqué. Un faux prix de référence contrevient aux règles App Store et, dans l'Union
+  européenne, à la directive Omnibus.
 
 ---
 
