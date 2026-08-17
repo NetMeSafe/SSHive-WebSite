@@ -13,6 +13,7 @@
  *   4. export GSC_KEY=/path/to/key.json
  *
  * Usage:
+ *   node scripts/gsc.mjs sites               properties this key can read (start here)
  *   node scripts/gsc.mjs sitemaps            list submitted sitemaps + counts
  *   node scripts/gsc.mjs inspect <url>       indexing verdict for one URL
  *   node scripts/gsc.mjs audit [limit]       inspect every sitemap URL, summarise
@@ -93,6 +94,27 @@ async function api(url, { method = 'GET', body } = {}) {
 
 const encodedSite = encodeURIComponent(SITE);
 const WM = `https://www.googleapis.com/webmasters/v3/sites/${encodedSite}`;
+
+/**
+ * Properties the authenticated identity can actually read. Run this first:
+ * it removes the Domain-vs-URL-prefix guesswork by printing the exact
+ * siteUrl string the other commands expect, and an empty list is the
+ * unambiguous sign the service account has not been added in Search Console.
+ */
+async function sites() {
+  const { siteEntry = [] } = await api('https://www.googleapis.com/webmasters/v3/sites');
+  if (!siteEntry.length) {
+    console.log('No property visible to this service account.');
+    console.log('Add it in Search Console > Settings > Users and permissions,');
+    console.log('with permission "Full":');
+    console.log(`  ${key.client_email}`);
+    return;
+  }
+  for (const s of siteEntry) {
+    console.log(`${s.permissionLevel.padEnd(22)} ${s.siteUrl}`);
+  }
+  console.log('\nUse one of the siteUrl values above as GSC_SITE.');
+}
 
 async function sitemaps() {
   const { sitemap = [] } = await api(`${WM}/sitemaps`);
@@ -210,13 +232,14 @@ const token = accessToken();
 const [cmd, arg] = process.argv.slice(2);
 
 try {
-  if (cmd === 'sitemaps') await sitemaps();
+  if (cmd === 'sites') await sites();
+  else if (cmd === 'sitemaps') await sitemaps();
   else if (cmd === 'inspect' && arg) await inspectOne(arg);
   else if (cmd === 'audit') await audit(arg);
   else if (cmd === 'queries') await searchAnalytics(arg ?? 28, 'query');
   else if (cmd === 'pages') await searchAnalytics(arg ?? 28, 'page');
   else {
-    console.error('Usage: gsc.mjs sitemaps | inspect <url> | audit [limit] | queries [days] | pages [days]');
+    console.error('Usage: gsc.mjs sites | sitemaps | inspect <url> | audit [limit] | queries [days] | pages [days]');
     process.exit(1);
   }
 } catch (err) {
