@@ -42,3 +42,10 @@ next-env.d.ts
 
 # Claude Code local state
 .claude/
+
+# Service-account keys (Search Console API). Never commit: the JSON holds a
+# private key that grants API access to the property.
+*-key.json
+*serviceaccount*.json
+gsc-*.json
+secrets/
