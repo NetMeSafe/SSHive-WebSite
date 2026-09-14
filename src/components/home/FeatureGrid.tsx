@@ -9,14 +9,20 @@ import {
   Bot,
   Radio,
   Code,
+  Cable,
+  SquareTerminal,
+  FolderUp,
 } from 'lucide-react';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
 const featureItems = [
   { key: 'ssh', icon: Terminal, href: '/features/ssh' as const, gradient: 'from-blue-500/20 to-cyan-500/20' },
   { key: 'sftp', icon: FolderOpen, href: '/features/sftp' as const, gradient: 'from-emerald-500/20 to-teal-500/20' },
+  { key: 'ftp', icon: FolderUp, href: '/features/ftp' as const, gradient: 'from-lime-500/20 to-green-500/20' },
   { key: 'rdp', icon: Monitor, href: '/features/rdp' as const, gradient: 'from-purple-500/20 to-pink-500/20' },
   { key: 'vnc', icon: Eye, href: '/features/vnc' as const, gradient: 'from-amber-500/20 to-orange-500/20' },
+  { key: 'serial', icon: Cable, href: '/features/serial' as const, gradient: 'from-orange-500/20 to-amber-500/20' },
+  { key: 'telnet', icon: SquareTerminal, href: '/features/telnet' as const, gradient: 'from-slate-500/20 to-zinc-500/20' },
   { key: 'tunnels', icon: ArrowLeftRight, href: '/features/tunnels' as const, gradient: 'from-rose-500/20 to-red-500/20' },
   { key: 'mcp', icon: Bot, href: '/features/mcp' as const, gradient: 'from-violet-500/20 to-indigo-500/20' },
   { key: 'broadcast', icon: Radio, href: '/features/broadcast' as const, gradient: 'from-sky-500/20 to-blue-500/20' },
