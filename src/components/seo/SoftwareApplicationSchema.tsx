@@ -12,7 +12,7 @@ export function SoftwareApplicationSchema() {
         applicationCategory: 'DeveloperApplication',
         applicationSubCategory: 'SSH Client',
         description:
-          'Native Apple SSH, SFTP, FTP, FTPS, RDP, VNC, Telnet and serial console client for Mac, iPhone and iPad. Reach a router or switch through a USB-to-serial adapter, open SSH tunnels, and keep every secret in the Touch ID / Face ID Keychain.',
+          'Native SSH, SFTP, RDP and VNC client for Mac, iPhone and iPad, with FTP, FTPS, Telnet and a serial console on the Mac. Reach a router or switch through a USB-to-serial adapter, open SSH tunnels, and keep every secret in the Touch ID / Face ID Keychain.',
         offers: [
           {
             '@type': 'Offer',
@@ -59,7 +59,7 @@ export function SoftwareApplicationSchema() {
           'Quick commands / snippet library',
           'TOTP / HOTP authenticator with encrypted vault (Mac)',
           'Serial console over USB-to-serial adapters (Mac), baud rate, parity, flow control, BREAK signal, session logging',
-          'Telnet client, RFC 854, with optional authentication (Mac, iPhone, iPad)',
+          'Telnet client, RFC 854, with IAC option negotiation and optional authentication (Mac)',
           'FTP and FTPS (AUTH TLS) file transfer alongside SFTP (Mac)',
           'RDP server certificate pinning with fingerprint change detection (Mac)',
           'Customizable keyboard shortcuts (Mac)',

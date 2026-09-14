@@ -7,7 +7,7 @@ export const APP_STORE_UNIVERSAL_URL = 'https://apps.apple.com/app/sshive/id6760
 export const LOCALES = ['en', 'fr'] as const;
 export type Locale = (typeof LOCALES)[number];
 
-export const FEATURES = ['ssh', 'sftp', 'rdp', 'vnc', 'tunnels', 'mcp', 'broadcast', 'snippets'] as const;
+export const FEATURES = ['ssh', 'sftp', 'ftp', 'rdp', 'vnc', 'serial', 'telnet', 'tunnels', 'mcp', 'broadcast', 'snippets'] as const;
 export type Feature = (typeof FEATURES)[number];
 
 export const COMPETITORS = ['mobaxterm', 'iterm2', 'terminus', 'putty', 'termius', 'royal-tsx', 'securecrt'] as const;

@@ -12,7 +12,7 @@ import { NETWORK_TOOL_SLUGS } from '@/lib/seo/network-tools';
  * every deploy claims "modified today" — so this is bumped by hand, never
  * derived from `new Date()`.
  */
-export const LAST_CONTENT_UPDATE = '2026-08-07';
+export const LAST_CONTENT_UPDATE = '2026-09-14';
 
 /**
  * The sitemap is split per content type rather than shipped as one 130-URL

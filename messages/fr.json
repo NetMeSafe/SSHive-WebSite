@@ -74,6 +74,21 @@
       "description": "Bibliothèque de commandes réutilisables avec 14 presets pour le système, réseau, disque, Docker et Git. Créez vos propres snippets.",
       "shortDesc": "Bibliothèque de commandes"
     },
+    "serial": {
+      "title": "Console série",
+      "description": "Atteignez un routeur, un commutateur ou une carte embarquée par adaptateur USB vers série, sans quitter SSHive. Débit, bits de données, parité, bits d'arrêt et contrôle de flux réglables, signal BREAK et enregistrement de session.",
+      "shortDesc": "Câble console vers routeur, switch ou carte"
+    },
+    "telnet": {
+      "title": "Client Telnet",
+      "description": "Un terminal Telnet intégré (RFC 854) sur Mac, pour les équipements anciens qui ne parlent rien d'autre. Apple a retiré telnet de macOS en 2017 ; SSHive le remet, en signalant clairement que la session n'est pas chiffrée.",
+      "shortDesc": "Terminal RFC 854 pour équipements anciens"
+    },
+    "ftp": {
+      "title": "FTP et FTPS",
+      "description": "Du FTP simple et du FTPS en AUTH TLS, dans le même navigateur de fichiers à deux volets que le SFTP. Apple a retiré la commande ftp de macOS en 2017 ; SSHive rend le protocole utilisable avec une vraie interface.",
+      "shortDesc": "FTP et FTPS dans le navigateur SFTP"
+    },
     "learnMore": "En savoir plus",
     "allFeatures": "Voir toutes les fonctionnalités"
   },
@@ -101,6 +116,8 @@
     "sftpManager": "Gestionnaire SFTP",
     "rdpClient": "Client RDP",
     "vncClient": "Client VNC",
+    "serialConsole": "Console série (adaptateur USB)",
+    "telnetClient": "Client Telnet",
     "sshTunnels": "Tunnels SSH",
     "broadcastMode": "Mode Broadcast",
     "mcpIntegration": "MCP / Intégration IA",
@@ -611,6 +628,36 @@
         "Créez, modifiez et supprimez des snippets personnalises",
         "Bibliothèque consultable avec filtrage par categorie",
         "Insertion en un clic dans le terminal actif"
+      ]
+    },
+    "serial": {
+      "metaTitle": "Console série sur Mac : adaptateur USB, BREAK",
+      "metaDescription": "Atteignez un routeur ou une carte embarquée par adaptateur USB vers série sous macOS. Débit, parité, contrôle de flux et signal BREAK, en version Mac App Store.",
+      "bullets": [
+        "Les adaptateurs branchés sont listés par leur nom : vous choisissez un port au lieu de deviner un chemin /dev/cu.*",
+        "Débits de 1200 à 230400 bauds, avec bits de données, parité, bits d'arrêt et contrôle de flux RTS/CTS ou XON/XOFF",
+        "Signal BREAK dans la barre d'outils, pour ROMMON et les invites de récupération de mot de passe",
+        "Fonctionne sous le bac à sable du Mac App Store grâce à l'entitlement com.apple.security.device.serial"
+      ]
+    },
+    "telnet": {
+      "metaTitle": "Client Telnet sur Mac, RFC 854, intégré",
+      "metaDescription": "Apple a retiré telnet de macOS en 2017. SSHive embarque un client RFC 854, avec négociation ECHO, SGA et NAWS, et dit que la session n'est pas chiffrée.",
+      "bullets": [
+        "Client RFC 854 écrit dans l'application, pas un appel à un binaire que macOS ne livre plus",
+        "ECHO, Suppress Go Ahead et NAWS négociés : le redimensionnement de la fenêtre atteint l'hôte distant",
+        "Octets IAC échappés dans vos frappes, pour qu'un 0xFF littéral ne soit jamais lu comme une commande",
+        "Les sessions sont signalées non chiffrées, car Telnet transmet les mots de passe en texte lisible"
+      ]
+    },
+    "ftp": {
+      "metaTitle": "Client FTP et FTPS sur Mac, deux volets",
+      "metaDescription": "Apple a retiré la commande ftp de macOS en 2017. SSHive gère le FTP et le FTPS en AUTH TLS dans le même navigateur de fichiers à deux volets que le SFTP.",
+      "bullets": [
+        "FTP et FTPS explicite (AUTH TLS) dans le même navigateur à deux volets que le SFTP",
+        "Glisser-déposer, transferts de dossiers, renommer, supprimer, recherche distante et dialogue de conflit remplacer / conserver les deux / ignorer",
+        "Opérations sérialisées par session, car une connexion de contrôle FTP ne gère qu'un transfert à la fois",
+        "Téléchargements écrits en fichier partiel puis renommés : le bouton Réessayer survit à un redémarrage"
       ]
     }
   },

@@ -74,6 +74,21 @@
       "description": "Library of reusable commands with 14 presets for system, network, disk, Docker, and Git operations. Create your own custom snippets.",
       "shortDesc": "Reusable command library"
     },
+    "serial": {
+      "title": "Serial console",
+      "description": "Reach a router, a switch or an embedded board through a USB-to-serial adapter, without leaving SSHive. Baud rate, data bits, parity, stop bits and flow control are all adjustable, with a BREAK signal and session logging.",
+      "shortDesc": "Console cable to router, switch or board"
+    },
+    "telnet": {
+      "title": "Telnet client",
+      "description": "A built-in Telnet terminal (RFC 854) on the Mac, for the legacy equipment that speaks nothing else. Apple removed telnet from macOS in 2017; SSHive brings it back, with a clear warning that the session is unencrypted.",
+      "shortDesc": "RFC 854 terminal for legacy equipment"
+    },
+    "ftp": {
+      "title": "FTP & FTPS",
+      "description": "Plain FTP and FTPS over AUTH TLS in the same dual-pane file browser as SFTP. Apple removed the ftp command from macOS in 2017, and this puts the protocol back with a real interface.",
+      "shortDesc": "FTP and FTPS in the SFTP file browser"
+    },
     "learnMore": "Learn more",
     "allFeatures": "See all features"
   },
@@ -101,6 +116,8 @@
     "sftpManager": "SFTP File Manager",
     "rdpClient": "RDP Client",
     "vncClient": "VNC Client",
+    "serialConsole": "Serial console (USB adapter)",
+    "telnetClient": "Telnet client",
     "sshTunnels": "SSH Tunnels",
     "broadcastMode": "Broadcast Mode",
     "mcpIntegration": "MCP / AI Integration",
@@ -611,6 +628,36 @@
         "Create, edit, and delete custom snippets",
         "Searchable library with category filtering",
         "One-click insertion into the active terminal"
+      ]
+    },
+    "serial": {
+      "metaTitle": "Serial Console for Mac: USB Adapter, BREAK",
+      "metaDescription": "Reach a router, switch or embedded board over a USB-to-serial adapter on macOS. Baud rate, parity, flow control and a BREAK signal, in the Mac App Store build.",
+      "bullets": [
+        "Attached adapters listed by name, so you pick a port instead of guessing a /dev/cu.* path",
+        "Baud rates from 1200 to 230400, with data bits, parity, stop bits and RTS/CTS or XON/XOFF flow control",
+        "BREAK signal in the toolbar, for ROMMON and password-recovery prompts",
+        "Runs inside the Mac App Store sandbox via the com.apple.security.device.serial entitlement"
+      ]
+    },
+    "telnet": {
+      "metaTitle": "Telnet Client for Mac, RFC 854, Built In",
+      "metaDescription": "Apple removed telnet from macOS in 2017. SSHive ships an RFC 854 Telnet client with ECHO, SGA and NAWS negotiation, and says the session is unencrypted.",
+      "bullets": [
+        "RFC 854 client written into the app, not a call to a binary macOS no longer ships",
+        "ECHO, Suppress Go Ahead and NAWS negotiated, so window resizing reaches the remote side",
+        "IAC bytes escaped in your keystrokes, so a literal 0xFF is never read as a command",
+        "Sessions are marked unencrypted, because Telnet sends passwords as readable text"
+      ]
+    },
+    "ftp": {
+      "metaTitle": "FTP & FTPS Client for Mac, Dual Pane",
+      "metaDescription": "Apple removed the ftp command from macOS in 2017. SSHive handles FTP and FTPS over AUTH TLS in the same dual-pane file browser it uses for SFTP.",
+      "bullets": [
+        "FTP and explicit FTPS (AUTH TLS) in the same dual-pane browser as SFTP",
+        "Drag and drop, folder transfers, rename, delete, remote search and a replace / keep both / skip conflict dialog",
+        "Operations are serialised per session, because an FTP control connection handles one transfer at a time",
+        "Downloads written as a partial file and renamed on completion, so Retry survives a restart"
       ]
     }
   },

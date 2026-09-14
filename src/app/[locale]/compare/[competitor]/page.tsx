@@ -102,6 +102,8 @@ export default async function CompetitorPage({
       sftpManager: tc('sftpManager'),
       rdpClient: tc('rdpClient'),
       vncClient: tc('vncClient'),
+      serialConsole: tc('serialConsole'),
+      telnetClient: tc('telnetClient'),
       sshTunnels: tc('sshTunnels'),
       broadcastMode: tc('broadcastMode'),
       mcpIntegration: tc('mcpIntegration'),
