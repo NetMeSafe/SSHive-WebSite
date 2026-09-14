@@ -19,13 +19,17 @@ export function SoftwareApplicationSchema() {
             price: '0',
             priceCurrency: 'USD',
             name: 'SSHive Free',
+            description:
+              'Permanent free tier. No trial period, no card required, no account: SSH terminal, SFTP, FTP, Telnet, serial console and the network tools.',
             availability: 'https://schema.org/InStock',
           },
           {
             '@type': 'Offer',
             price: '17.99',
             priceCurrency: 'USD',
-            name: 'SSHive Pro',
+            name: 'SSHive Pro — one-time purchase',
+            description:
+              'A single purchase, not a subscription: pay once and the software and every future update are yours, with no renewal and no expiring licence. Universal Purchase across Mac, iPhone and iPad on one Apple ID. 19,99 EUR in the euro zone.',
             availability: 'https://schema.org/InStock',
             url: APP_STORE_URL,
           },

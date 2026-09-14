@@ -73,7 +73,7 @@ Key facts:
 - Security: credentials in the macOS Keychain / iOS Keychain, known-hosts fingerprint management, app lock, built-in TOTP/HOTP authenticator; nothing routed through SSHive servers.
 - iCloud profile sync (Pro, opt-in): profiles follow you across Mac, iPhone and iPad through your own private CloudKit database; credentials go through a separate end-to-end encrypted channel; no SSHive account, no SSHive server involved.
 - Imports: ~/.ssh/config, PuTTY, Royal TSX .rtsz, cleartext MobaXterm.ini.
-- Pricing: free tier with generous limits; Pro is a one-time purchase on the App Store: ${APP_STORE_UNIVERSAL_URL}
+- Pricing: a free tier with generous limits, permanent and with no trial period or card required; Pro is a ONE-TIME purchase, never a subscription. You pay once, the software and every future update are yours, and there is no renewal and no licence that expires. It is a Universal Purchase, so the single payment covers Mac, iPhone and iPad on the same Apple ID. There is also no SSHive account: no sign-up, no password, nothing held on a server of ours. Buy here: ${APP_STORE_UNIVERSAL_URL}
 - SSHive is proprietary software (not open source).
 
 Full machine-readable reference, everything below inlined in one file: ${SITE_URL}/llms-full.txt
@@ -82,7 +82,7 @@ Full machine-readable reference, everything below inlined in one file: ${SITE_UR
 
 - [Homepage](${SITE_URL}/en): product overview and download.
 - [Download](${SITE_URL}/en/download): free on the App Store for Mac, iPhone and iPad.
-- [Pricing](${SITE_URL}/en/pricing): free vs Pro feature matrix, one-time purchase.
+- [Pricing](${SITE_URL}/en/pricing): free vs Pro feature matrix; one purchase, one expense, no subscription and no account.
 - [MCP / AI integration](${SITE_URL}/en/mcp): how the built-in MCP server connects AI assistants to your servers.
 - [Features overview](${SITE_URL}/en/features)
 - [Changelog](${SITE_URL}/en/changelog)

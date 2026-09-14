@@ -134,8 +134,8 @@
     "switchToSSHive": "Switch to SSHive, Free"
   },
   "pricing": {
-    "title": "Simple, transparent pricing",
-    "subtitle": "Start free. Upgrade when you need more.",
+    "title": "One purchase. No subscription.",
+    "subtitle": "Start free. If you move up to Pro, you pay once: the software and its updates are yours, and there is no account to create.",
     "free": {
       "name": "Free",
       "price": "$0",
@@ -150,12 +150,13 @@
         "OTP authenticator (3 tokens)",
         "Dark theme",
         "macOS Keychain security"
-      ]
+      ],
+      "reassurance": "Free for good, with no trial period and no card required."
     },
     "pro": {
       "name": "Pro",
       "price": "$17.99",
-      "period": "one-time purchase",
+      "period": "once, for life",
       "launchBadge": "One-time purchase",
       "badge": "Recommended",
       "cta": "Get Pro on App Store",
@@ -175,7 +176,8 @@
         "Session logging",
         "Unlimited custom snippets & OTP tokens",
         "All themes (dark, light, system)"
-      ]
+      ],
+      "reassurance": "One purchase, one expense. No renewal, no monthly invoice, no SSHive account to create. Universal Purchase: Mac, iPhone and iPad on the same Apple ID."
     },
     "noSubscription": "One-time purchase. No subscription. Yours forever.",
     "faq": {
@@ -187,14 +189,14 @@
       "q3": "Can I upgrade later?",
       "a3": "Absolutely. Start with the free version and upgrade to Pro anytime from the Mac App Store. Your profiles and settings carry over seamlessly.",
       "q4": "Is there a subscription?",
-      "a4": "No. SSHive Pro is a one-time purchase of $17.99. You pay once and own it forever: no subscription, no recurring fees, and every future update is included.",
+      "a4": "No, and there will not be one. SSHive Pro is a one-time purchase of $17.99: one expense, once, and the software is yours for good, updates included. No annual renewal, no licence that expires, no feature that closes up if you stop paying — because there is nothing to stop. It is also a Universal Purchase: the same purchase covers Mac, iPhone and iPad on your Apple ID.",
       "q5": "Do I need an account?",
-      "a5": "No. SSHive works completely offline with no account required. Your data stays on your machine, secured by the macOS Keychain.",
+      "a5": "No. There is no SSHive account, no sign-up, no password to remember and no server of ours holding anything. The app works offline, your credentials stay in the macOS or iOS Keychain behind Touch ID or Face ID, and the Pro purchase is handled by the App Store under your Apple ID — we never see your name or your payment method.",
       "q6": "After updating, the app says I am back on Free. What do I do?",
       "a6": "A small number of users see this happen the first time the app launches after an update, because the StoreKit receipt has not been refreshed yet. The fix is one tap: open Settings, Subscription / Purchases, and tap \"Restore Purchases\". Pro comes right back, and it does not cost anything (you are not buying it a second time, Apple is simply re-confirming your previous purchase). A permanent fix is on the roadmap so the restore is no longer needed. If restoring does not bring Pro back, email contact@netmesafe.com with your App Store country and we will check on our side."
     },
-    "metaDescription": "SSHive is free to start: SSH terminal, SFTP and 2 sessions. Pro is a one-time $17.99 purchase, no subscription: RDP, VNC, unlimited tunnels, MCP AI and iCloud sync.",
-    "metaTitle": "SSHive Pricing, Free vs Pro, $17.99 One-Time"
+    "metaDescription": "SSHive Pro is a one-time $17.99 purchase, not a subscription: pay once and the software and its updates are yours. No account. The free tier stays free.",
+    "metaTitle": "SSHive Pricing: $17.99 Once, No Subscription"
   },
   "download": {
     "title": "Download SSHive",
@@ -213,7 +215,7 @@
     "noAccount": "No account needed",
     "noAds": "No ads, no tracking in the app",
     "keychainSecurity": "Secure, Touch ID + Keychain encryption",
-    "upgradeLater": "Upgrade to Pro anytime ($17.99, one-time)",
+    "upgradeLater": "Move up to Pro whenever you like: $17.99 once, for life",
     "emailTitle": "Get notified of new releases",
     "emailPlaceholder": "your@email.com",
     "emailSubscribe": "Subscribe",
@@ -254,7 +256,7 @@
       "allInOne": "All-in-one: SSH, SFTP, RDP, VNC, tunnels, and AI in a single app",
       "securePrivate": "Secure & private, macOS Keychain encryption, no telemetry, data stays on your machine",
       "nativeMac": "Native macOS app with Keychain integration and Apple Silicon support",
-      "oneTimePrice": "One-time $17.99 Pro upgrade, no recurring subscription",
+      "oneTimePrice": "One $17.99 purchase, for life — no subscription, no renewal",
       "aiIntegration": "Built-in MCP server for Claude Code, Cursor, and Claude Desktop",
       "appStore": "Available on the Mac App Store for easy install and updates"
     },
@@ -749,9 +751,9 @@
       },
       "pro": {
         "price": "$17.99",
-        "period": "one-time purchase",
+        "period": "once, for life",
         "badge": "One-time purchase",
-        "savings": "lifetime updates",
+        "savings": "for life, no subscription",
         "cta": "Get Pro on App Store",
         "features": [
           "Unlimited SSH sessions",

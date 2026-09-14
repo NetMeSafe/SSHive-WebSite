@@ -134,8 +134,8 @@
     "switchToSSHive": "Passez a SSHive, Gratuit"
   },
   "pricing": {
-    "title": "Tarification simple et transparente",
-    "subtitle": "Commencez gratuitement. Passez a Pro quand vous en avez besoin.",
+    "title": "Un seul achat. Pas d'abonnement.",
+    "subtitle": "Commencez gratuitement. Si vous passez a Pro, vous payez une fois : le logiciel et ses mises a jour sont a vous, sans compte a creer.",
     "free": {
       "name": "Gratuit",
       "price": "0 €",
@@ -150,12 +150,13 @@
         "Authenticator OTP (3 jetons)",
         "Thème sombre",
         "Sécurité via le Trousseau macOS"
-      ]
+      ],
+      "reassurance": "Gratuit pour de bon, sans periode d'essai et sans carte bancaire."
     },
     "pro": {
       "name": "Pro",
       "price": "19,99 €",
-      "period": "achat unique",
+      "period": "une fois, a vie",
       "launchBadge": "Achat unique",
       "badge": "Recommande",
       "cta": "Obtenir Pro sur l'App Store",
@@ -175,7 +176,8 @@
         "Journalisation de session",
         "Snippets personnalises et jetons OTP illimités",
         "Tous les thèmes (sombre, clair, système)"
-      ]
+      ],
+      "reassurance": "Un achat, une depense. Pas de renouvellement, pas de facture mensuelle, aucun compte SSHive a creer. Universal Purchase : Mac, iPhone et iPad avec le meme identifiant Apple."
     },
     "noSubscription": "Achat unique. Pas d'abonnement. A vous pour toujours.",
     "faq": {
@@ -187,14 +189,14 @@
       "q3": "Puis-je passer a Pro plus tard ?",
       "a3": "Absolument. Commencez avec la version gratuite et passez a Pro quand vous voulez depuis le Mac App Store. Vos profils et paramètres sont conserves.",
       "q4": "Y a-t-il un abonnement ?",
-      "a4": "Non. SSHive Pro est un achat unique a 19,99 €. Vous payez une fois et c'est a vous pour toujours : pas d'abonnement, pas de frais recurrents, et toutes les mises a jour sont incluses.",
+      "a4": "Non, et il n'y en aura pas. SSHive Pro est un achat unique a 19,99 € : une seule depense, une seule fois, et le logiciel est a vous pour toujours, mises a jour comprises. Pas de renouvellement annuel, pas de licence qui expire, pas de fonctionnalite qui se referme si vous arretez de payer — puisqu'il n'y a rien a arreter. C'est aussi un Universal Purchase : le meme achat couvre le Mac, l'iPhone et l'iPad sur votre identifiant Apple.",
       "q5": "Ai-je besoin d'un compte ?",
-      "a5": "Non. SSHive fonctionne completement hors ligne sans compte requis. Vos données restent sur votre machine, sécurisées par le Trousseau macOS.",
+      "a5": "Non. Il n'y a pas de compte SSHive, pas d'inscription, pas de mot de passe a retenir et pas de serveur chez nous qui detiendrait quoi que ce soit. L'application fonctionne hors ligne, vos identifiants restent dans le Trousseau macOS ou iOS derriere Touch ID ou Face ID, et l'achat Pro est gere par l'App Store avec votre identifiant Apple — nous ne voyons ni votre nom ni votre moyen de paiement.",
       "q6": "Après une mise a jour, l'app dit que je suis repasse en Free. Que faire ?",
       "a6": "Un petit nombre d'utilisateurs voient ca au premier lancement post-update, parce que le recu StoreKit n'a pas encore ete rafraichi. Le fix est un tap : ouvrez Réglages, Abonnement / Achats, et tapez \"Restaurer les achats\". Pro revient immédiatement, et ca ne coûte rien (vous ne rachetez pas, Apple reconfirme simplement votre achat précédent). Un correctif permanent est dans la roadmap pour ne plus avoir besoin de la restauration. Si la restauration ne ramene pas Pro, ecrivez a contact@netmesafe.com avec votre pays App Store et on regarde de notre cote."
     },
-    "metaDescription": "SSHive est gratuit pour commencer : terminal SSH, SFTP, 2 sessions. Pro est un achat unique de 19,99 €, sans abonnement : RDP, VNC, tunnels illimités, IA MCP et sync iCloud.",
-    "metaTitle": "Tarifs SSHive, Gratuit vs Pro, 19,99 € une seule fois"
+    "metaDescription": "SSHive Pro est un achat unique a 19,99 €, pas un abonnement : vous payez une fois, le logiciel et ses mises a jour sont a vous. Sans compte a creer.",
+    "metaTitle": "Tarifs SSHive : 19,99 € une fois, sans abonnement"
   },
   "download": {
     "title": "Télécharger SSHive",
@@ -213,7 +215,7 @@
     "noAccount": "Aucun compte requis",
     "noAds": "Pas de pub, pas de tracking dans l'app",
     "keychainSecurity": "Sécurisé, Touch ID + chiffrement Trousseau",
-    "upgradeLater": "Passez a Pro quand vous voulez (19,99 €, achat unique)",
+    "upgradeLater": "Passez a Pro quand vous voulez : 19,99 € une fois, a vie",
     "emailTitle": "Recevez les notifications de nouvelles versions",
     "emailPlaceholder": "votre@email.com",
     "emailSubscribe": "S'abonner",
@@ -254,7 +256,7 @@
       "allInOne": "Tout-en-un : SSH, SFTP, RDP, VNC, tunnels et IA dans une seule app",
       "securePrivate": "Sécurisé et privé, chiffrement via le Trousseau macOS, aucune télémétrie, données sur votre machine",
       "nativeMac": "App macOS native avec intégration Trousseau et support Apple Silicon",
-      "oneTimePrice": "Achat unique a 19,99 € pour Pro, pas d'abonnement recurrent",
+      "oneTimePrice": "Un seul achat a 19,99 €, a vie — pas d'abonnement, pas de renouvellement",
       "aiIntegration": "Serveur MCP intégré pour Claude Code, Cursor et Claude Desktop",
       "appStore": "Disponible sur le Mac App Store pour une installation et des mises a jour faciles"
     },
@@ -749,9 +751,9 @@
       },
       "pro": {
         "price": "19,99 €",
-        "period": "achat unique",
+        "period": "une fois, a vie",
         "badge": "Achat unique",
-        "savings": "mises a jour a vie",
+        "savings": "a vie, sans abonnement",
         "cta": "Obtenir Pro sur l'App Store",
         "features": [
           "Sessions SSH illimitees",

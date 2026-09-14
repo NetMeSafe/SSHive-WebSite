@@ -122,6 +122,9 @@ export default async function PricingPage({
                   {t('free.period')}
                 </span>
               </div>
+              <p className="mt-3 text-sm text-muted-foreground">
+                {t('free.reassurance')}
+              </p>
               <ul className="mt-8 space-y-4 flex-1">
                 {freeFeatures.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
@@ -154,6 +157,9 @@ export default async function PricingPage({
                   {t('pro.period')}
                 </span>
               </div>
+              <p className="mt-3 text-sm text-foreground/80">
+                {t('pro.reassurance')}
+              </p>
               <ul className="mt-8 space-y-4 flex-1">
                 {proFeatures.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
