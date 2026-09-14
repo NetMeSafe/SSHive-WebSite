@@ -83,11 +83,11 @@ English, French, Spanish
 `Freemium`, Model `Purchase` (surtout pas *Subscription*), et **ne pas cocher**
 *Is Opensource*.
 
-**Min Purchase Price** et **Max Purchase Price** : `8.99` dans les deux.
+**Min Purchase Price** et **Max Purchase Price** : `17.99` dans les deux.
 
-Le champ est en dollars et le prix App Store aux États-Unis est **8,99 $**, pas 9,99 $.
-Le même montant des deux côtés parce qu'il n'y a qu'un seul achat Pro, pas une gamme de
-paliers : une fourchette laisserait croire à plusieurs éditions.
+Le champ est en dollars et le prix App Store aux États-Unis est **17,99 $**. Le même
+montant des deux côtés parce qu'il n'y a qu'un seul achat Pro, pas une gamme de paliers :
+une fourchette laisserait croire à plusieurs éditions.
 
 ### Tags
 
@@ -187,10 +187,23 @@ Cursor, bloc à copier pour Claude Desktop. Fonctionnalité Pro.
 personnalisés, 3 jetons OTP, thème sombre.
 
 **Pro** — achat unique, pas d'abonnement, Universal Purchase sur les trois plateformes.
-Prix réels relevés dans App Store Connect : **8,99 $ aux États-Unis**, **9,99 € en zone
-euro** (France, Allemagne, Italie, Espagne…), 8,99 £ au Royaume-Uni, 14,99 $ en Australie.
-Certains pays facturés en USD sont à 9,99 $. **Ne jamais écrire « 9,99 $ » pour le marché
-américain.**
+Tarif relevé le 2026-09-14 dans App Store Connect, territoire de base FRA, propagé sur
+174 territoires :
+
+| Territoire | Prix client |
+|---|---|
+| France / zone euro (FRA, DEU…) | 19,99 € |
+| États-Unis | 17,99 $ |
+| Royaume-Uni | 17,99 £ |
+| Canada | 24,99 $ CA |
+| Suisse | 15,00 CHF |
+| Australie | 29,99 $ AU |
+| Japon | 3 000 ¥ |
+| Inde | 1 999 ₹ |
+
+**Ne jamais convertir soi-même d'une devise à l'autre** : les paliers Apple ne suivent pas
+le taux de change, et 19,99 € ne fait pas 17,99 $. Reprendre le montant du territoire visé,
+ou celui des États-Unis quand le formulaire demande des dollars sans préciser.
 
 **Confidentialité** — aucun compte, aucune inscription, aucune télémétrie. Identifiants
 dans le Trousseau macOS/iOS derrière Touch ID ou Face ID. Sync iCloud optionnelle,
@@ -224,11 +237,13 @@ un refus de modération.
 - **Note ou nombre d'avis.** Apple signale un nombre d'évaluations insuffisant : tout
   chiffre serait inventé.
 - **Tarifs des concurrents.** Ne jamais les citer, ils changent et engagent.
-- **« 9,99 $ » pour les États-Unis.** Le prix américain est 8,99 $. Les 9,99 concernent
-  l'euro. Vérifier dans App Store Connect avant d'écrire un montant.
-- **Un prix barré (« au lieu de 19,99 $ »)** tant que ce tarif n'a pas réellement été
-  pratiqué. Un faux prix de référence contrevient aux règles App Store et, dans l'Union
-  européenne, à la directive Omnibus.
+- **Un montant converti à la main.** 19,99 € ne fait pas 17,99 $ : ce sont deux paliers
+  Apple distincts, pas une conversion. Reprendre le tableau ci-dessus, et le revérifier
+  dans App Store Connect avant d'écrire un chiffre — le tarif a déjà changé une fois.
+- **Un prix barré** tant que le tarif de référence n'a pas réellement été pratiqué, et
+  pendant assez longtemps. Un faux prix de référence contrevient aux règles App Store et,
+  dans l'Union européenne, à la directive Omnibus, qui impose d'afficher le prix le plus
+  bas appliqué au cours des 30 jours précédents.
 
 ---
 

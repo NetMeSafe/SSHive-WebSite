@@ -60,8 +60,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       fr: 'Terminal xterm-256color, clés Ed25519 avec passphrase, Trousseau Touch ID, tunnels, le workflow SSH complet, natif sur iOS et iPadOS.',
     },
     intro: {
-      en: 'Apple never shipped an SSH client. If the prod alert hits at 2am while you are nowhere near a laptop, the default iPhone gives you nothing, no `ssh user@host`, no terminal, no SFTP. SSHive fills that gap with a native iPhone and iPad app: a real xterm-256color terminal built on SwiftTerm, Ed25519 + ECDSA P-256 private-key auth with bcrypt-pbkdf passphrase encryption, local tunnels, and credentials stored in the iOS Keychain behind Face ID or Touch ID, all in a SwiftUI interface that adapts to iPhone TabView and iPad NavigationSplitView.\n\nThe model is intentionally simple: no subscription, no data sent off your device, one-time Pro purchase, yours for life. The Free tier covers 2 concurrent sessions, 5 saved profiles, 1 local tunnel, 3 snippets and 10 MB-per-file SFTP. Pro is $8.99 one-time on the App Store (Universal Purchase: pay once, use on iPhone, iPad, and Mac). If something feels off or could be better, we are listening, write to us.',
-      fr: 'Apple n\'a jamais livre de client SSH. Si l\'alerte prod tombe a 2h alors que vous êtes loin d\'un laptop, l\'iPhone par défaut ne vous donne rien, pas de `ssh user@host`, pas de terminal, pas de SFTP. SSHive comble ce manque avec une app iPhone et iPad native : un vrai terminal xterm-256color base sur SwiftTerm, auth par clé privée Ed25519 + ECDSA P-256 avec passphrase bcrypt-pbkdf, tunnels locaux, et credentials stockés dans le Trousseau iOS derrière Face ID ou Touch ID, le tout dans une interface SwiftUI qui s\'adapte au TabView iPhone et au NavigationSplitView iPad.\n\nLe modèle est volontairement simple : pas d\'abonnement, pas de données qui quittent votre appareil, achat Pro unique, a vous pour la vie. Le tier gratuit couvre 2 sessions simultanées, 5 profils sauvegardes, 1 tunnel local, 3 snippets et 10 Mo par fichier SFTP. Pro a 9,99 € unique sur l\'App Store (Universal Purchase : payez une fois, utilisez sur iPhone, iPad et Mac). Si quelque chose vous semble manquer ou ameliorable, on ecoute, ecrivez-nous.',
+      en: 'Apple never shipped an SSH client. If the prod alert hits at 2am while you are nowhere near a laptop, the default iPhone gives you nothing, no `ssh user@host`, no terminal, no SFTP. SSHive fills that gap with a native iPhone and iPad app: a real xterm-256color terminal built on SwiftTerm, Ed25519 + ECDSA P-256 private-key auth with bcrypt-pbkdf passphrase encryption, local tunnels, and credentials stored in the iOS Keychain behind Face ID or Touch ID, all in a SwiftUI interface that adapts to iPhone TabView and iPad NavigationSplitView.\n\nThe model is intentionally simple: no subscription, no data sent off your device, one-time Pro purchase, yours for life. The Free tier covers 2 concurrent sessions, 5 saved profiles, 1 local tunnel, 3 snippets and 10 MB-per-file SFTP. Pro is $17.99 one-time on the App Store (Universal Purchase: pay once, use on iPhone, iPad, and Mac). If something feels off or could be better, we are listening, write to us.',
+      fr: 'Apple n\'a jamais livre de client SSH. Si l\'alerte prod tombe a 2h alors que vous êtes loin d\'un laptop, l\'iPhone par défaut ne vous donne rien, pas de `ssh user@host`, pas de terminal, pas de SFTP. SSHive comble ce manque avec une app iPhone et iPad native : un vrai terminal xterm-256color base sur SwiftTerm, auth par clé privée Ed25519 + ECDSA P-256 avec passphrase bcrypt-pbkdf, tunnels locaux, et credentials stockés dans le Trousseau iOS derrière Face ID ou Touch ID, le tout dans une interface SwiftUI qui s\'adapte au TabView iPhone et au NavigationSplitView iPad.\n\nLe modèle est volontairement simple : pas d\'abonnement, pas de données qui quittent votre appareil, achat Pro unique, a vous pour la vie. Le tier gratuit couvre 2 sessions simultanées, 5 profils sauvegardes, 1 tunnel local, 3 snippets et 10 Mo par fichier SFTP. Pro a 19,99 € unique sur l\'App Store (Universal Purchase : payez une fois, utilisez sur iPhone, iPad et Mac). Si quelque chose vous semble manquer ou ameliorable, on ecoute, ecrivez-nous.',
     },
     capabilities: [
       {
@@ -115,8 +115,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         title: { en: 'No subscription, no data sent', fr: 'Pas d\'abonnement, pas de données envoyees' },
         body: {
-          en: 'SSHive Pro is a single $8.99 one-time purchase, Universal across iPhone, iPad and Mac, with lifetime updates. The Free tier is usable without paying anything. Nothing about your sessions or credentials is sent off your device, there is no telemetry to collect and no cloud account to create.',
-          fr: 'SSHive Pro est un achat unique a 9,99 €, Universal sur iPhone, iPad et Mac, mises a jour a vie. Le tier gratuit est utilisable sans payer. Rien sur vos sessions ou identifiants ne quitte votre appareil, pas de télémétrie a collecter et pas de compte cloud a creer.',
+          en: 'SSHive Pro is a single $17.99 one-time purchase, Universal across iPhone, iPad and Mac, with lifetime updates. The Free tier is usable without paying anything. Nothing about your sessions or credentials is sent off your device, there is no telemetry to collect and no cloud account to create.',
+          fr: 'SSHive Pro est un achat unique a 19,99 €, Universal sur iPhone, iPad et Mac, mises a jour a vie. Le tier gratuit est utilisable sans payer. Rien sur vos sessions ou identifiants ne quitte votre appareil, pas de télémétrie a collecter et pas de compte cloud a creer.',
         },
       },
       {
@@ -662,8 +662,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         title: { en: 'One purchase, every Apple device', fr: 'Un achat, tous les appareils Apple' },
         body: {
-          en: 'SSHive Pro is a single $8.99 one-time Universal Purchase covering iPhone, iPad and Mac with lifetime updates. No subscription, no data sent to us, yours for life.',
-          fr: 'SSHive Pro est un achat unique Universal Purchase a 9,99 € qui couvre iPhone, iPad et Mac avec mises a jour a vie. Pas d\'abonnement, pas de données envoyees vers nous, a vous pour la vie.',
+          en: 'SSHive Pro is a single $17.99 one-time Universal Purchase covering iPhone, iPad and Mac with lifetime updates. No subscription, no data sent to us, yours for life.',
+          fr: 'SSHive Pro est un achat unique Universal Purchase a 19,99 € qui couvre iPhone, iPad et Mac avec mises a jour a vie. Pas d\'abonnement, pas de données envoyees vers nous, a vous pour la vie.',
         },
       },
       {
@@ -815,8 +815,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
       {
         title: { en: 'No telemetry, no traffic relayed', fr: 'Pas de télémétrie, pas de trafic relaye' },
         body: {
-          en: 'SSHive is paid (Pro $8.99 one-time) and has no advertising business model, so the app simply does not need to look at your VPN traffic. No telemetry, no third-party analytics, no traffic relayed through servers we control, the VPN goes directly from your iPhone to your configured endpoint.',
-          fr: 'SSHive est payante (Pro 9,99 € unique) et n\'a pas de modèle publicitaire, donc l\'app n\'a tout simplement pas besoin de regarder votre trafic VPN. Pas de télémétrie, pas d\'analytics tiers, pas de trafic relaye par des serveurs qu\'on contrôle, le VPN va directement de votre iPhone a votre endpoint configure.',
+          en: 'SSHive is paid (Pro $17.99 one-time) and has no advertising business model, so the app simply does not need to look at your VPN traffic. No telemetry, no third-party analytics, no traffic relayed through servers we control, the VPN goes directly from your iPhone to your configured endpoint.',
+          fr: 'SSHive est payante (Pro 19,99 € unique) et n\'a pas de modèle publicitaire, donc l\'app n\'a tout simplement pas besoin de regarder votre trafic VPN. Pas de télémétrie, pas d\'analytics tiers, pas de trafic relaye par des serveurs qu\'on contrôle, le VPN va directement de votre iPhone a votre endpoint configure.',
         },
       },
       {

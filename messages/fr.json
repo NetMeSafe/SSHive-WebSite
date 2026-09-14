@@ -154,7 +154,7 @@
     },
     "pro": {
       "name": "Pro",
-      "price": "9,99 €",
+      "price": "19,99 €",
       "period": "achat unique",
       "launchBadge": "Achat unique",
       "badge": "Recommande",
@@ -187,14 +187,14 @@
       "q3": "Puis-je passer a Pro plus tard ?",
       "a3": "Absolument. Commencez avec la version gratuite et passez a Pro quand vous voulez depuis le Mac App Store. Vos profils et paramètres sont conserves.",
       "q4": "Y a-t-il un abonnement ?",
-      "a4": "Non. SSHive Pro est un achat unique a 9,99 €. Vous payez une fois et c'est a vous pour toujours : pas d'abonnement, pas de frais recurrents, et toutes les mises a jour sont incluses.",
+      "a4": "Non. SSHive Pro est un achat unique a 19,99 €. Vous payez une fois et c'est a vous pour toujours : pas d'abonnement, pas de frais recurrents, et toutes les mises a jour sont incluses.",
       "q5": "Ai-je besoin d'un compte ?",
       "a5": "Non. SSHive fonctionne completement hors ligne sans compte requis. Vos données restent sur votre machine, sécurisées par le Trousseau macOS.",
       "q6": "Après une mise a jour, l'app dit que je suis repasse en Free. Que faire ?",
       "a6": "Un petit nombre d'utilisateurs voient ca au premier lancement post-update, parce que le recu StoreKit n'a pas encore ete rafraichi. Le fix est un tap : ouvrez Réglages, Abonnement / Achats, et tapez \"Restaurer les achats\". Pro revient immédiatement, et ca ne coûte rien (vous ne rachetez pas, Apple reconfirme simplement votre achat précédent). Un correctif permanent est dans la roadmap pour ne plus avoir besoin de la restauration. Si la restauration ne ramene pas Pro, ecrivez a contact@netmesafe.com avec votre pays App Store et on regarde de notre cote."
     },
-    "metaDescription": "SSHive est gratuit pour commencer : terminal SSH, SFTP, 2 sessions. Pro est un achat unique de 9,99 €, sans abonnement : RDP, VNC, tunnels illimités, IA MCP et sync iCloud.",
-    "metaTitle": "Tarifs SSHive, Gratuit vs Pro, 9,99 € une seule fois"
+    "metaDescription": "SSHive est gratuit pour commencer : terminal SSH, SFTP, 2 sessions. Pro est un achat unique de 19,99 €, sans abonnement : RDP, VNC, tunnels illimités, IA MCP et sync iCloud.",
+    "metaTitle": "Tarifs SSHive, Gratuit vs Pro, 19,99 € une seule fois"
   },
   "download": {
     "title": "Télécharger SSHive",
@@ -213,7 +213,7 @@
     "noAccount": "Aucun compte requis",
     "noAds": "Pas de pub, pas de tracking dans l'app",
     "keychainSecurity": "Sécurisé, Touch ID + chiffrement Trousseau",
-    "upgradeLater": "Passez a Pro quand vous voulez (9,99 €, achat unique)",
+    "upgradeLater": "Passez a Pro quand vous voulez (19,99 €, achat unique)",
     "emailTitle": "Recevez les notifications de nouvelles versions",
     "emailPlaceholder": "votre@email.com",
     "emailSubscribe": "S'abonner",
@@ -254,7 +254,7 @@
       "allInOne": "Tout-en-un : SSH, SFTP, RDP, VNC, tunnels et IA dans une seule app",
       "securePrivate": "Sécurisé et privé, chiffrement via le Trousseau macOS, aucune télémétrie, données sur votre machine",
       "nativeMac": "App macOS native avec intégration Trousseau et support Apple Silicon",
-      "oneTimePrice": "Achat unique a 9,99 € pour Pro, pas d'abonnement recurrent",
+      "oneTimePrice": "Achat unique a 19,99 € pour Pro, pas d'abonnement recurrent",
       "aiIntegration": "Serveur MCP intégré pour Claude Code, Cursor et Claude Desktop",
       "appStore": "Disponible sur le Mac App Store pour une installation et des mises a jour faciles"
     },
@@ -268,9 +268,9 @@
       "iterm2": "iTerm2 a gagne sa reputation de meilleur emulateur de terminal pour macOS, et a juste titre. Il offre des panneaux divises, des profils, une recherche avancée et une personnalisation incroyable. Cependant, iTerm2 est purement un emulateur de terminal, il n'inclut pas de gestion de fichiers SFTP intégrée, de RDP, VNC, de gestion de tunnels SSH ou de profils de connexion. SSHive respecte ce qu'iTerm2 fait bien tout en comblant les lacunes dont les administrateurs système et ingenieurs DevOps ont besoin. Si votre workflow implique plus que taper des commandes dans un shell, SSHive consolide tout dans une seule fenetre.",
       "terminus": "Tabby (anciennement Terminus) est un terminal moderne et multi-plateforme construit avec des technologies web. Il offre une interface soignee, un système de plugins et des fonctionnalités SSH basiques. Cependant, sa focalisation multi-plateforme signifie qu'il manque l'intégration macOS profonde que SSHive fournit. SSHive inclut la gestion complète de fichiers SFTP, des clients RDP et VNC embarques, la configuration de tunnels SSH et l'intégration IA, des fonctionnalités que Tabby n'a pas du tout ou ne supporte que partiellement via des plugins. Pour les utilisateurs macOS qui veulent une experience de gestion a distance complète, SSHive offre significativement plus pret a l'emploi.",
       "putty": "PuTTY est l'un des clients SSH les plus anciens et les plus reconnus au monde. Initialement concu pour Windows, il a ete porte sur macOS, mais l'experience est loin d'être native. PuTTY n'a pas de SFTP, RDP, VNC, de theming moderne ni de gestion de profils de connexion. SSHive reprend tout ce qui a fait aimer PuTTY, la simplicité et la fiabilite, et l'enveloppe dans une experience macOS moderne et native avec tous les protocoles et outils dont un administrateur système a besoin en 2026.",
-      "termius": "Termius est un client SSH soigne et multi-plateforme connu pour sa belle interface et ses capacites de synchronisation. Cependant, son niveau gratuit est limite, et les fonctionnalités avancées comme les tunnels SSH nécessitent un abonnement a 10 $/mois. SSHive offre des fonctionnalités comparables, SSH, SFTP, profils de connexion, sécurité Trousseau, avec un achat unique a 9,99 € pour Pro pour des sessions illimitees, RDP, VNC, le mode broadcast et l'intégration IA. Pour les utilisateurs macOS qui veulent des outils SSH professionnels sans coûts recurrents, SSHive est le choix evident.",
+      "termius": "Termius est un client SSH soigne et multi-plateforme connu pour sa belle interface et ses capacites de synchronisation. Cependant, son niveau gratuit est limite, et les fonctionnalités avancées comme les tunnels SSH nécessitent un abonnement a 10 $/mois. SSHive offre des fonctionnalités comparables, SSH, SFTP, profils de connexion, sécurité Trousseau, avec un achat unique a 19,99 € pour Pro pour des sessions illimitees, RDP, VNC, le mode broadcast et l'intégration IA. Pour les utilisateurs macOS qui veulent des outils SSH professionnels sans coûts recurrents, SSHive est le choix evident.",
       "royal-tsx": "Royal TSX est un outil de gestion a distance bien etabli pour macOS. Il supporte SSH, RDP, VNC et SFTP via une architecture de plugins. Cependant, Royal TSX coûte 29 $ pour une licence unique et n'inclut pas d'intégration IA. SSHive fournit tous les mêmes protocoles dans une seule app unifiee qui coûte une fraction du prix et inclut des fonctionnalités modernes comme l'intégration IA basee sur MCP pour Claude Code et Cursor.",
-      "securecrt": "SecureCRT de VanDyke Software est le client SSH de niveau entreprise de choix depuis des decennies. Il offre du scripting avance, la gestion de sessions et le support de protocoles. Cependant, a 119 $ par licence, il est tarifie pour les budgets entreprise. SSHive fournit une fonctionnalité SSH et SFTP comparable, ajoute RDP, VNC, le mode broadcast et l'intégration IA, et coûte soit rien (niveau gratuit) soit 9,99 € pour Pro. Pour les développeurs individuels, administrateurs système et petites équipes, SSHive offre des fonctionnalités de qualité entreprise a un prix accessible."
+      "securecrt": "SecureCRT de VanDyke Software est le client SSH de niveau entreprise de choix depuis des decennies. Il offre du scripting avance, la gestion de sessions et le support de protocoles. Cependant, a 119 $ par licence, il est tarifie pour les budgets entreprise. SSHive fournit une fonctionnalité SSH et SFTP comparable, ajoute RDP, VNC, le mode broadcast et l'intégration IA, et coûte soit rien (niveau gratuit) soit 19,99 € pour Pro. Pour les développeurs individuels, administrateurs système et petites équipes, SSHive offre des fonctionnalités de qualité entreprise a un prix accessible."
     }
   },
   "about": {
@@ -425,7 +425,7 @@
           },
           {
             "q": "Combien coûte Pro, est-ce un abonnement ?",
-            "a": "Pro est un achat unique de 9,99 € sur l'App Store. Pas d'abonnement, pas de frais récurrents. C'est un Universal Purchase : l'acheter une fois débloque Pro sur Mac, iPhone et iPad avec le même identifiant Apple."
+            "a": "Pro est un achat unique de 19,99 € sur l'App Store. Pas d'abonnement, pas de frais récurrents. C'est un Universal Purchase : l'acheter une fois débloque Pro sur Mac, iPhone et iPad avec le même identifiant Apple."
           },
           {
             "q": "Après une mise à jour, l'app repasse en Free. Que faire ?",
@@ -748,7 +748,7 @@
         ]
       },
       "pro": {
-        "price": "9,99 €",
+        "price": "19,99 €",
         "period": "achat unique",
         "badge": "Achat unique",
         "savings": "mises a jour a vie",

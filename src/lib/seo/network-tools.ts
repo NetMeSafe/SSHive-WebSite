@@ -127,8 +127,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "Gratuit partout, et franc sur les manques"
         },
         "body": {
-          "en": "Every tool here is free on Mac, iPhone and iPad. None sits behind the licence check: no upgrade prompt, no ads, no account. What is missing is deliberate — no port scanner, no netstat, no finger. SSHive Pro is a separate one-time purchase (about $8.99, Universal across Mac, iPhone and iPad, no subscription) covering the remote-access side, never the diagnostics.",
-          "fr": "SSHive Pro est un achat unique séparé (environ 9,99 €, Universal sur Mac, iPhone et iPad, sans abonnement) qui couvre l'accès distant, jamais le diagnostic."
+          "en": "Every tool here is free on Mac, iPhone and iPad. None sits behind the licence check: no upgrade prompt, no ads, no account. What is missing is deliberate — no port scanner, no netstat, no finger. SSHive Pro is a separate one-time purchase (about $17.99, Universal across Mac, iPhone and iPad, no subscription) covering the remote-access side, never the diagnostics.",
+          "fr": "SSHive Pro est un achat unique séparé (environ 19,99 €, Universal sur Mac, iPhone et iPad, sans abonnement) qui couvre l'accès distant, jamais le diagnostic."
         }
       }
     ],
@@ -241,8 +241,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "Les outils réseau sont-ils gratuits, ou faut-il la version Pro ?"
         },
         "answer": {
-          "en": "Free — all six, on Mac, Windows, iPhone and iPad. None of them goes through the licence check, so there is no upgrade prompt, no ad overlay before a result, and no account to create. You can install the app, run a whois and never see a paywall. SSHive Pro is a separate one-time purchase (about $8.99, Universal Purchase across Mac, iPhone and iPad, no subscription) that covers the remote-access side of the app. It does not gate the diagnostics on any platform.",
-          "fr": "Gratuits — les six, sur Mac, Windows, iPhone et iPad. Aucun ne passe par la vérification de licence : pas d'invitation à l'achat, pas d'encart publicitaire avant un résultat, pas de compte à créer. Vous installez l'app, vous lancez un whois, vous ne croisez aucun mur payant. SSHive Pro est un achat unique séparé (environ 9,99 €, Universal Purchase sur Mac, iPhone et iPad, sans abonnement) qui couvre la partie accès distant. Il ne verrouille le diagnostic sur aucune plateforme."
+          "en": "Free — all six, on Mac, Windows, iPhone and iPad. None of them goes through the licence check, so there is no upgrade prompt, no ad overlay before a result, and no account to create. You can install the app, run a whois and never see a paywall. SSHive Pro is a separate one-time purchase (about $17.99, Universal Purchase across Mac, iPhone and iPad, no subscription) that covers the remote-access side of the app. It does not gate the diagnostics on any platform.",
+          "fr": "Gratuits — les six, sur Mac, Windows, iPhone et iPad. Aucun ne passe par la vérification de licence : pas d'invitation à l'achat, pas d'encart publicitaire avant un résultat, pas de compte à créer. Vous installez l'app, vous lancez un whois, vous ne croisez aucun mur payant. SSHive Pro est un achat unique séparé (environ 19,99 €, Universal Purchase sur Mac, iPhone et iPad, sans abonnement) qui couvre la partie accès distant. Il ne verrouille le diagnostic sur aucune plateforme."
         }
       },
       {
@@ -499,8 +499,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "L'outil Ping est-il gratuit ou réservé à Pro ?"
         },
         "answer": {
-          "en": "Free, on every platform. None of SSHive's six network tools — ping, traceroute, DNS lookup, whois, MX lookup and DNSBL check — sit behind a licence check on Mac, Windows, iPhone or iPad. SSHive Pro is a separate one-time purchase (around 8.99 USD, Universal across Mac, iPhone and iPad, no subscription and no account) that unlocks SSH, RDP and VNC sessions, profiles, tunnels and related features. The diagnostics run in the free tier, with no ads.",
-          "fr": "Gratuit, sur toutes les plateformes. Aucun des six outils réseau de SSHive — ping, traceroute, DNS lookup, whois, MX lookup et vérification DNSBL — n'est soumis à une vérification de licence sur Mac, Windows, iPhone ou iPad. SSHive Pro est un achat unique distinct (environ 9,99 €, Universal sur Mac, iPhone et iPad, sans abonnement ni compte) qui débloque les sessions SSH, RDP et VNC, les profils, les tunnels et les fonctions associées. Les diagnostics tournent dans la version gratuite, sans publicité."
+          "en": "Free, on every platform. None of SSHive's six network tools — ping, traceroute, DNS lookup, whois, MX lookup and DNSBL check — sit behind a licence check on Mac, Windows, iPhone or iPad. SSHive Pro is a separate one-time purchase (around 17.99 USD, Universal across Mac, iPhone and iPad, no subscription and no account) that unlocks SSH, RDP and VNC sessions, profiles, tunnels and related features. The diagnostics run in the free tier, with no ads.",
+          "fr": "Gratuit, sur toutes les plateformes. Aucun des six outils réseau de SSHive — ping, traceroute, DNS lookup, whois, MX lookup et vérification DNSBL — n'est soumis à une vérification de licence sur Mac, Windows, iPhone ou iPad. SSHive Pro est un achat unique distinct (environ 19,99 €, Universal sur Mac, iPhone et iPad, sans abonnement ni compte) qui débloque les sessions SSH, RDP et VNC, les profils, les tunnels et les fonctions associées. Les diagnostics tournent dans la version gratuite, sans publicité."
         }
       }
     ],
@@ -834,8 +834,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "Gratuit sur toutes les plateformes"
         },
         "body": {
-          "en": "All six network tools — DNS Lookup, ping, traceroute, whois, MX lookup and DNSBL blacklist check — are free on Mac, Windows, iPhone and iPad, with no ads and no account. Pro is a one-time purchase (about 8.99 USD, Universal Purchase across Mac, iPhone and iPad) covering SSH, SFTP, RDP and VNC features. It does not gate diagnostics.",
-          "fr": "Les six outils réseau — DNS Lookup, ping, traceroute, whois, MX lookup et vérification de blacklist DNSBL — sont gratuits sur Mac, Windows, iPhone et iPad, sans publicité ni compte. Pro est un achat unique (environ 9,99 €, Achat Universel sur Mac, iPhone et iPad) qui couvre SSH, SFTP, RDP et VNC. Il ne verrouille aucun outil de diagnostic."
+          "en": "All six network tools — DNS Lookup, ping, traceroute, whois, MX lookup and DNSBL blacklist check — are free on Mac, Windows, iPhone and iPad, with no ads and no account. Pro is a one-time purchase (about 17.99 USD, Universal Purchase across Mac, iPhone and iPad) covering SSH, SFTP, RDP and VNC features. It does not gate diagnostics.",
+          "fr": "Les six outils réseau — DNS Lookup, ping, traceroute, whois, MX lookup et vérification de blacklist DNSBL — sont gratuits sur Mac, Windows, iPhone et iPad, sans publicité ni compte. Pro est un achat unique (environ 19,99 €, Achat Universel sur Mac, iPhone et iPad) qui couvre SSH, SFTP, RDP et VNC. Il ne verrouille aucun outil de diagnostic."
         }
       }
     ],
@@ -978,8 +978,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "DNS Lookup est-il gratuit ou faut-il Pro ?"
         },
         "answer": {
-          "en": "Free, on Mac, Windows, iPhone and iPad, with no ads, no account and no usage limit. The entire network-tools suite — DNS Lookup, ping, traceroute, whois, MX lookup and DNSBL blacklist check — is outside the Pro gate on every platform. Pro is a one-time purchase of about 8.99 USD, Universal Purchase across Mac, iPhone and iPad, and it unlocks SSH, SFTP, RDP and VNC capabilities. There is no subscription.",
-          "fr": "Gratuit, sur Mac, Windows, iPhone et iPad, sans publicité, sans compte et sans limite d'utilisation. Toute la suite d'outils réseau — DNS Lookup, ping, traceroute, whois, MX lookup et vérification DNSBL — est hors du périmètre Pro sur chaque plateforme. Pro est un achat unique d'environ 9,99 €, en Achat Universel sur Mac, iPhone et iPad, qui débloque les fonctions SSH, SFTP, RDP et VNC. Il n'y a aucun abonnement."
+          "en": "Free, on Mac, Windows, iPhone and iPad, with no ads, no account and no usage limit. The entire network-tools suite — DNS Lookup, ping, traceroute, whois, MX lookup and DNSBL blacklist check — is outside the Pro gate on every platform. Pro is a one-time purchase of about 17.99 USD, Universal Purchase across Mac, iPhone and iPad, and it unlocks SSH, SFTP, RDP and VNC capabilities. There is no subscription.",
+          "fr": "Gratuit, sur Mac, Windows, iPhone et iPad, sans publicité, sans compte et sans limite d'utilisation. Toute la suite d'outils réseau — DNS Lookup, ping, traceroute, whois, MX lookup et vérification DNSBL — est hors du périmètre Pro sur chaque plateforme. Pro est un achat unique d'environ 19,99 €, en Achat Universel sur Mac, iPhone et iPad, qui débloque les fonctions SSH, SFTP, RDP et VNC. Il n'y a aucun abonnement."
         }
       }
     ],
@@ -1203,8 +1203,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "L'outil whois est-il gratuit ou faut-il Pro ?"
         },
         "answer": {
-          "en": "Free, on Mac, Windows, iPhone and iPad. None of SSHive's network tools — whois, DNS lookup, ping, traceroute, MX lookup, blacklist check — sits behind a licence check on any platform. SSHive Pro is a one-time purchase of about 8.99 USD, a Universal Purchase covering Mac, iPhone and iPad, with no subscription and no account, and it unlocks things like RDP and VNC sessions, tunnels and SFTP upload. The network tools are not part of that.",
-          "fr": "Gratuit, sur Mac, Windows, iPhone et iPad. Aucun outil réseau de SSHive — whois, DNS lookup, ping, traceroute, MX lookup, blacklist check — n'est soumis à une vérification de licence, sur aucune plateforme. SSHive Pro est un achat unique d'environ 9,99 €, en achat universel Mac + iPhone + iPad, sans abonnement ni compte, et il débloque par exemple les sessions RDP et VNC, les tunnels ou l'envoi SFTP. Les outils réseau n'en font pas partie."
+          "en": "Free, on Mac, Windows, iPhone and iPad. None of SSHive's network tools — whois, DNS lookup, ping, traceroute, MX lookup, blacklist check — sits behind a licence check on any platform. SSHive Pro is a one-time purchase of about 17.99 USD, a Universal Purchase covering Mac, iPhone and iPad, with no subscription and no account, and it unlocks things like RDP and VNC sessions, tunnels and SFTP upload. The network tools are not part of that.",
+          "fr": "Gratuit, sur Mac, Windows, iPhone et iPad. Aucun outil réseau de SSHive — whois, DNS lookup, ping, traceroute, MX lookup, blacklist check — n'est soumis à une vérification de licence, sur aucune plateforme. SSHive Pro est un achat unique d'environ 19,99 €, en achat universel Mac + iPhone + iPad, sans abonnement ni compte, et il débloque par exemple les sessions RDP et VNC, les tunnels ou l'envoi SFTP. Les outils réseau n'en font pas partie."
         }
       },
       {
@@ -1549,8 +1549,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "Gratuit, sur toutes les plateformes, sans compte"
         },
         "body": {
-          "en": "The whole network-tools suite is free on Mac, Windows, iPhone and iPad. There is no Pro gate on the blacklist check, no ad interstitial before a result, and no sign-up. SSHive Pro is a separate one-time purchase (around 8.99 USD, Universal across Mac, iPhone and iPad) that unlocks other features entirely — never these.",
-          "fr": "SSHive Pro est un achat unique distinct (environ 9,99 €, achat universel Mac + iPhone + iPad) qui débloque d'autres fonctions — jamais celles-ci."
+          "en": "The whole network-tools suite is free on Mac, Windows, iPhone and iPad. There is no Pro gate on the blacklist check, no ad interstitial before a result, and no sign-up. SSHive Pro is a separate one-time purchase (around 17.99 USD, Universal across Mac, iPhone and iPad) that unlocks other features entirely — never these.",
+          "fr": "SSHive Pro est un achat unique distinct (environ 19,99 €, achat universel Mac + iPhone + iPad) qui débloque d'autres fonctions — jamais celles-ci."
         }
       }
     ],
@@ -1683,8 +1683,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
           "fr": "Faut-il SSHive Pro pour lancer une vérification de liste noire ?"
         },
         "answer": {
-          "en": "No. The entire network-tools suite — blacklist check, MX lookup, DNS lookup, whois, ping and network interfaces — is free on Mac, Windows, iPhone and iPad, with no account and no ads. SSHive Pro is an optional one-time purchase (around 8.99 USD) that is Universal across Mac, iPhone and iPad and unlocks unrelated features. There is no subscription, and none of these diagnostics is behind a paywall on any platform.",
-          "fr": "Non. Toute la suite d'outils réseau — vérification de liste noire, MX lookup, DNS lookup, whois, ping et interfaces réseau — est gratuite sur Mac, Windows, iPhone et iPad, sans compte et sans publicité. SSHive Pro est un achat unique optionnel (environ 9,99 €), universel entre Mac, iPhone et iPad, qui débloque d'autres fonctions. Il n'y a pas d'abonnement, et aucun de ces diagnostics n'est derrière un paywall, sur aucune plateforme."
+          "en": "No. The entire network-tools suite — blacklist check, MX lookup, DNS lookup, whois, ping and network interfaces — is free on Mac, Windows, iPhone and iPad, with no account and no ads. SSHive Pro is an optional one-time purchase (around 17.99 USD) that is Universal across Mac, iPhone and iPad and unlocks unrelated features. There is no subscription, and none of these diagnostics is behind a paywall on any platform.",
+          "fr": "Non. Toute la suite d'outils réseau — vérification de liste noire, MX lookup, DNS lookup, whois, ping et interfaces réseau — est gratuite sur Mac, Windows, iPhone et iPad, sans compte et sans publicité. SSHive Pro est un achat unique optionnel (environ 19,99 €), universel entre Mac, iPhone et iPad, qui débloque d'autres fonctions. Il n'y a pas d'abonnement, et aucun de ces diagnostics n'est derrière un paywall, sur aucune plateforme."
         }
       }
     ],

@@ -147,8 +147,8 @@ export default async function CompetitorPage({
           : `Is SSHive cheaper than ${data.name}?`,
       answer:
         locale === 'fr'
-          ? `SSHive Pro est un achat unique a 9,99 € avec mises a jour a vie. ${data.name} se positionne sur ${priceRow?.competitor ?? 'un autre modele tarifaire'}. Sur la duree, SSHive devient generalement plus economique.`
-          : `SSHive Pro is a one-time $8.99 purchase with lifetime updates. ${data.name} is priced at ${priceRow?.competitor ?? 'a different model'}. Over time SSHive typically works out cheaper.`,
+          ? `SSHive Pro est un achat unique a 19,99 € avec mises a jour a vie. ${data.name} se positionne sur ${priceRow?.competitor ?? 'un autre modele tarifaire'}. Sur la duree, SSHive devient generalement plus economique.`
+          : `SSHive Pro is a one-time $17.99 purchase with lifetime updates. ${data.name} is priced at ${priceRow?.competitor ?? 'a different model'}. Over time SSHive typically works out cheaper.`,
     },
     {
       question:

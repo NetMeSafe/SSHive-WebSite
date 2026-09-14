@@ -154,7 +154,7 @@
     },
     "pro": {
       "name": "Pro",
-      "price": "$8.99",
+      "price": "$17.99",
       "period": "one-time purchase",
       "launchBadge": "One-time purchase",
       "badge": "Recommended",
@@ -187,14 +187,14 @@
       "q3": "Can I upgrade later?",
       "a3": "Absolutely. Start with the free version and upgrade to Pro anytime from the Mac App Store. Your profiles and settings carry over seamlessly.",
       "q4": "Is there a subscription?",
-      "a4": "No. SSHive Pro is a one-time purchase of $8.99. You pay once and own it forever: no subscription, no recurring fees, and every future update is included.",
+      "a4": "No. SSHive Pro is a one-time purchase of $17.99. You pay once and own it forever: no subscription, no recurring fees, and every future update is included.",
       "q5": "Do I need an account?",
       "a5": "No. SSHive works completely offline with no account required. Your data stays on your machine, secured by the macOS Keychain.",
       "q6": "After updating, the app says I am back on Free. What do I do?",
       "a6": "A small number of users see this happen the first time the app launches after an update, because the StoreKit receipt has not been refreshed yet. The fix is one tap: open Settings, Subscription / Purchases, and tap \"Restore Purchases\". Pro comes right back, and it does not cost anything (you are not buying it a second time, Apple is simply re-confirming your previous purchase). A permanent fix is on the roadmap so the restore is no longer needed. If restoring does not bring Pro back, email contact@netmesafe.com with your App Store country and we will check on our side."
     },
-    "metaDescription": "SSHive is free to start: SSH terminal, SFTP and 2 sessions. Pro is a one-time $8.99 purchase, no subscription: RDP, VNC, unlimited tunnels, MCP AI and iCloud sync.",
-    "metaTitle": "SSHive Pricing, Free vs Pro, $8.99 One-Time"
+    "metaDescription": "SSHive is free to start: SSH terminal, SFTP and 2 sessions. Pro is a one-time $17.99 purchase, no subscription: RDP, VNC, unlimited tunnels, MCP AI and iCloud sync.",
+    "metaTitle": "SSHive Pricing, Free vs Pro, $17.99 One-Time"
   },
   "download": {
     "title": "Download SSHive",
@@ -213,7 +213,7 @@
     "noAccount": "No account needed",
     "noAds": "No ads, no tracking in the app",
     "keychainSecurity": "Secure, Touch ID + Keychain encryption",
-    "upgradeLater": "Upgrade to Pro anytime ($8.99, one-time)",
+    "upgradeLater": "Upgrade to Pro anytime ($17.99, one-time)",
     "emailTitle": "Get notified of new releases",
     "emailPlaceholder": "your@email.com",
     "emailSubscribe": "Subscribe",
@@ -254,7 +254,7 @@
       "allInOne": "All-in-one: SSH, SFTP, RDP, VNC, tunnels, and AI in a single app",
       "securePrivate": "Secure & private, macOS Keychain encryption, no telemetry, data stays on your machine",
       "nativeMac": "Native macOS app with Keychain integration and Apple Silicon support",
-      "oneTimePrice": "One-time $8.99 Pro upgrade, no recurring subscription",
+      "oneTimePrice": "One-time $17.99 Pro upgrade, no recurring subscription",
       "aiIntegration": "Built-in MCP server for Claude Code, Cursor, and Claude Desktop",
       "appStore": "Available on the Mac App Store for easy install and updates"
     },
@@ -268,9 +268,9 @@
       "iterm2": "iTerm2 has earned its reputation as the best terminal emulator for macOS, and rightfully so. It offers split panes, profiles, advanced search, and incredible customization. However, iTerm2 is purely a terminal emulator, it does not include built-in SFTP file management, RDP, VNC, SSH tunnel management, or connection profiles. SSHive respects what iTerm2 does well while filling the gaps that server administrators and DevOps engineers need. If your workflow involves more than just typing commands in a shell, SSHive consolidates everything into one window.",
       "terminus": "Tabby (formerly Terminus) is a modern, cross-platform terminal built with web technologies. It offers a polished UI, plugin system, and basic SSH features. However, its cross-platform focus means it lacks the deep macOS integration that SSHive provides. SSHive includes full SFTP file management, embedded RDP and VNC clients, SSH tunnel configuration, and AI integration, features that Tabby either lacks entirely or only partially supports through plugins. For macOS users who want a complete remote management experience, SSHive offers significantly more out of the box.",
       "putty": "PuTTY is one of the oldest and most recognized SSH clients in the world. Originally built for Windows, it has been ported to macOS, but the experience is far from native. PuTTY lacks SFTP, RDP, VNC, modern theming, and connection profile management. SSHive takes everything that made PuTTY beloved, simplicity and reliability, and wraps it in a modern, native macOS experience with all the protocols and tools a system administrator needs in 2026.",
-      "termius": "Termius is a polished, cross-platform SSH client known for its beautiful UI and sync capabilities. However, its free tier is limited, and advanced features like SSH tunnels require a $10/month subscription. SSHive offers comparable features, SSH, SFTP, connection profiles, Keychain security, with a one-time $8.99 Pro upgrade for unlimited sessions, RDP, VNC, broadcast mode, and AI integration. For macOS users who want professional SSH tooling without recurring costs, SSHive is the clear choice.",
+      "termius": "Termius is a polished, cross-platform SSH client known for its beautiful UI and sync capabilities. However, its free tier is limited, and advanced features like SSH tunnels require a $10/month subscription. SSHive offers comparable features, SSH, SFTP, connection profiles, Keychain security, with a one-time $17.99 Pro upgrade for unlimited sessions, RDP, VNC, broadcast mode, and AI integration. For macOS users who want professional SSH tooling without recurring costs, SSHive is the clear choice.",
       "royal-tsx": "Royal TSX is a well-established remote management tool for macOS. It supports SSH, RDP, VNC, and SFTP through a plugin architecture. However, Royal TSX costs $29 for a single license and does not include AI integration. SSHive provides all the same protocols in a single, unified app that costs a fraction of the price and includes modern features like MCP-based AI integration for Claude Code and Cursor.",
-      "securecrt": "SecureCRT by VanDyke Software has been the enterprise-grade SSH client of choice for decades. It offers advanced scripting, session management, and protocol support. However, at $119 per license, it is priced for enterprise budgets. SSHive provides comparable SSH and SFTP functionality, adds RDP, VNC, broadcast mode, and AI integration, and costs either nothing (free tier) or $8.99 for the Pro upgrade. For individual developers, sysadmins, and small teams, SSHive delivers enterprise-quality features at an accessible price point."
+      "securecrt": "SecureCRT by VanDyke Software has been the enterprise-grade SSH client of choice for decades. It offers advanced scripting, session management, and protocol support. However, at $119 per license, it is priced for enterprise budgets. SSHive provides comparable SSH and SFTP functionality, adds RDP, VNC, broadcast mode, and AI integration, and costs either nothing (free tier) or $17.99 for the Pro upgrade. For individual developers, sysadmins, and small teams, SSHive delivers enterprise-quality features at an accessible price point."
     }
   },
   "about": {
@@ -425,7 +425,7 @@
           },
           {
             "q": "How much is Pro, and is it a subscription?",
-            "a": "Pro is a one-time purchase of $8.99 on the App Store. There is no subscription and no recurring fee. It is a Universal Purchase, so buying it once unlocks Pro on Mac, iPhone and iPad with the same Apple ID."
+            "a": "Pro is a one-time purchase of $17.99 on the App Store. There is no subscription and no recurring fee. It is a Universal Purchase, so buying it once unlocks Pro on Mac, iPhone and iPad with the same Apple ID."
           },
           {
             "q": "After an update the app says I am back on Free. What do I do?",
@@ -748,7 +748,7 @@
         ]
       },
       "pro": {
-        "price": "$8.99",
+        "price": "$17.99",
         "period": "one-time purchase",
         "badge": "One-time purchase",
         "savings": "lifetime updates",

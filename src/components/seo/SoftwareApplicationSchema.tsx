@@ -23,7 +23,7 @@ export function SoftwareApplicationSchema() {
           },
           {
             '@type': 'Offer',
-            price: '8.99',
+            price: '17.99',
             priceCurrency: 'USD',
             name: 'SSHive Pro',
             availability: 'https://schema.org/InStock',
