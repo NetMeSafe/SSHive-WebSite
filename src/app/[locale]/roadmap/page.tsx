@@ -23,12 +23,12 @@ export async function generateMetadata({
 
   const title =
     locale === 'fr'
-      ? 'Roadmap SSHive, ce qui arrive ensuite | SSHive'
-      : 'SSHive Roadmap, what is coming next | SSHive';
+      ? 'Roadmap SSHive : ce qui arrive ensuite'
+      : 'SSHive Roadmap: what is coming next';
   const description =
     locale === 'fr'
-      ? 'Sync iCloud, Mosh, support YubiKey NFC, multi-fenetres iPad, et corrections de bugs. La roadmap publique de SSHive sur Mac, iPhone et iPad, on ecoute vos retours.'
-      : 'iCloud sync, Mosh, YubiKey NFC support, multi-window on iPad, and bug fixes. SSHive\'s public roadmap on Mac, iPhone and iPad, we listen to your feedback.';
+      ? 'Support YubiKey NFC, multi-fenetres sur iPad, autonomie de l\'assistant IA et corrections. La roadmap publique de SSHive sur Mac, iPhone et iPad.'
+      : 'YubiKey NFC support, multi-window on iPad, AI assistant autonomy and fixes. The public SSHive roadmap for Mac, iPhone and iPad, shaped by your feedback.';
 
   return getPageMetadata({
     locale,

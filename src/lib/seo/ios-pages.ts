@@ -44,8 +44,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     slug: 'ios-ssh-client',
     iconName: 'Terminal',
     metaTitle: {
-      en: 'iOS SSH Client, Native iPhone & iPad Terminal | SSHive',
-      fr: 'Client SSH iOS, Terminal iPhone et iPad natif | SSHive',
+      en: 'iOS SSH Client, Native iPhone & iPad Terminal',
+      fr: 'Client SSH iOS, Terminal iPhone et iPad natif',
     },
     metaDescription: {
       en: 'Full xterm-256color SSH terminal on iPhone and iPad. Ed25519 and ECDSA keys with passphrase, Touch ID / Face ID Keychain, 8 themes and SSH tunnels. Free to start.',
@@ -248,8 +248,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     slug: 'ios-sftp-app',
     iconName: 'FolderOpen',
     metaTitle: {
-      en: 'iOS SFTP App, Native iPhone & iPad File Transfer | SSHive',
-      fr: 'App SFTP iOS, Transfert de fichiers iPhone et iPad natif | SSHive',
+      en: 'iOS SFTP App, Native iPhone & iPad File Transfer',
+      fr: 'App SFTP iOS : transfert natif iPhone et iPad',
     },
     metaDescription: {
       en: 'Native SFTP client for iPhone and iPad. Remote file browser, built-in text editor, upload/download queue, Touch ID Keychain. Free up to 10 MB per file; Pro unlimited.',
@@ -427,8 +427,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     slug: 'iphone-remote-desktop',
     iconName: 'Monitor',
     metaTitle: {
-      en: 'iPhone Remote Desktop, RDP for iPhone & iPad | SSHive',
-      fr: 'Bureau a distance iPhone, RDP pour iPhone et iPad | SSHive',
+      en: 'iPhone Remote Desktop, RDP for iPhone & iPad',
+      fr: 'Bureau a distance iPhone, RDP pour iPhone et iPad',
     },
     metaDescription: {
       en: 'Native RDP client on iPhone and iPad. FreeRDP 3 with TLS 1.3, NLA, NTLMv2 and Active Directory. Works with Windows Server 2016 to 2025 and Windows 10/11 Pro.',
@@ -605,8 +605,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     slug: 'iphone-vnc-client',
     iconName: 'Eye',
     metaTitle: {
-      en: 'iPhone VNC Viewer, Native VNC Client for iOS | SSHive',
-      fr: 'Viewer VNC iPhone, Client VNC natif pour iOS | SSHive',
+      en: 'iPhone VNC Viewer, Native VNC Client for iOS',
+      fr: 'Viewer VNC iPhone, Client VNC natif pour iOS',
     },
     metaDescription: {
       en: 'Native VNC viewer on iPhone and iPad, RoyalVNC engine with TLS, ARD and RFB. Built-in VNC keyboard, tap-to-click, pinch-to-zoom. Works over SSH tunnels.',
@@ -751,8 +751,8 @@ export const IOS_PAGES: IosFeatureSEO[] = [
     slug: 'iphone-vpn-client',
     iconName: 'Shield',
     metaTitle: {
-      en: 'iPhone VPN Client, OpenVPN, IKEv2, IPSec Built-In | SSHive',
-      fr: 'Client VPN iPhone, OpenVPN, IKEv2, IPSec intégré | SSHive',
+      en: 'iPhone VPN Client, OpenVPN, IKEv2, IPSec Built-In',
+      fr: 'Client VPN iPhone, OpenVPN, IKEv2, IPSec intégré',
     },
     metaDescription: {
       en: 'Built-in VPN client on iPhone and iPad: IKEv2, IPSec/Xauth, OpenVPN. Auto-connect before SSH/RDP. Apple NetworkExtension. No tracking. One app for VPN + SSH + SFTP + RDP + VNC.',

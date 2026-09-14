@@ -103,8 +103,8 @@ export const USE_CASES: UseCaseSEO[] = [
   {
     slug: 'raspberry-pi',
     metaTitle: {
-      en: 'SSH into Raspberry Pi from a Mac, Free Native Client',
-      fr: 'SSH vers Raspberry Pi depuis Mac, Client natif gratuit',
+      en: 'SSH into a Raspberry Pi from a Mac, Free',
+      fr: 'SSH vers Raspberry Pi depuis un Mac, gratuit',
     },
     metaDescription: {
       en: 'Manage your Raspberry Pi from macOS with SSHive: SSH terminal, SFTP file transfers, VNC desktop, and SSH tunnels. Free, native macOS client. No PuTTY needed.',
@@ -175,8 +175,8 @@ export const USE_CASES: UseCaseSEO[] = [
   {
     slug: 'aws-ec2',
     metaTitle: {
-      en: 'SSH into AWS EC2 from a Mac, Manage Instances Securely',
-      fr: 'SSH vers AWS EC2 depuis Mac, Gérer les instances en sécurité',
+      en: 'SSH into AWS EC2 from a Mac, Securely',
+      fr: 'SSH vers AWS EC2 depuis un Mac, en toute sécurité',
     },
     metaDescription: {
       en: 'Connect to EC2 instances from macOS with SSHive: PEM keys, jump hosts (bastions), private subnets via tunnels, and SFTP. Better than Termius for AWS workflows.',
@@ -247,8 +247,8 @@ export const USE_CASES: UseCaseSEO[] = [
   {
     slug: 'home-server',
     metaTitle: {
-      en: 'Home Server Management on Mac, SSH, SFTP, VNC, Tunnels',
-      fr: 'Gestion de serveur perso sur Mac, SSH, SFTP, VNC, tunnels',
+      en: 'Home Server Management from a Mac',
+      fr: 'Gerer son serveur perso depuis un Mac',
     },
     metaDescription: {
       en: 'Manage your home lab from a Mac: SSH, SFTP file transfer, VNC, and SSH tunnels for self-hosted services like Plex, Jellyfin, Home Assistant, Nextcloud.',
@@ -382,7 +382,7 @@ export const USE_CASES: UseCaseSEO[] = [
     slug: 'docker',
     metaTitle: {
       en: 'Manage Docker Hosts from a Mac, SSH, Tunnels, Logs',
-      fr: 'Gérer les hôtes Docker depuis Mac, SSH, tunnels, logs',
+      fr: 'Gérer des hôtes Docker depuis un Mac',
     },
     metaDescription: {
       en: 'Connect to remote Docker hosts from macOS: SSH for `docker ps`/`docker logs`, tunnels for exposed ports, broadcast for swarm ops, MCP for AI-assisted ops.',
@@ -424,8 +424,8 @@ export const USE_CASES: UseCaseSEO[] = [
       {
         question: { en: 'Does SSHive support Docker contexts (DOCKER_HOST over SSH)?', fr: 'SSHive supporte-t-il les contextes Docker (DOCKER_HOST en SSH) ?' },
         answer: {
-          en: 'SSHive doesn\'t set DOCKER_HOST for you, but you can run `docker context use myremote` in SSHive\'s local terminal (Local Shell tab). Docker CLI then talks to the remote Docker daemon over SSH transparently. This is independent of SSHive\'s SSH session feature.',
-          fr: 'SSHive ne règle pas DOCKER_HOST pour vous, mais vous pouvez lancer `docker context use myremote` dans le terminal local SSHive (onglet Local Shell). La CLI Docker parle alors au daemon Docker distant via SSH de facon transparente. C\'est independant de la fonctionnalité session SSH de SSHive.',
+          en: 'SSHive doesn\'t set DOCKER_HOST for you. Create the context once in macOS Terminal with `docker context create myremote --docker "host=ssh://user@host"`, then `docker context use myremote`: the Docker CLI talks to the remote daemon over SSH transparently. That runs alongside SSHive rather than inside it, and both reuse the same `~/.ssh/config` host entry.',
+          fr: 'SSHive ne règle pas DOCKER_HOST pour vous. Créez le contexte une fois dans le Terminal macOS avec `docker context create myremote --docker "host=ssh://user@host"`, puis `docker context use myremote` : la CLI Docker parle alors au daemon distant via SSH de façon transparente. Cela tourne à côté de SSHive plutôt que dedans, et les deux réutilisent la même entrée d\'hôte de `~/.ssh/config`. C\'est indépendant de la fonctionnalité session SSH de SSHive.',
         },
       },
     ],
@@ -437,7 +437,7 @@ export const USE_CASES: UseCaseSEO[] = [
     slug: 'kubernetes',
     metaTitle: {
       en: 'kubectl + SSH on macOS, Manage K8s Nodes from a Mac',
-      fr: 'kubectl + SSH sur macOS, Gérer des noeuds K8s depuis Mac',
+      fr: 'kubectl et SSH sur Mac : gérer des nœuds K8s',
     },
     metaDescription: {
       en: 'Run kubectl from SSHive\'s terminal, SSH directly to Kubernetes nodes for node-level work, broadcast across nodes, and tunnel cluster services to your Mac.',
@@ -449,7 +449,7 @@ export const USE_CASES: UseCaseSEO[] = [
       fr: 'SSH aux noeuds, kubectl depuis un terminal unifie, tunnel des services cluster et broadcast a travers les noeuds, tout dans SSHive.',
     },
     intro: {
-      en: 'kubectl is the primary interface to Kubernetes, but for node-level diagnostics (kubelet logs, journald, containerd state), you still SSH into the nodes. SSHive becomes your unified workspace: a profile per node (control plane and workers), kubectl from the local shell tab, broadcast for fleet-wide node maintenance, tunnels to reach internal services. Combine with the MCP integration and Claude can introspect a misbehaving node and `kubectl describe` the relevant pods in one breath.',
+      en: 'kubectl is the primary interface to Kubernetes, but for node-level diagnostics (kubelet logs, journald, containerd state), you still SSH into the nodes. SSHive becomes your unified workspace: a profile per node (control plane and workers), broadcast for fleet-wide node maintenance, snippets for the commands you repeat, tunnels to reach internal services. Combine with the MCP integration and Claude can introspect a misbehaving node and `kubectl describe` the relevant pods in one breath.',
       fr: 'kubectl est l\'interface primaire vers Kubernetes, mais pour les diagnostics au niveau noeud (logs kubelet, journald, état containerd), vous SSH-ez encore. SSHive devient votre workspace unifie : un profil par noeud (control plane et workers), kubectl depuis l\'onglet local, broadcast pour la maintenance fleet-wide, tunnels pour atteindre les services internes. Combinez avec l\'intégration MCP et Claude peut introspecter un noeud qui se comporte mal et `kubectl describe` les pods concernes d\'une traite.',
     },
     sections: [
@@ -463,7 +463,7 @@ export const USE_CASES: UseCaseSEO[] = [
       {
         heading: { en: 'Tunnel cluster services for local browsing', fr: 'Tunnel des services cluster pour browsing local' },
         body: {
-          en: 'Need to reach a ClusterIP service from your Mac (Argo CD UI, Grafana, internal admin)? Two options. (1) `kubectl port-forward` from SSHive\'s local shell. (2) SSH into a node and let SSHive\'s Local forward expose the cluster service to your Mac. Both work, port-forward is simpler, SSHive tunnel is faster for repeated access.',
+          en: 'Need to reach a ClusterIP service from your Mac (Argo CD UI, Grafana, internal admin)? Two options. (1) `kubectl port-forward` from macOS Terminal. (2) SSH into a node and let SSHive\'s local forward (-L) expose the cluster service to your Mac. Both work; port-forward is simpler for a one-off, the SSHive tunnel is faster for repeated access because it reconnects with the profile.',
           fr: 'Besoin d\'atteindre un service ClusterIP depuis Mac (UI Argo CD, Grafana, admin interne) ? Deux options. (1) `kubectl port-forward` depuis le shell local SSHive. (2) SSH sur un noeud et laissez le forward Local de SSHive exposer le service cluster vers Mac. Les deux marchent, port-forward est plus simple, le tunnel SSHive est plus rapide pour accès repete.',
         },
       },
@@ -492,7 +492,7 @@ export const USE_CASES: UseCaseSEO[] = [
     slug: 'jump-host',
     metaTitle: {
       en: 'SSH Jump Host (Bastion) from a Mac, One-Click Setup',
-      fr: 'Jump Host SSH (bastion) depuis Mac, Setup en un clic',
+      fr: 'Jump host SSH (bastion) depuis un Mac',
     },
     metaDescription: {
       en: 'Configure ProxyJump bastions visually in SSHive: set up a jump host once, reuse across profiles, agent forwarding, no ~/.ssh/config editing required.',
@@ -547,7 +547,7 @@ export const USE_CASES: UseCaseSEO[] = [
     slug: 'windows-server',
     metaTitle: {
       en: 'Connect to Windows Server from Mac, RDP & SSH',
-      fr: 'Se connecter a Windows Server depuis Mac, RDP et SSH',
+      fr: 'Windows Server depuis un Mac : RDP et SSH',
     },
     metaDescription: {
       en: 'RDP into Windows Server 2019/2022/2025 from macOS plus OpenSSH for command-line. Embedded RDP client, no Microsoft Remote Desktop window-juggling.',
@@ -602,7 +602,7 @@ export const USE_CASES: UseCaseSEO[] = [
     slug: 'nas-synology',
     metaTitle: {
       en: 'SSH into Synology / QNAP NAS from Mac, SFTP & Admin',
-      fr: 'SSH vers NAS Synology / QNAP depuis Mac, SFTP et admin',
+      fr: 'SSH vers un NAS Synology ou QNAP depuis un Mac',
     },
     metaDescription: {
       en: 'Manage Synology DSM, QNAP QTS, or any SSH-enabled NAS from macOS: terminal, SFTP file browser, tunnels for DSM web UI, broadcast across multiple NAS units.',
@@ -656,8 +656,8 @@ export const USE_CASES: UseCaseSEO[] = [
   {
     slug: 'all-in-one-ssh-client-mac',
     metaTitle: {
-      en: 'All-in-One SSH Client for macOS, SSH, SFTP, RDP & VNC',
-      fr: 'Client SSH tout-en-un pour macOS, SSH, SFTP, RDP et VNC',
+      en: 'All-in-One macOS Client: SSH, SFTP, RDP & VNC',
+      fr: 'Client SSH tout-en-un macOS : SSH, SFTP, RDP, VNC',
     },
     metaDescription: {
       en: 'Looking for an all-in-one SSH terminal on macOS that bundles SFTP, RDP, VNC, tunnels and AI integration? SSHive is the native Mac client built for that workflow. Free download.',
@@ -735,8 +735,8 @@ export const USE_CASES: UseCaseSEO[] = [
   {
     slug: 'developer-mac',
     metaTitle: {
-      en: 'Developer SSH Workflow on Mac, Profiles, Tunnels, AI',
-      fr: 'Workflow SSH développeur sur Mac, profils, tunnels, IA',
+      en: 'Developer SSH Workflow on Mac: Profiles and AI',
+      fr: 'Workflow SSH développeur sur Mac : profils et IA',
     },
     metaDescription: {
       en: 'A modern SSH workflow for developers on macOS: project profiles, dev DB tunnels, deploy scripts as snippets, Claude/Cursor MCP integration for AI-assisted ops.',

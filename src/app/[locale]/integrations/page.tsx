@@ -23,8 +23,8 @@ export async function generateMetadata({
 
   const title =
     locale === 'fr'
-      ? 'Integrations IA, Claude Code, Cursor, Claude Desktop | SSHive'
-      : 'AI Integrations, Claude Code, Cursor, Claude Desktop | SSHive';
+      ? 'Integrations IA : Claude Code et Cursor'
+      : 'AI Integrations: Claude Code and Cursor';
   const description =
     locale === 'fr'
       ? 'SSHive expose un serveur MCP local sur macOS pour Claude Code, Cursor et Claude Desktop. Guides de setup pour chaque client, 100 % local, Bearer token.'

@@ -223,13 +223,13 @@
   },
   "comparePage": {
     "title": "SSHive vs {competitor}",
-    "description": "See how SSHive compares to {competitor} for SSH, SFTP, and remote desktop on macOS.",
+    "description": "See how SSHive compares to {competitor} on SSH, SFTP, RDP, VNC and tunnels, with a feature-by-feature table and an honest look at what each does best.",
     "verdict": "The verdict",
     "tryFree": "Try SSHive Free",
     "downloadFree": "Download SSHive Free",
     "overviewTitle": "How SSHive Compares",
     "overviewSubtitle": "See how SSHive stacks up against every major SSH client. One app to replace them all.",
-    "overviewMetaTitle": "SSHive vs Competitors, Best SSH Client for macOS 2026",
+    "overviewMetaTitle": "SSHive vs Competitors: Best Mac SSH Client 2026",
     "overviewMetaDescription": "Compare SSHive to MobaXterm, iTerm2, Termius, PuTTY, Royal TSX, SecureCRT, and Tabby. Feature-by-feature comparison table for macOS SSH clients.",
     "viewComparison": "View full comparison",
     "featureByFeature": "Feature-by-feature comparison",
@@ -245,7 +245,7 @@
     "keychainIntegration": "Keychain Integration",
     "connectionProfiles": "Connection Profiles",
     "modernUI": "Modern UI",
-    "metaTitleTemplate": "SSHive vs {competitor}, A {competitor} Alternative for Mac (2026)",
+    "metaTitleTemplate": "SSHive vs {competitor}: Mac Alternative Compared (2026)",
     "introTitle": "SSHive vs {competitor}: which is the better SSH client for macOS?",
     "detailedIntro": {
       "mobaxterm": "MobaXterm has been the gold standard all-in-one terminal on Windows for years. With X11 forwarding, embedded SFTP, and RDP support, it set the bar for what a remote management tool should be. SSHive brings this same philosophy to macOS, but with native Keychain security, and modern AI capabilities that MobaXterm does not offer. If you have been searching for a MobaXterm equivalent on Mac, SSHive is built specifically for you. Unlike MobaXterm, which only runs on Windows (or via Wine, with limited success), SSHive is a native macOS application built with Electron and React, optimized for Apple Silicon, and available on the Mac App Store.",
@@ -259,7 +259,7 @@
   },
   "about": {
     "title": "About SSHive",
-    "metaDescription": "Learn about SSHive, the SSH/SFTP/RDP client for macOS built by Lucas Russo. Inspired by MobaXterm.",
+    "metaDescription": "SSHive is built by NetMeSafe. Why we made a native Apple SSH, SFTP, RDP and VNC client for Mac, iPhone and iPad: no account, no telemetry, one-time price.",
     "description": "SSHive is built by Lucas Russo, a developer passionate about building great tools for macOS. Inspired by MobaXterm, SSHive brings the same all-in-one experience to Mac users, with a native feel, Keychain security, and modern AI integrations.",
     "storyTitle": "The story",
     "storyText": "As a developer and sysadmin who switched from Windows to macOS, I missed the all-in-one experience that MobaXterm provided. I found myself juggling between Terminal, Cyberduck, Microsoft Remote Desktop, and various other tools. SSHive was born from that frustration, a single app that combines SSH, SFTP, RDP, and VNC with a native macOS feel. Built with Electron, React, and TypeScript, SSHive is crafted with care for security and performance.",
@@ -291,7 +291,7 @@
   },
   "changelog": {
     "title": "Changelog",
-    "metaDescription": "SSHive release history. See what's new in each version of the SSH/SFTP/RDP client for macOS.",
+    "metaDescription": "SSHive release history for Mac, iPhone and iPad. What changed in every version since 1.0, from the native RDP engine to full localization and reliable.",
     "subtitle": "All notable changes to SSHive are documented here.",
     "releases": [
       {
@@ -527,7 +527,7 @@
   },
   "featuresPage": {
     "title": "Features",
-    "subtitle": "Everything you need to manage remote servers, in one native macOS app.",
+    "subtitle": "SSH terminal, SFTP, RDP, VNC, tunnels, broadcast and a built-in MCP server for AI assistants, in one native app for Mac, iPhone and iPad. No account required.",
     "exploreFeature": "Explore {feature}"
   },
   "featurePages": {
@@ -625,7 +625,7 @@
       "connections": "Connections",
       "newConnection": "New connection",
       "searchProfile": "Search a profile…",
-      "localTerminal": "Local terminal",
+      "localTerminal": "Snippets",
       "networkTools": "Network tools",
       "settings": "Settings",
       "recents": "Recents",

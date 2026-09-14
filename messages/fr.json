@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "SSHive, Client SSH, SFTP, RDP et VNC pour Mac, iPhone et iPad",
+    "title": "SSHive : client SSH, SFTP, RDP et VNC pour Apple",
     "description": "Client SSH, SFTP, RDP, VNC et VPN natif Apple pour Mac, iPhone et iPad. Trousseau Touch ID, sync iCloud et serveur MCP intégré pour Claude Code et Cursor."
   },
   "nav": {
@@ -223,13 +223,13 @@
   },
   "comparePage": {
     "title": "SSHive vs {competitor}",
-    "description": "Decouvrez comment SSHive se compare a {competitor} pour SSH, SFTP et bureau a distance sur macOS.",
+    "description": "Comparez SSHive et {competitor} sur SSH, SFTP, RDP, VNC et les tunnels, avec un tableau détaillé et un regard honnête sur les forces de chacun.",
     "verdict": "Le verdict",
     "tryFree": "Essayer SSHive gratuitement",
     "downloadFree": "Télécharger SSHive gratuitement",
     "overviewTitle": "SSHive face a la concurrence",
     "overviewSubtitle": "Decouvrez comment SSHive se compare a chaque client SSH majeur. Une seule app pour tous les remplacer.",
-    "overviewMetaTitle": "SSHive vs Concurrents, Meilleur client SSH pour macOS 2026",
+    "overviewMetaTitle": "SSHive vs concurrents : meilleur client SSH Mac 2026",
     "overviewMetaDescription": "Comparez SSHive a MobaXterm, iTerm2, Termius, PuTTY, Royal TSX, SecureCRT et Tabby. Tableau comparatif fonctionnalité par fonctionnalité des clients SSH macOS.",
     "viewComparison": "Voir la comparaison complète",
     "featureByFeature": "Comparaison fonctionnalité par fonctionnalité",
@@ -245,7 +245,7 @@
     "keychainIntegration": "Intégration Trousseau",
     "connectionProfiles": "Profils de connexion",
     "modernUI": "Interface moderne",
-    "metaTitleTemplate": "SSHive vs {competitor}, Une alternative a {competitor} sur Mac (2026)",
+    "metaTitleTemplate": "SSHive vs {competitor} : alternative Mac comparée (2026)",
     "introTitle": "SSHive vs {competitor} : quel est le meilleur client SSH pour macOS ?",
     "detailedIntro": {
       "mobaxterm": "MobaXterm est le standard des terminaux tout-en-un sur Windows depuis des annees. Avec le forwarding X11, le SFTP embarque et le support RDP, il a fixe la barre pour ce que devrait être un outil de gestion a distance. SSHive apporte cette même philosophie sur macOS, mais avec la sécurité native du Trousseau et des capacites IA modernes que MobaXterm n'offre pas. Si vous cherchez un equivalent MobaXterm sur Mac, SSHive est concu specifiquement pour vous. Contrairement a MobaXterm, qui ne fonctionne que sur Windows (ou via Wine, avec un succès limite), SSHive est une application macOS native construite avec Electron et React, optimisee pour Apple Silicon et disponible sur le Mac App Store.",
@@ -259,7 +259,7 @@
   },
   "about": {
     "title": "A propos de SSHive",
-    "metaDescription": "Decouvrez SSHive, le client SSH/SFTP/RDP pour macOS cree par Lucas Russo. Inspire de MobaXterm.",
+    "metaDescription": "SSHive est développé par NetMeSafe. Pourquoi nous avons fait un client SSH, SFTP, RDP et VNC natif Apple, sans compte, sans télémétrie et en achat unique.",
     "description": "SSHive est cree par Lucas Russo, un développeur passionne par la creation d'outils de qualité pour macOS. Inspire de MobaXterm, SSHive apporte la même experience tout-en-un aux utilisateurs Mac, avec un feeling natif, la sécurité Trousseau et des intégrations IA modernes.",
     "storyTitle": "L'histoire",
     "storyText": "En tant que développeur et administrateur système passe de Windows a macOS, l'experience tout-en-un de MobaXterm me manquait. Je me retrouvais a jongler entre Terminal, Cyberduck, Microsoft Remote Desktop et divers autres outils. SSHive est ne de cette frustration, une seule app qui combine SSH, SFTP, RDP et VNC avec un feeling macOS natif. Construit avec Electron, React et TypeScript, SSHive est concu avec soin pour la sécurité et la performance.",
@@ -291,7 +291,7 @@
   },
   "changelog": {
     "title": "Changelog",
-    "metaDescription": "Historique des versions de SSHive. Decouvrez les nouveautes de chaque version du client SSH/SFTP/RDP pour macOS.",
+    "metaDescription": "Historique des versions de SSHive pour Mac, iPhone et iPad. Ce qui a changé à chaque version depuis la 1.0, du moteur RDP natif aux transferts fiabilisés.",
     "subtitle": "Tous les changements notables de SSHive sont documentes ici.",
     "releases": [
       {
@@ -527,7 +527,7 @@
   },
   "featuresPage": {
     "title": "Fonctionnalités",
-    "subtitle": "Tout ce qu'il faut pour gérer vos serveurs, dans une seule app macOS native.",
+    "subtitle": "Terminal SSH, SFTP, RDP, VNC, tunnels, broadcast et un serveur MCP intégré pour les assistants IA, dans une app native Mac, iPhone et iPad. Sans compte.",
     "exploreFeature": "Explorer {feature}"
   },
   "featurePages": {
@@ -575,7 +575,7 @@
       ]
     },
     "tunnels": {
-      "metaTitle": "Tunnels SSH pour macOS, Redirection de ports et SOCKS5",
+      "metaTitle": "Tunnels SSH sur macOS : ports et SOCKS5",
       "metaDescription": "SSHive supporte la redirection locale (-L), distante (-R) et le proxy dynamique SOCKS5 (-D) avec support IPv4/IPv6 complet. Gratuit pour macOS.",
       "bullets": [
         "Redirection locale (-L) : Accedez aux services distants comme s'ils etaient locaux",
@@ -605,7 +605,7 @@
       ]
     },
     "snippets": {
-      "metaTitle": "Commandes Rapides pour macOS, Bibliothèque de Snippets",
+      "metaTitle": "Commandes rapides et snippets pour macOS",
       "metaDescription": "SSHive inclut 14 commandes rapides pour le système, réseau, disque, Docker et Git, plus la creation de snippets personnalises. Gratuit pour macOS.",
       "bullets": [
         "14 commandes rapides intégrées pour le système, réseau, disque, Docker et Git",
@@ -625,7 +625,7 @@
       "connections": "Connexions",
       "newConnection": "Nouvelle connexion",
       "searchProfile": "Rechercher un profil…",
-      "localTerminal": "Terminal local",
+      "localTerminal": "Snippets",
       "networkTools": "Outils réseau",
       "settings": "Paramètres",
       "recents": "Récents",
@@ -721,7 +721,7 @@
     }
   },
   "mcpPage": {
-    "metaTitle": "Serveur MCP pour Claude Code, Cursor et Claude Desktop",
+    "metaTitle": "Serveur MCP pour Claude Code et Cursor",
     "metaDescription": "Le serveur MCP intégré de SSHive permet a Claude Code, Cursor et Claude Desktop d'exécuter des commandes et gérer vos fichiers SSH. Un interrupteur, local et securise.",
     "backToFeatures": "Voir toutes les fonctionnalités",
     "sectionLabel": "Intégration IA",

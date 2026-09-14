@@ -30,8 +30,8 @@ export const BEST_PAGES: BestPageSEO[] = [
   {
     slug: 'best-ssh-client-for-mac',
     metaTitle: {
-      en: 'Best SSH Client for Mac in 2026, Free, Native, AI-Ready',
-      fr: 'Meilleur client SSH pour Mac en 2026, Gratuit, natif, pret pour l\'IA',
+      en: 'Best SSH Client for Mac 2026: Free and AI-Ready',
+      fr: 'Meilleur client SSH pour Mac 2026, gratuit et natif',
     },
     metaDescription: {
       en: 'A curated guide to the best SSH clients for macOS in 2026: SSHive, iTerm2, Termius, PuTTY (port), Royal TSX, SecureCRT, pricing, strengths, and which to pick.',
@@ -181,8 +181,8 @@ export const BEST_PAGES: BestPageSEO[] = [
   {
     slug: 'best-sftp-client-for-mac',
     metaTitle: {
-      en: 'Best SFTP Client for Mac in 2026, Free Native Options Compared',
-      fr: 'Meilleur client SFTP pour Mac en 2026, Options gratuites natives comparees',
+      en: 'Best SFTP Client for Mac 2026: Free and Native',
+      fr: 'Meilleur client SFTP pour Mac 2026, natif',
     },
     metaDescription: {
       en: 'A curated guide to the best SFTP clients for macOS in 2026: SSHive, Cyberduck, Transmit, FileZilla, ForkLift. Drag-and-drop transfers, remote editing, free vs paid.',
@@ -313,8 +313,8 @@ export const BEST_PAGES: BestPageSEO[] = [
   {
     slug: 'best-rdp-client-for-mac',
     metaTitle: {
-      en: 'Best RDP Client for Mac in 2026, Native Alternatives Compared',
-      fr: 'Meilleur client RDP pour Mac en 2026, Alternatives natives comparees',
+      en: 'Best RDP Client for Mac 2026: Native Alternatives',
+      fr: 'Meilleur client RDP pour Mac 2026, natif et complet',
     },
     metaDescription: {
       en: 'A curated guide to the best RDP clients on macOS in 2026: SSHive (embedded), Microsoft Remote Desktop, Royal TSX, Jump Desktop, Parallels Client, features, AD support and price.',
@@ -478,8 +478,8 @@ export const BEST_PAGES: BestPageSEO[] = [
   {
     slug: 'best-vnc-client-for-mac',
     metaTitle: {
-      en: 'Best VNC Viewer for Mac in 2026, TLS, ARD & RFB Compared',
-      fr: 'Meilleur viewer VNC pour Mac en 2026, TLS, ARD et RFB compares',
+      en: 'Best VNC Viewer for Mac 2026: TLS, ARD & RFB',
+      fr: 'Meilleur viewer VNC pour Mac 2026 : TLS, ARD, RFB',
     },
     metaDescription: {
       en: 'A short guide to the best VNC clients on macOS in 2026: SSHive (embedded), RealVNC Viewer, TigerVNC, Apple Screen Sharing, encryption, performance, which to pick.',

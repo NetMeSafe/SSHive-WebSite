@@ -26,7 +26,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'ssh-tunnel-mac',
     metaTitle: {
       en: 'How to Set Up an SSH Tunnel on a Mac (2026 Guide)',
-      fr: 'Comment configurer un tunnel SSH sur Mac (guide 2026)',
+      fr: 'Configurer un tunnel SSH sur Mac : guide 2026',
     },
     metaDescription: {
       en: 'Step-by-step guide to setting up SSH local, remote, and SOCKS5 tunnels on macOS, with the OpenSSH command line and visually with SSHive.',
@@ -103,7 +103,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'ssh-key-mac',
     metaTitle: {
       en: 'How to Generate and Use SSH Keys on a Mac (2026)',
-      fr: 'Comment générer et utiliser des clés SSH sur Mac (2026)',
+      fr: 'Générer et utiliser des clés SSH sur Mac',
     },
     metaDescription: {
       en: 'Generate ed25519 SSH keys on macOS, copy them to remote servers, configure ssh-agent and the Apple Keychain, use them in SSHive, complete 2026 guide.',
@@ -123,8 +123,8 @@ export const HOW_TOS: HowToSEO[] = [
       {
         name: { en: 'Generate the keypair (one-time, in any terminal)', fr: 'Générer la paire (une seule fois, dans n\'importe quel terminal)' },
         text: {
-          en: 'SSHive does not embed a key generator, keep one source of truth at `~/.ssh/`. Open Terminal.app (or SSHive\'s built-in local terminal via Cmd+T) and run `ssh-keygen -t ed25519 -C "your-email@example.com"`. Press Enter to accept the default path (`~/.ssh/id_ed25519`). Set a passphrase, the macOS Keychain will remember it via SSHive\'s safeStorage so you only type it once.',
-          fr: 'SSHive n\'embarque pas de generateur de clé, on garde une seule source de verite dans `~/.ssh/`. Ouvrez Terminal.app (ou le terminal local de SSHive via Cmd+T) et lancez `ssh-keygen -t ed25519 -C "votre-email@example.com"`. Entrée pour accepter le chemin par défaut (`~/.ssh/id_ed25519`). Mettez une passphrase, le Trousseau macOS la retiendra via le safeStorage de SSHive, donc tapee une seule fois.',
+          en: 'SSHive does not embed a key generator, keep one source of truth at `~/.ssh/`. Open Terminal.app and run `ssh-keygen -t ed25519 -C "your-email@example.com"`. Press Enter to accept the default path (`~/.ssh/id_ed25519`). Set a passphrase, the macOS Keychain will remember it via SSHive\'s safeStorage so you only type it once.',
+          fr: 'SSHive n\'embarque pas de générateur de clé, on garde une seule source de vérité dans `~/.ssh/`. Ouvrez Terminal.app et lancez `ssh-keygen -t ed25519 -C "votre-email@example.com"`. Entrée pour accepter le chemin par défaut (`~/.ssh/id_ed25519`). Mettez une passphrase, le Trousseau macOS la retiendra via le safeStorage de SSHive, donc tapee une seule fois.',
         },
       },
       {
@@ -180,7 +180,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'sftp-gui-mac',
     metaTitle: {
       en: 'Best Free SFTP Client for Mac (2026), SSHive Guide',
-      fr: 'Meilleur client SFTP gratuit pour Mac (2026), Guide complet',
+      fr: 'Transferer des fichiers en SFTP depuis un Mac',
     },
     metaDescription: {
       en: 'How to use SFTP on macOS visually, drag & drop file transfers, remote editing, bulk operations. Free SFTP client with SSH terminal in the same window.',
@@ -257,7 +257,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'rdp-from-mac',
     metaTitle: {
       en: 'How to RDP from a Mac to Windows in 2026',
-      fr: 'Comment faire du RDP depuis un Mac vers Windows en 2026',
+      fr: 'RDP depuis un Mac vers Windows : guide 2026',
     },
     metaDescription: {
       en: 'Connect to Windows desktops or servers from macOS via RDP, built-in SSHive client (no Microsoft Remote Desktop window-juggling), keyboard mapping, clipboard.',
@@ -334,7 +334,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'vnc-from-mac',
     metaTitle: {
       en: 'How to VNC from a Mac to Linux / Pi (2026 Guide)',
-      fr: 'Comment faire du VNC depuis Mac vers Linux / Pi (guide 2026)',
+      fr: 'VNC depuis un Mac vers Linux ou Raspberry Pi',
     },
     metaDescription: {
       en: 'Connect via VNC from macOS to Raspberry Pi, Proxmox, KVM/QEMU, x11vnc, or RealVNC. Built-in noVNC viewer, no separate WebSocket relay needed.',
@@ -397,7 +397,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'jump-host-mac',
     metaTitle: {
       en: 'How to Use a Jump Host (Bastion) on Mac SSH',
-      fr: 'Comment utiliser un Jump Host (bastion) en SSH sur Mac',
+      fr: 'Utiliser un jump host (bastion) SSH sur Mac',
     },
     metaDescription: {
       en: 'Configure SSH ProxyJump bastions visually on macOS, no ~/.ssh/config editing, agent forwarding, multi-hop chains. Step-by-step with SSHive.',
@@ -599,8 +599,8 @@ export const HOW_TOS: HowToSEO[] = [
   {
     slug: 'broadcast-commands-mac',
     metaTitle: {
-      en: 'How to Run a Command on Multiple SSH Servers from Mac',
-      fr: 'Comment lancer une commande sur plusieurs serveurs SSH depuis Mac',
+      en: 'Run One Command on Multiple SSH Servers from Mac',
+      fr: 'Lancer une commande sur plusieurs serveurs SSH',
     },
     metaDescription: {
       en: 'Send the same command to many SSH servers simultaneously from macOS, without Ansible. Use SSHive\'s broadcast mode for instant fleet operations.',
@@ -670,7 +670,7 @@ export const HOW_TOS: HowToSEO[] = [
     slug: 'claude-mcp-ssh',
     metaTitle: {
       en: 'How to Connect Claude Code / Cursor to SSH via MCP',
-      fr: 'Comment connecter Claude Code / Cursor au SSH via MCP',
+      fr: 'Connecter Claude Code et Cursor au SSH via MCP',
     },
     metaDescription: {
       en: 'Let Claude or Cursor execute commands and read files on your remote SSH servers via SSHive\'s built-in MCP server. One-toggle setup, copy-paste config, local and secure.',

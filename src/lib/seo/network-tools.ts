@@ -755,8 +755,8 @@ export const NETWORK_TOOLS: NetworkToolSEO[] = [
     "slug": "dns-lookup",
     "iconName": "Globe",
     "metaTitle": {
-      "en": "DNS Lookup for Mac & iPhone: A, AAAA, MX, TXT on desktop",
-      "fr": "DNS Lookup sur Mac, iPhone et iPad : A, AAAA, MX, TXT"
+      "en": "DNS Lookup on Mac, iPhone and iPad: A, MX, TXT",
+      "fr": "DNS Lookup sur Mac et iPhone : A, MX, TXT"
     },
     "metaDescription": {
       "en": "Run a DNS lookup from your Mac, iPhone or iPad. A, AAAA, MX, CNAME, NS and TXT records on macOS and Windows, A and AAAA on iOS. Free, no ads.",

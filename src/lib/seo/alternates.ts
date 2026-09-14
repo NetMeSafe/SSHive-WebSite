@@ -38,7 +38,11 @@ export function getPageMetadata({
   const frUrl = `${SITE_URL}/fr${normalized}`;
 
   return {
-    title,
+    // The root layout appends " | SSHive" to every title. A page whose title
+    // already names the product would end up saying it twice, and those nine
+    // characters are exactly what pushes most of these past the ~60 that
+    // Google and Bing render. `absolute` opts the page out of the template.
+    title: title.includes('SSHive') ? { absolute: title } : title,
     description,
     alternates: {
       canonical: fullUrl,
