@@ -127,7 +127,7 @@ export function Hero() {
           </div>
         </ScrollReveal>
 
-        {/* Universal Binary note */}
+        {/* Native Apple Silicon note */}
         <ScrollReveal delay={400}>
           <p className="mt-8 text-sm text-muted-foreground">
             {t('universalBinary')}

@@ -51,7 +51,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
-      en: 'SSHive is the only client on this list that bundles SSH terminal, SFTP file manager, embedded RDP, embedded VNC, SSH tunnels (-L, -R, -D), multi-host broadcast, snippet library, network tools, and a built-in MCP server for Claude Code, Cursor and Claude Desktop, all in one Apple-native window, on Mac as well as iPhone and iPad. Credentials live in the macOS Keychain, gated by Touch ID. Free for SSH and SFTP; Pro is a one-time $9.99 on the Mac App Store with no recurring fees and lifetime updates. If you do anything beyond a terminal, this is what we use ourselves.',
+      en: 'SSHive is the only client on this list that bundles SSH terminal, SFTP file manager, embedded RDP, embedded VNC, SSH tunnels (-L, -R, -D), multi-host broadcast, snippet library, network tools, and a built-in MCP server for Claude Code, Cursor and Claude Desktop, all in one Apple-native window, on Mac as well as iPhone and iPad. Credentials live in the macOS Keychain, gated by Touch ID. Free for SSH and SFTP; Pro is a one-time $8.99 on the Mac App Store with no recurring fees and lifetime updates. If you do anything beyond a terminal, this is what we use ourselves.',
       fr: 'SSHive est le seul client de cette liste qui regroupe terminal SSH, gestionnaire SFTP, RDP intégré, VNC intégré, tunnels SSH (-L, -R, -D), broadcast multi-hôte, bibliothèque de snippets, outils réseau et un serveur MCP intégré pour Claude Code, Cursor et Claude Desktop, le tout dans une fenêtre Apple native, sur Mac comme sur iPhone et iPad. Les identifiants sont dans le Trousseau macOS, proteges par Touch ID. Gratuit pour SSH et SFTP ; Pro a 9,99 € achat unique sur le Mac App Store, sans frais recurrents, mises a jour a vie. Si vous faites quoi que ce soit au-dela d\'un terminal, c\'est ce qu\'on utilise nous-memes.',
     },
     shortlistHeading: {
@@ -128,8 +128,8 @@ export const BEST_PAGES: BestPageSEO[] = [
       {
         title: { en: 'Native to Apple, not a port', fr: 'Natif Apple, pas un portage' },
         body: {
-          en: 'SSHive runs on Apple Silicon and Intel Macs as a Universal Binary, plus iPhone and iPad. macOS Keychain handles credentials with Touch ID gating. No Wine, no VM, no cross-platform compromise.',
-          fr: 'SSHive tourne sur Apple Silicon et Intel Mac en binaire universel, plus iPhone et iPad. Le Trousseau macOS gère les identifiants avec Touch ID. Pas de Wine, pas de VM, pas de compromis multi-plateforme.',
+          en: 'SSHive runs natively on Apple Silicon Macs, plus iPhone and iPad. macOS Keychain handles credentials with Touch ID gating. No Wine, no VM, no cross-platform compromise.',
+          fr: 'SSHive tourne nativement sur les Mac Apple Silicon, plus iPhone et iPad. Le Trousseau macOS gère les identifiants avec Touch ID. Pas de Wine, pas de VM, pas de compromis multi-plateforme.',
         },
       },
       {
@@ -149,8 +149,8 @@ export const BEST_PAGES: BestPageSEO[] = [
       {
         title: { en: 'One-time price, no subscription', fr: 'Prix unique, sans abonnement' },
         body: {
-          en: 'SSHive Pro is $9.99 once on the Mac App Store. Lifetime updates included. Termius costs ~$10/month for advanced features. SecureCRT is per-seat enterprise pricing. Royal TSX has its own license model. Over a year, SSHive comes out cheapest by a large margin.',
-          fr: 'SSHive Pro coûte 9,99 $ une fois sur le Mac App Store. Mises a jour a vie incluses. Termius coûte ~10 $/mois pour les fonctionnalités avancees. SecureCRT est en tarification entreprise par siege. Royal TSX a son propre modèle de licence. Sur un an, SSHive sort gagnant largement.',
+          en: 'SSHive Pro is $8.99 once on the Mac App Store. Lifetime updates included. Termius costs ~$10/month for advanced features. SecureCRT is per-seat enterprise pricing. Royal TSX has its own license model. Over a year, SSHive comes out cheapest by a large margin.',
+          fr: 'SSHive Pro coûte 9,99 € une fois sur le Mac App Store. Mises a jour a vie incluses. Termius coûte ~10 $/mois pour les fonctionnalités avancees. SecureCRT est en tarification entreprise par siege. Royal TSX a son propre modèle de licence. Sur un an, SSHive sort gagnant largement.',
         },
       },
     ],
@@ -158,8 +158,8 @@ export const BEST_PAGES: BestPageSEO[] = [
       {
         question: { en: 'Is SSHive really free?', fr: 'SSHive est-il vraiment gratuit ?' },
         answer: {
-          en: 'The free tier is real and unrestricted in time. It covers SSH terminal, SFTP file manager, snippets, profiles and Keychain credential storage with a small concurrent-session limit. Pro adds RDP, VNC, tunnels, broadcast, MCP and unlimited sessions for $9.99 one-time on the Mac App Store.',
-          fr: 'Le tier gratuit est réel et sans limite dans le temps. Il couvre terminal SSH, gestionnaire SFTP, snippets, profils et stockage Trousseau, avec une petite limite de sessions concurrentes. Pro ajoute RDP, VNC, tunnels, broadcast, MCP et sessions illimitees pour 9,99 $ achat unique sur le Mac App Store.',
+          en: 'The free tier is real and unrestricted in time. It covers SSH terminal, SFTP file manager, snippets, profiles and Keychain credential storage with a small concurrent-session limit. Pro adds RDP, VNC, tunnels, broadcast, MCP and unlimited sessions for $8.99 one-time on the Mac App Store.',
+          fr: 'Le tier gratuit est réel et sans limite dans le temps. Il couvre terminal SSH, gestionnaire SFTP, snippets, profils et stockage Trousseau, avec une petite limite de sessions concurrentes. Pro ajoute RDP, VNC, tunnels, broadcast, MCP et sessions illimitees pour 9,99 € achat unique sur le Mac App Store.',
         },
       },
       {
@@ -334,7 +334,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
-      en: 'SSHive embeds a real RDP client (FreeRDP 3 on iOS/iPadOS, IronRDP on macOS) inside the same window as your SSH terminal and SFTP file manager. CredSSP, NLA, NTLMv2, Active Directory (NetBIOS and FQDN), Ctrl+Alt+Del, configurable resolution, clipboard, all there. When the Windows admin pages you at 2am to check a service behind a jump host, you do not open three apps: SSH-tunnel to the bastion, SFTP-edit a config, RDP into the Windows VM, all in one window. Credentials live in the macOS Keychain, gated by Touch ID. Pro is $9.99 one-time on the Mac App Store. The RDP feature is also free up to 2 concurrent sessions.',
+      en: 'SSHive embeds a real RDP client (FreeRDP 3 on iOS/iPadOS, IronRDP on macOS) inside the same window as your SSH terminal and SFTP file manager. CredSSP, NLA, NTLMv2, Active Directory (NetBIOS and FQDN), Ctrl+Alt+Del, configurable resolution, clipboard, all there. When the Windows admin pages you at 2am to check a service behind a jump host, you do not open three apps: SSH-tunnel to the bastion, SFTP-edit a config, RDP into the Windows VM, all in one window. Credentials live in the macOS Keychain, gated by Touch ID. Pro is $8.99 one-time on the Mac App Store. The RDP feature is also free up to 2 concurrent sessions.',
       fr: 'SSHive embarque un vrai client RDP (FreeRDP 3 sur iOS/iPadOS, IronRDP sur macOS) dans la même fenêtre que votre terminal SSH et gestionnaire SFTP. CredSSP, NLA, NTLMv2, Active Directory (NetBIOS et FQDN), Ctrl+Alt+Suppr, résolution configurable, presse-papiers, tout est la. Quand l\'admin Windows bipe a 2h pour vérifier un service derrière un jump host, vous n\'ouvrez pas trois apps : SSH-tunnel vers bastion, SFTP-edit une config, RDP sur la VM Windows, tout dans une fenetre. Les identifiants vont dans le Trousseau macOS, proteges par Touch ID. Pro a 9,99 € unique sur le Mac App Store. La feature RDP est aussi gratuite jusqu\'a 2 sessions simultanees.',
     },
     shortlistHeading: { en: 'The other RDP clients we considered', fr: 'Les autres clients RDP evalues' },
@@ -410,7 +410,7 @@ export const BEST_PAGES: BestPageSEO[] = [
       {
         title: { en: 'Free for 2 RDP sessions', fr: 'Gratuit jusqu\'a 2 sessions RDP' },
         body: {
-          en: 'You can try RDP without paying. Free covers 2 concurrent RDP sessions; Pro removes the cap and unlocks unlimited SFTP transfer size, all tunnel types and snippets. $9.99 one-time, no subscription.',
+          en: 'You can try RDP without paying. Free covers 2 concurrent RDP sessions; Pro removes the cap and unlocks unlimited SFTP transfer size, all tunnel types and snippets. $8.99 one-time, no subscription.',
           fr: 'Vous pouvez essayer le RDP sans payer. Gratuit couvre 2 sessions RDP simultanées ; Pro retire la limite et debloque transferts SFTP illimités, tous les tunnels et snippets. 9,99 € unique, sans abonnement.',
         },
       },
@@ -499,7 +499,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     },
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
-      en: 'SSHive embeds RoyalVNC under the hood, the same VNC engine used in Royal TSX, with full TLS, VeNCrypt, ARD and standard RFB support. You get saved profiles with Touch ID-gated credentials, native macOS rendering and, critically, RDP, SSH and SFTP in the same window. Need to VNC into a headless Ubuntu through a bastion? Open an SSH tunnel in the Tunnels UI (two clicks), point a VNC profile at 127.0.0.1, save the combo. Future you opens it with one click. Free for two concurrent VNC sessions; Pro is $9.99 one-time on the Mac App Store. The same VNC engine ships on iOS and iPadOS too.',
+      en: 'SSHive embeds RoyalVNC under the hood, the same VNC engine used in Royal TSX, with full TLS, VeNCrypt, ARD and standard RFB support. You get saved profiles with Touch ID-gated credentials, native macOS rendering and, critically, RDP, SSH and SFTP in the same window. Need to VNC into a headless Ubuntu through a bastion? Open an SSH tunnel in the Tunnels UI (two clicks), point a VNC profile at 127.0.0.1, save the combo. Future you opens it with one click. Free for two concurrent VNC sessions; Pro is $8.99 one-time on the Mac App Store. The same VNC engine ships on iOS and iPadOS too.',
       fr: 'SSHive embarque RoyalVNC sous le capot, le même moteur VNC utilise dans Royal TSX, avec support complet TLS, VeNCrypt, ARD et RFB standard. Vous avez des profils sauvegardes avec credentials Touch ID, rendu macOS natif, et, critique, RDP, SSH et SFTP dans la même fenetre. Besoin de VNC sur un Ubuntu headless via un bastion ? Ouvrez un tunnel SSH dans l\'UI Tunnels (deux clics), pointez un profil VNC sur 127.0.0.1, sauvegardez la combinaison. Future-vous l\'ouvre en un clic. Gratuit jusqu\'a deux sessions VNC simultanées ; Pro a 9,99 € unique sur le Mac App Store. Le même moteur VNC est aussi sur iOS et iPadOS.',
     },
     shortlistHeading: { en: 'The other VNC clients we considered', fr: 'Les autres clients VNC evalues' },

@@ -65,7 +65,7 @@ export function GET(): Response {
 
 Key facts:
 
-- Platforms: macOS 13+ (Apple Silicon native + Intel), iOS 17+, iPadOS 17+.
+- Platforms: macOS 12+ (Apple Silicon, M1 or later), iOS 17+, iPadOS 17+.
 - Universal features (Mac + iPhone + iPad): SSH terminal, SFTP file manager, RDP remote desktop (FreeRDP 3, NLA, Active Directory), VNC viewer (RoyalVNC), local SSH tunnels (-L), snippets, network tools (ping, traceroute, DNS, MX, whois, DNSBL), connection profiles, biometric unlock (Touch ID / Face ID).
 - macOS-only: the local MCP server for AI assistants, broadcast mode (run a command on every open session), remote (-R) and SOCKS5 (-D) tunnels, jump hosts, TOTP/HOTP authenticator, shared accounts, session logging. iOS/iPadOS-only: VPN client (IKEv2, IPSec/Xauth, OpenVPN).
 - MCP server: runs locally on port 49422 with Bearer-token auth; exposes 11 tools (ssh_execute, ssh_list_sessions, sftp_list, sftp_read_file, sftp_write_file, sftp_write_file_chunk, sftp_write_from_local_path, sftp_download_to_local_path, sftp_mkdir, sftp_rename, sftp_delete); auto-configures Claude Code, Cursor and Claude Desktop.
@@ -119,7 +119,7 @@ ${list(INTEGRATION_SLUGS, '/integrations')}
 
 ## Network diagnostic tools
 
-Beyond remote access, SSHive ships network diagnostics. Engines differ per platform and the pages say so explicitly: ping is real ICMP only on the macOS direct-download build and a TCP-connect probe elsewhere; traceroute measures real hops only on the macOS direct download and on Windows.
+Beyond remote access, SSHive ships network diagnostics. Ping and traceroute send real ICMP on every Apple platform, including the sandboxed Mac App Store build, via an unprivileged datagram ICMP socket (SOCK_DGRAM, IPPROTO_ICMP) rather than a raw socket. A TCP-connect probe is offered as a labelled alternative for hosts that filter ICMP.
 
 - [Network tools overview](${SITE_URL}/en/network-tools)
 ${list(NETWORK_TOOL_SLUGS, '/network-tools')}

@@ -19,8 +19,8 @@
     "subtitle": "SSH, SFTP, RDP, VNC, VPN et tunnels SSH, tout dans une app native sur Mac, iPhone et iPad. Gratuit pour commencer. Le MCP pour l'IA est sur macOS.",
     "downloadCta": "Télécharger gratuitement",
     "featuresCta": "Voir les fonctionnalités",
-    "version": "Version {version}, macOS 13+ · iOS 17+ · iPadOS 17+",
-    "universalBinary": "Natif Mac (Apple Silicon + Intel) · iPhone · iPad",
+    "version": "Version {version}, macOS 12+ · iOS 17+ · iPadOS 17+",
+    "universalBinary": "Natif Apple Silicon · iPhone · iPad",
     "platforms": "Disponible sur Mac · iPhone · iPad",
     "platformsHint": "App Apple universelle, les mêmes profils, partout",
     "moreOptions": "Aussi sur iPhone et iPad, voir toutes les options",
@@ -138,9 +138,8 @@
     "pro": {
       "name": "Pro",
       "price": "9,99 €",
-      "originalPrice": "19,99 €",
       "period": "achat unique",
-      "launchBadge": "Offre de lancement",
+      "launchBadge": "Achat unique",
       "badge": "Recommande",
       "cta": "Obtenir Pro sur l'App Store",
       "features": [
@@ -171,7 +170,7 @@
       "q3": "Puis-je passer a Pro plus tard ?",
       "a3": "Absolument. Commencez avec la version gratuite et passez a Pro quand vous voulez depuis le Mac App Store. Vos profils et paramètres sont conserves.",
       "q4": "Y a-t-il un abonnement ?",
-      "a4": "Non. SSHive Pro est un achat unique a 9,99 € (offre de lancement, au lieu de 19,99 €). Vous payez une fois et c'est a vous pour toujours. Pas de frais recurrents.",
+      "a4": "Non. SSHive Pro est un achat unique a 9,99 €. Vous payez une fois et c'est a vous pour toujours : pas d'abonnement, pas de frais recurrents, et toutes les mises a jour sont incluses.",
       "q5": "Ai-je besoin d'un compte ?",
       "a5": "Non. SSHive fonctionne completement hors ligne sans compte requis. Vos données restent sur votre machine, sécurisées par le Trousseau macOS.",
       "q6": "Après une mise a jour, l'app dit que je suis repasse en Free. Que faire ?",
@@ -184,7 +183,7 @@
     "title": "Télécharger SSHive",
     "subtitle": "Gratuit pour commencer. Mac, iPhone et iPad.",
     "dmgButton": "Obtenir SSHive sur le Mac App Store",
-    "dmgSubtitle": "Gratuit sur le Mac App Store · Binaire universel (Apple Silicon + Intel)",
+    "dmgSubtitle": "Gratuit sur le Mac App Store · Build natif Apple Silicon",
     "iosSectionTitle": "App iPhone et iPad native",
     "iosSectionDescription": "SSH, SFTP, RDP (FreeRDP 3 avec NLA + Active Directory), VNC (RoyalVNC), VPN (IKEv2/IPSec/OpenVPN), tunnels SSH locaux et outils réseau, tout natif sur iPhone et iPad. Touch ID et Face ID. Universal Purchase avec la version macOS.",
     "iosCta": "Obtenir SSHive sur l'App Store",
@@ -202,7 +201,7 @@
     "emailPlaceholder": "votre@email.com",
     "emailSubscribe": "S'abonner",
     "systemReq": "Configuration requise",
-    "systemReqDetails": "macOS 13 Ventura ou ulterieur (Apple Silicon M1/M2/M3/M4 ou Intel x64). iOS 17+ sur iPhone, iPadOS 17+ sur iPad. arm64 / arm64e.",
+    "systemReqDetails": "macOS 12 Monterey ou ulterieur, Mac Apple Silicon (M1 ou ulterieur). iOS 17+ sur iPhone, iPadOS 17+ sur iPad.",
     "metaDescription": "Téléchargez SSHive gratuitement sur l'App Store pour Mac, iPhone et iPad. Client SSH, SFTP, RDP, VNC et VPN natif avec Touch ID, sans compte.",
     "metaTitle": "Télécharger SSHive pour Mac, iPhone et iPad"
   },
@@ -384,7 +383,7 @@
           },
           {
             "q": "Quels systèmes sont supportés ?",
-            "a": "macOS 13 Ventura ou ultérieur sur Mac, iOS 17 ou ultérieur sur iPhone, iPadOS 17 ou ultérieur sur iPad. La version Mac est un binaire universel qui tourne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel x64."
+            "a": "macOS 12 Monterey ou ultérieur sur un Mac Apple Silicon (M1 ou ultérieur), iOS 17 ou ultérieur sur iPhone, iPadOS 17 ou ultérieur sur iPad."
           },
           {
             "q": "Faut-il créer un compte ?",
@@ -409,7 +408,7 @@
           },
           {
             "q": "Combien coûte Pro, est-ce un abonnement ?",
-            "a": "Pro est un achat unique de 9,99 $ sur l'App Store. Pas d'abonnement, pas de frais récurrents. C'est un Universal Purchase : l'acheter une fois débloque Pro sur Mac, iPhone et iPad avec le même identifiant Apple."
+            "a": "Pro est un achat unique de 9,99 € sur l'App Store. Pas d'abonnement, pas de frais récurrents. C'est un Universal Purchase : l'acheter une fois débloque Pro sur Mac, iPhone et iPad avec le même identifiant Apple."
           },
           {
             "q": "Après une mise à jour, l'app repasse en Free. Que faire ?",
@@ -703,10 +702,9 @@
       },
       "pro": {
         "price": "9,99 €",
-        "originalPrice": "19,99 €",
         "period": "achat unique",
-        "badge": "Offre de lancement",
-        "savings": "-50 %",
+        "badge": "Achat unique",
+        "savings": "mises a jour a vie",
         "cta": "Obtenir Pro sur l'App Store",
         "features": [
           "Sessions SSH illimitees",

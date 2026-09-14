@@ -267,8 +267,8 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
       {
         question: { en: 'Is VNC included in the free tier?', fr: 'VNC est-il inclus en gratuit ?' },
         answer: {
-          en: 'No. VNC is a Pro feature alongside RDP and tunnels. The Pro upgrade is a one-time $9.99 on the Mac App Store with lifetime updates.',
-          fr: 'Non. VNC est une fonctionnalité Pro avec RDP et les tunnels. L\'upgrade Pro est un achat unique a 9,99 $ sur le Mac App Store avec mises a jour a vie.',
+          en: 'No. VNC is a Pro feature alongside RDP and tunnels. The Pro upgrade is a one-time $8.99 on the Mac App Store with lifetime updates.',
+          fr: 'Non. VNC est une fonctionnalité Pro avec RDP et les tunnels. L\'upgrade Pro est un achat unique a 9,99 € sur le Mac App Store avec mises a jour a vie.',
         },
       },
       {
@@ -338,8 +338,8 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
       {
         question: { en: 'Are tunnels in the free tier?', fr: 'Les tunnels sont-ils en gratuit ?' },
         answer: {
-          en: 'Tunnels are a Pro feature. Free tier covers SSH terminal + SFTP. Pro ($9.99 one-time) unlocks tunnels, RDP, VNC, broadcast, and unlimited sessions.',
-          fr: 'Les tunnels sont une fonctionnalité Pro. Le gratuit couvre terminal SSH + SFTP. Pro (9,99 $ achat unique) debloque tunnels, RDP, VNC, broadcast et sessions illimitees.',
+          en: 'Tunnels are a Pro feature. Free tier covers SSH terminal + SFTP. Pro ($8.99 one-time) unlocks tunnels, RDP, VNC, broadcast, and unlimited sessions.',
+          fr: 'Les tunnels sont une fonctionnalité Pro. Le gratuit couvre terminal SSH + SFTP. Pro (9,99 € achat unique) debloque tunnels, RDP, VNC, broadcast et sessions illimitees.',
         },
       },
     ],
@@ -402,8 +402,8 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
       {
         question: { en: 'Is MCP a Pro feature?', fr: 'MCP est-il une fonctionnalité Pro ?' },
         answer: {
-          en: 'Yes. MCP integration is included in the Pro upgrade ($9.99 one-time). Free tier focuses on SSH and SFTP for individual use.',
-          fr: 'Oui. L\'intégration MCP est incluse dans l\'upgrade Pro (9,99 $ achat unique). Le gratuit se concentre sur SSH et SFTP pour usage individuel.',
+          en: 'Yes. MCP integration is included in the Pro upgrade ($8.99 one-time). Free tier focuses on SSH and SFTP for individual use.',
+          fr: 'Oui. L\'intégration MCP est incluse dans l\'upgrade Pro (9,99 € achat unique). Le gratuit se concentre sur SSH et SFTP pour usage individuel.',
         },
       },
     ],
@@ -466,8 +466,8 @@ export const FEATURE_SEO: Record<Feature, FeatureSEO> = {
       {
         question: { en: 'Pro feature?', fr: 'Fonctionnalité Pro ?' },
         answer: {
-          en: 'Yes, broadcast is part of Pro along with RDP, VNC, tunnels, and unlimited sessions. $9.99 one-time on the Mac App Store.',
-          fr: 'Oui, broadcast fait partie de Pro avec RDP, VNC, tunnels et sessions illimitees. 9,99 $ achat unique sur le Mac App Store.',
+          en: 'Yes, broadcast is part of Pro along with RDP, VNC, tunnels, and unlimited sessions. $8.99 one-time on the Mac App Store.',
+          fr: 'Oui, broadcast fait partie de Pro avec RDP, VNC, tunnels et sessions illimitees. 9,99 € achat unique sur le Mac App Store.',
         },
       },
     ],

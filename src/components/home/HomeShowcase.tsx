@@ -1492,7 +1492,6 @@ export function HomeShowcase() {
                   <div className="p-8 flex-1 flex flex-col">
                     <h3 className="text-lg font-semibold text-foreground mb-4">Pro</h3>
                     <div className="flex items-end gap-2.5 mb-1">
-                      <span className="text-xl text-muted-foreground/40 line-through font-medium">{tHome('offer.pro.originalPrice')}</span>
                       <span className="text-4xl md:text-5xl font-bold text-foreground" style={{ fontFamily: 'var(--font-display)' }}>
                         {tHome('offer.pro.price')}
                       </span>

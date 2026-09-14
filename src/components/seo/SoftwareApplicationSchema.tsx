@@ -8,11 +8,11 @@ export function SoftwareApplicationSchema() {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
         name: 'SSHive',
-        operatingSystem: 'macOS 13+, iOS 17+, iPadOS 17+',
+        operatingSystem: 'macOS 12+, iOS 17+, iPadOS 17+',
         applicationCategory: 'DeveloperApplication',
         applicationSubCategory: 'SSH Client',
         description:
-          'Native Apple SSH, SFTP, RDP, VNC and VPN client for Mac, iPhone and iPad. SSH tunnels and Touch ID / Face ID Keychain on every device. Broadcast mode and built-in MCP server for Claude Code, Cursor and Claude Desktop on macOS.',
+          'Native Apple SSH, SFTP, FTP, FTPS, RDP, VNC, Telnet and serial console client for Mac, iPhone and iPad. Reach a router or switch through a USB-to-serial adapter, open SSH tunnels, and keep every secret in the Touch ID / Face ID Keychain.',
         offers: [
           {
             '@type': 'Offer',
@@ -23,7 +23,7 @@ export function SoftwareApplicationSchema() {
           },
           {
             '@type': 'Offer',
-            price: '9.99',
+            price: '8.99',
             priceCurrency: 'USD',
             name: 'SSHive Pro',
             availability: 'https://schema.org/InStock',
@@ -33,7 +33,7 @@ export function SoftwareApplicationSchema() {
         downloadUrl: APP_STORE_UNIVERSAL_URL,
         installUrl: APP_STORE_UNIVERSAL_URL,
         softwareVersion: APP_VERSION,
-        fileSize: '150MB',
+        fileSize: '260MB',
         author: {
           '@type': 'Organization',
           name: 'NetMeSafe',
@@ -58,9 +58,14 @@ export function SoftwareApplicationSchema() {
           'Touch ID / Face ID-secured Keychain credential storage',
           'Quick commands / snippet library',
           'TOTP / HOTP authenticator with encrypted vault (Mac)',
+          'Serial console over USB-to-serial adapters (Mac), baud rate, parity, flow control, BREAK signal, session logging',
+          'Telnet client, RFC 854, with optional authentication (Mac, iPhone, iPad)',
+          'FTP and FTPS (AUTH TLS) file transfer alongside SFTP (Mac)',
+          'RDP server certificate pinning with fingerprint change detection (Mac)',
+          'Customizable keyboard shortcuts (Mac)',
         ],
-        softwareRequirements: 'macOS 13 Ventura or later, iOS 17+, iPadOS 17+',
-        processorRequirements: 'Apple Silicon (M1/M2/M3/M4) or Intel x64 on Mac; A12 Bionic or later on iPhone/iPad',
+        softwareRequirements: 'macOS 12 Monterey or later, iOS 17+, iPadOS 17+',
+        processorRequirements: 'Apple Silicon (M1 or later) on Mac; A12 Bionic or later on iPhone/iPad',
         releaseNotes: `${SITE_URL}/en/changelog`,
         screenshot: `${SITE_URL}/opengraph-image`,
       }}

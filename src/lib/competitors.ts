@@ -43,7 +43,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'nativeMacOS', sshive: true, competitor: false },
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'macAppStore', sshive: true, competitor: false },
-      { key: 'price', sshive: 'Free / $9.99 Pro', competitor: 'Free / paid Pro' },
+      { key: 'price', sshive: 'Free / $8.99 Pro', competitor: 'Free / paid Pro' },
     ],
   },
   iterm2: {
@@ -69,7 +69,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'macAppStore', sshive: true, competitor: false },
       { key: 'connectionProfiles', sshive: true, competitor: false },
-      { key: 'price', sshive: 'Free / $9.99 Pro', competitor: 'Free' },
+      { key: 'price', sshive: 'Free / $8.99 Pro', competitor: 'Free' },
     ],
   },
   terminus: {
@@ -94,7 +94,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'nativeMacOS', sshive: true, competitor: true },
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'macAppStore', sshive: true, competitor: false },
-      { key: 'price', sshive: 'Free / $9.99 Pro', competitor: 'Free' },
+      { key: 'price', sshive: 'Free / $8.99 Pro', competitor: 'Free' },
     ],
   },
   putty: {
@@ -119,7 +119,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'nativeMacOS', sshive: true, competitor: 'via unofficial port' },
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'modernUI', sshive: true, competitor: false },
-      { key: 'price', sshive: 'Free / $9.99 Pro', competitor: 'Free' },
+      { key: 'price', sshive: 'Free / $8.99 Pro', competitor: 'Free' },
     ],
   },
   termius: {
@@ -130,8 +130,8 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       fr: 'Termius est un client SSH soigne disponible sur plusieurs plateformes. SSHive offre une experience comparable sur macOS avec l\'avantage de la securite Trousseau, un prix unique et l\'integration IA.',
     },
     verdict: {
-      en: 'Termius is feature-rich but requires a $10/month subscription for advanced features. SSHive offers comparable functionality with a one-time $9.99 Pro upgrade and no recurring costs.',
-      fr: 'Termius est riche en fonctionnalites mais necessite un abonnement a 10 $/mois pour les fonctionnalites avancees. SSHive offre une fonctionnalite comparable avec un achat unique a 9,99 $ sans frais recurrents.',
+      en: 'Termius is feature-rich but requires a $10/month subscription for advanced features. SSHive offers comparable functionality with a one-time $8.99 Pro upgrade and no recurring costs.',
+      fr: 'Termius est riche en fonctionnalites mais necessite un abonnement a 10 $/mois pour les fonctionnalites avancees. SSHive offre une fonctionnalite comparable avec un achat unique a 9,99 € sans frais recurrents.',
     },
     features: [
       { key: 'sshTerminal', sshive: true, competitor: true },
@@ -144,7 +144,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'nativeMacOS', sshive: true, competitor: true },
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'macAppStore', sshive: true, competitor: true },
-      { key: 'price', sshive: '$9.99 one-time', competitor: '$10/month' },
+      { key: 'price', sshive: '$8.99 one-time', competitor: '$10/month' },
     ],
   },
   'royal-tsx': {
@@ -169,7 +169,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'nativeMacOS', sshive: true, competitor: true },
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'macAppStore', sshive: true, competitor: true },
-      { key: 'price', sshive: '$9.99 one-time', competitor: '$29' },
+      { key: 'price', sshive: '$8.99 one-time', competitor: '$29' },
     ],
   },
   securecrt: {
@@ -180,8 +180,8 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       fr: 'SecureCRT est un client SSH entreprise de VanDyke Software. SSHive fournit une alternative moderne avec des fonctionnalites comparables a une fraction du prix.',
     },
     verdict: {
-      en: 'SecureCRT is aimed at enterprise users with deep pockets ($119/license). SSHive provides comparable SSH/SFTP functionality with modern additions like RDP, VNC, and AI, all for free or $9.99.',
-      fr: 'SecureCRT vise les utilisateurs entreprise avec un budget consequent (119 $/licence). SSHive fournit une fonctionnalite SSH/SFTP comparable avec des ajouts modernes comme RDP, VNC et l\'IA, le tout gratuit ou a 9,99 $.',
+      en: 'SecureCRT is aimed at enterprise users with deep pockets ($119/license). SSHive provides comparable SSH/SFTP functionality with modern additions like RDP, VNC, and AI, all for free or $8.99.',
+      fr: 'SecureCRT vise les utilisateurs entreprise avec un budget consequent (119 $/licence). SSHive fournit une fonctionnalite SSH/SFTP comparable avec des ajouts modernes comme RDP, VNC et l\'IA, le tout gratuit ou a 9,99 €.',
     },
     features: [
       { key: 'sshTerminal', sshive: true, competitor: true },
@@ -194,7 +194,7 @@ export const COMPETITOR_DATA: Record<Competitor, CompetitorData> = {
       { key: 'nativeMacOS', sshive: true, competitor: true },
       { key: 'keychainIntegration', sshive: true, competitor: false },
       { key: 'macAppStore', sshive: true, competitor: false },
-      { key: 'price', sshive: '$9.99 one-time', competitor: '$119' },
+      { key: 'price', sshive: '$8.99 one-time', competitor: '$119' },
     ],
   },
 };

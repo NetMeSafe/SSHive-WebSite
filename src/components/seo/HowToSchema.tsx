@@ -40,7 +40,7 @@ export function HowToSchema({
           },
           {
             '@type': 'HowToTool',
-            name: 'macOS 13 or later',
+            name: 'macOS 12 or later',
           },
         ],
         step: steps.map((step, index) => ({
