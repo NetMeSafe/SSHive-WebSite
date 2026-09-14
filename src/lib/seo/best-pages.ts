@@ -408,10 +408,10 @@ export const BEST_PAGES: BestPageSEO[] = [
         },
       },
       {
-        title: { en: 'Free for 2 RDP sessions', fr: 'Gratuit jusqu\'a 2 sessions RDP' },
+        title: { en: 'RDP is a Pro feature', fr: 'Le RDP est une fonctionnalité Pro' },
         body: {
-          en: 'You can try RDP without paying. Free covers 2 concurrent RDP sessions; Pro removes the cap and unlocks unlimited SFTP transfer size, all tunnel types and snippets. $17.99 one-time, no subscription.',
-          fr: 'Vous pouvez essayer le RDP sans payer. Gratuit couvre 2 sessions RDP simultanées ; Pro retire la limite et debloque transferts SFTP illimités, tous les tunnels et snippets. 19,99 € unique, sans abonnement.',
+          en: 'RDP is one of the things the one-time Pro purchase unlocks, alongside VNC, the remote and SOCKS tunnels, broadcast and unlimited sessions. The free tier is the SSH and file-transfer half of the app, and it stays free for good. Free covers 2 concurrent RDP sessions; Pro removes the cap and unlocks unlimited SFTP transfer size, all tunnel types and snippets. $17.99 one-time, no subscription.',
+          fr: 'Le RDP fait partie de ce que débloque l\'achat unique Pro, avec le VNC, les tunnels distants et SOCKS, le broadcast et les sessions illimitées. Le gratuit couvre la moitié SSH et transfert de fichiers de l\'application, et le reste gratuit pour de bon. 19,99 € une fois, sans abonnement.',
         },
       },
       {
@@ -500,7 +500,7 @@ export const BEST_PAGES: BestPageSEO[] = [
     ourPickHeading: { en: 'Our pick: SSHive', fr: 'Notre choix : SSHive' },
     ourPickBody: {
       en: 'SSHive embeds RoyalVNC under the hood, the same VNC engine used in Royal TSX, with full TLS, VeNCrypt, ARD and standard RFB support. You get saved profiles with Touch ID-gated credentials, native macOS rendering and, critically, RDP, SSH and SFTP in the same window. Need to VNC into a headless Ubuntu through a bastion? Open an SSH tunnel in the Tunnels UI (two clicks), point a VNC profile at 127.0.0.1, save the combo. Future you opens it with one click. Free for two concurrent VNC sessions; Pro is $17.99 one-time on the Mac App Store. The same VNC engine ships on iOS and iPadOS too.',
-      fr: 'SSHive embarque RoyalVNC sous le capot, le même moteur VNC utilise dans Royal TSX, avec support complet TLS, VeNCrypt, ARD et RFB standard. Vous avez des profils sauvegardes avec credentials Touch ID, rendu macOS natif, et, critique, RDP, SSH et SFTP dans la même fenetre. Besoin de VNC sur un Ubuntu headless via un bastion ? Ouvrez un tunnel SSH dans l\'UI Tunnels (deux clics), pointez un profil VNC sur 127.0.0.1, sauvegardez la combinaison. Future-vous l\'ouvre en un clic. Gratuit jusqu\'a deux sessions VNC simultanées ; Pro a 19,99 € unique sur le Mac App Store. Le même moteur VNC est aussi sur iOS et iPadOS.',
+      fr: 'SSHive embarque RoyalVNC sous le capot, le même moteur VNC utilise dans Royal TSX, avec support complet TLS, VeNCrypt, ARD et RFB standard. Vous avez des profils sauvegardes avec credentials Touch ID, rendu macOS natif, et, critique, RDP, SSH et SFTP dans la même fenetre. Besoin de VNC sur un Ubuntu headless via un bastion ? Ouvrez un tunnel SSH dans l\'UI Tunnels (deux clics), pointez un profil VNC sur 127.0.0.1, sauvegardez la combinaison. Future-vous l\'ouvre en un clic. Le VNC fait partie de Pro, achat unique a 19,99 € sur le Mac App Store. Le même moteur VNC est aussi sur iOS et iPadOS.',
     },
     shortlistHeading: { en: 'The other VNC clients we considered', fr: 'Les autres clients VNC evalues' },
     shortlist: [
